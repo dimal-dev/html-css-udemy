@@ -1,0 +1,182 @@
+<Quiz 3>
+<lessons the quizz covers>
+  Lesson 9, Lesson 10, Lesson 11
+</lessons the quizz covers>
+<Insert after>
+  Lesson 11
+</Insert after>
+<Quizz Title>
+  Configure with HTML Attributes
+</Quizz Title>
+<Quizz description>
+  Show how well you understand HTML attributes, their syntax, and their effect.
+</Quizz description>
+
+<Question 1>
+  <Description>
+    What does the type attribute do when added to an <input> element?
+  </Description>
+  <Answer 1>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      Changes the color of the text field
+    </Content>
+    <Explanation>
+      Why? The type attribute doesn’t affect visual styling—it changes the behavior of the input.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      Adds a label next to the input field
+    </Content>
+    <Explanation>
+      Why? Labels must be added using separate elements like <label> or <p>.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>
+      yes
+    </Is Correct>
+    <Content>
+      Changes the kind of input, like text, password, or checkbox
+    </Content>
+    <Explanation>
+      Why? The type attribute defines how the input behaves, like hiding characters or showing a checkbox.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 9
+  </Where discussed>
+</Question 1>
+
+<Question 2>
+  <Description>
+    You write <input type="password">. What happens on the page?
+  </Description>
+  <Answer 1>
+    <Is Correct>
+      yes
+    </Is Correct>
+    <Content>
+      The user sees a field where characters are hidden as they type
+    </Content>
+    <Explanation>
+      Why? The "password" type masks the user input for privacy, just like on login forms.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      The browser asks for a system password
+    </Content>
+    <Explanation>
+      Why? The browser never asks for passwords automatically based on the input type.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      It creates a button labeled “password”
+    </Content>
+    <Explanation>
+      Why? <input type="password"> creates a hidden character field, not a button.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 10
+  </Where discussed>
+</Question 2>
+
+<Question 3>
+  <Description>
+    Which of these is a valid use of the placeholder attribute?
+  </Description>
+  <Answer 1>
+    <Is Correct>
+      yes
+    </Is Correct>
+    <Content>
+      <input type="text" placeholder="Enter your name">
+    </Content>
+    <Explanation>
+      Why? This syntax adds a placeholder text that disappears when the user starts typing.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      <p placeholder="Name">
+    </Content>
+    <Explanation>
+      Why? The placeholder attribute is not valid on <p> elements and will be ignored.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      <input "placeholder=Name">
+    </Content>
+    <Explanation>
+      Why? This breaks HTML syntax because it’s missing the attribute name and proper quotation placement.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 11
+  </Where discussed>
+</Question 3>
+
+<Question 4>
+  <Description>
+    You want to specify an attribute on an <input> element. Where should the attribute be placed?
+  </Description>
+  <Answer 1>
+    <Is Correct>
+      yes
+    </Is Correct>
+    <Content>
+      Inside the opening tag, after the element name
+    </Content>
+    <Explanation>
+      Why? All attributes must be placed inside the opening tag of an element, never in the closing tag.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      Inside the closing tag
+    </Content>
+    <Explanation>
+      Why? HTML does not allow attributes inside closing tags; this would be invalid syntax.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      Outside of any tags
+    </Content>
+    <Explanation>
+      Why? Attributes placed outside of tags are ignored and not recognized by the browser.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 11
+  </Where discussed>
+</Question 4>
+</Quiz 3>

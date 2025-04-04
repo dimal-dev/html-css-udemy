@@ -1,0 +1,224 @@
+<Quiz 2>
+<lessons the quizz covers>
+  Lesson 5, Lesson 6, Lesson 7
+</lessons the quizz covers>
+<Insert after>
+  Lesson 7
+</Insert after>
+<Quizz Title>
+  Understanding HTML Element Behavior
+</Quizz Title>
+<Quizz description>
+  Check how well you grasp the structure and nesting of HTML elements.
+</Quizz description>
+
+<Question 1>
+  <Description>
+    What is a void HTML element?
+  </Description>
+  <Answer 1>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      An element that is invisible on the web page
+    </Content>
+    <Explanation>
+      Why? Visibility doesn't define void elements; it's about having no content or closing tag.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>
+      yes
+    </Is Correct>
+    <Content>
+      An element that does not contain content and has no closing tag
+    </Content>
+    <Explanation>
+      Why? Void elements like <input> do not need a closing tag and have no content inside them.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      An element used only for debugging HTML
+    </Content>
+    <Explanation>
+      Why? There are no such elements used solely for debugging in HTML.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 5
+  </Where discussed>
+</Question 1>
+
+<Question 2>
+  <Description>
+    Which of the following describes a non-void element?
+  </Description>
+  <Answer 1>
+    <Is Correct>
+      yes
+    </Is Correct>
+    <Content>
+      It has an opening tag, content, and a closing tag
+    </Content>
+    <Explanation>
+      Why? Non-void elements like <p> include all three parts: an opening tag, content, and a closing tag.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      It must always contain an input field
+    </Content>
+    <Explanation>
+      Why? Non-void elements can contain any valid content, not just input fields.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      It has only one tag and no content
+    </Content>
+    <Explanation>
+      Why? That describes a void element, not a non-void one.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 5
+  </Where discussed>
+</Question 2>
+
+<Question 3>
+  <Description>
+    What is nesting in HTML?
+  </Description>
+  <Answer 1>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      Placing an HTML element next to another element
+    </Content>
+    <Explanation>
+      Why? Nesting involves placing elements inside other elements, not beside them.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>
+      yes
+    </Is Correct>
+    <Content>
+      Placing one HTML element inside another
+    </Content>
+    <Explanation>
+      Why? Nesting refers to putting child elements inside parent elements like inputs inside a paragraph.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      Indenting lines of code with spaces
+    </Content>
+    <Explanation>
+      Why? Indenting improves readability but is not the definition of nesting.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 6
+  </Where discussed>
+</Question 3>
+
+<Question 4>
+  <Description>
+    You want two input fields to appear on separate lines. What’s the most effective way to do that?
+  </Description>
+  <Answer 1>
+    <Is Correct>
+      yes
+    </Is Correct>
+    <Content>
+      Wrap each input inside a separate <p> element
+    </Content>
+    <Explanation>
+      Why? Paragraphs force the inputs to render on separate lines due to default block behavior.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      Add multiple spaces between them
+    </Content>
+    <Explanation>
+      Why? HTML ignores extra spaces and will not place the inputs on separate lines.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      Use a closing tag after each input
+    </Content>
+    <Explanation>
+      Why? <input> is a void element and doesn’t require or support a closing tag.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 6
+  </Where discussed>
+</Question 4>
+
+<Question 5>
+  <Description>
+    Which of the following is an invalid HTML structure?
+  </Description>
+  <Answer 1>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      <p><input></p>
+    </Content>
+    <Explanation>
+      Why? Inputs can be placed inside paragraphs, making this structure valid.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>
+      yes
+    </Is Correct>
+    <Content>
+      <p><p>This is wrong</p></p>
+    </Content>
+    <Explanation>
+      Why? HTML does not allow paragraphs nested inside other paragraphs.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      <p>Name <input></p>
+    </Content>
+    <Explanation>
+      Why? A mix of plain text and inputs inside a paragraph is valid HTML.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 7
+  </Where discussed>
+</Question 5>
+</Quiz 2>

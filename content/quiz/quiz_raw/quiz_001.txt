@@ -1,0 +1,221 @@
+<Quiz 1>
+    <lessons the quizz covers>Lesson 2, Lesson 3, Lesson 4</lessons the quizz covers>
+    <Insert after>Lesson 4</Insert after>
+    <Quizz Title>
+        Your First Steps with HTML
+    </Quizz Title>
+
+    <Quizz description>
+        Great job getting started! Let's test your progress and keep your momentum going.
+    </Quizz description>
+
+<Question 1>
+  <Description>
+    What does the .html extension tell your computer?
+  </Description>
+  <Answer 1>
+    <Is Correct>
+      yes
+    </Is Correct>
+    <Content>
+      That the file contains HTML code
+    </Content>
+    <Explanation>
+      Why? The .html extension signals that the file contains HTML code so browsers can process and display it correctly.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      That the file contains an image
+    </Content>
+    <Explanation>
+      Why? .html is not used for images; formats like .jpg or .png are.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      That the file is a text document
+    </Content>
+    <Explanation>
+      Why? Plain text files typically have a .txt extension, not .html.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 2
+  </Where discussed>
+</Question 1>
+
+<Question 2>
+  <Description>
+    What happens if you forget to save your HTML file before refreshing the browser?
+  </Description>
+  <Answer 1>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      The browser automatically saves it
+    </Content>
+    <Explanation>
+      Why? Browsers do not save your code automatically—you must manually save the file in VS Code.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>
+      yes
+    </Is Correct>
+    <Content>
+      The browser won’t show your latest changes
+    </Content>
+    <Explanation>
+      Why? Without saving, the browser loads the old version of the file, missing any new edits.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      The file disappears
+    </Content>
+    <Explanation>
+      Why? The file stays but just won’t reflect new changes until it’s saved and reloaded.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 3
+  </Where discussed>
+</Question 2>
+
+<Question 3>
+  <Description>
+    Which of these will correctly create a text field in HTML?
+  </Description>
+  <Answer 1>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      <input/>
+    </Content>
+    <Explanation>
+      Why? This syntax is incorrect for HTML input elements—no slash is needed inside the tag.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>
+      yes
+    </Is Correct>
+    <Content>
+      <input>
+    </Content>
+    <Explanation>
+      Why? <input> is the correct syntax to create a text field in HTML.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      <input field>
+    </Content>
+    <Explanation>
+      Why? "field" is not part of valid input syntax; this breaks the HTML syntax rules.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 2
+  </Where discussed>
+</Question 3>
+
+<Question 4>
+  <Description>
+    You see your text field turning into regular text on the browser. What’s the most likely cause?
+  </Description>
+  <Answer 1>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      You used lowercase letters
+    </Content>
+    <Explanation>
+      Why? HTML is not case-sensitive for tag names, so lowercase letters won’t cause issues.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>
+      yes
+    </Is Correct>
+    <Content>
+      You added a space between the bracket and the tag name
+    </Content>
+    <Explanation>
+      Why? A space after the left angle bracket breaks HTML syntax and causes the tag to be treated as plain text.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      You didn’t close the VS Code editor
+    </Content>
+    <Explanation>
+      Why? Whether the editor is closed has no effect on how the browser renders HTML.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 3
+  </Where discussed>
+</Question 4>
+
+<Question 5>
+  <Description>
+    In a real-world scenario, you're writing a short paragraph for your website. Which HTML element should you use?
+  </Description>
+  <Answer 1>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      <input>
+    </Content>
+    <Explanation>
+      Why? The <input> element creates form fields, not paragraphs of text.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>
+      yes
+    </Is Correct>
+    <Content>
+      <p>
+    </Content>
+    <Explanation>
+      Why? <p> is the paragraph element used for text content in HTML.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>
+      no
+    </Is Correct>
+    <Content>
+      <line>
+    </Content>
+    <Explanation>
+      Why? <line> is not a valid HTML element for paragraph text.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 4
+  </Where discussed>
+</Question 5>
+</Quiz 1>
