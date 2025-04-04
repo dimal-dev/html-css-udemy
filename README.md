@@ -1,1 +1,1 @@
-# html-css-udemy
+# HTML and CSS Course
