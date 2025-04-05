@@ -1,0 +1,197 @@
+<Quiz 10>
+<lessons the quizz covers>
+    Lesson 32
+    Lesson 33
+    Lesson 34
+</lessons the quizz covers>
+<Insert after>
+    Lesson 34
+</Insert after>
+<Quizz Title>
+    Styling Smarter: Tag vs. Class Selectors
+</Quizz Title>
+<Quizz description>
+    Test what you’ve learned about using tags and classes to control your layout like a pro.
+</Quizz description>
+
+<Question 1>
+    <Description>
+        What’s the key difference between a tag selector and a class selector in CSS?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            A tag selector is used only for links, while a class selector is used for images.
+        </Content>
+        <Explanation>
+            Why? Tag selectors can target any HTML tag (like p, a, img), not just links.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            A tag selector targets all elements of a type, while a class selector targets elements with a specific class.
+        </Content>
+        <Explanation>
+            Why? Tag selectors apply styles to all elements of a specific HTML tag, class selectors target elements with a specific class name.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            A tag selector uses a dot before the name, while a class selector does not.
+        </Content>
+        <Explanation>
+            Why? It’s the other way around—class selectors use a dot before the name, tag selectors do not.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 33
+    </Where discussed>
+</Question 1>
+
+<Question 2>
+    <Description>
+        You add the same class to three different images. What happens when you apply a CSS rule to that class?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Only the first image will be affected by the CSS rule.
+        </Content>
+        <Explanation>
+            Why? Class selectors apply the style to all elements with that class, not just the first one.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            All three images will be styled according to the CSS rule.
+        </Content>
+        <Explanation>
+            Why? Class selectors are designed to apply styles to any element that shares the specified class name.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            The rule will only work if each image has a different class name.
+        </Content>
+        <Explanation>
+            Why? One class can be used on multiple elements, and the rule still applies to all of them.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 34
+    </Where discussed>
+</Question 2>
+
+<Question 3>
+    <Description>
+        Real-world challenge: You want your company logo to be larger than the other images on the page. What’s the best way to do that with CSS?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            Add a class to the logo image and write a CSS rule that targets that class.
+        </Content>
+        <Explanation>
+            Why? Class selectors let you target and style specific elements individually—even if they’re the same tag as others.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Use multiple tag selectors to style the images differently.
+        </Content>
+        <Explanation>
+            Why? You can't differentiate images with tag selectors alone—they target all <img> tags.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Move the logo to a new HTML page to isolate its style.
+        </Content>
+        <Explanation>
+            Why? That’s unnecessary and inefficient. Class selectors exist exactly for cases like this.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 32
+    </Where discussed>
+</Question 3>
+
+<Question 4>
+    <Description>
+        Which of the following is the correct CSS selector to target an element with class="header-img"?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            .header-img
+        </Content>
+        <Explanation>
+            Why? The dot at the beginning signals a class selector and must match the exact class name.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            #header-img
+        </Content>
+        <Explanation>
+            Why? That’s an ID selector, not a class selector. Class selectors use a dot prefix.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            header-img
+        </Content>
+        <Explanation>
+            Why? This isn’t a valid selector on its own—it needs a dot to be a class selector or must be an actual HTML tag to be a tag selector.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 33
+    </Where discussed>
+</Question 4>
+
+<Question 5>
+    <Description>
+        You name a class “main-image” in your CSS but accidentally write class="main_img" in your HTML. What will happen?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            The browser will automatically correct the name and apply the styles.
+        </Content>
+        <Explanation>
+            Why? Browsers do not fix incorrect class names. They must match exactly for the CSS to work.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Both styles will be applied.
+        </Content>
+        <Explanation>
+            Why? If the names don’t match, the style rule won’t apply to that HTML element at all.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            The style will not apply because the names don’t match exactly.
+        </Content>
+        <Explanation>
+            Why? Class selectors are case-sensitive and require an exact match with the class name in HTML.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 33
+    </Where discussed>
+</Question 5>
+
+</Quiz 10>

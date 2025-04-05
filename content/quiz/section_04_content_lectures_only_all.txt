@@ -1,0 +1,132 @@
+<Lesson 29>
+In this tutorial, we'll learn how to add CSS to our page and to use it to resize images. Then, in the next tutorial, we'll learn how to style text with CSS. And then we'll apply all this to create this sidebar from the Reddit clone project.
+
+In the previous tutorial, we added these three images from Reddit to our web page. By default, the browser loads these images and displays them in their original size. Often, we want to change that size and the best practice for that is to use CSS. So, let's learn how to do that.
+
+We'll need a new file for that. In VS Code, in the File Explorer, create a new file. We'll name it first-css.html.
+
+The file is empty, so let's add an image to play with. To add an image, we'll use the img element. Then we'll add the src attribute to point to a specific image. For that, let's use this community icon.
+
+one dot png image that we've got from the previous tutorial. We will point to this image using a relative url. For that we'll write images because this folder is in the same folder as the first dash css dot html file that we are creating the relative url from.
+
+then we'll go inside the images so for that we'll type slash next goes the icons folder and then the name of the image itself community-icon-1.png
+
+This is a relative URL because it's relative to our first CSS file. If you don't have this image on your computer, then use this absolute URL in the src attribute instead of the relative URL. And lastly, we'll put the closing angle bracket to make sure that our HTML syntax is correct.
+
+Save the file, then drag the file into Chrome to open it, and now you should have this image in the browser. Next, let's learn how to add CSS to our web page to make this image smaller. For that, we'll go to VS Code, we'll write the code first, then we'll run it, and then I'll explain the code.
+
+We will start off from a new line and we'll create a new HTML element called style. Inside this element, we'll write img space, left curly bracket, and VS Code adds the right curly bracket for us automatically. Then we'll press Enter to expand.
+
+Then, between the curly brackets, we'll type width, colon, space, 200, px for pixels, and make sure that there is no space like this between 200 and pixels. Lastly, a semicolon.
+
+This is CSS code. It might look pretty unusual and different from the HTML code to you right now. Don't worry, we'll go through every part of it in a moment. But now let's save the file and see what happens in the browser when we reload the page. So, command R to reload the page. And the image is much smaller. Congratulations, this is your first CSS code and it works.
+</Lesson 29>
+
+<Lesson 30>
+Notice that in addition to the image width, the browser changed the height of the image automatically to keep its proportions. And with CSS, we can change the height too. To do that, in VS Code, we'll start a new line and write height, colon, space, 400, px, again with no symbols between the number and pixels, and then semicolon.
+
+Save the file, reload the page, and now the image is a bit stretched vertically. Great! We have successfully changed the width and the height of this image using CSS. Normally, you want to keep the image proportions, but here we've stretched the image to see more clearly that our CSS code works.
+
+And now, let's discuss the code that we just added. So, first, we used a new HTML element called style. It is a non-void element, so we can put some content inside. And that content is CSS code.
+
+The sole purpose of the style element is to contain CSS code. CSS, or Cascading Style Sheets, is a language and technology different from HTML. By definition, CSS is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML.
+
+This means we use HTML to create our web page, and after that we use CSS to change its appearance, to make our web page look good. So, for example, our final Reddit project looks like this without CSS code. This is how it looks when we create all the HTML code but don't apply any CSS.
+
+And this is the same page with the same HTML code, but after we've added CSS code. That's the power of CSS we're starting to learn. Okay, now that we know that this is CSS code, let's discuss how it works.
+
+This img part targets this HTML image. Then, between the curly brackets, we put a list of things we want to change about this image. Now let's learn our first term in CSS. The things we configure in this list are called CSS properties. The first one is the width property. Here it sets the width of the image to 200 pixels.
+
+The second one is the Height CSS property. It sets the height of the image to 400 pixels. A pixel is a unit of measurement computers use to measure images and other visual elements. Think of pixels as just tiny dots that everything you see on your screen consists of.
+
+Most of the time you don't need to remember the actual size of one pixel or how much is 200 pixels or 400 pixels. You'll have either specific numbers from a web designer or you'll experiment and change this number by eye until you reach the desired look.
+</Lesson 30>
+
+<Lesson 31>
+Okay, now let's remove the height property for our image to keep its proportions. Save. Reload. And it's not stretched now. Next, let's increase the width of the image to 250 pixels. Save the file. Reload the page. And the image is slightly bigger.
+
+So, when we increase the value of the width property, the image becomes bigger and if we decrease the value of the width property, the image becomes smaller. Next, let's learn another important term in CSS. This piece of code is called a CSS selector.
+
+A CSS selector targets one or more HTML elements that we want to style. In our case, we are targeting the IMG element. Then, between the curly brackets that follow, we put CSS properties to change the appearance of the element.
+
+There are many different types of selectors in CSS. This one is called a tag selector. Because notice that the name we write as this tag selector is img, which is exactly the same as the img name we use here in the opening HTML tag. So this is why this selector is called a tag selector.
+
+A tag CSS selector targets all the HTML elements with that name on this web page. So, this CSS code means find all the IMG elements on this page, so all the images, and then set their width to 250 pixels. If we wanted to target all the paragraphs on this page, we could have written here P instead.
+
+because p is the name of the paragraph element and if we wanted to style all the links on the page we could have written a here instead because as you know from the previous tutorials we use a or the anchor element to create links and so if we leave our css code like this
+
+It now targets all the A or anchor elements on the page and sets their width to 250 pixels. But now this CSS code doesn't target images on our page. And if we save and reload the page, the image is back to its original size.
+
+Because this CSS code now targets all the links, but not the images. And to target the image, we can change the name of the selector to img, save, reload, and the image is back to being 250 pixels wide.
+
+And to check that this CSS rule, this tag selector targets all the images on the page and not only this one, let's add one more image and see what happens. To add another image, we'll start a new line and we'll add the img tag.
+
+And inside the src attribute we need to put a URL of the image we want to use. And for this let's use the URL from the sidebar image from the previous tutorial. I'm going to copy it and paste it here. Don't forget to add this closing angle bracket after the quote. Save. Reload.
+
+Now there is this second image. As you can see, its width is the same as the width of the first image and it's 250 pixels. This means that this tag selector, img tag selector, targets all the img elements on the page.
+
+And then the browser changes the width of all IMG elements to 250 pixels. If we change the width to, say, 50 pixels, save and reload, now the images are tiny, each is 50 pixels wide. Because this tag selector applies this property to every image on the page.
+</Lesson 31>
+
+<Lesson 32>
+Notice that we add the style HTML element in the code, but it's not visible on the page. This is because the style HTML element is a special element. Its only purpose is to contain CSS code that the browser uses to style our web page.
+
+Okay, a CSS selector together with the list of CSS properties that it changes, they create a CSS rule. As you'll see later, usually we can write hundreds and even thousands of CSS rules like this for a single website. This CSS rule sets the width of all images on the web page to 50 pixels.
+
+But what if we want different images to have different width? What if, for example, we want this first image to be 50 pixels wide, but the second image to be 150 pixels wide?
+
+We can, for example, try to add a second CSS rule that sets the width to 150 pixels. Like this. And think that the first one applies to the first image and the second CSS rule applies to the second image.
+
+But if we try to save and then reload the page, you can see that both images are now 150 pixels wide. So it seems like only the second rule applies to all images. In this case,
+
+This happens because when the browser applies all this CSS code, it first applies the first CSS rule and sets the width of all image elements to 50 pixels. But then it applies the second CSS rule and sets the width of all images to 150 pixels.
+
+And so the second rule overrides the first rule. And we end up with the images that are 150 pixels wide. Okay, so as you can see, to make this image 150 pixels and this image 50 pixels, a tag selector is not enough. Let's delete the second CSS rule, save, reload.
+
+Okay, so to achieve our goal and make the second image 150 pixels wide, we will learn another HTML feature and another CSS selector. For that, as usually, we'll write the code first and then I'll explain it.
+
+Let's put the cursor right here inside the second image element. Then we'll write space class equals and between the quotes we'll write image2. Here we are adding the class attribute.
+
+Now let's see what happens in the browser. Save, reload and nothing is changed. So the class attribute does nothing to this image. The image works the same. However, now we can use this class to target this image from our CSS code.
+
+And we will use a special selector for that. We will add a new line. And then we'll type .image2. Notice that this is the name of the class we have. Then space, curly brackets, Enter to expand them. And next, we'll set the width property to 150 pixels. And lastly, we added a semicolon.
+
+Now let's save and see what happens in the browser. Reload the page. There you go. The first image is 50 pixels wide and the second image is 150 pixels wide. Great! This is exactly what we wanted.
+</Lesson 32>
+
+<Lesson 33>
+Now let's discuss how it works. So this is the class HTML attribute and as a value for the class attribute we can use our own custom names.
+
+We use the class attribute to kind of mark an HTML element with our own custom name and then use that custom name to target this marked HTML element from our CSS code. The class attribute changes nothing about how an element works. Its sole purpose is to mark an element or kind of label it
+
+so that we can use this label or mark to then target this element from our CSS code. What's cool about the class attribute is that it's not unique to images, we can add it to any HTML element we want. So, for example, we can add it to images, paragraphs, inputs and many other elements that we will learn throughout this course.
+
+Okay, so once we've added a class to an element, we can use this class to target it from CSS. And to target an HTML element by its class name from CSS, we use a special CSS selector, it's called a class selector. A class CSS selector, it always starts with a dot.
+
+and then follows the name of the class we want to target. So in our case, we want to target the ImageTo class from our CSS.
+
+And then, after the class selector, between the curly brackets follows the list of CSS properties that we want to change. In our case, we set here the width to 150 pixels. What's important is that the class name here, so this, and the class name here, they must be the same for this to work.
+
+If, for example, I'll add a dash here, now the names do not match. The browser won't apply this whole CSS rule to this element, because now we are targeting a completely different HTML class than this one. And if we save and reload the page, now both images are 50 pixels wide.
+
+because the second rule doesn't apply, but they both are images and so the first rule affects both of them.
+
+Okay, a common practice in naming in CSS is to separate words in a class name with dashes like this. And if we'll add dash here, now the class names, they are the same in our CSS code and in our HTML code. And this CSS rule should be applied. And so if we save and reload the page, now the second image is 150 pixels wide.
+
+So make sure that the class name you're using in your HTML code is exactly the same as the class name that you're using in your CSS code. Otherwise, it won't work.
+</Lesson 33>
+<Lesson 34>
+Another cool feature about the class attribute is that we can use the same class with many HTML elements on one page. So, for example, we can add the same class, Image-2, to the first image. Now, both the second and the first images, they have the Image-2 class, and this CSS rule applies to both images, because they have that same class.
+
+And if we save and reload the page, now both images are 150 pixels wide. It happens because a class selector, it applies not only to one element with this class name, but to all HTML elements that share this class name.
+
+So this means that we can add the class attribute with the same class name to many HTML elements and target all those HTML elements that share this class name from our CSS code using the class selector and change their appearance with CSS properties. Now let's quickly recap what we've learned so far. It will help you to understand and remember all this better.
+
+So, to write CSS code, we use this style HTML element. And we write CSS code inside that element. The style HTML element is not visible on the page. This and this, they are CSS rules.
+
+Our CSS code can contain hundreds and even thousands of CSS rules on one page. A CSS rule has two parts, a CSS selector and a list of CSS properties. We use CSS selectors to target some HTML elements that we then style with CSS properties.
+
+So far, we've learned two types of CSS selectors, a tag selector and a class selector. To use a tag selector, we just write the name of HTML element that we want to target. A tag selector targets all the elements of that type on the web page. To use a class selector, we write dot and then the name of the HTML class that we want to target.
+
+A class selector targets all the elements that have that class name on the page. Don't forget to add the class attribute to the HTML elements you want to target from your CSS code. The class selector is arguably the most commonly used selector nowadays.
+</Lesson 34>

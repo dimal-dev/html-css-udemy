@@ -1,0 +1,125 @@
+⭐️Question 1:
+What’s the key difference between a tag selector and a class selector in CSS?
+
+1️⃣ Answer 1:
+A tag selector is used only for links, while a class selector is used for images.
+😎Why:
+Why? Tag selectors can target any HTML tag (like p, a, img), not just links.
+--
+
+2️⃣ ✅ Answer 2:
+A tag selector targets all elements of a type, while a class selector targets elements with a specific class.
+😎Why:
+Why? Tag selectors apply styles to all elements of a specific HTML tag, class selectors target elements with a specific class name.
+--
+
+3️⃣ Answer 3:
+A tag selector uses a dot before the name, while a class selector does not.
+😎Why:
+Why? It’s the other way around—class selectors use a dot before the name, tag selectors do not.
+
+☁️DISCUSSED:
+Lesson 33
+
+##########
+
+⭐️Question 2:
+You add the same class to three different images. What happens when you apply a CSS rule to that class?
+
+1️⃣ Answer 1:
+Only the first image will be affected by the CSS rule.
+😎Why:
+Why? Class selectors apply the style to all elements with that class, not just the first one.
+--
+
+2️⃣ ✅ Answer 2:
+All three images will be styled according to the CSS rule.
+😎Why:
+Why? Class selectors are designed to apply styles to any element that shares the specified class name.
+--
+
+3️⃣ Answer 3:
+The rule will only work if each image has a different class name.
+😎Why:
+Why? One class can be used on multiple elements, and the rule still applies to all of them.
+
+☁️DISCUSSED:
+Lesson 34
+
+##########
+
+⭐️Question 3:
+Real-world case: You want your company logo to be larger than the other images on the page. What’s the best way to do that with CSS?
+
+1️⃣ ✅ Answer 1:
+Add a class to the logo image and write a CSS rule that targets that class.
+😎Why:
+Why? Class selectors let you target and style specific elements individually—even if they’re the same tag as others.
+--
+
+2️⃣ Answer 2:
+Use multiple tag selectors to style the images differently.
+😎Why:
+Why? You can't differentiate images with tag selectors alone—they target all <img> tags.
+--
+
+3️⃣ Answer 3:
+Move the logo to a new HTML page to isolate its style.
+😎Why:
+Why? That’s unnecessary and inefficient. Class selectors exist exactly for cases like this.
+
+☁️DISCUSSED:
+Lesson 32
+
+##########
+
+⭐️Question 4:
+Which of the following is the correct CSS selector to target an element with class="header-img"?
+
+1️⃣ ✅ Answer 1:
+.header-img
+😎Why:
+Why? The dot at the beginning signals a class selector and must match the exact class name.
+--
+
+2️⃣ Answer 2:
+#header-img
+😎Why:
+Why? That’s an ID selector, not a class selector. Class selectors use a dot prefix.
+--
+
+3️⃣ Answer 3:
+header-img
+😎Why:
+Why? This isn’t a valid selector on its own—it needs a dot to be a class selector or must be an actual HTML tag to be a tag selector.
+
+☁️DISCUSSED:
+Lesson 33
+
+##########
+
+⭐️Question 5:
+You name a class “main-image” in your CSS but accidentally write class="main_img" in your HTML. What will happen?
+
+1️⃣ Answer 1:
+The browser will automatically correct the name and apply the styles.
+😎Why:
+Why? Browsers do not fix incorrect class names. They must match exactly for the CSS to work.
+--
+
+2️⃣ Answer 2:
+Both styles will be applied.
+😎Why:
+Why? If the names don’t match, the style rule won’t apply to that HTML element at all.
+--
+
+3️⃣ ✅ Answer 3:
+The style will not apply because the names don’t match exactly.
+😎Why:
+Why? Class selectors are case-sensitive and require an exact match with the class name in HTML.
+
+☁️DISCUSSED:
+Lesson 33
+
+##########
+

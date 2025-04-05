@@ -1,0 +1,113 @@
+<Quiz 9>
+<lessons the quizz covers>
+    Lesson 29
+    Lesson 30
+    Lesson 31
+</lessons the quizz covers>
+<Insert after>
+    Lesson 31
+</Insert after>
+<Quizz Title>
+    Mastering Your First CSS Rules
+</Quizz Title>
+<Quizz description>
+    You’ve written your first CSS—now see how well you understand it.
+</Quizz description>
+
+
+<Question 1>
+    <Description>
+        What is the correct HTML element to add CSS code directly inside an HTML file?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>link</Content>
+        <Explanation>Why? The link element is used to connect external CSS files, not for writing CSS code directly.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>style</Content>
+        <Explanation>Why? The style element is specifically designed to contain CSS code directly in your HTML file.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>script</Content>
+        <Explanation>Why? The script element is for JavaScript code, not for CSS styles.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 29
+    </Where discussed>
+</Question 1>
+
+<Question 2>
+    <Description>
+        You want all images on your webpage to be displayed at 250 pixels wide. What kind of CSS selector should you use?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>tag selector</Content>
+        <Explanation>Why? A tag selector like img applies styles to all HTML elements of that type on the page.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>id selector</Content>
+        <Explanation>Why? An ID selector targets only one specific element with a unique ID.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>class selector</Content>
+        <Explanation>Why? A class selector applies styles to elements with a specific class name, not all elements of that type.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 31
+    </Where discussed>
+</Question 2>
+
+<Question 3>
+    <Description>
+        Real-world scenario: You added a second image and noticed it’s automatically resized just like the first one. Why is that happening?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>They have different URLs, but the browser resizes them the same by default.</Content>
+        <Explanation>Why? The browser doesn’t automatically resize images based on similarity. CSS selectors do that.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>The CSS tag selector img applies the same width property to both images.</Content>
+        <Explanation>Why? The tag selector targets all img elements, so any new image inherits the same CSS rule.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>The HTML automatically adjusts size when there are multiple images.</Content>
+        <Explanation>Why? HTML doesn’t adjust size on its own; only CSS can style multiple elements this way.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 31
+    </Where discussed>
+</Question 3>
+
+<Question 4>
+    <Description>
+        Which of the following is a correct CSS property to change the appearance of an image?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>fontsize</Content>
+        <Explanation>Why? fontsize is not a valid CSS property; the correct one is font-size and it's not for images.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>width</Content>
+        <Explanation>Why? The width property is used in CSS to define the width of elements like images.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>bgcolor</Content>
+        <Explanation>Why? bgcolor is an old HTML attribute, not a valid CSS property.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 30
+    </Where discussed>
+</Question 4>
+</Quiz 9>

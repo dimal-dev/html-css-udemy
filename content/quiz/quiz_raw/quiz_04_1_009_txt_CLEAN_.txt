@@ -1,0 +1,125 @@
+⭐️Question 1:
+What is the correct HTML element to add CSS code directly inside an HTML file?
+
+1️⃣ Answer 1:
+link
+😎Why:
+Why? The link element is used to connect external CSS files, not for writing CSS code directly.
+--
+
+2️⃣ ✅ Answer 2:
+style
+😎Why:
+Why? The style element is specifically designed to contain CSS code directly in your HTML file.
+--
+
+3️⃣ Answer 3:
+script
+😎Why:
+Why? The script element is for JavaScript code, not for CSS styles.
+
+☁️DISCUSSED:
+Lesson 29
+
+##########
+
+⭐️Question 2:
+You want all images on your webpage to be displayed at 250 pixels wide. What kind of CSS selector should you use?
+
+1️⃣ ✅ Answer 1:
+tag selector
+😎Why:
+Why? A tag selector like img applies styles to all HTML elements of that type on the page.
+--
+
+2️⃣ Answer 2:
+id selector
+😎Why:
+Why? An ID selector targets only one specific element with a unique ID.
+--
+
+3️⃣ Answer 3:
+class selector
+😎Why:
+Why? A class selector applies styles to elements with a specific class name, not all elements of that type.
+
+☁️DISCUSSED:
+Lesson 31
+
+##########
+
+⭐️Question 3:
+Real-world scenario: You added a second image and noticed it’s automatically resized just like the first one. Why is that happening?
+
+1️⃣ Answer 1:
+They have different URLs, but the browser resizes them the same by default.
+😎Why:
+Why? The browser doesn’t automatically resize images based on similarity. CSS selectors do that.
+--
+
+2️⃣ ✅ Answer 2:
+The CSS tag selector img applies the same width property to both images.
+😎Why:
+Why? The tag selector targets all img elements, so any new image inherits the same CSS rule.
+--
+
+3️⃣ Answer 3:
+The HTML automatically adjusts size when there are multiple images.
+😎Why:
+Why? HTML doesn’t adjust size on its own; only CSS can style multiple elements this way.
+
+☁️DISCUSSED:
+Lesson 31
+
+##########
+
+⭐️Question 4:
+Which of the following is a correct CSS property to change the appearance of an image?
+
+1️⃣ Answer 1:
+fontsize
+😎Why:
+Why? fontsize is not a valid CSS property; the correct one is font-size and it's not for images.
+--
+
+2️⃣ ✅ Answer 2:
+width
+😎Why:
+Why? The width property is used in CSS to define the width of elements like images.
+--
+
+3️⃣ Answer 3:
+bgcolor
+😎Why:
+Why? bgcolor is an old HTML attribute, not a valid CSS property.
+
+☁️DISCUSSED:
+Lesson 30
+
+##########
+
+⭐️Question 5:
+Slightly challenging: What happens if you add a second CSS rule with img selector and a different width value after the first rule?
+
+1️⃣ Answer 1:
+Both rules cancel each other out and nothing is applied.
+😎Why:
+Why? CSS does not cancel rules; it uses the last rule in order when selectors are equal.
+--
+
+2️⃣ Answer 2:
+Only the first rule is applied and the second one is ignored.
+😎Why:
+Why? Later CSS rules override earlier ones if they have the same selector specificity.
+--
+
+3️⃣ ✅ Answer 3:
+The second rule overrides the first one, applying its width value to all images.
+😎Why:
+Why? In CSS, when selectors are the same, the one that appears last in the code is used.
+
+☁️DISCUSSED:
+Lesson 32
+
+##########
+
