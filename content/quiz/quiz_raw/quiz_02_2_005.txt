@@ -1,0 +1,182 @@
+<Quiz 5>
+  <lessons the quizz covers>
+    Lesson 17, Lesson 18
+  </lessons the quizz covers>
+  <Insert after>
+    Lesson 18
+  </Insert after>
+  <Quizz Title>
+    Connect Your Pages Like a Pro
+  </Quizz Title>
+  <Quizz description>
+    Time to test your mastery of linking pages within your site and beyond.
+  </Quizz description>
+
+  <Question 1>
+    <Description>
+      Which of the following is an internal link?
+    </Description>
+    <Answer 1>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        <a href="https://reddit.com">Reddit</a>
+      </Content>
+      <Explanation>
+        Why? This is an external link since it points to another website.
+      </Explanation>
+    </Answer 1>
+    <Answer 2>
+      <Is Correct>
+        yes
+      </Is Correct>
+      <Content>
+        <a href="attributes.html">Attributes Page</a>
+      </Content>
+      <Explanation>
+        Why? This points to another file in the same folder, making it an internal link.
+      </Explanation>
+    </Answer 2>
+    <Answer 3>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        <a href="https://google.com">Google</a>
+      </Content>
+      <Explanation>
+        Why? Any link starting with https:// is external to your website.
+      </Explanation>
+    </Answer 3>
+    <Where discussed>
+      Lesson 17
+    </Where discussed>
+  </Question 1>
+
+  <Question 2>
+    <Description>
+      Which of the following is a valid absolute URL?
+    </Description>
+    <Answer 1>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        attributes.html
+      </Content>
+      <Explanation>
+        Why? This is a relative URL because it doesn't contain a protocol or domain.
+      </Explanation>
+    </Answer 1>
+    <Answer 2>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        links-internal
+      </Content>
+      <Explanation>
+        Why? This is not a valid absolute URL—it lacks a scheme and domain.
+      </Explanation>
+    </Answer 2>
+    <Answer 3>
+      <Is Correct>
+        yes
+      </Is Correct>
+      <Content>
+        https://www.google.com
+      </Content>
+      <Explanation>
+        Why? This contains the protocol, domain name, and full path, making it an absolute URL.
+      </Explanation>
+    </Answer 3>
+    <Where discussed>
+      Lesson 18
+    </Where discussed>
+  </Question 2>
+
+  <Question 3>
+    <Description>
+      You renamed a file from links.html to links-external.html but didn’t update the href in your link. What happens?
+    </Description>
+    <Answer 1>
+      <Is Correct>
+        yes
+      </Is Correct>
+      <Content>
+        The link is broken and shows an error
+      </Content>
+      <Explanation>
+        Why? If the file no longer exists at the given path, the browser shows a “file not found” error.
+      </Explanation>
+    </Answer 1>
+    <Answer 2>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        The link updates automatically
+      </Content>
+      <Explanation>
+        Why? HTML links must be updated manually when filenames change.
+      </Explanation>
+    </Answer 2>
+    <Answer 3>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        The page reloads without any changes
+      </Content>
+      <Explanation>
+        Why? A broken link doesn’t reload—it leads to an error page.
+      </Explanation>
+    </Answer 3>
+    <Where discussed>
+      Lesson 17
+    </Where discussed>
+  </Question 3>
+
+  <Question 4>
+    <Description>
+      What makes a URL relative instead of absolute?
+    </Description>
+    <Answer 1>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        It uses capital letters
+      </Content>
+      <Explanation>
+        Why? Capitalization doesn’t define relative vs. absolute—it’s about the structure.
+      </Explanation>
+    </Answer 1>
+    <Answer 2>
+      <Is Correct>
+        yes
+      </Is Correct>
+      <Content>
+        It doesn’t include the protocol or full website address
+      </Content>
+      <Explanation>
+        Why? Relative URLs skip the domain and protocol, pointing to a file based on folder structure.
+      </Explanation>
+    </Answer 2>
+    <Answer 3>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        It links to YouTube
+      </Content>
+      <Explanation>
+        Why? YouTube links are external, not relative or internal to your project.
+      </Explanation>
+    </Answer 3>
+    <Where discussed>
+      Lesson 18
+    </Where discussed>
+  </Question 4>
+</Quiz 5>

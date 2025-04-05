@@ -1,0 +1,125 @@
+⭐️Question 1:
+What does the <br> tag do in HTML?
+
+1️⃣ ✅ Answer 1:
+It moves the following content to a new line without adding vertical space.
+😎Why:
+Why? The <br> tag creates a line break like pressing Enter, but it doesn’t add extra vertical spacing.
+--
+
+2️⃣ Answer 2:
+It adds a horizontal gray line with vertical spacing.
+😎Why:
+Why? That describes the <hr> tag, not <br>.
+--
+
+3️⃣ Answer 3:
+It wraps the text inside a new paragraph.
+😎Why:
+Why? <p> is used to create paragraphs; <br> only breaks lines without adding paragraph formatting.
+
+☁️DISCUSSED:
+Lesson 27
+
+##########
+
+⭐️Question 2:
+Which of the following HTML elements creates a horizontal line across the page?
+
+1️⃣ Answer 1:
+<br>
+😎Why:
+Why? <br> only creates a line break; it doesn’t draw a visual horizontal line.
+--
+
+2️⃣ ✅ Answer 2:
+<hr>
+😎Why:
+Why? The <hr> element creates a horizontal rule with space above and below.
+--
+
+3️⃣ Answer 3:
+<line>
+😎Why:
+Why? <line> is not a valid HTML element.
+
+☁️DISCUSSED:
+Lesson 28
+
+##########
+
+⭐️Question 3:
+You added a <br> after a sentence, but you still see the next sentence on the same line. What is the most likely reason?
+
+1️⃣ Answer 1:
+You used double quotes around the text.
+😎Why:
+Why? Quotes have no effect on line breaks in HTML.
+--
+
+2️⃣ ✅ Answer 2:
+You may have forgotten the right angle bracket or mistyped the tag.
+😎Why:
+Why? Incorrect syntax prevents the browser from recognizing the <br> element.
+--
+
+3️⃣ Answer 3:
+The <br> tag needs a closing tag like </br>.
+😎Why:
+Why? <br> is a void element and does not require or allow a closing tag.
+
+☁️DISCUSSED:
+Lesson 27
+
+##########
+
+⭐️Question 4:
+You’re building a personal web page and want to add a thin visual separator between two sections of content. Which tag should you use?
+
+1️⃣ Answer 1:
+<break>
+😎Why:
+Why? <break> is not a valid HTML tag.
+--
+
+2️⃣ Answer 2:
+<p>
+😎Why:
+Why? <p> adds paragraph structure but not a visual separator.
+--
+
+3️⃣ ✅ Answer 3:
+<hr>
+😎Why:
+Why? <hr> adds a visual horizontal line that separates content sections.
+
+☁️DISCUSSED:
+Lesson 28
+
+##########
+
+⭐️Question 5:
+Which of these is a true statement about the difference between <br> and <hr>?
+
+1️⃣ Answer 1:
+<br> adds a visual line, and <hr> just moves text to a new line.
+😎Why:
+Why? It's the other way around—<br> breaks the line without visuals, <hr> creates a visual separator.
+--
+
+2️⃣ ✅ Answer 2:
+<br> only breaks the line; <hr> breaks the line and adds a visual horizontal rule.
+😎Why:
+Why? This correctly describes both elements and their roles in HTML.
+--
+
+3️⃣ Answer 3:
+Both <br> and <hr> add paragraphs with vertical space.
+😎Why:
+Why? Neither tag creates paragraphs; <br> adds a break with no extra space, and <hr> adds a line and spacing.
+
+☁️DISCUSSED:
+Lesson 28
+
+##########
+

@@ -1,0 +1,196 @@
+<Quiz 6>
+<lessons the quizz covers>
+    Lesson 19
+    Lesson 20
+    Lesson 21
+</lessons the quizz covers>
+<Insert after>
+    Lesson 21
+</Insert after>
+<Quizz Title>
+    Your First Steps with HTML Images
+</Quizz Title>
+<Quizz description>
+    Ready to level up? This quick check will reinforce your image know-how.
+</Quizz description>
+
+<Question 1>
+    <Description>
+        What HTML element is used to display an image on a web page?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            <img>
+        </Content>
+        <Explanation>
+            Why? <img> is the correct element used to embed an image in HTML.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            <image>
+        </Content>
+        <Explanation>
+            Why? <image> is not a valid HTML tag; the correct tag is <img>.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            <src>
+        </Content>
+        <Explanation>
+            Why? <src> is an attribute used inside the <img> tag, not a standalone element.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 19
+    </Where discussed>
+</Question 1>
+
+<Question 2>
+    <Description>
+        Why might an image not appear on your web page even if you've used the <img> element?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Because the browser doesn't support images
+        </Content>
+        <Explanation>
+            Why? All modern browsers support images; the issue is almost always in your code.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            Because you forgot the right angle bracket at the end of the tag
+        </Content>
+        <Explanation>
+            Why? Forgetting the right angle bracket breaks HTML syntax and prevents the image from loading.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Because <img> tags always need a closing tag
+        </Content>
+        <Explanation>
+            Why? <img> is a void element and doesn't require a closing tag.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 20
+    </Where discussed>
+</Question 2>
+
+<Question 3>
+    <Description>
+        You’re making a simple blog. You want two images to appear on separate lines, even if there’s enough space for them side by side. What’s one way to do this?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Use the href attribute on the second image
+        </Content>
+        <Explanation>
+            Why? href is for links and has no effect on image placement.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Add a closing tag for <img>
+        </Content>
+        <Explanation>
+            Why? <img> is a void element and doesn’t require a closing tag; this won’t change layout.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            Wrap each image in a separate <p> tag
+        </Content>
+        <Explanation>
+            Why? Paragraph tags force images to appear on separate lines, behaving like block-level elements.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 21
+    </Where discussed>
+</Question 3>
+
+<Question 4>
+    <Description>
+        Which of the following is true about the src attribute in the <img> tag?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            It defines the URL of the image you want to show.
+        </Content>
+        <Explanation>
+            Why? The src attribute specifies the image’s path so the browser knows where to load it from.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            It styles the image with borders and padding.
+        </Content>
+        <Explanation>
+            Why? Styling is done using CSS, not through the src attribute.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            It provides alternate text for the image.
+        </Content>
+        <Explanation>
+            Why? The alt attribute provides alternate text, not src.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 19
+    </Where discussed>
+</Question 4>
+
+<Question 5>
+    <Description>
+        A student claims: “I used the <img> tag correctly, but the image isn’t loading.” What is the most helpful first thing to check?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            Whether the image URL in the src attribute is valid and reachable
+        </Content>
+        <Explanation>
+            Why? If the src path is broken or incorrect, the image won’t appear.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            If the image is wrapped inside an <h1> tag
+        </Content>
+        <Explanation>
+            Why? Wrapping the image in an <h1> doesn't prevent it from loading.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Whether the image file is a .docx format
+        </Content>
+        <Explanation>
+            Why? Images must be in a supported image format like .jpg, .png, .gif—not document formats.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 20
+    </Where discussed>
+</Question 5>
+</Quiz 6>

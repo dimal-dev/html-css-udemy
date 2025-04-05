@@ -1,0 +1,126 @@
+<Lessons for which I want you create quizzes>
+<Lesson 19>
+Next, let's learn how to use images in HTML.
+
+For that, let's create a new tab, then right-click on that tab and choose Close Other Tabs, because we don't need them anymore. Next, in the address bar, let's type in the following dmal-dev.github.io.html-css.reddit and then press Enter to open it.
+
+This is a complete version of the Reddit clone project we will be creating in the second part of this course. It has several images, so let's learn how to add images to our web pages, because we'll need that later. To do that, let's go to VS Code and create a new file.
+
+We'll call it images.html. Then let's start by adding this Reddit logo image to our web page. To add an image, we'll type left angle bracket IMG, then space SRC equals. And inside these double quotes, we put the address or URL of the image we want to show.
+
+We want to show this Reddit logo image. And to get the URL of this image, we will right-click on the image and then select Copy Image Address. Make sure that you click Copy Image Address and not Copy Link Address. So click this to copy the URL. Next, we'll paste it here with the command V for Mac or Ctrl V for Windows.
+
+And then we'll add the right angle bracket after the double quote. IMG is a void element, so we don't need to add a closing tag. And we'll drag the file into Chrome to open it. There you go. There is this Reddit logo image on our page. So to add the image, we've used the new HTML element called IMG. IMG is short for image.
+
+What's great about HTML is that most of the terms and names are pretty self-explanatory. Then we used the src attribute to configure what image we want to display.
+</Lesson 19>
+<Lesson 20>
+The src attribute for images is kind of like the href attribute for links. And just like with the href attribute, we also use URLs to load images. Notice that this image address starts with the HTTPS.
+
+then follows the domain name, and then follows the path to the actual image. And we already know this means that this is an absolute URL. But this time it's an absolute URL to an image on the Internet. Now let's add another image to our page from the Reddit clone project.
+
+Let's add this bold image. To add it we'll right-click it and then select copy image address. Then in VS Code we'll add another img element and to specify what image we want to load we'll add the src attribute and paste the URL we just copied
+
+And don't forget to add the right angle bracket. Otherwise, we'll break the HTML syntax and the image won't appear. So save, reload. And there is the baldy image beside the Reddit logo. Now let me quickly show you what happens if we forget to add the right angle bracket here. Save, reload.
+
+And there is no image. And if we put back the right angle bracket, save and reload, the image is back. So if you added an image element, but it doesn't appear on the page, check that you have the right angle bracket at the end. And this applies to all void elements.
+</Lesson 20>
+<Lesson 21>
+Now, notice that both images are on the same line. This is because by default images behave like text, which means they go one after another on the same line like words in a sentence, until there is no space left on that line. And when there is no horizontal space left for an image to fit, it goes to the next line.
+
+Let me resize the window to show you that. When there is no enough horizontal space, the yellow image with Baldi goes to the next line. And when there is enough horizontal space, both images are staying on the same line. But if we want these images to be on separate lines, even when there is enough horizontal space, we already know that we can wrap them in paragraphs.
+
+So let's do that to have more practice. For that, we'll add an empty paragraph before the first image. Then we'll press Enter to expand it. And then we'll move the first image inside the paragraph. Then we'll repeat the same for the second image. Save. Reload. Now both images are on separate lines even when there is enough horizontal space.
+</Lesson 21>
+<Lesson 22>
+What's great about the src attribute is that because it's a URL, it works the same way as we learned for the anchor tag. This means we can put here not only an absolute URL to an image on the internet,
+
+but also a relative URL to an image in our website's folder. Let's try to do this for the Reddit logo. So if we remove this, then what's left is a relative URL. And just like with links, this relative URL points to the redditlogo.png file that must be in the same folder as the images.html.
+
+And right now there is no reddit logo image in our folder yet. So let's save the file and see what happens in the browser when we're trying to add an image that doesn't exist in our folder. So reload. Okay, instead of the reddit logo there is this small icon here. This is the icon we see when the browser cannot find the image we refer to in the src attribute.
+
+So this HTML code tells the browser display the reddit-logo.png image here and search for this image in the same folder as the images.html file, which is in the my-website folder.
+
+Then, Chrome tries to find that image. And there is no such image in our folder, so it shows this little icon here. To fix this, we need to put this image in our website's folder. For that, let's learn how to download images from the Internet.
+
+To do that we will open the Reddit clone. Then we'll right-click on the image we want to download. Then click on the Save image as option.
+
+Then we will select where we want to save the image. We want to save this image to the My Website folder, which is located on the desktop. So here I'll select Desktop, My Website, and then click Save.
+
+This downloads the image and now we can see the image we downloaded here in the Explorer. If you don't have the image here, this means that you saved it to a different folder. To fix this, just go through the process again and make sure that you save it into the MyWebsite folder. And also we need to make sure that the image name here is exactly the same as the image name in the src attribute.
+
+Okay, now let's reload the page in Chrome and see what happens. Great! There it is, the Reddit logo. This means that the browser was able to find the image. Now let's do the same for the second image. So first, we'll remove this part to make the URL relative.
+
+Save. Reload. The image is not found icon, which is expected. So next, we also need to download this image into our folder. For that, on the Reddit Clone website, right-click on the Baldi image and then select Save Image As. Then we need to make sure that we're saving into the right folder and click Save.
+
+on our web page. Let's reload it. And the image is back. The page looks the same, but now we are loading these two images from our computer rather than from the Internet. And you need to know the both ways because you'll be using them for different tasks.
+</Lesson 22>
+<Lesson 24>
+Usually, we want to keep our images in a separate folder for better organization. So let's improve our project's file structure and create a new folder by clicking on this new folder icon. We will name our folder Images. Then we'll drag the images we downloaded into this folder.
+
+Good! Now that both images are in the folder we created, let's go to the browser and reload the page. And the browser is unable to find these images.
+
+This is because in our HTML we're still pointing to the old location in both URLs. And the browser searches for them only up here in the my-website folder. The browser doesn't go into the images folder until we tell it to do so.
+
+which means that when we move our images to a new location we need to update the src attribute too. So let's do that. First let's remove both URLs.
+
+and to specify the current relative url to the reddit logo we'll start with images because this is the name of the folder that contains the reddit logo image and this folder is located in the same folder which is my website as the images.html file from which we're trying to load the image next to go inside the images folder we'll write slash
+
+and then the reddit-logo.png filename.
+
+so this relative url now tells the browser to look into the images folder which is next to the images.html file so they're in the same folder and the slash tells the browser to go inside the images folder and then to look for the file with the name reddit-logo.png
+
+Now let's write the same for the second image which is community-icon1.png
+
+Save, reload and both images are back. We're not limited to only one folder here. We can nest folders inside folders as many levels as we want. Let me quickly show you that. So I'm going to select the images folder and then click create new folder. Let's call it icons. Then I'll move the bold image into the icons folder.
+
+Now this URL is incorrect because this file is now not in the images folder, it's deeper, it's inside the images and then icons folder. So if I reload the page, the Baldi disappears.
+
+To fix this, I need to make sure that this relative URL reflects the actual file structure I have here. And for that I can add the icons folder here and also a slash.
+
+Now, this relative URL tells the browser to search for the community icon1 file under the images and then icons folders. Save, reload, and the image is back. Before we discuss a few more HTML features, let's go over what we've learned about images. So to add an image to a web page, we use the img element, which is a void element. It doesn't have a closing tag and content.
+
+Inside the src attribute we put a URL to the image we want to show. It can be an absolute URL or a relative URL. We can point to an image on the Internet or to an image we have on our computer. We can put images inside a folder and refer to the image in that folder using the slash symbol.
+</Lesson 24>
+<Lesson 25>
+Now let's learn how to turn an image into a link. We will change our code so that this Reddit logo image opens reddit.com when clicked. And in HTML it's actually a pretty easy task. So to turn this image into a clickable link we'll first add that link here. You already know how to add a link to reddit.com.
+
+For that we'll use the anchor element and inside the href attribute we'll write https://reddit.com and then inside the content we'll write reddit. Let's also format our link to make it a little bit more readable. Save, reload and there is this text that opens reddit.com when clicked.
+
+Now, to turn this image into a clickable link, we will remove the Reddit text and move the image inside the content of the link like this. So here we have the image as the content of this link.
+
+Save. Reload. And now, when we hover over the image, the cursor changes to a hand. And if we click the image, we go to reddit.com. And this is it. To turn an image into a clickable link, you just put that image inside the anchor element.
+
+Remember that when we place an element inside an element it's called nesting. So here we nested this image inside this anchor element.
+
+And because this image is nested inside the anchor element, it's also a child to this element. And the anchor element is a parent element to this image. But the anchor element itself is a child element to the paragraph. And the paragraph is a parent element to the anchor.
+
+We are gradually learning these terms parent, child and nested HTML elements because we'll encounter them in the CSS part of this course.
+</Lesson 25>
+<Lesson 27>
+Now, without the paragraphs, the images are on the same line. So let's learn two more HTML elements to move an element to a new line. For that, in VS Code, right after the anchor element, write the following. Left angle bracket, br, right angle bracket.
+
+Save. Reload. And now the second image went to the new line. The br element stands for break and it makes everything that follows it go to the next line. The br element is a void element so we don't need to add a closing tag.
+
+Right now the third image is on the next line only because there is not enough horizontal space here. If we resize the window to add more horizontal space, now both the second and the third images are on the same line.
+
+And if we want to make sure that this third image always stays on the next line to the bold image, we can use the BR tag again after the bold image. So BR, Save, Reload. Now they are on the separate lines. And it doesn't matter how much horizontal space we have.
+
+So, the br-element is short for break and it's like pressing enter, only using an HTML element instead. And also notice that, unlike paragraphs, the br-element doesn't add any vertical space between the lines.
+
+We can also use the br-element to split text. So, for example, if we add some plain text, like this is a sentence of plain text. Reload. This image is on the same line with the text because, remember, images by default behave like text. So the browser treats this image by default like another word before this text.
+
+Now let's add the BR element in the middle of the text and see what happens. Save. Reload. And the text after the BR element goes to the next line, but the text before the BR element stays on the same line with this image.
+</Lesson 27>
+<Lesson 28>
+Now let's learn the last HTML element in this tutorial. For that let's remove this first br element here and instead we'll write left angle bracket hr right angle bracket.
+
+Now let's see what happens in the browser. Save. Reload. Okay, the HR element also moves this image to the next line and it also adds this gray line with a bit of vertical space above and below.
+
+The hr element stands for horizontal rule and just like the br element it moves everything that follows to the next line. And it also adds this thin horizontal gray line with some space above and below.
+
+Now let's replace the remaining BR elements to have more practice. Save. Reload. And we have this line here and this line here. So use the BR element whenever you need to move text elements to a new line. And use the HR element whenever you need more visual separation.
+
+In this tutorial, you've learned how to add links and images to your web page with HTML. You learned about URLs and how to use them with links and images. And now you know the most important basics of HTML. And in addition to HTML, in the next tutorial, we'll start learning CSS. CSS will make creating websites more rewarding and interesting.
+</Lesson 28>
+</Lessons for which I want you create quizzes>

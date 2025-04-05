@@ -1,0 +1,224 @@
+<Quiz 4>
+  <lessons the quizz covers>
+    Lesson 12, Lesson 13, Lesson 14, Lesson 15
+  </lessons the quizz covers>
+  <Insert after>
+    Lesson 15
+  </Insert after>
+  <Quizz Title>
+    Level Up with HTML Links
+  </Quizz Title>
+  <Quizz description>
+    Test your knowledge of anchor elements and link behavior.
+  </Quizz description>
+
+  <Question 1>
+    <Description>
+      What HTML element is used to create a clickable link?
+    </Description>
+    <Answer 1>
+      <Is Correct>
+        yes
+      </Is Correct>
+      <Content>
+        <a>
+      </Content>
+      <Explanation>
+        Why? The anchor element <a> is used in HTML to create clickable links on web pages.
+      </Explanation>
+    </Answer 1>
+    <Answer 2>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        <link>
+      </Content>
+      <Explanation>
+        Why? <link> is used for linking external resources like stylesheets, not creating clickable links.
+      </Explanation>
+    </Answer 2>
+    <Answer 3>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        <href>
+      </Content>
+      <Explanation>
+        Why? href is an attribute, not an HTML element.
+      </Explanation>
+    </Answer 3>
+    <Where discussed>
+      Lesson 12
+    </Where discussed>
+  </Question 1>
+
+  <Question 2>
+    <Description>
+      You wrote <a>Reddit</a> with no href attribute. What happens on the page?
+    </Description>
+    <Answer 1>
+      <Is Correct>
+        yes
+      </Is Correct>
+      <Content>
+        The word “Reddit” appears but it’s not clickable
+      </Content>
+      <Explanation>
+        Why? Without the href attribute, the anchor behaves like regular text.
+      </Explanation>
+    </Answer 1>
+    <Answer 2>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        The browser opens reddit.com
+      </Content>
+      <Explanation>
+        Why? Only anchor tags with a valid href attribute will redirect to a URL.
+      </Explanation>
+    </Answer 2>
+    <Answer 3>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        The page shows an error
+      </Content>
+      <Explanation>
+        Why? This is valid HTML, just incomplete as a link.
+      </Explanation>
+    </Answer 3>
+    <Where discussed>
+      Lesson 12
+    </Where discussed>
+  </Question 2>
+
+  <Question 3>
+    <Description>
+      What does the target="_blank" attribute do?
+    </Description>
+    <Answer 1>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        It adds a blank space after the link
+      </Content>
+      <Explanation>
+        Why? The target attribute controls how the link opens, not visual spacing.
+      </Explanation>
+    </Answer 1>
+    <Answer 2>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        It reloads the current page
+      </Content>
+      <Explanation>
+        Why? Reloading happens when the href is empty, not when using target.
+      </Explanation>
+    </Answer 2>
+    <Answer 3>
+      <Is Correct>
+        yes
+      </Is Correct>
+      <Content>
+        It opens the link in a new browser tab
+      </Content>
+      <Explanation>
+        Why? target="_blank" opens the linked page in a new tab, commonly used for external links.
+      </Explanation>
+    </Answer 3>
+    <Where discussed>
+      Lesson 15
+    </Where discussed>
+  </Question 3>
+
+  <Question 4>
+    <Description>
+      In a real-world example, you want to link to google.com. Which is the correct code?
+    </Description>
+    <Answer 1>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        <a>https://google.com</a>
+      </Content>
+      <Explanation>
+        Why? Without the href attribute, this is just text.
+      </Explanation>
+    </Answer 1>
+    <Answer 2>
+      <Is Correct>
+        yes
+      </Is Correct>
+      <Content>
+        <a href="https://google.com">Google</a>
+      </Content>
+      <Explanation>
+        Why? This properly uses the href attribute to define the destination and shows link text.
+      </Explanation>
+    </Answer 2>
+    <Answer 3>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        <a link="https://google.com">Google</a>
+      </Content>
+      <Explanation>
+        Why? The attribute name must be href, not link.
+      </Explanation>
+    </Answer 3>
+    <Where discussed>
+      Lesson 13
+    </Where discussed>
+  </Question 4>
+
+  <Question 5>
+    <Description>
+      Which of these best defines what a URL is?
+    </Description>
+    <Answer 1>
+      <Is Correct>
+        yes
+      </Is Correct>
+      <Content>
+        The full address to a web page or resource
+      </Content>
+      <Explanation>
+        Why? URL stands for Uniform Resource Locator, which points to a specific web location.
+      </Explanation>
+    </Answer 1>
+    <Answer 2>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        A styling tool for formatting links
+      </Content>
+      <Explanation>
+        Why? URLs are not about styling—they’re about navigation.
+      </Explanation>
+    </Answer 2>
+    <Answer 3>
+      <Is Correct>
+        no
+      </Is Correct>
+      <Content>
+        A type of tag only used in CSS
+      </Content>
+      <Explanation>
+        Why? URL is not a CSS tag; it is a browser address format.
+      </Explanation>
+    </Answer 3>
+    <Where discussed>
+      Lesson 14
+    </Where discussed>
+  </Question 5>
+</Quiz 4>

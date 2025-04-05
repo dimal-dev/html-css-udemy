@@ -1,6 +1,6 @@
 <?php
 
-$file = 'quiz_003.txt';
+$file = 'quiz_03_3_008.txt';
 $fullPath = __DIR__ . DIRECTORY_SEPARATOR . $file;
 $content = file_get_contents($fullPath);
 
@@ -64,7 +64,7 @@ function prepareQuestions($content) {
 
         $answers = [];
         foreach ($answersRaw as $key => $answerRaw) {
-            $isCorrect = in_array(extractSimpleValue($answerRaw, 'Is Correct'), ['true', 'yes']);
+            $isCorrect = in_array(strtolower(extractSimpleValue($answerRaw, 'Is Correct')), ['true', 'yes']);
             $content = extractSimpleValue($answerRaw, 'Content');
             $explanation = extractSimpleValue($answerRaw, 'Explanation');
             $answers[] = [

@@ -1,0 +1,196 @@
+<Quiz 8>
+<lessons the quizz covers>
+    Lesson 27
+    Lesson 28
+</lessons the quizz covers>
+<Insert after>
+    Lesson 28
+</Insert after>
+<Quizz Title>
+    New Lines and Visual Breaks
+</Quizz Title>
+<Quizz description>
+    Let’s check how well you understand line breaks and horizontal rules in HTML!
+</Quizz description>
+
+<Question 1>
+    <Description>
+        What does the <br> tag do in HTML?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            It moves the following content to a new line without adding vertical space.
+        </Content>
+        <Explanation>
+            Why? The <br> tag creates a line break like pressing Enter, but it doesn’t add extra vertical spacing.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            It adds a horizontal gray line with vertical spacing.
+        </Content>
+        <Explanation>
+            Why? That describes the <hr> tag, not <br>.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            It wraps the text inside a new paragraph.
+        </Content>
+        <Explanation>
+            Why? <p> is used to create paragraphs; <br> only breaks lines without adding paragraph formatting.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 27
+    </Where discussed>
+</Question 1>
+
+<Question 2>
+    <Description>
+        Which of the following HTML elements creates a horizontal line across the page?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            <br>
+        </Content>
+        <Explanation>
+            Why? <br> only creates a line break; it doesn’t draw a visual horizontal line.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            <hr>
+        </Content>
+        <Explanation>
+            Why? The <hr> element creates a horizontal rule with space above and below.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            <line>
+        </Content>
+        <Explanation>
+            Why? <line> is not a valid HTML element.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 28
+    </Where discussed>
+</Question 2>
+
+<Question 3>
+    <Description>
+        You added a <br> after a sentence, but you still see the next sentence on the same line. What is the most likely reason?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            You used double quotes around the text.
+        </Content>
+        <Explanation>
+            Why? Quotes have no effect on line breaks in HTML.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            You may have forgotten the right angle bracket or mistyped the tag.
+        </Content>
+        <Explanation>
+            Why? Incorrect syntax prevents the browser from recognizing the <br> element.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            The <br> tag needs a closing tag like </br>.
+        </Content>
+        <Explanation>
+            Why? <br> is a void element and does not require or allow a closing tag.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 27
+    </Where discussed>
+</Question 3>
+
+<Question 4>
+    <Description>
+        You’re building a personal web page and want to add a thin visual separator between two sections of content. Which tag should you use?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            <break>
+        </Content>
+        <Explanation>
+            Why? <break> is not a valid HTML tag.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            <p>
+        </Content>
+        <Explanation>
+            Why? <p> adds paragraph structure but not a visual separator.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            <hr>
+        </Content>
+        <Explanation>
+            Why? <hr> adds a visual horizontal line that separates content sections.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 28
+    </Where discussed>
+</Question 4>
+
+<Question 5>
+    <Description>
+        Which of these is a true statement about the difference between <br> and <hr>?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            <br> adds a visual line, and <hr> just moves text to a new line.
+        </Content>
+        <Explanation>
+            Why? It's the other way around—<br> breaks the line without visuals, <hr> creates a visual separator.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            <br> only breaks the line; <hr> breaks the line and adds a visual horizontal rule.
+        </Content>
+        <Explanation>
+            Why? This correctly describes both elements and their roles in HTML.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Both <br> and <hr> add paragraphs with vertical space.
+        </Content>
+        <Explanation>
+            Why? Neither tag creates paragraphs; <br> adds a break with no extra space, and <hr> adds a line and spacing.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 28
+    </Where discussed>
+</Question 5>
+
+</Quiz 8>

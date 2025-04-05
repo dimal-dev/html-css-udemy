@@ -1,0 +1,125 @@
+⭐️Question 1:
+What HTML element is used to create a clickable link?
+
+1️⃣ ✅ Answer 1:
+<a>
+😎Why:
+Why? The anchor element <a> is used in HTML to create clickable links on web pages.
+--
+
+2️⃣ Answer 2:
+<link>
+😎Why:
+Why? <link> is used for linking external resources like stylesheets, not creating clickable links.
+--
+
+3️⃣ Answer 3:
+<href>
+😎Why:
+Why? href is an attribute, not an HTML element.
+
+☁️DISCUSSED:
+Lesson 12
+
+##########
+
+⭐️Question 2:
+You wrote <a>Reddit</a> with no href attribute. What happens on the page?
+
+1️⃣ ✅ Answer 1:
+The word “Reddit” appears but it’s not clickable
+😎Why:
+Why? Without the href attribute, the anchor behaves like regular text.
+--
+
+2️⃣ Answer 2:
+The browser opens reddit.com
+😎Why:
+Why? Only anchor tags with a valid href attribute will redirect to a URL.
+--
+
+3️⃣ Answer 3:
+The page shows an error
+😎Why:
+Why? This is valid HTML, just incomplete as a link.
+
+☁️DISCUSSED:
+Lesson 12
+
+##########
+
+⭐️Question 3:
+What does the target="_blank" attribute do?
+
+1️⃣ Answer 1:
+It adds a blank space after the link
+😎Why:
+Why? The target attribute controls how the link opens, not visual spacing.
+--
+
+2️⃣ Answer 2:
+It reloads the current page
+😎Why:
+Why? Reloading happens when the href is empty, not when using target.
+--
+
+3️⃣ ✅ Answer 3:
+It opens the link in a new browser tab
+😎Why:
+Why? target="_blank" opens the linked page in a new tab, commonly used for external links.
+
+☁️DISCUSSED:
+Lesson 15
+
+##########
+
+⭐️Question 4:
+In a real-world example, you want to link to google.com. Which is the correct code?
+
+1️⃣ Answer 1:
+<a>https://google.com</a>
+😎Why:
+Why? Without the href attribute, this is just text.
+--
+
+2️⃣ ✅ Answer 2:
+<a href="https://google.com">Google</a>
+😎Why:
+Why? This properly uses the href attribute to define the destination and shows link text.
+--
+
+3️⃣ Answer 3:
+<a link="https://google.com">Google</a>
+😎Why:
+Why? The attribute name must be href, not link.
+
+☁️DISCUSSED:
+Lesson 13
+
+##########
+
+⭐️Question 5:
+Which of these best defines what a URL is?
+
+1️⃣ ✅ Answer 1:
+The full address to a web page or resource
+😎Why:
+Why? URL stands for Uniform Resource Locator, which points to a specific web location.
+--
+
+2️⃣ Answer 2:
+A styling tool for formatting links
+😎Why:
+Why? URLs are not about styling—they’re about navigation.
+--
+
+3️⃣ Answer 3:
+A type of tag only used in CSS
+😎Why:
+Why? URL is not a CSS tag; it is a browser address format.
+
+☁️DISCUSSED:
+Lesson 14
+
+##########
+

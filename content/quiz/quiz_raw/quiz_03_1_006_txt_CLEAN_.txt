@@ -1,0 +1,125 @@
+⭐️Question 1:
+What HTML element is used to display an image on a web page?
+
+1️⃣ ✅ Answer 1:
+<img>
+😎Why:
+Why? <img> is the correct element used to embed an image in HTML.
+--
+
+2️⃣ Answer 2:
+<image>
+😎Why:
+Why? <image> is not a valid HTML tag; the correct tag is <img>.
+--
+
+3️⃣ Answer 3:
+<src>
+😎Why:
+Why? <src> is an attribute used inside the <img> tag, not a standalone element.
+
+☁️DISCUSSED:
+Lesson 19
+
+##########
+
+⭐️Question 2:
+Why might an image not appear on your web page even if you've used the <img> element?
+
+1️⃣ Answer 1:
+Because the browser doesn't support images
+😎Why:
+Why? All modern browsers support images; the issue is almost always in your code.
+--
+
+2️⃣ ✅ Answer 2:
+Because you forgot the right angle bracket at the end of the tag
+😎Why:
+Why? Forgetting the right angle bracket breaks HTML syntax and prevents the image from loading.
+--
+
+3️⃣ Answer 3:
+Because <img> tags always need a closing tag
+😎Why:
+Why? <img> is a void element and doesn't require a closing tag.
+
+☁️DISCUSSED:
+Lesson 20
+
+##########
+
+⭐️Question 3:
+You’re making a simple blog. You want two images to appear on separate lines, even if there’s enough space for them side by side. What’s one way to do this?
+
+1️⃣ Answer 1:
+Use the href attribute on the second image
+😎Why:
+Why? href is for links and has no effect on image placement.
+--
+
+2️⃣ Answer 2:
+Add a closing tag for <img>
+😎Why:
+Why? <img> is a void element and doesn’t require a closing tag; this won’t change layout.
+--
+
+3️⃣ ✅ Answer 3:
+Wrap each image in a separate <p> tag
+😎Why:
+Why? Paragraph tags force images to appear on separate lines, behaving like block-level elements.
+
+☁️DISCUSSED:
+Lesson 21
+
+##########
+
+⭐️Question 4:
+Which of the following is true about the src attribute in the <img> tag?
+
+1️⃣ ✅ Answer 1:
+It defines the URL of the image you want to show.
+😎Why:
+Why? The src attribute specifies the image’s path so the browser knows where to load it from.
+--
+
+2️⃣ Answer 2:
+It styles the image with borders and padding.
+😎Why:
+Why? Styling is done using CSS, not through the src attribute.
+--
+
+3️⃣ Answer 3:
+It provides alternate text for the image.
+😎Why:
+Why? The alt attribute provides alternate text, not src.
+
+☁️DISCUSSED:
+Lesson 19
+
+##########
+
+⭐️Question 5:
+A student claims: “I used the <img> tag correctly, but the image isn’t loading.” What is the most helpful first thing to check?
+
+1️⃣ ✅ Answer 1:
+Whether the image URL in the src attribute is valid and reachable
+😎Why:
+Why? If the src path is broken or incorrect, the image won’t appear.
+--
+
+2️⃣ Answer 2:
+If the image is wrapped inside an <h1> tag
+😎Why:
+Why? Wrapping the image in an <h1> doesn't prevent it from loading.
+--
+
+3️⃣ Answer 3:
+Whether the image file is a .docx format
+😎Why:
+Why? Images must be in a supported image format like .jpg, .png, .gif—not document formats.
+
+☁️DISCUSSED:
+Lesson 20
+
+##########
+

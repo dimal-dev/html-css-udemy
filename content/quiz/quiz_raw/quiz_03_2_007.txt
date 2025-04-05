@@ -1,0 +1,197 @@
+<Quiz 7>
+<lessons the quizz covers>
+    Lesson 22
+    Lesson 24
+    Lesson 25
+</lessons the quizz covers>
+<Insert after>
+    Lesson 25
+</Insert after>
+<Quizz Title>
+    Linking and Organizing Images
+</Quizz Title>
+<Quizz description>
+    This quiz helps reinforce linking images and managing your file structure.
+</Quizz description>
+
+<Question 1>
+    <Description>
+        What is the difference between an absolute URL and a relative URL for an image in HTML?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            An absolute URL points to an image on the web, while a relative URL points to an image on your computer.
+        </Content>
+        <Explanation>
+            Why? Absolute URLs are complete web addresses, while relative URLs are paths to images within your website’s folders.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            An absolute URL is a type of file path on your computer, while a relative URL is a link to an image hosted online.
+        </Content>
+        <Explanation>
+            Why? Absolute URLs are for images on the web, not file paths on your computer.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            An absolute URL uses a file path that starts with "C:\" for Windows, while a relative URL does not.
+        </Content>
+        <Explanation>
+            Why? Absolute URLs contain the full address, including the domain and file path, while relative URLs are specific to your website’s folder structure.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 22
+    </Where discussed>
+</Question 1>
+
+<Question 2>
+    <Description>
+        After moving your image to a folder called "images" on your computer, which of the following should the src attribute look like to display the image properly?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            src="images/reddit-logo.png"
+        </Content>
+        <Explanation>
+            Why? The src attribute correctly points to the folder and image file in your website's directory.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            src="reddit-logo.png"
+        </Content>
+        <Explanation>
+            Why? This assumes the image is in the same folder as the HTML file, but it has been moved to a subfolder named "images."
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            src="my-website/images/reddit-logo.png"
+        </Content>
+        <Explanation>
+            Why? The path should be relative to your current HTML file location, and "my-website" may not be necessary if you're already inside that folder.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 24
+    </Where discussed>
+</Question 2>
+
+<Question 3>
+    <Description>
+        How can you turn an image into a clickable link in HTML?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            Wrap the image inside an anchor element with the href attribute pointing to the desired URL.
+        </Content>
+        <Explanation>
+            Why? Nesting an <img> element inside an anchor element <a> creates a clickable image that links to a URL.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Use the href attribute inside the <img> tag to create the link.
+        </Content>
+        <Explanation>
+            Why? The href attribute should be used in the <a> tag, not the <img> tag.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Add the link to the alt attribute of the <img> tag.
+        </Content>
+        <Explanation>
+            Why? The alt attribute provides alternative text for the image but does not make the image clickable.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 25
+    </Where discussed>
+</Question 3>
+
+<Question 4>
+    <Description>
+        What happens if you don't update the src attribute when you move an image to a different folder?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            The browser will show a broken image icon because it cannot find the image at the old path.
+        </Content>
+        <Explanation>
+            Why? If the src path isn't updated to reflect the new folder, the browser can’t locate the image and displays an error icon instead.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            The browser will automatically search for the image in the new folder.
+        </Content>
+        <Explanation>
+            Why? The browser doesn't automatically adjust file paths—it's crucial to update the src attribute when moving files.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            The image will appear with a small watermark indicating that it has been moved.
+        </Content>
+        <Explanation>
+            Why? The browser won't add any watermark; it simply cannot find the image at the specified location if the src path is incorrect.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 24
+    </Where discussed>
+</Question 4>
+
+<Question 5>
+    <Description>
+        You want to link an image to a webpage. Which of the following is a real-world use case for this?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            Adding a company logo that redirects to the company’s homepage when clicked.
+        </Content>
+        <Explanation>
+            Why? It’s common to link logos to the homepage to provide a convenient navigation option.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Using an image as a background for a paragraph.
+        </Content>
+        <Explanation>
+            Why? To use an image as a background, CSS is used, not the anchor <a> element.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Clicking an image to open a document saved on the user’s computer.
+        </Content>
+        <Explanation>
+            Why? For security reasons, browsers do not allow direct access to local files like this using <img> and <a>.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 25
+    </Where discussed>
+</Question 5>
+
+</Quiz 7>

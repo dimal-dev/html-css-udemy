@@ -1,0 +1,100 @@
+⭐️Question 1:
+Which of the following is an internal link?
+
+1️⃣ Answer 1:
+<a href="https://reddit.com">Reddit</a>
+😎Why:
+Why? This is an external link since it points to another website.
+--
+
+2️⃣ ✅ Answer 2:
+<a href="attributes.html">Attributes Page</a>
+😎Why:
+Why? This points to another file in the same folder, making it an internal link.
+--
+
+3️⃣ Answer 3:
+<a href="https://google.com">Google</a>
+😎Why:
+Why? Any link starting with https:// is external to your website.
+
+☁️DISCUSSED:
+Lesson 17
+
+##########
+
+⭐️Question 2:
+Which of the following is a valid absolute URL?
+
+1️⃣ Answer 1:
+attributes.html
+😎Why:
+Why? This is a relative URL because it doesn't contain a protocol or domain.
+--
+
+2️⃣ Answer 2:
+links-internal
+😎Why:
+Why? This is not a valid absolute URL—it lacks a scheme and domain.
+--
+
+3️⃣ ✅ Answer 3:
+https://www.google.com
+😎Why:
+Why? This contains the protocol, domain name, and full path, making it an absolute URL.
+
+☁️DISCUSSED:
+Lesson 18
+
+##########
+
+⭐️Question 3:
+You renamed a file from links.html to links-external.html but didn’t update the href in your link. What happens?
+
+1️⃣ ✅ Answer 1:
+The link is broken and shows an error
+😎Why:
+Why? If the file no longer exists at the given path, the browser shows a “file not found” error.
+--
+
+2️⃣ Answer 2:
+The link updates automatically
+😎Why:
+Why? HTML links must be updated manually when filenames change.
+--
+
+3️⃣ Answer 3:
+The page reloads without any changes
+😎Why:
+Why? A broken link doesn’t reload—it leads to an error page.
+
+☁️DISCUSSED:
+Lesson 17
+
+##########
+
+⭐️Question 4:
+What makes a URL relative instead of absolute?
+
+1️⃣ Answer 1:
+It uses capital letters
+😎Why:
+Why? Capitalization doesn’t define relative vs. absolute—it’s about the structure.
+--
+
+2️⃣ ✅ Answer 2:
+It doesn’t include the protocol or full website address
+😎Why:
+Why? Relative URLs skip the domain and protocol, pointing to a file based on folder structure.
+--
+
+3️⃣ Answer 3:
+It links to YouTube
+😎Why:
+Why? YouTube links are external, not relative or internal to your project.
+
+☁️DISCUSSED:
+Lesson 18
+
+##########
+
