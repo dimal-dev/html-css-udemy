@@ -1,0 +1,174 @@
+<Lessons for which I want you create quizzes>
+<Lesson 35>
+In this tutorial, we'll start learning how to style text with CSS, because we'll need that to create this Reddit sidebar. We will start by creating a new folder under my website folder. We'll call it text-css.
+
+Make sure that the folder is selected by clicking it, and then we'll create a new file inside this folder. The name will be text-size.html. We will use this file to learn how to change the size of our text with CSS.
+
+Inside the file I'll create two paragraphs. The first one will contain text 1, default size, and the second one will be for text 2, custom size. Save the file and next I'll drag it into Chrome to open it.
+
+Now let's use CSS to make the text of the second paragraph bigger. So I'll go back to VS Code and to start writing CSS I'll need to add the style element. And now inside the style element I can write CSS code to change the text size of the second paragraph. We want to target only the text of this paragraph and do not touch the first paragraph.
+
+So to target only the second paragraph, we know that we can use for that a class selector. To use a class selector from the CSS code, first what we need to do is to add the class attribute to the second paragraph.
+
+let's name it text-custom and we can choose whatever names we want for our classes so instead of this we could write dog or space rocket and they are valid class names however using
+
+Text custom is better here because it reflects our intentions, what we are going to do here, which makes this code easier to understand. And as a software developer, you always, always want to make your code very easy to understand.
+
+Next, I'll target this paragraph from our CSS code using a class selector. For that, I'll type dot because every class selector starts with a dot. Then goes the class name, so it will be text-custom. Space.
+
+and make sure that there are no extra symbols or spaces between the dot and the class name. Otherwise you'll break a CSS syntax and it won't work. Next after the class name let's add curly brackets. So between the curly brackets we add CSS properties that we want to change about
+
+This paragraph. To change the text size in CSS we use the property called font-size. So this is the name of the property we're setting here and then we need to add colon and then space to set a specific value or size of that property.
+
+So this colon separates the property name from the property value we are about to set. And this space here and also this space here, they are not required by CSS syntax. But they add a little bit more of visual separation and they make our code easier to read. And just like with images, we can set the size of our font using pixels.
+
+Let's write 50 pixels here and see what happens in the browser. Then, after the value, we need to put a semicolon. Think of this property declaration as a sentence in English. And this semicolon is just like a period you put at the end of the sentence.
+
+Save the file. Reload the page. Okay, this text is definitely bigger. In fact, I think it is too big. So let's make it smaller. We can do this by decreasing this value to, say, 25 pixels to make it two times smaller. Save. Reload. That's better. And this is how the text with the font size of 25 pixels looks.
+
+So to change the size of our text we use the font size property and we adjust this value to make the text bigger or smaller. The smallest value is one pixel and it makes our text really really tiny. And usually we adjust this number until we make our text the size we want on the web page.
+
+In practice, most of the time we set the font size value somewhere between 10 and 30 pixels. So it may be, say, 14, for example, and the 14-pixel text looks like this. But it's possible to use a really big number here, for example, 500 pixels.
+
+and this value makes our text really enormous which can be fun to play with for the sake of learning but most of the time on practice it makes this text unreadable and for real websites you'll use numbers like 14 pixels or 20 pixels or 25 pixels so let's change it back to 14 pixels
+
+Okay, previously I mentioned that this space and also this space, they are not required by the rules of CSS syntax. And if we remove them and save and reload the page, everything works just fine.
+
+And also, this new line and these spaces and this new line, they're also not required by CSS syntax. And if we remove them, like this, and this new line too, and save the file and reload the page, everything still works just fine.
+
+But now, without those new lines and spaces, our CSS code is harder to understand and change. Especially when we add more CSS properties like this one to the CSS rule. So it is a good practice to make sure that every CSS property is indented and on its own line.
+
+and that also we have this space here before the curly bracket and also here after the colon. It's a common practice among developers to format CSS code like this because this way the code is much easier to read and change.
+
+So to change the size of our text in CSS we target the text using a CSS selector. It can be a class selector or it can be a tag selector. So for example I can replace this with a tag selector. Let's change the text size for both paragraphs. For that I'll type the p character because that's the name of the paragraph element.
+
+And let's change the font size to, say, 25 pixels so that we can easily notice the changes. If I save and reload the page, now both paragraphs are bigger. And to change the size of the text, we use the font size property and we set its value using pixels and the number we want to set it to.
+
+</Lesson 35>
+
+<Lesson 36>
+Okay, next let's see how to change the color of our text with CSS. For that we'll create a new file under the text.css folder. Its name will be text-color.html.
+
+Inside this file we'll also add two paragraphs. The first paragraph will be text default and the second paragraph will be text red. We'll save the file and drag it into Chrome to open it. At this moment the text of both paragraphs is black because by default all text is black. Let's use CSS to change the color of the second paragraph to red.
+
+But before we change the text color here, let's increase the text size of both paragraphs because they are too small, which makes it harder to notice the changes we do to our text. So to change the size of our text, to have more practice with writing CSS code, I'm not going to zoom in this time, let's use CSS to increase the text size of these paragraphs.
+
+Okay, so for that I'll start by adding the style element to our web page so that we can write CSS code. And because we want to target all the paragraphs on our web page, I'll use the tag selector, so P. And again, to use the tag selector, we just write the element name without angle brackets that we want to target. And in this case, it's P for paragraphs.
+
+Next I'll add a space to format our code properly, an opening curly bracket, enter to expand it. Then between the curly brackets we specify what CSS properties we want to change about the HTML elements that we target with the CSS selector. So to increase the text size for our paragraphs we know that we use the font
+
+size property and then after the name of the property we add a colon to separate the name of the property from its value. Colon is not optional here, it is required by CSS syntax.
+
+If we don't add a column here, our CSS code won't work. Then we'll add a space, which is optional, but it improves code readability. Next, we set the actual font size in pixels. Let's try to set it to 80 pixels to make the text big and easy to see for us.
+
+Lastly, we finish it with a semicolon. Save, reload, and there you go. The paragraph's text is big enough.
+
+And now we are ready to change the color of this text to red with CSS. So we want to change the text color of this paragraph to red but we want to leave the text color of this paragraph black. And in this case we already know that if we want to target specifically this paragraph
+
+we can use a class selector and to use a class selector we first need to add the class attribute and the value let's name this class text red because we want to make the text red then we'll target this paragraph from our CSS code so a class selector starts with a dot and then goes the name of the class which is text
+
+red. Generally in CSS if we want to change something about our web page we use a CSS property. To change the text color we use the property called color. Then goes colon to separate the property name from its value. And then to set the text color to red we can just write red here. And lastly a semicolon to finish setting this property.
+
+Also notice that VS Code conveniently visualizes the color for us here by adding this red square. Now save, reload, and the text color is now red. And this is how easy to change the color of your text with CSS. We can use a class selector or a tag selector. Then we use the color property.
+
+and as the value we can use a keyword like red, blue, green or one of many colors that CSS provides for us
+
+Okay, to practice more, let's create a few more paragraphs and change their text color. We'll make the text color of this paragraph green. So the text will be text green and class name will be text green. Now save, reload. It's black by default.
+
+And also notice that the text size of this paragraph is the same as for these two, so it's 80 pixels. And this is because we have this CSS rule that targets all the paragraphs on our page with a tag selector. And when we add more paragraphs to our page,
+
+This rule applies to them too and sets their font size to 80 pixels. Okay, so to change the text color of this paragraph to green we'll need to have another CSS rule.
+
+this rule or target the paragraph with a class selector which is going to be text green now then we know that inside the curly brackets we need to use a CSS property so we want to change its color for that we'll use the color property and we want to set its color to green so we'll use the value green
+
+semicolon. Save. Reload. Now the text is green. Okay, that's great, but where can you get these color keywords yourself? So let me show you how to find them using Google. Go to google.com, then search for CSS color names.
+
+Next, open this second search result for MDN Web Docs, namely Named Color. MDN is one of the best resources that you can use to get information about HTML and CSS. And then scroll down until you see this table with colors and the keywords that you can use for these colors.
+
+There are many different colors on this page that you can experiment with. Just find the color you like here, then use its corresponding keyword from here. So let's use a couple of colors from this page on our web page.
+
+I'll use this dark violet color because I like how it looks. And also maybe this dodger blue color. For that, I will add another paragraph. Text will be text dark violet. The class name, I'll add text dark violet.
+
+Then I'm gonna copy this class name and use a class selector to target that paragraph. And to set the text color of this paragraph I'll use the color property and we know that
+
+The keyword that I need to use is dark violet without spaces. So in VS Code, I'm going to type dark violet and semicolon. Save and go back to our textcolor.html page. Reload the page and here is the text dark violet paragraph.
+
+And for the Dodger Blue we'll also need another paragraph. It's gonna be text Dodger Blue. And then the class name will be text Dodger Blue 2. Then I'll copy the class name and I will use a class selector for that. We are changing the color property here.
+
+And the value that we want to set is Dodger Blue. So I'm gonna select this keyword, Command C to copy it, and I'll paste it here and add a semicolon to make our CSS code valid. Then Save.
+
+Go back to the web page, reload, and here is this text, which is Dodger Blue. Great. Now we have text of different colors on our page. The default text color is black. If we want to change the color of our text, we use the color CSS property. And then one of the color keywords that we can get from, for example, this page.
+
+</Lesson 36>
+
+<Lesson 37>
+Okay, the next thing we'll learn is how to change the case of our text with CSS, which is actually quite easy to do with what you already know. So for that, let's create a new file under the text-css folder and the filename will be text-case.html.
+
+Inside this file we'll add two paragraphs. The first paragraph will be regular text, and the second paragraph will be uppercase text. Initially, this text is not uppercase, but we will use CSS to make it uppercase.
+
+Next, we'll add the style element to write some CSS code in it. And we'll target all the paragraphs and make their font size 80 pixels so that they are big enough right off the bat.
+
+So this is a tag selector, it targets all the paragraphs on our page and we use the font size property with this value to change the font size of all the elements that this selector targets. Save the file and then drag it into Chrome to open.
+
+And there you go, we've got two paragraphs that we are ready to style with CSS. So again, as previously, we want to leave this text like this and we want to change only this second text to uppercase.
+
+And to make this text uppercase with CSS, we'll use another CSS property. Because as you already know, in CSS, like 99% of the time, if you want to change something about your web page, you'll use a CSS property for that. So first, let's add a class of text uppercase.
+
+to the second paragraph. Then, we will add another CSS rule that targets this paragraph through this class. For that, I'll write dot, text, uppercase. Next, I'll add a space and a pair of curly brackets.
+
+Inside the curly brackets we will use another CSS property that's called text-transform to change the case of our text. Then we'll add a colon and to make the text uppercase we'll write uppercase here and a semicolon to finish this declaration. Save, reload and now
+
+The text of this paragraph is all uppercase. So we use the TextTransform property to change the original case of the text. And when we set this property to uppercase, the text becomes uppercase in the browser regardless of the original text case. So it doesn't matter whether this character is uppercase or lowercase or other characters.
+
+All text becomes uppercase. Now that we know how to change the color of our text with CSS to have more practice, let's also make the text color of this paragraph gray. For that we will add a new line here.
+
+Because remember, it improves readability and is a good practice to start every CSS property from a new line. Then to change the text color of this paragraph, we use the color property. We want to set the color to gray, so I'll use the gray keyword.
+
+And now we're setting two CSS properties in this one rule, which is perfectly fine. It's a common thing to set 2, 3, 5 or even 10 properties in one CSS rule. Save, reload, and now this text is grey.
+</Lesson 37>
+
+<Lesson 38>
+What's also interesting is currently on this web page we've got two CSS rules that style this paragraph. The first CSS rule targets all the paragraphs on the page, including this one.
+
+And it changes the font size to 80 pixels. And then there is this second CSS rule that also styles the second paragraph. And it makes the text uppercase and it changes its color to gray. This all shows that in CSS it's possible to have multiple CSS rules that target
+
+one HTML element and they style its different properties. And when multiple CSS rules, like here, target one HTML element and they change different CSS properties about this element, like in our case, all those properties add up and are applied.
+
+So for this paragraph, this, it's like we're having one big CSS rule, like this, that targets this paragraph. Okay, let me undo this. So when two or more CSS rules target the same HTML element and change its different properties,
+
+The browser adds them up and applies them all. A more complex situation is when two or more CSS rules change the same properties about an element.
+
+For example, if this first CSS rule changes the font size of all paragraphs to 80 pixels, but in the second rule we change the font size of only one specific paragraph to, say, 40 pixels.
+
+Now there is a conflict between these two rules over the font size property because they both are competing over setting the font size of the second paragraph to either 80 pixels or 40 pixels. In this conflict a class selector always wins over a tag selector.
+
+because the class selector is more specific we can use it to target only certain elements or a certain subset of elements on the page whereas the tag selector targets all the elements of that type on the page so remember a class selector always wins over a tag selector in such a conflict and now
+
+If we save and reload the page, the second paragraph text is 40 pixels. It's smaller. Even though we still have this CSS rule that tries to set its text size to 80 pixels.
+
+but it loses to this CSS rule and in this case the order of these rules doesn't matter so it doesn't matter whether this rule is after the first one or before it in the code
+
+The class selector wins here anyway. And if we move this second rule up, so it's now before this one, and then save and reload the page, the text is still 40 pixels. And this was a brief introduction to conflicts in CSS rules.
+
+We will discuss it in more detail later in this course. And for now, we've got two more values to explore with the text transform property. To explore them, we'll add another paragraph and its text will be lowercase text. I'll assign it a class that's going to be text lowercase.
+
+We will target this paragraph from our CSS code. Let's remove this extra new line and add another CSS rule that uses a class selector. And as you might have probably guessed from the text itself, we will use the text transform property and we'll set it to lower case.
+
+Then we'll save the file and notice that even though the first character of this paragraph is uppercase, when we reload the page, it's lowercase in the browser and the whole text. Even if I change this original text to be uppercase here in the code. So let's change it to uppercase.
+
+here, save, reload, it's still lowercase in the browser. And also notice that the text size of this paragraph is bigger than this one. So it's now 80 pixels. That's because in this CSS rule we change only the case of this text. And so this third paragraph gets
+
+this CSS property from this second CSS rule, and also this CSS property from this third CSS rule. Because remember, if we are changing different CSS properties in different CSS rules about one HTML element, those properties, they add up. And if we want to change the font size of this paragraph, we can add
+
+another CSS property to this second rule. Let's use font-size and set it to 20 pixels. Save. Reload. And now the text is 20 pixels because
+
+In this conflict, this is a class selector, and this is a tag selector, and a class selector always wins over a tag selector. But let's remove this property because the text is too small, I think, here to see it clearly. And to explore the last value of the TextTransform property, we'll add another paragraph, which will have the text capitalized.
+
+And we'll add a class attribute of text capitalized. So to target this paragraph we'll add another CSS rule and we'll use the text transform property, the value of which will be, as you might probably have guessed, capitalized. So save.
+
+Reload. And now this text is capitalized, which means that every first character of every word is now uppercase. Okay, where are we going to use the text transform property? So Forbes, for example, makes the titles of their articles capitalized. And the text under the photo preview is uppercase.
+
+Stack Overflow, which is one of the most popular Q&A websites for developers, makes the tag names lowercase. And on YouTube, certain buttons are in uppercase. So to change the case of our text, we use the text transform property and we use the uppercase, lowercase or capitalized values.
+
+</Lesson 38>
+</Lessons for which I want you create quizzes>

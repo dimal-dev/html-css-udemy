@@ -1,0 +1,145 @@
+<lessons the quizz covers>
+    Lesson 35
+    Lesson 36
+</lessons the quizz covers>
+<Insert after>
+    Lesson 36
+</Insert after>
+<Quizz Title>
+    Mastering Text Size and Color in CSS
+</Quizz Title>
+<Quizz Title>
+    Make It Big, Make It Red! Quiz on Text Styling
+</Quizz Title>
+<Quizz Title>
+    Your First CSS Styling Milestone!
+</Quizz Title>
+<Quizz description>
+    Let’s check how well you can style text size and color using CSS!
+</Quizz description>
+<Quizz description>
+    Ready to show off your new CSS skills? Let’s style some text!
+</Quizz description>
+<Quizz description>
+    You’ve learned how to make text bigger and more colorful—now prove it!
+</Quizz description>
+
+<Question 1>
+    <Description>
+        What CSS property is used to change the size of text?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>text-size</Content>
+        <Explanation>Why? There’s no CSS property called text-size; the correct one is font-size.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>font-size</Content>
+        <Explanation>Why? font-size is the correct CSS property for setting the size of text in pixels or other units.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>text-font</Content>
+        <Explanation>Why? text-font isn’t a valid CSS property. font-size is the one you need.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 35
+    </Where discussed>
+</Question 1>
+
+<Question 2>
+    <Description>
+        You want to make only the second paragraph on a page red. What selector should you use?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>.text-red</Content>
+        <Explanation>Why? A class selector like .text-red lets you target just that specific paragraph.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>p</Content>
+        <Explanation>Why? This would target all paragraph elements, not just the second one.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>#text-red</Content>
+        <Explanation>Why? This would select an element with ID "text-red", but the class uses a dot, not a hash.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 36
+    </Where discussed>
+</Question 2>
+
+<Question 3>
+    <Description>
+        Real-world scenario: You want to highlight your name on your portfolio page. What CSS property will you use to make your name’s text larger?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>text-transform</Content>
+        <Explanation>Why? text-transform changes the case of text, not its size.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>line-height</Content>
+        <Explanation>Why? line-height adjusts spacing between lines, not the font size.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>Yes</Is Correct>
+        <Content>font-size</Content>
+        <Explanation>Why? font-size is exactly what you use to change the size of text.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 35
+    </Where discussed>
+</Question 3>
+
+<Question 4>
+    <Description>
+        What happens if you forget to add a semicolon at the end of a CSS property declaration?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>The text color changes but the size won't</Content>
+        <Explanation>Why? CSS may ignore the rule entirely, not just part of it—it depends on the browser.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>The CSS rule might break and not work correctly</Content>
+        <Explanation>Why? The semicolon marks the end of the declaration; without it, your CSS might not be applied properly.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>It will still work the same</Content>
+        <Explanation>Why? Not always—especially if there’s another declaration after it, the browser may skip the whole rule.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 35
+    </Where discussed>
+</Question 4>
+
+<Question 5>
+    <Description>
+        Which of the following is the correct way to write a class selector in CSS?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>class="text-big"</Content>
+        <Explanation>Why? That’s HTML syntax for assigning a class, not a selector in CSS.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>p.text-big</Content>
+        <Explanation>Why? This is a valid combined selector, but it's not the simplest standalone class selector.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>Yes</Is Correct>
+        <Content>.text-big</Content>
+        <Explanation>Why? .text-big correctly selects any element with the class "text-big" in CSS.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 35
+    </Where discussed>
+</Question 5>

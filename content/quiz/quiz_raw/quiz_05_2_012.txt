@@ -1,0 +1,145 @@
+<lessons the quizz covers>
+    Lesson 37
+    Lesson 38
+</lessons the quizz covers>
+<Insert after>
+    Lesson 38
+</Insert after>
+<Quizz Title>
+    Transform and Triumph: Text Case & CSS Rule Power!
+</Quizz Title>
+<Quizz Title>
+    Text Transform and Rule Conflicts: Time to Level Up!
+</Quizz Title>
+<Quizz Title>
+    Boost Your CSS Superpowers with Case and Specificity!
+</Quizz Title>
+<Quizz description>
+    Let's see how well you can shape your text and resolve CSS rule conflicts!
+</Quizz description>
+<Quizz description>
+    You’ve learned to control how your text looks and how rules interact—now show off!
+</Quizz description>
+<Quizz description>
+    Time to practice transforming text and understanding who wins when rules collide!
+</Quizz description>
+
+<Question 1>
+    <Description>
+        What CSS property is used to turn normal text into uppercase letters?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>text-case</Content>
+        <Explanation>Why? text-case is not a valid CSS property. The correct one is text-transform.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>text-transform</Content>
+        <Explanation>Why? text-transform is the CSS property used to change text case to uppercase, lowercase, or capitalized.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>font-case</Content>
+        <Explanation>Why? font-case is not a recognized CSS property.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 37
+    </Where discussed>
+</Question 1>
+
+<Question 2>
+    <Description>
+        If one rule sets the font size of all paragraphs to 80px and another sets a specific paragraph’s size to 40px, which will apply?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>The rule that comes last in the CSS file</Content>
+        <Explanation>Why? Order doesn't matter in this case—selector specificity determines the winner.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>The rule using the class selector</Content>
+        <Explanation>Why? A class selector is more specific than a tag selector and wins in case of conflict.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>Both will be applied at the same time</Content>
+        <Explanation>Why? Only one value per property can be applied, and the more specific selector wins.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 38
+    </Where discussed>
+</Question 2>
+
+<Question 3>
+    <Description>
+        Real-world scenario: You want each word in a title to begin with a capital letter. What value should you use for text-transform?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>uppercase</Content>
+        <Explanation>Why? uppercase capitalizes all letters, not just the first letter of each word.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>capitalize</Content>
+        <Explanation>Why? capitalize turns only the first letter of each word into uppercase, which is perfect for titles.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>first-letter</Content>
+        <Explanation>Why? first-letter is a pseudo-element, not a value for text-transform.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 38
+    </Where discussed>
+</Question 3>
+
+<Question 4>
+    <Description>
+        Which of the following is TRUE about combining multiple CSS rules for one element?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>Different CSS rules can apply together if they change different properties</Content>
+        <Explanation>Why? When rules affect different properties (like font-size and color), they add up and apply together.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>Only the last CSS rule applies</Content>
+        <Explanation>Why? All rules can apply unless there’s a conflict over the same property—then specificity decides.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>Only inline styles apply</Content>
+        <Explanation>Why? Inline styles do have high specificity but we’re discussing internal CSS rules here.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 38
+    </Where discussed>
+</Question 4>
+
+<Question 5>
+    <Description>
+        Diagnostic: What is a common mistake when writing text-transform in CSS?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>Using a semicolon at the end</Content>
+        <Explanation>Why? This is correct syntax. Semicolons are required to end property declarations.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>Using text-transform: UpperCase;</Content>
+        <Explanation>Why? CSS values are case-sensitive; the correct value is lowercase: uppercase.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>Writing .text-uppercase as the selector</Content>
+        <Explanation>Why? This is valid syntax for targeting elements with the class "text-uppercase".</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 37
+    </Where discussed>
+</Question 5>
