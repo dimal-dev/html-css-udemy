@@ -1,0 +1,125 @@
+⭐️Question 1:
+What CSS property is used to turn normal text into uppercase letters?
+
+1️⃣ Answer 1:
+text-case
+😎Why:
+Why? text-case is not a valid CSS property. The correct one is text-transform.
+--
+
+2️⃣ ✅ Answer 2:
+text-transform
+😎Why:
+Why? text-transform is the CSS property used to change text case to uppercase, lowercase, or capitalized.
+--
+
+3️⃣ Answer 3:
+font-case
+😎Why:
+Why? font-case is not a recognized CSS property.
+
+☁️DISCUSSED:
+Lesson 37
+
+##########
+
+⭐️Question 2:
+Two CSS rules apply to the same paragraph. One sets font-size to 80px using a tag selector, and the other sets it to 40px using a class selector. What font size will the paragraph appear as?
+
+1️⃣ ✅ Answer 1:
+40px
+😎Why:
+Why? The class selector is more specific than the tag selector, so its font-size value wins.
+--
+
+2️⃣ Answer 2:
+80px
+😎Why:
+Why? Even if declared later, tag selectors are less specific and will be overridden by class selectors.
+--
+
+3️⃣ Answer 3:
+Both values will cancel out and the text will stay default size
+😎Why:
+Why? CSS does not cancel styles. One rule overrides the other based on specificity.
+
+☁️DISCUSSED:
+Lesson 38
+
+##########
+
+⭐️Question 3:
+Real-world scenario: You want each word in a title to begin with a capital letter. What value should you use for text-transform?
+
+1️⃣ Answer 1:
+uppercase
+😎Why:
+Why? uppercase capitalizes all letters, not just the first letter of each word.
+--
+
+2️⃣ ✅ Answer 2:
+capitalize
+😎Why:
+Why? capitalize turns only the first letter of each word into uppercase, which is perfect for titles.
+--
+
+3️⃣ Answer 3:
+first-letter
+😎Why:
+Why? first-letter is a pseudo-element, not a value for text-transform.
+
+☁️DISCUSSED:
+Lesson 38
+
+##########
+
+⭐️Question 4:
+Which of the following is TRUE about combining multiple CSS rules for one element?
+
+1️⃣ ✅ Answer 1:
+Different CSS rules can apply together if they change different properties
+😎Why:
+Why? When rules affect different properties (like font-size and color), they add up and apply together.
+--
+
+2️⃣ Answer 2:
+Only the last CSS rule applies
+😎Why:
+Why? All rules can apply unless there’s a conflict over the same property—then specificity decides.
+--
+
+3️⃣ Answer 3:
+Only inline styles apply
+😎Why:
+Why? Inline styles do have high specificity but we’re discussing internal CSS rules here.
+
+☁️DISCUSSED:
+Lesson 38
+
+##########
+
+⭐️Question 5:
+You applied two different CSS rules to a paragraph: one changes the font-size, and the other changes the text color and casing. What happens?
+
+1️⃣ Answer 1:
+Only the last rule gets applied
+😎Why:
+Why? When rules change different properties, they are combined and applied together.
+--
+
+2️⃣ ✅ Answer 2:
+All properties from both rules are combined and applied
+😎Why:
+Why? CSS allows multiple rules to apply as long as they affect different properties. They get merged together.
+--
+
+3️⃣ Answer 3:
+The rule with more lines overrides the other
+😎Why:
+Why? CSS priority depends on specificity, not how many lines are in a rule.
+
+☁️DISCUSSED:
+Lesson 38
+
+##########
+

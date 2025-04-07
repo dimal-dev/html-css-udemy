@@ -6,20 +6,8 @@
     Lesson 38
 </Insert after>
 <Quizz Title>
-    Transform and Triumph: Text Case & CSS Rule Power!
+    Text Transform and Rule Conflicts
 </Quizz Title>
-<Quizz Title>
-    Text Transform and Rule Conflicts: Time to Level Up!
-</Quizz Title>
-<Quizz Title>
-    Boost Your CSS Superpowers with Case and Specificity!
-</Quizz Title>
-<Quizz description>
-    Let's see how well you can shape your text and resolve CSS rule conflicts!
-</Quizz description>
-<Quizz description>
-    You’ve learned to control how your text looks and how rules interact—now show off!
-</Quizz description>
 <Quizz description>
     Time to practice transforming text and understanding who wins when rules collide!
 </Quizz description>
@@ -50,22 +38,22 @@
 
 <Question 2>
     <Description>
-        If one rule sets the font size of all paragraphs to 80px and another sets a specific paragraph’s size to 40px, which will apply?
+        Two CSS rules apply to the same paragraph. One sets font-size to 80px using a tag selector, and the other sets it to 40px using a class selector. What font size will the paragraph appear as?
     </Description>
     <Answer 1>
-        <Is Correct>No</Is Correct>
-        <Content>The rule that comes last in the CSS file</Content>
-        <Explanation>Why? Order doesn't matter in this case—selector specificity determines the winner.</Explanation>
+        <Is Correct>Yes</Is Correct>
+        <Content>40px</Content>
+        <Explanation>Why? The class selector is more specific than the tag selector, so its font-size value wins.</Explanation>
     </Answer 1>
     <Answer 2>
-        <Is Correct>Yes</Is Correct>
-        <Content>The rule using the class selector</Content>
-        <Explanation>Why? A class selector is more specific than a tag selector and wins in case of conflict.</Explanation>
+        <Is Correct>No</Is Correct>
+        <Content>80px</Content>
+        <Explanation>Why? Even if declared later, tag selectors are less specific and will be overridden by class selectors.</Explanation>
     </Answer 2>
     <Answer 3>
         <Is Correct>No</Is Correct>
-        <Content>Both will be applied at the same time</Content>
-        <Explanation>Why? Only one value per property can be applied, and the more specific selector wins.</Explanation>
+        <Content>Both values will cancel out and the text will stay default size</Content>
+        <Explanation>Why? CSS does not cancel styles. One rule overrides the other based on specificity.</Explanation>
     </Answer 3>
     <Where discussed>
         Lesson 38
@@ -119,27 +107,26 @@
         Lesson 38
     </Where discussed>
 </Question 4>
-
 <Question 5>
     <Description>
-        Diagnostic: What is a common mistake when writing text-transform in CSS?
+        You applied two different CSS rules to a paragraph: one changes the font-size, and the other changes the text color and casing. What happens?
     </Description>
     <Answer 1>
         <Is Correct>No</Is Correct>
-        <Content>Using a semicolon at the end</Content>
-        <Explanation>Why? This is correct syntax. Semicolons are required to end property declarations.</Explanation>
+        <Content>Only the last rule gets applied</Content>
+        <Explanation>Why? When rules change different properties, they are combined and applied together.</Explanation>
     </Answer 1>
     <Answer 2>
         <Is Correct>Yes</Is Correct>
-        <Content>Using text-transform: UpperCase;</Content>
-        <Explanation>Why? CSS values are case-sensitive; the correct value is lowercase: uppercase.</Explanation>
+        <Content>All properties from both rules are combined and applied</Content>
+        <Explanation>Why? CSS allows multiple rules to apply as long as they affect different properties. They get merged together.</Explanation>
     </Answer 2>
     <Answer 3>
         <Is Correct>No</Is Correct>
-        <Content>Writing .text-uppercase as the selector</Content>
-        <Explanation>Why? This is valid syntax for targeting elements with the class "text-uppercase".</Explanation>
+        <Content>The rule with more lines overrides the other</Content>
+        <Explanation>Why? CSS priority depends on specificity, not how many lines are in a rule.</Explanation>
     </Answer 3>
     <Where discussed>
-        Lesson 37
+        Lesson 38
     </Where discussed>
 </Question 5>

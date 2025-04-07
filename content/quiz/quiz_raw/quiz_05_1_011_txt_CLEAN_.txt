@@ -1,0 +1,75 @@
+⭐️Question 1:
+What CSS property is used to change the size of text?
+
+1️⃣ Answer 1:
+text-size
+😎Why:
+Why? There’s no CSS property called text-size; the correct one is font-size.
+--
+
+2️⃣ ✅ Answer 2:
+font-size
+😎Why:
+Why? font-size is the correct CSS property for setting the size of text in pixels or other units.
+--
+
+3️⃣ Answer 3:
+text-font
+😎Why:
+Why? text-font isn’t a valid CSS property. font-size is the one you need.
+
+☁️DISCUSSED:
+Lesson 35
+
+##########
+
+⭐️Question 2:
+You want a paragraph to be red. Which of the following CSS rules will achieve that?
+
+1️⃣ Answer 1:
+p { background-color: red; }
+😎Why:
+Why? This changes the background color, not the text color.
+--
+
+2️⃣ Answer 2:
+.text-red { text-color: red; }
+😎Why:
+Why? text-color is not a valid CSS property. The correct one is just color.
+--
+
+3️⃣ ✅ Answer 3:
+.text-red { color: red; }
+😎Why:
+Why? This is the correct syntax for changing text color using a class selector.
+
+☁️DISCUSSED:
+Lesson 36
+
+##########
+
+⭐️Question 3:
+A beginner wrote the following CSS: .text-big { font-size 30px } — why doesn’t it work?
+
+1️⃣ Answer 1:
+They forgot the dot before the class name
+😎Why:
+Why? The dot is present; the issue is elsewhere.
+--
+
+2️⃣ ✅ Answer 2:
+They forgot the colon between property and value
+😎Why:
+Why? CSS syntax requires a colon between font-size and its value (30px).
+--
+
+3️⃣ Answer 3:
+font-size is not a real CSS property
+😎Why:
+Why? font-size is valid CSS. The real issue is missing syntax punctuation.
+
+☁️DISCUSSED:
+Lesson 35
+
+##########
+
