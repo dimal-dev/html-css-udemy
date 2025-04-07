@@ -1,0 +1,290 @@
+<lessons the quizz covers>
+    Lesson 40
+</lessons the quizz covers>
+<Insert after>
+    Lesson 40
+</Insert after>
+<Quizz Title>
+    From Image to Indicator: Test Your Skills
+</Quizz Title>
+<Quizz description>
+    Show off your skills in transforming basic text into styled elements using CSS!
+</Quizz description>
+
+
+<Question 1>
+    <Description>
+        Why is it helpful to keep the final design open while building a website?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>To compare your work to the end goal as you build</Content>
+        <Explanation>Why? Having the final design open helps ensure that each element you build matches the reference visually.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>So the browser loads faster</Content>
+        <Explanation>Why? The final design does not affect browser speed; it’s for visual comparison only.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>Because HTML won’t work otherwise</Content>
+        <Explanation>Why? HTML works fine without the reference design open; it’s just a good practice for developers.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 39
+    </Where discussed>
+</Question 1>
+
+<Question 2>
+  <Description>
+    You want to make a paragraph take up only 270px of width, like an image above it. What CSS property should you use?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>
+      width
+    </Content>
+    <Explanation>
+      Why? The width property controls how wide an element is, and it works on text just like it does on images.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>
+      font-size
+    </Content>
+    <Explanation>
+      Why? font-size changes how big the text appears, not how wide the paragraph container is.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>
+      padding
+    </Content>
+    <Explanation>
+      Why? padding controls space inside the element, not its actual width.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 43
+  </Where discussed>
+</Question 2>
+
+<Question 3>
+    <Description>
+        A developer applies font-style: italic; to an image inside a paragraph. What happens?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>The image becomes tilted</Content>
+        <Explanation>Why? font-style doesn’t apply to images. Only text elements are affected by this property.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>The image remains unaffected</Content>
+        <Explanation>Why? font-style only affects text, not images or other non-text elements.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>The image text turns bold</Content>
+        <Explanation>Why? font-style doesn’t make text bold—it italicizes it. Also, it won’t apply to the image element.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 44
+    </Where discussed>
+</Question 3>
+
+<Question 4>
+  <Description>
+    A developer sets width: 270px on all img tags. Now your green dot icon is way too big. What’s the best fix?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Use a class on the large image and target it specifically with CSS</Content>
+    <Explanation>Why? Using a class selector limits the style to the intended image and avoids affecting others.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Use the same width for all images</Content>
+    <Explanation>Why? Not all images should have the same width. This can cause layout issues.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Remove the width property from all images</Content>
+    <Explanation>Why? That would break your layout by removing necessary styles from other images.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 41
+  </Where discussed>
+</Question 4>
+
+<Question 5>
+  <Description>
+    Which CSS property is used to make text appear bold on a webpage?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>
+      font-style
+    </Content>
+    <Explanation>
+      Why? font-style is used to make text italic, not bold.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>
+      font-weight
+    </Content>
+    <Explanation>
+      Why? font-weight is the correct property to control text thickness, including making it bold.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>
+      text-transform
+    </Content>
+    <Explanation>
+      Why? text-transform changes the case of text (like uppercase), not its thickness.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 44
+  </Where discussed>
+</Question 5>
+
+
+<Question 6>
+    <Description>
+        You want to make paragraph lines easier to read by adding spacing between them. What CSS property should you use?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>font-weight</Content>
+        <Explanation>Why? font-weight affects how thick text appears, not spacing between lines.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>font-size</Content>
+        <Explanation>Why? font-size changes how large the text is, not the spacing between lines.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>Yes</Is Correct>
+        <Content>line-height</Content>
+        <Explanation>Why? line-height controls the vertical spacing between lines in a paragraph, making text easier to read.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 44
+    </Where discussed>
+</Question 6>
+
+<Question 7>
+    <Description>
+        Why did the "font-style: italic" not tilt the green dot image?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Because the image wasn’t placed in a <span>
+        </Content>
+        <Explanation>
+            Why? Element type doesn't matter here; <font-style> only affects text content regardless of container tag.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Because font-style doesn’t work if applied inside a class
+        </Content>
+        <Explanation>
+            Why? Font-style works in a class, but it only applies to text, not images or other media.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            Because font-style only applies to text, not images
+        </Content>
+        <Explanation>
+            Why? CSS font-style is a text-only property and images are not affected by it.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 41
+    </Where discussed>
+</Question 7>
+
+<Question 8>
+  <Description>
+    Real-world scenario: You’re designing a section title that needs to be larger, bold, and uppercase. Which combination of properties will help you achieve this?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>
+      font-size, font-weight, text-transform
+    </Content>
+    <Explanation>
+      Why? These three properties control size, boldness, and case—all necessary for a standout section title.
+    </Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>
+      width, color, padding
+    </Content>
+    <Explanation>
+      Why? These affect layout and color but won’t help with text styling like bold or uppercase.
+    </Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>
+      border, margin, text-align
+    </Content>
+    <Explanation>
+      Why? These properties help with spacing and alignment, not boldness, size, or text case.
+    </Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 44
+  </Where discussed>
+</Question 8>
+
+<Question 9>
+    <Description>
+        Slightly challenging: You want to make a paragraph’s text smaller, tighter, and gray. Which combination would work?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            font-size: 24px; color: black; line-height: 30px;
+        </Content>
+        <Explanation>
+            Why? This increases font size and uses black text—opposite of the goal.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            font-size: 14px; color: gray; line-height: 22px;
+        </Content>
+        <Explanation>
+            Why? This combination matches exactly what was used to style the sidebar paragraph for clarity and design.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            font-style: italic; color: green; text-transform: uppercase;
+        </Content>
+        <Explanation>
+            Why? This makes text italic, green, and uppercase—not smaller or tighter spaced.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 44
+    </Where discussed>
+</Question 9>

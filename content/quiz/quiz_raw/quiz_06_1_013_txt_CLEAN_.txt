@@ -1,0 +1,225 @@
+gi⭐️Question 1:
+Why is it helpful to keep the final design open while building a website?
+
+1️⃣ ✅ Answer 1:
+To compare your work to the end goal as you build
+😎Why:
+Why? Having the final design open helps ensure that each element you build matches the reference visually.
+--
+
+2️⃣ Answer 2:
+So the browser loads faster
+😎Why:
+Why? The final design does not affect browser speed; it’s for visual comparison only.
+--
+
+3️⃣ Answer 3:
+Because HTML won’t work otherwise
+😎Why:
+Why? HTML works fine without the reference design open; it’s just a good practice for developers.
+
+☁️DISCUSSED:
+Lesson 39
+
+##########
+
+⭐️Question 2:
+You want to make a paragraph take up only 270px of width, like an image above it. What CSS property should you use?
+
+1️⃣ ✅ Answer 1:
+width
+😎Why:
+Why? The width property controls how wide an element is, and it works on text just like it does on images.
+--
+
+2️⃣ Answer 2:
+font-size
+😎Why:
+Why? font-size changes how big the text appears, not how wide the paragraph container is.
+--
+
+3️⃣ Answer 3:
+padding
+😎Why:
+Why? padding controls space inside the element, not its actual width.
+
+☁️DISCUSSED:
+Lesson 43
+
+##########
+
+⭐️Question 3:
+A developer applies font-style: italic; to an image inside a paragraph. What happens?
+
+1️⃣ Answer 1:
+The image becomes tilted
+😎Why:
+Why? font-style doesn’t apply to images. Only text elements are affected by this property.
+--
+
+2️⃣ ✅ Answer 2:
+The image remains unaffected
+😎Why:
+Why? font-style only affects text, not images or other non-text elements.
+--
+
+3️⃣ Answer 3:
+The image text turns bold
+😎Why:
+Why? font-style doesn’t make text bold—it italicizes it. Also, it won’t apply to the image element.
+
+☁️DISCUSSED:
+Lesson 44
+
+##########
+
+⭐️Question 4:
+A developer sets width: 270px on all img tags. Now your green dot icon is way too big. What’s the best fix?
+
+1️⃣ ✅ Answer 1:
+Use a class on the large image and target it specifically with CSS
+😎Why:
+Why? Using a class selector limits the style to the intended image and avoids affecting others.
+--
+
+2️⃣ Answer 2:
+Use the same width for all images
+😎Why:
+Why? Not all images should have the same width. This can cause layout issues.
+--
+
+3️⃣ Answer 3:
+Remove the width property from all images
+😎Why:
+Why? That would break your layout by removing necessary styles from other images.
+
+☁️DISCUSSED:
+Lesson 41
+
+##########
+
+⭐️Question 5:
+Which CSS property is used to make text appear bold on a webpage?
+
+1️⃣ Answer 1:
+font-style
+😎Why:
+Why? font-style is used to make text italic, not bold.
+--
+
+2️⃣ ✅ Answer 2:
+font-weight
+😎Why:
+Why? font-weight is the correct property to control text thickness, including making it bold.
+--
+
+3️⃣ Answer 3:
+text-transform
+😎Why:
+Why? text-transform changes the case of text (like uppercase), not its thickness.
+
+☁️DISCUSSED:
+Lesson 44
+
+##########
+
+⭐️Question 6:
+You want to make paragraph lines easier to read by adding spacing between them. What CSS property should you use?
+
+1️⃣ Answer 1:
+font-weight
+😎Why:
+Why? font-weight affects how thick text appears, not spacing between lines.
+--
+
+2️⃣ Answer 2:
+font-size
+😎Why:
+Why? font-size changes how large the text is, not the spacing between lines.
+--
+
+3️⃣ ✅ Answer 3:
+line-height
+😎Why:
+Why? line-height controls the vertical spacing between lines in a paragraph, making text easier to read.
+
+☁️DISCUSSED:
+Lesson 44
+
+##########
+
+⭐️Question 7:
+Why did the "font-style: italic" not tilt the green dot image?
+
+1️⃣ Answer 1:
+Because the image wasn’t placed in a <span>
+😎Why:
+Why? Element type doesn't matter here; <font-style> only affects text content regardless of container tag.
+--
+
+2️⃣ Answer 2:
+Because font-style doesn’t work if applied inside a class
+😎Why:
+Why? Font-style works in a class, but it only applies to text, not images or other media.
+--
+
+3️⃣ ✅ Answer 3:
+Because font-style only applies to text, not images
+😎Why:
+Why? CSS font-style is a text-only property and images are not affected by it.
+
+☁️DISCUSSED:
+Lesson 41
+
+##########
+
+⭐️Question 8:
+Real-world scenario: You’re designing a section title that needs to be larger, bold, and uppercase. Which combination of properties will help you achieve this?
+
+1️⃣ ✅ Answer 1:
+font-size, font-weight, text-transform
+😎Why:
+Why? These three properties control size, boldness, and case—all necessary for a standout section title.
+--
+
+2️⃣ Answer 2:
+width, color, padding
+😎Why:
+Why? These affect layout and color but won’t help with text styling like bold or uppercase.
+--
+
+3️⃣ Answer 3:
+border, margin, text-align
+😎Why:
+Why? These properties help with spacing and alignment, not boldness, size, or text case.
+
+☁️DISCUSSED:
+Lesson 44
+
+##########
+
+⭐️Question 9:
+Slightly challenging: You want to make a paragraph’s text smaller, tighter, and gray. Which combination would work?
+
+1️⃣ Answer 1:
+font-size: 24px; color: black; line-height: 30px;
+😎Why:
+Why? This increases font size and uses black text—opposite of the goal.
+--
+
+2️⃣ ✅ Answer 2:
+font-size: 14px; color: gray; line-height: 22px;
+😎Why:
+Why? This combination matches exactly what was used to style the sidebar paragraph for clarity and design.
+--
+
+3️⃣ Answer 3:
+font-style: italic; color: green; text-transform: uppercase;
+😎Why:
+Why? This makes text italic, green, and uppercase—not smaller or tighter spaced.
+
+☁️DISCUSSED:
+Lesson 44
+
+##########
+
