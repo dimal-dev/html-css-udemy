@@ -1,6 +1,6 @@
 <?php
 
-$file = 'quiz_07_3_016.txt';
+$file = 'quiz_07_2_015.txt';
 $fullPath = __DIR__ . DIRECTORY_SEPARATOR . $file;
 $content = file_get_contents($fullPath);
 

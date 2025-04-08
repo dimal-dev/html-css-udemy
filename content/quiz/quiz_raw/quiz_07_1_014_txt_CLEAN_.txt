@@ -1,10 +1,10 @@
 ⭐️Question 1:
-What is the purpose of the CSS pseudoclass :hover?
+What is the purpose of the CSS pseudo-class :hover?
 
 1️⃣ Answer 1:
 To target elements when the page loads
 😎Why:
-Why? The :hover pseudoclass targets elements only when the user hovers over them with the cursor.
+Why? The :hover pseudo-class targets elements only when the user hovers over them with the cursor.
 --
 
 2️⃣ ✅ Answer 2:
@@ -16,7 +16,7 @@ Why? :hover activates when a user moves the mouse over an element, letting you c
 3️⃣ Answer 3:
 To apply styles when an element is focused by keyboard
 😎Why:
-Why? That would be the :focus pseudoclass, not :hover.
+Why? That would be the :focus pseudo-class, not :hover.
 
 ☁️DISCUSSED:
 Lesson 45
@@ -24,7 +24,7 @@ Lesson 45
 ##########
 
 ⭐️Question 2:
-What does the :active pseudoclass do?
+What does the :active pseudo-class do?
 
 1️⃣ Answer 1:
 It styles elements that have been visited
@@ -49,24 +49,24 @@ Lesson 47
 ##########
 
 ⭐️Question 3:
-Which of the following is the correct syntax for using the :hover pseudoclass on a tag selector?
+Which of the following is the correct syntax for using the :hover pseudo-class on a tag selector?
 
 1️⃣ ✅ Answer 1:
 a:hover { color: red; }
 😎Why:
-Why? This is the correct syntax: selector, colon, pseudoclass, then style declarations.
+Why? This is the correct syntax: selector, colon, pseudo-class, then style declarations.
 --
 
 2️⃣ Answer 2:
 :hover a { color: red; }
 😎Why:
-Why? The colon pseudoclass must come after the selector, not before.
+Why? The colon pseudo-class must come after the selector, not before.
 --
 
 3️⃣ Answer 3:
 a { :hover { color: red; } }
 😎Why:
-Why? This syntax is incorrect. Pseudoclasses go in the selector, not in a nested block.
+Why? This syntax is incorrect. pseudo-classes go in the selector, not in a nested block.
 
 ☁️DISCUSSED:
 Lesson 45
@@ -79,7 +79,7 @@ Which selector would you use to style all elements with the class "job-link" onl
 1️⃣ Answer 1:
 .job-link:hovered
 😎Why:
-Why? There’s no pseudoclass named :hovered in CSS.
+Why? There’s no pseudo-class named :hovered in CSS.
 --
 
 2️⃣ ✅ Answer 2:
@@ -91,7 +91,7 @@ Why? This targets elements with class "job-link" during the hover state.
 3️⃣ Answer 3:
 :hover.job-link
 😎Why:
-Why? The selector and the pseudoclass are in the wrong order.
+Why? The selector and the pseudo-class are in the wrong order.
 
 ☁️DISCUSSED:
 Lesson 46
@@ -135,13 +135,13 @@ Why? This selector is valid and targets elements with class "link" on hover.
 2️⃣ Answer 2:
 a.active
 😎Why:
-Why? This selector targets <a> tags with a class named "active", which is valid but different from a pseudoclass.
+Why? This selector targets <a> tags with a class named "active", which is valid but different from a pseudo-class.
 --
 
 3️⃣ ✅ Answer 3:
 a:clicked
 😎Why:
-Why? There is no :clicked pseudoclass in CSS; the correct one is :active.
+Why? There is no :clicked pseudo-class in CSS; the correct one is :active.
 
 ☁️DISCUSSED:
 Lesson 47

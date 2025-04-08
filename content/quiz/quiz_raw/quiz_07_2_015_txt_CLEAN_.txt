@@ -1,0 +1,150 @@
+⭐️Question 1:
+What CSS property removes the underline from text?
+
+1️⃣ ✅ Answer 1:
+text-decoration: none;
+😎Why:
+Why? This removes all decorative lines from text, including underlines.
+--
+
+2️⃣ Answer 2:
+font-style: normal;
+😎Why:
+Why? font-style controls italics and normal font, not underlines.
+--
+
+3️⃣ Answer 3:
+border: 0;
+😎Why:
+Why? border removes outer borders, not text decoration.
+
+☁️DISCUSSED:
+Lesson 49
+
+##########
+
+⭐️Question 2:
+Which value of the text-decoration property makes text underlined?
+
+1️⃣ Answer 1:
+bold
+😎Why:
+Why? bold is used for font-weight, not text-decoration.
+--
+
+2️⃣ Answer 2:
+highlight
+😎Why:
+Why? There is no value 'highlight' for text-decoration.
+--
+
+3️⃣ ✅ Answer 3:
+underline
+😎Why:
+Why? underline draws a line beneath the text.
+
+☁️DISCUSSED:
+Lesson 49
+
+##########
+
+⭐️Question 3:
+Real-world: You want links to show a line only when hovered. What two rules do you need?
+
+1️⃣ Answer 1:
+a:hover { text-decoration: none; } and a { text-decoration: underline; }
+😎Why:
+Why? This setup does the opposite of what is needed.
+--
+
+2️⃣ ✅ Answer 2:
+a { text-decoration: none; } and a:hover { text-decoration: underline; }
+😎Why:
+Why? This removes the line by default and adds it only on hover.
+--
+
+3️⃣ Answer 3:
+a:link { text-decoration: underline; } and a:hover { text-decoration: none; }
+😎Why:
+Why? This also reverses the desired effect.
+
+☁️DISCUSSED:
+Lesson 50
+
+##########
+
+⭐️Question 4:
+Why does styling all links with tag selectors save time?
+
+1️⃣ Answer 1:
+Because tag selectors only apply to visited links
+😎Why:
+Why? Tag selectors apply to all matching elements, not just visited ones.
+--
+
+2️⃣ Answer 2:
+Because tag selectors are always stronger than class selectors
+😎Why:
+Why? Class selectors are actually more specific than tag selectors.
+--
+
+3️⃣ ✅ Answer 3:
+Because it applies styles to every link without needing classes
+😎Why:
+Why? Tag selectors affect all elements of that type, so you don’t repeat rules.
+
+☁️DISCUSSED:
+Lesson 50
+
+##########
+
+⭐️Question 5:
+Which rule should come first to make hover and active styles work properly?
+
+1️⃣ ✅ Answer 1:
+.link:hover { color: royalblue; } then .link:active { color: blue; }
+😎Why:
+Why? When specificity is the same, the rule that comes later overrides the earlier one.
+--
+
+2️⃣ Answer 2:
+.link:active { color: blue; } then .link:hover { color: royalblue; }
+😎Why:
+Why? This causes :hover to override :active when both are triggered.
+--
+
+3️⃣ Answer 3:
+The order doesn’t matter if both use the same selector
+😎Why:
+Why? CSS resolves conflicts by order when specificity is equal.
+
+☁️DISCUSSED:
+Lesson 48
+
+##########
+
+⭐️Question 6:
+Slightly challenging: Why might your hover effect not appear even if your CSS is correct?
+
+1️⃣ Answer 1:
+Hover pseudo-class is only supported on <img> tags
+😎Why:
+Why? :hover works on many elements, not just images.
+--
+
+2️⃣ ✅ Answer 2:
+The link is already styled with higher specificity
+😎Why:
+Why? More specific rules can override your :hover effect unless managed properly.
+--
+
+3️⃣ Answer 3:
+The hover pseudo-class must be declared in HTML
+😎Why:
+Why? pseudo-classes are written in CSS, not HTML.
+
+☁️DISCUSSED:
+Lesson 48
+
+##########
+

@@ -5,30 +5,30 @@
   Lesson 53
 </Insert after>
 <Quizz Title>
-  Make Anything React: Pseudoclass Mastery
+  Make Anything React: pseudo-class Mastery
 </Quizz Title>
 <Quizz description>
-  You've learned how pseudoclasses work with any element—now let's test your skills!
+  You've learned how pseudo-classes work with any element—now let's test your skills!
 </Quizz description>
 
 <Question 1>
   <Description>
-    Which HTML elements can you use pseudoclasses like :hover and :active with?
+    Which HTML elements can you use pseudo-classes like :hover and :active with?
   </Description>
   <Answer 1>
     <Is Correct>No</Is Correct>
     <Content>Only <a> tags</Content>
-    <Explanation>Why? While links are common, pseudoclasses work with many HTML elements.</Explanation>
+    <Explanation>Why? While links are common, pseudo-classes work with many HTML elements.</Explanation>
   </Answer 1>
   <Answer 2>
     <Is Correct>Yes</Is Correct>
     <Content>Any HTML element</Content>
-    <Explanation>Why? Pseudoclasses like :hover and :active can be used with paragraphs, images, and more.</Explanation>
+    <Explanation>Why? pseudo-classes like :hover and :active can be used with paragraphs, images, and more.</Explanation>
   </Answer 2>
   <Answer 3>
     <Is Correct>No</Is Correct>
     <Content>Only form elements</Content>
-    <Explanation>Why? Pseudoclasses are not limited to form elements and can style a wide range of elements.</Explanation>
+    <Explanation>Why? pseudo-classes are not limited to form elements and can style a wide range of elements.</Explanation>
   </Answer 3>
   <Where discussed>
     Lesson 52
@@ -100,7 +100,7 @@
   <Answer 3>
     <Is Correct>No</Is Correct>
     <Content>Zooms the image when hovered</Content>
-    <Explanation>Why? That behavior would require the :hover pseudoclass, not :active.</Explanation>
+    <Explanation>Why? That behavior would require the :hover pseudo-class, not :active.</Explanation>
   </Answer 3>
   <Where discussed>
     Lesson 53
@@ -157,22 +157,22 @@
 
 <Question 7>
   <Description>
-    What happens if you use multiple CSS properties inside a pseudoclass like :hover?
+    What happens if you use multiple CSS properties inside a pseudo-class like :hover?
   </Description>
   <Answer 1>
     <Is Correct>No</Is Correct>
     <Content>Only the last property is applied</Content>
-    <Explanation>Why? All valid properties inside the rule block are applied when the pseudoclass is active.</Explanation>
+    <Explanation>Why? All valid properties inside the rule block are applied when the pseudo-class is active.</Explanation>
   </Answer 1>
   <Answer 2>
     <Is Correct>No</Is Correct>
     <Content>It causes a CSS error</Content>
-    <Explanation>Why? CSS allows multiple properties in any selector or pseudoclass rule block.</Explanation>
+    <Explanation>Why? CSS allows multiple properties in any selector or pseudo-class rule block.</Explanation>
   </Answer 2>
   <Answer 3>
     <Is Correct>Yes</Is Correct>
     <Content>All the properties inside the rule are applied during hover</Content>
-    <Explanation>Why? CSS applies all valid properties defined inside the hover pseudoclass block.</Explanation>
+    <Explanation>Why? CSS applies all valid properties defined inside the hover pseudo-class block.</Explanation>
   </Answer 3>
   <Where discussed>
     Lesson 51

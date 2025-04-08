@@ -8,7 +8,7 @@
   Hover, Click, Style!
 </Quizz Title>
 <Quizz description>
-  You're doing great—let's see if you can make all your links behave just the way you want them.
+  You're doing great — let's see if you can make all your links behave just the way you want them.
 </Quizz description>
 
 <Question 1>
@@ -137,7 +137,7 @@
   </Description>
   <Answer 1>
     <Is Correct>No</Is Correct>
-    <Content>Hover pseudoclass is only supported on <img> tags</Content>
+    <Content>Hover pseudo-class is only supported on <img> tags</Content>
     <Explanation>Why? :hover works on many elements, not just images.</Explanation>
   </Answer 1>
   <Answer 2>
@@ -147,8 +147,8 @@
   </Answer 2>
   <Answer 3>
     <Is Correct>No</Is Correct>
-    <Content>The hover pseudoclass must be declared in HTML</Content>
-    <Explanation>Why? Pseudoclasses are written in CSS, not HTML.</Explanation>
+    <Content>The hover pseudo-class must be declared in HTML</Content>
+    <Explanation>Why? pseudo-classes are written in CSS, not HTML.</Explanation>
   </Answer 3>
   <Where discussed>
     Lesson 48
