@@ -1,0 +1,200 @@
+⭐️Question 1:
+Which HTML elements can you use pseudoclasses like :hover and :active with?
+
+1️⃣ Answer 1:
+Only <a> tags
+😎Why:
+Why? While links are common, pseudoclasses work with many HTML elements.
+--
+
+2️⃣ ✅ Answer 2:
+Any HTML element
+😎Why:
+Why? Pseudoclasses like :hover and :active can be used with paragraphs, images, and more.
+--
+
+3️⃣ Answer 3:
+Only form elements
+😎Why:
+Why? Pseudoclasses are not limited to form elements and can style a wide range of elements.
+
+☁️DISCUSSED:
+Lesson 52
+
+##########
+
+⭐️Question 2:
+What CSS property changes the mouse pointer icon?
+
+1️⃣ Answer 1:
+text-decoration
+😎Why:
+Why? This controls underlines and other decorative text styles, not cursors.
+--
+
+2️⃣ ✅ Answer 2:
+cursor
+😎Why:
+Why? The cursor property sets the mouse pointer style when hovering over elements.
+--
+
+3️⃣ Answer 3:
+font-style
+😎Why:
+Why? This property changes the style of text, like italic, not the pointer.
+
+☁️DISCUSSED:
+Lesson 52
+
+##########
+
+⭐️Question 3:
+What value makes the mouse pointer look like a clickable hand?
+
+1️⃣ Answer 1:
+default
+😎Why:
+Why? This value keeps the pointer as a regular arrow, not a clickable hand.
+--
+
+2️⃣ Answer 2:
+crosshair
+😎Why:
+Why? crosshair shows a plus symbol, not a pointer hand.
+--
+
+3️⃣ ✅ Answer 3:
+pointer
+😎Why:
+Why? pointer displays the hand icon typically used for clickable elements like links.
+
+☁️DISCUSSED:
+Lesson 52
+
+##########
+
+⭐️Question 4:
+What does the CSS rule img:active { width: 52px; } do?
+
+1️⃣ ✅ Answer 1:
+Temporarily changes the image size while it's being clicked
+😎Why:
+Why? :active applies only during the moment the image is clicked, changing its width briefly.
+--
+
+2️⃣ Answer 2:
+Changes the image size permanently after clicking
+😎Why:
+Why? :active applies only while the element is actively clicked—not after.
+--
+
+3️⃣ Answer 3:
+Zooms the image when hovered
+😎Why:
+Why? That behavior would require the :hover pseudoclass, not :active.
+
+☁️DISCUSSED:
+Lesson 53
+
+##########
+
+⭐️Question 5:
+Diagnostic: Why might your image not grow on hover even with img:hover { width: 60px; }?
+
+1️⃣ ✅ Answer 1:
+You forgot to set the original width smaller than 60px
+😎Why:
+Why? If the default size is already 60px or more, increasing the size to 60px has no visible effect.
+--
+
+2️⃣ Answer 2:
+:hover can only be used on text elements
+😎Why:
+Why? :hover works on any element, including images.
+--
+
+3️⃣ Answer 3:
+You must add JavaScript to make hover work
+😎Why:
+Why? Hover behavior in CSS works without JavaScript.
+
+☁️DISCUSSED:
+Lesson 53
+
+##########
+
+⭐️Question 6:
+Which property and value combination makes a paragraph bold when hovered?
+
+1️⃣ Answer 1:
+font-style: bold;
+😎Why:
+Why? font-style controls italic or normal text, not bold.
+--
+
+2️⃣ ✅ Answer 2:
+font-weight: bold;
+😎Why:
+Why? font-weight controls how thick the text appears; 'bold' is a valid value.
+--
+
+3️⃣ Answer 3:
+text-transform: bold;
+😎Why:
+Why? text-transform changes case (uppercase, lowercase), not boldness.
+
+☁️DISCUSSED:
+Lesson 51
+
+##########
+
+⭐️Question 7:
+What happens if you use multiple CSS properties inside a pseudoclass like :hover?
+
+1️⃣ Answer 1:
+Only the last property is applied
+😎Why:
+Why? All valid properties inside the rule block are applied when the pseudoclass is active.
+--
+
+2️⃣ Answer 2:
+It causes a CSS error
+😎Why:
+Why? CSS allows multiple properties in any selector or pseudoclass rule block.
+--
+
+3️⃣ ✅ Answer 3:
+All the properties inside the rule are applied during hover
+😎Why:
+Why? CSS applies all valid properties defined inside the hover pseudoclass block.
+
+☁️DISCUSSED:
+Lesson 51
+
+##########
+
+⭐️Question 8:
+What does the following rule do? p:hover { font-size: 20px; text-transform: uppercase; }
+
+1️⃣ ✅ Answer 1:
+Makes the paragraph larger and uppercase when hovered
+😎Why:
+Why? font-size increases the text size and text-transform changes it to uppercase.
+--
+
+2️⃣ Answer 2:
+Changes the font to Times New Roman
+😎Why:
+Why? font-family changes fonts, not font-size or text-transform.
+--
+
+3️⃣ Answer 3:
+Adds bold styling and shadow effects
+😎Why:
+Why? Neither font-weight nor text-shadow is used in the rule.
+
+☁️DISCUSSED:
+Lesson 51
+
+##########
+

@@ -1,0 +1,146 @@
+<Lessons for which I want you create quizzes>
+<Lesson 39>
+Our goal for this tutorial is to create this Reddit sidebar using what we've learned so far throughout this course. I'll have this page open here to be a reference of what we're going to create. It's not required for you to have this reference page open, but if you want to, you can type in this URL manually in the address bar, or you can use the link from the description, or you can open the course resources page and open this link.
+
+In general, it's a good practice when you're creating websites to have the final design open all the time, so that you can easily see your end goal. And now let's start creating this sidebar. So first, I'll head over to VS Code and create a file called sidebar.html. This file will contain all the HTML and CSS code of our sidebar.
+
+Then I'll open it in Chrome and rearrange the windows like this. This way we can see the final design, our current web page, and also easily switch between the current web page and VS Code. So to create the sidebar, the approach we'll use is the following. We'll take one element from this web page, then create and style it, and then move on to the next element.
+
+And then we'll repeat the same process until we create all the elements from this web page. So let's start off by creating and styling this image, because we already know how to do it. To add this image, I'll copy its URL here first. Then in VS Code, we'll need an img element.
+
+And I'll paste the URL we just copied into its src attribute. Save the file, reload our page, and the image is here, but it's too wide compared to the reference design. So let's write some CSS to make it as wide as we need. For that, we'll need to add the style element.
+
+And we can target the image using a tag selector, so IMG. Then to set the width, I'm gonna use the width property. And honestly, I cannot tell the width of this image in pixels just by looking at it. Usually, I start with some initial number, like 150 pixels. Then I'll adjust it until I reach the desired width.
+
+So save, reload. Okay, the image is smaller than we need. It seems like it's almost two times smaller than this one. So let's set it to, say, 285 pixels. Save, reload. Okay, it's a little bit bigger. I can decrease it to, say, 270 pixels.
+
+Perfect! It looks like this is the width we want. I think that the first element of this sidebar is ready.
+</Lesson 39>
+
+<Lesson 40>
+Now let's move on to the next element which is this sidebar image text. Usually what I do is I add an HTML element first and then I think what CSS styles I need to apply to this element to achieve the desired look.
+
+So this text is on its own separate line and it also has the space above and the space below. And based on this, I think the paragraph element will be a good fit here. So let's add a paragraph in our code before the image and its content will be sidebar image.
+
+Save. Reload. OK. Now we have this text with the default styles. Next, let's analyze the reference page and see what CSS styles we need to apply to our text to make it look like this.
+
+The first obvious thing that I can notice here is that this text is all uppercase. So let's make our text uppercase too. And we've got several ways to do this. The first one is we can actually rewrite this original HTML code in all caps, sidebar image, like this.
+
+And in this case, if I save and reload the page, it works just fine. But the downside of this approach is that we solely rely on the original text here. But suppose that another developer from our team that doesn't know about our intentions comes and changes this text to, say, capitalized sidebar image, like this.
+
+Then, instead of being all uppercase, the text appears capitalized in the browser, which is not what we want. So to make our web page more stable and our code is more robust, let's use CSS to ensure that this text always stays uppercase.
+
+For that, we can add another CSS rule and use a tag selector to target the paragraph. Then I'll use the text transform property with the value uppercase. And this makes the text we see on the web page uppercase, no matter what text we have in the HTML code.
+
+All right, the next thing that I can see about this text on the reference page is that its color is gray, but ours is not. So let's also change this. And for that, we know that to change the color of our text, we can use the color property. Let's use the gray color keyword. Okay, it seems that this one exists. Reload. And the text color seems to be the same.
+
+Good. Now visually this text and this text, they look the same to me. The same text color, the same case and the same text size. So this means that we're done here.
+</Lesson 40>
+
+<Lesson 41>
+Let's move on to creating this online indicator. So now let's analyze how we can create this online indicator. What I can see here is that it has two parts. The first one is this text online, and the second one is this green dot. So this green dot, if I right click on it, I can see this copy image address option, which means that this is an image.
+
+So in our HTML code, we'll need to add one image and this text. Also, they appear on their own line, so we'll need to put them into a paragraph. So I'll create a paragraph before this text.
+
+Inside the paragraph I'll put one image and also just online text. And we'll also need to specify the URL for this image, so for that I'll use the src attribute. Then I'll right-click on the image, copy its address and paste the address right here.
+
+Next, I'll save, reload and... Whoa! The green dot image is too big. In fact, it looks like it has the same width as this image. Pause this video for a second and think what can be the reason for that. And also think about how could we fix that.
+
+Okay, so from what I can tell, the reason for that is that we are using this tag selector here and it targets all the images on our web page and sets their width to 270 pixels. And so it affects the sidebar image and we want its width to be 270 pixels. And it also affects this image, which we don't want to be that big.
+
+As a fix here, we can use a different type of selector instead of a tag selector here to target only this image. I suggest that we use a class selector here. And to use it, we'll need to add a class attribute to this image. As for the value, let's name it SidebarPosterImage.
+
+And then we'll copy this class name, remove the tag selector, type dot and paste the class name. After this, I'll save, reload, and okay, this is better. The poster image is still 270 pixels, but the online image is way smaller. It's being rendered in its original size because we don't change its size from our CSS code.
+
+Okay, it's smaller here, but it's not small enough. So let's reduce its size with CSS2.
+
+And we'll use the same approach, so we'll add a class attribute here. I'll name it OnlineImage, copy the class name, and next I'll add another CSS rule that targets this image. We want to change its width here, and this one is quite small, so let's start from something like 15 pixels.
+
+Save, reload. Yes, it's smaller, but it's not small enough. I think we need to make it two times smaller. So let's make it eight pixels wide. Save, reload. Yes, this looks good. And now we can move on to styling the online text, which seems to have the same problem as with images and inherits the styles from this text.
+
+Now again, why do you think is this happening here? I would say that this is happening because here we're using also a tag selector, which means that these two CSS properties are being applied to all paragraphs on our page. And this is the reason why this text and this text have the same styles.
+
+And just like with the images, we can fix this by using a class selector to target only this paragraph. So we'll add class, sidebar, poster, text, and then change this to target only that class. Save, reload. Yes, the online text looks normal right now.
+
+And we're ready to style it properly to make it look the same as this one. So on the reference page, the text is tilted to the right, or it's also called italic. And so how can we make our text to look like this? In CSS, it's actually quite easy to do. We'll just use another CSS property.
+
+so you already know that in CSS to style text we target the HTML element that contains this text which means that we need to target this paragraph which at this point should be an easy task for us we'll just use a class selector let's make this one online indicator
+
+Then we'll target it from our CSS code, so dot, the class name. And then to make the text inside the paragraph tilted to the right, or italic, we'll use a new property called font-style.
+
+And the only value you'll ever use is italic. And this is it. So save, reload, and now the text is tilted to the right. Exactly the same as here. What's also interesting here is that we're setting the font style property to italic for the online indicator class, which targets this paragraph,
+
+And the paragraph contains both the image and the text. Which means that the font-style property should be applied to the image, right? And so the image should be also tilted to the right. But why is it not tilted?
+
+The reason is that the font-style property, it affects only text. Because it doesn't make sense to apply the italic font style to other elements like images or forms. So in this case, the browser applies the font-style property only to the text inside the paragraph.
+
+and this image it just ignores and so in CSS some CSS properties are applied only to text like for example the text transform property or the color property or font style or font size and it's actually pretty obvious which ones are applied to only text as you will start using them you'll see that on practice okay
+
+There is also one more thing that I noticed about the online text on our page. It is slightly but bigger than the text on the reference page. So let's make it smaller. And we already know that for that we need to use the font-size property.
+
+Okay, we already have this CSS rule that styles our online text. So let's extend it and add the font size property. And we'll start from something like 10 pixels, because I don't know the exact size in pixels to have it like this. Save, reload. Yeah, okay, it is too small. So let's make it a bit bigger. How about 14 pixels?
+
+And yes, they look the same to me. This means that we have finished creating the online indicator.
+</Lesson 41>
+
+<Lesson 42>
+We're ready to move on to the next element, which shows the number of people online. Okay, as usual, let's create HTML code for this element and then style it. The number is on its own line, meaning that we'll need a paragraph for it. So let's create a paragraph.
+
+and 73. Save. Reload. We have this paragraph here. Okay, the first thing I notice here is that the number on the reference page seems to be slightly thicker than ours. What I mean is that on our page it seems that the number is like this and on the reference page the number is like this.
+
+Well, maybe not that much thicker, but still it's thicker. So to achieve this, we'll use a new property called font-weight.
+
+And to use it, we'll again add another class to this paragraph. Let's call it TextBold. Then we use this class to target the paragraph from our CSS code. And to make the text bold, we'll just simply write font-weight and then bold.
+
+Save. Reload. And now the text looks thicker. So when we want to make our text thicker, we apply the font weight bold to that text.
+
+What I also notice here is that the text on our page is bigger than the text on the reference page. And so what I would ask you to do is to pause this video and make the text of this paragraph smaller so that it looks the same as this text.
+
+And I'll fast-forward through the rest of the code so that you don't get bored. Now they look the same to me. So, again, the font-weight property configures how thick our text is. And to make our text thick or bold, we can use the bold value.
+</Lesson 42>
+
+<Lesson 43>
+Now let's move on to the next element which is this description.
+
+And here it looks like we need to add another paragraph with this text and make its color gray. So for that, I'll copy this text and scroll up. And before this element, I'll add a paragraph and paste the text. Let's also make this text gray straight away. So I'll add a class and I'll use a description value. Then another
+
+CSS rule that targets the paragraph we just added and the color will be gray. Save, reload and here is the paragraph. Okay, so the first thing I notice about this paragraph is ours it takes up all the page width available but the paragraph on the reference page doesn't.
+
+it looks like this one has the same width as this image. And so when its text reaches this limit, it goes to the next line. So how do we do this? How do we make our paragraph the same width as this image? Well, in CSS we can use the width property not only with images. By default, we can use it with paragraphs too.
+
+Let me show you. So for that, first I'll find the rule that sets this width. Okay, the width here is set to 270 pixels. So let's try to do the same but for our paragraph.
+
+On the next line I'll write width and then 270 pixels. And when I save and reload the page, now the paragraph seems to be limited right here and its text goes to the next line just as we have it here. So this means that we can change the width of our paragraphs using the width property too.
+
+Now let's continue styling our paragraph and compare it to the one that's on the reference page. Okay, the text color is the same, the text size is also the same, it has the same width, but this paragraph seems to have more space between the lines than ours.
+
+which means that we need to use CSS to somehow increase the space between the lines. And there is another CSS property for that. It's called line-height. And so, because we want to target this paragraph, we can add the line-height property to this CSS rule.
+
+What the Line Height property does is that it configures how tall each line of text will be. And we can also set it in pixels. So let's set 50 pixels. And if we do this and save and reload, you can see that there is plenty of space between the lines here.
+
+This is because now every line of text here is 50 pixels. And so the font size here is 16 pixels by default. And when we set the line height that's bigger than the font size, the browser adds all this empty space above and below the text to make sure that every line is 50 pixels.
+
+And so if we make the line height, say, 150 pixels, then we've got even more empty space around each line. But if we make the line height less than the font size, so, for example, it's 5 pixels here when I reload the page, then the text overlaps. Because the height of every line of text here is smaller than the text itself.
+
+Okay, so every line of text on the reference page has some extra space, but not much. Let's try setting the line height of our paragraph to, say, 20 pixels and we'll see how that looks. Reload the page. And I think we need to increase it a little bit more. So what about 24 pixels? Reload. All right, maybe we'll need to use 22 pixels. Like this.
+
+Great! Perfect! So, use the LineHeight property to configure the height of every line of text of an HTML element.
+</Lesson 43>
+
+<Lesson 44>
+The last element that we need to create for the sidebar is this title. And you already know everything to create this title, so to have more practice, pause this video and try to create it yourself. And I'll fast forward through the rest of the code so that you don't get bored.
+
+Now the title is bold, that is, it's thicker and stands out more compared to regular text. The bold text is commonly used to emphasize important words or headings like this title on the webpage. Okay, and if we compare the reference page and the page that we have,
+
+Well, they look the same to me. And so, congratulations! We've done a great job and created this Reddit sidebar with HTML and CSS. Awesome! Now it's your turn. You'll improve your CSS skills a lot if you pause this video and you'll recreate this sidebar yourself from scratch.
+
+Okay, we've learned plenty of CSS properties that style text. Let's quickly recap them to remember them better. So to change the size of your text, use the font-size property and set the value in pixels. To change the color of your text, use the color property and use color keywords as its value.
+
+And to change the case of your text, use the TextTransform property and you can make your text uppercase, lowercase or capitalized. Then to make your text italic, like this, use the FontStyle property and set the value to italic.
+
+Next, to change the height of your text, use the LineHeight property and set its value in pixels. And also, to make your text stand out, to make it bold, use the FontWeight property and set its value to bold. Before we continue to the practice exercises, let's improve our project file structure and group the files by tutorial.
+
+I will also fast forward this so that you can see the final result. So this is how the current file structure looks like. And from now on, to stay organized, we'll create a separate folder for every tutorial.
+</Lesson 44>
+
+</Lessons for which I want you create quizzes>

@@ -1,0 +1,157 @@
+<lessons the quizz covers>
+  Lesson 45, Lesson 46, Lesson 47
+</lessons the quizz covers>
+<Insert after>
+  Lesson 47
+</Insert after>
+<Quizz Title>
+  Level Up with Link Styling
+</Quizz Title>
+<Quizz description>
+  Test how well you can use CSS pseudoclasses to make links dynamic and interactive.
+</Quizz description>
+
+<Question 1>
+  <Description>
+    What is the purpose of the CSS pseudoclass :hover?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>To target elements when the page loads</Content>
+    <Explanation>Why? The :hover pseudoclass targets elements only when the user hovers over them with the cursor.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>To apply styles when the mouse pointer is over an element</Content>
+    <Explanation>Why? :hover activates when a user moves the mouse over an element, letting you change its appearance temporarily.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>To apply styles when an element is focused by keyboard</Content>
+    <Explanation>Why? That would be the :focus pseudoclass, not :hover.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 45
+  </Where discussed>
+</Question 1>
+
+<Question 2>
+  <Description>
+    What does the :active pseudoclass do?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>It styles elements that have been visited</Content>
+    <Explanation>Why? :visited is used for that, not :active.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>It applies styles when an element is hovered</Content>
+    <Explanation>Why? That's what :hover is for. :active works on click.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>It styles an element during the moment it is clicked</Content>
+    <Explanation>Why? :active activates while the mouse button is being pressed down on an element.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 47
+  </Where discussed>
+</Question 2>
+
+<Question 3>
+  <Description>
+    Which of the following is the correct syntax for using the :hover pseudoclass on a tag selector?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>a:hover { color: red; }</Content>
+    <Explanation>Why? This is the correct syntax: selector, colon, pseudoclass, then style declarations.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>:hover a { color: red; }</Content>
+    <Explanation>Why? The colon pseudoclass must come after the selector, not before.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>a { :hover { color: red; } }</Content>
+    <Explanation>Why? This syntax is incorrect. Pseudoclasses go in the selector, not in a nested block.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 45
+  </Where discussed>
+</Question 3>
+
+<Question 4>
+  <Description>
+    Which selector would you use to style all elements with the class "job-link" only when hovered?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>.job-link:hovered</Content>
+    <Explanation>Why? There’s no pseudoclass named :hovered in CSS.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>.job-link:hover</Content>
+    <Explanation>Why? This targets elements with class "job-link" during the hover state.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>:hover.job-link</Content>
+    <Explanation>Why? The selector and the pseudoclass are in the wrong order.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 46
+  </Where discussed>
+</Question 4>
+
+<Question 5>
+  <Description>
+    Real-world: You want every link on your portfolio to turn orange on hover. What's the simplest rule?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>.portfolio-link:hover { color: orange; }</Content>
+    <Explanation>Why? This targets only elements with a specific class, not all links.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>#portfolio:hover { color: orange; }</Content>
+    <Explanation>Why? This targets an element with ID "portfolio", not general links.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>a:hover { color: orange; }</Content>
+    <Explanation>Why? This rule uses the tag selector for all links and applies the hover style universally.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 45
+  </Where discussed>
+</Question 5>
+
+
+<Question 6>
+  <Description>
+    Diagnostic: Which of these selectors will NOT apply styles correctly?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>.link:hover</Content>
+    <Explanation>Why? This selector is valid and targets elements with class "link" on hover.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>a.active</Content>
+    <Explanation>Why? This selector targets <a> tags with a class named "active", which is valid but different from a pseudoclass.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>a:clicked</Content>
+    <Explanation>Why? There is no :clicked pseudoclass in CSS; the correct one is :active.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 47
+  </Where discussed>
+</Question 6>

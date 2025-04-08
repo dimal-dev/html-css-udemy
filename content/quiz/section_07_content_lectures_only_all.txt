@@ -1,0 +1,191 @@
+<Lesson 45>
+Our goal for this tutorial is to learn a cool CSS feature called pseudoclasses. And then we'll use it to create a web page with links that change their appearance when we hover over or click on them. Then, by the end of this tutorial, you'll be able to do all this yourself. Let's start off by creating a folder for this tutorial. The name will be tutorial-7.
+
+Inside the folder we'll create a new file job-links.html. This file will contain all the html and css code we will write to create a page like this. So let's open it in the browser and rearrange the windows so that we can easily see our current web page and our goal web page. Okay,
+
+This page has three links and each link comes with its own color. And when we hover over a link, notice that our cursor changes and also the link gets a slightly different color. And also this straight line appears under the link. And this happens to every link on this page. So let's create this step-by-step.
+
+First, we'll start with this link. Before we style it, we'll need to add the link to our page. The text is linkedin.jobs and I'll leave the href attribute empty so that when we click the link here, the browser will just refresh the current web page.
+
+This will make testing certain styles easier in the future, but if you want, you can put here an actual link to the LinkedIn jobs website. Okay, notice that our link already has some styles by default. Its color is purple, the text is underlined, and when I hover over the link, the cursor changes to a pointer.
+
+So all links get these styles by default. Now my link has this purple text color, which means I've opened it before. And you might have it like this, which is the default color the browser uses for all the links that you haven't opened yet. Okay, let me remove this.
+
+On our page, when I hover over the link, its color stays the same. But on this page, the link's color becomes different when I hover over it. So let's learn how to make our link to change its text color on hover too. And for that, we'll use something called pseudoclass in CSS. Let me first show you how to use it, and then I'll explain.
+
+We'll need to add the style element to write our CSS code in and then a CSS rule that's going to use a tag selector to target all the A or anchor elements on this page. Then we'll set their text color to royal blue. And this is how the link looks now by default.
+
+Though the color is correct, we want it to appear only when we hover over the link, like this. And when we remove the cursor, we want the link to return to its original color, whatever the color is. So in CSS we can modify this selector so that it targets the A elements only when they are hovered over.
+
+For that, right after the selector, I'll add colon hover. Save, reload, and now the link is not royal blue in its default state.
+
+And when I hover over the link, it becomes royal blue. When I remove the cursor, the link returns to its original color. So this is what this does. This colon hover is called a pseudoclass. In CSS, a pseudoclass is a keyword we add right after a selector to style it when it's in a certain state.
+
+This hover pseudoclass allows us to style elements when we hover over them, like when we hover over a link. The syntax for pseudoclasses is quite simple. Right after a selector, we add a colon and then the pseudoclass name, with no spaces or extra symbols before the colon or after the colon.
+
+So it's a regular selector, a colon, and then the pseudoclass name. As the selector here, we can use tag selectors, class selectors, and other CSS selectors that we'll learn later on.
+</Lesson 45>
+
+<Lesson 46>
+The pseudoclass here works with the selector just like an extra filter or an extra condition. So this means for all anchor elements, that is, for all the links on our page, when they are hovered over, apply the following CSS properties that are between these curly brackets.
+
+And we can replace this tag selector with a class selector. And it'll still work. Let me show you. So first we'll need to add the class attribute to this link. We'll name it LinkedIn. And then I'll remove this tag selector and use a class selector.
+
+Now this means target all the HTML elements that have this class but only when they are hovered over and change their color to royal blue. So if I reload the page this still works. And what's cool here is that this is still a CSS rule and it works just as other CSS rules work.
+
+And this is a CSS selector. Just a bit more complex and specific selector that targets only the hover state.
+
+as you learn CSS more and more you'll see that for the most part you're learning more CSS selectors that target more specific parts of your page and also more CSS properties. And that's it. Nothing scary. Just a bunch of different CSS selectors and different CSS properties.
+
+Okay, now let's change the default color of our link to match this one. And this is what you actually already know how to do. We'll just need to add another CSS rule that targets our link in its normal state. So for that, we'll use this class selector without adding any pseudo classes.
+
+and then we'll set its color to Dodger Blue. Don't worry, you don't need to remember these colors. I know them because when I was preparing the code for this video, I looked up the values in the CSS documentation from this webpage. And if you watched the previous tutorials, then you've already seen this page. But if not, and you're curious, then I'll put the link to this page in the description.
+
+Okay, so this makes the link to be dodger blue in its normal state, but when I hover over the link, its color changes to the royal blue color here.
+
+Now let me explain how this works. So here we've got two CSS rules, and they both target this class. This one targets all the elements that have this class, and this one also targets all the elements that have this class, but only when they're in this hover state. And so this rule is being applied all the time, and this CSS rule applies only on hover.
+
+And both rules are changing the text color, so there is a conflict here. But this conflict happens only when we hover over the link, because in other states this rule is not applied. And so when we hover over the element, the conflict happens. These two rules are competing with each other.
+
+And because the link's color changes to royal blue, you can see that this one wins. And it wins because this selector is more specific. They both are targeting the same class, but this one additionally targets its hover state.
+</Lesson 46>
+
+<Lesson 47>
+Okay, the next thing that I want to show you is that when I click this link, its text color changes even further. So let's learn how to do this. Because notice that by default, when we click the link, its color stays the same. Okay, to achieve this, we'll also target the same class, but this time we'll use a different pseudo class, it's called Active.
+
+The active pseudoclass is used to target an element when it's clicked. So when this link is clicked, we want to change its color to blue. And this makes our link to change its color to blue, just like we have it here. So the active pseudoclass is just another pseudoclass that we can use to target a different state of an HTML element.
+
+The hover pseudoclass targets the element's state when we hover over it and the active pseudoclass targets the state when we click the element.
+</Lesson 47>
+
+<Lesson 48>
+What's important here is that when we use it like this, the order matters here. To make this work, we need to make sure that the rule with the active pseudoclass goes after the hover. Because if I put this one before, like this, now when I hover over the link, the color becomes royal blue, but when I click the link, it's still royal blue.
+
+Now let me explain why this happens. So first notice that when I click the link the cursor is still hovering over it. Which means that when we click on the element it actually is in two states. When we click the element it's in the hover state and it's also in the active state at the same time. Which means that when we click on the element both
+
+These rules are being applied and they both are trying to change its color, which means that we've got a conflict between these rules. Only one of them wins in this case and gets to set the color. And CSS uses multiple criteria to solve this conflict, one of which is called specificity.
+
+which says that a rule with the most specific CSS selector wins in such a conflict. So, for example, remember that if we compare this selector and this selector then this one is more specific because it targets not only all the elements of this class but in addition their certain state.
+
+And in CSS, class selectors and also pseudoclass selectors, they have the same specificity weight. And we can say that this one has only one class selector, and so its specificity is 1. And this one has one class selector and also one pseudoclass selector, so it's 1 and 1. And so its total specificity is 2.
+
+And the rule that has the biggest specificity score or specificity weight wins in such a conflict.
+
+So when these two rules are in conflict, it's easy. This one wins because it has the biggest specificity score. But when these two are in conflict, they both have one class selector, so it's 1-1, and they both have one pseudoclass selector, so it's 1-1-2, which means that they both have the specificity score of 2. So they have equal specificity.
+
+And when this happens, CSS favors the rule that goes later in the code. This is why this rule wins over this rule and the link's color stays the same no matter whether we hover over it or click it.
+
+And so, remember, in CSS, when two rules have the same specificity, the one that goes later in code wins. And to fix this, we just need to move the active rule below the hover rule, like this. And now, if I hover over the link, its color is royal blue, and if I click the link, its color is blue.
+
+Okay, so if we want to style an HTML element, when we hover over it, we use the hover pseudoclass. And when we want to style an element, when we click it, we use the active pseudoclass. Now, we've got two more links to style here.
+
+And that will be a challenge for you. Pause this video and try to create them yourself. Use the following colors for their normal, hover and active states. And also make sure that each link is on a separate line. Don't worry for now about this line that appears on hover. We'll learn how to do this later on.
+
+Now let's code this together. For that I will wrap our link into a paragraph like this. Then I'll copy this two more times.
+
+This link will be Glassdoor, and so this class will be Glassdoor2. And then the third link will be for Indeed. So I'll use the Indeed class to here. Next, I'll create a CSS rule to target the Glassdoor link in its normal state. And here we want to make its color forest green, like this.
+
+Then I'll add another CSS rule to target its hover state, for which the color will be green, which makes our link to change its color on hover just as we want it. And lastly, for the glass door link, I'll need to target its active state, for which the color that we'll use will be dark green.
+
+And now if I click the link it changes its color to dark green and when I hover over the link it changes its color very slightly.
+
+And for the third link, I'm going to fast-forward the video because you already know how to do this. Great! Now the third link works the same as this link. And this is how you use the Hover and Active pseudo-classes to change the color of your links and other elements on Hover and when you click them.
+</Lesson 48>
+
+<Lesson 49>
+Now notice that the links on our page are underlined in their normal state and the links here are not.
+
+This is because our links get default styles from the browser, and one of the default styles is to underline each link on your page. Whereas here, these links, they have their own custom styles, which means that we can use CSS to decide whether our text is underlined or not. So let's learn how to do that, to make our links underlined like this, only when we hover over them.
+
+And we'll start off by removing this straight line under the LinkedIn link. For that, we'll need to extend this CSS rule that targets its normal state. And we'll extend it with another CSS property called text decoration. Now, to remove this line, we'll write here none.
+
+The TextDecoration property configures the appearance of decorative lines on text. We can use it to add or remove lines and other shapes below text, in the middle of text, or above text. And so TextDecoration.none removes all decorative lines the text has.
+
+And if I save and reload the page, the line disappears completely. And so writing it like this removes this line from all the states. The link is not underlined in its normal state and when we hover over it and when we click it too. And so if we want to make it underlined, like here, when we hover over the link, we'll need to do something in this CSS rule that is responsible for the hover state of our link.
+
+And to make the line appear on hover, we'll use the text decoration property again, but this time the value will be under line. Now save, reload, and there is still no line in the normal state, but when I hover over the link, it becomes underlined.
+
+And when I move the cursor away, the line disappears, which is exactly what we want. And now our link works the same as the link here. So use text decoration none when you want to remove decoration lines from your text. And use text decoration underline if you want to add a straight line under your text.
+
+Now notice that on this page the remaining two links are not underlined in their normal state and the line appears only when I hover over them. And so here is a challenge for you. Pause this video and write all the CSS code needed to make the remaining two links on our page work the same so that in the normal state they are not underlined
+
+And then when you hover over them, the text becomes underlined. So it should work for them like for this link. Now I'll fast forward the video so that you can see the final solution. Great, if I hover over any link on this web page, it gets underlined.
+</Lesson 49>
+
+<Lesson 50>
+Here is an extra challenge for you. Think of how can you modify your CSS code so that you don't need to manually change it for every new link you add to your web page for it to be underlined when you hover over it and not underlined in the normal state.
+
+I mean, how can you modify this CSS code to make sure that if you have 5, 10, 20, or even 1,000 links on your page, they all are not underlined by default and they only become underlined on hover? So pause this video again and try to think of the solution. A little hint for you here. You might consider using tag selectors.
+
+Now let me show you how I would solve this. So first I'll remove all the text decoration properties from these rules like this and this. And this makes our web page to go back to the state where all the links are underlined all the time. Then I'll add two more CSS rules. The first one will use the anchor tag selector to target all the links on our page.
+
+And this rule will set text decoration to none for all those links in their normal state. So now our page will look like this. Next I'm going to add the second CSS rule that uses the tag selector again, but this time we'll also use the hover pseudo class to target only the hover state of those links. And we'll set text
+
+decoration here to underline. Save, reload, and now each link becomes underlined when we hover over it. But with this, we're saving ourselves from repeating text decoration none, text decoration underline for each link that we add to our page. And we make sure that if we add more links to our page, like this for example, they will all work the way we want them.
+
+Okay, let me undo this. Now, this works because, remember, if multiple CSS rules target an HTML element, all their CSS properties add up and are applied.
+
+So, for example, this link gets its color from this CSS rule and also its text decoration from this CSS rule. And then when we hover over the link, these two CSS rules will apply and change its color and text decoration.
+
+And this works the same for the remaining links here as well. And with this, I think we've reached our initial goal and our page works the same as this one.
+</Lesson 50>
+
+<Lesson 51>
+Now, as a bonus, let's discuss pseudoclasses a little bit more. So when we're using pseudoclasses, we're not limited to only setting the color or text decoration properties on hover or on click. Remember that these are just CSS rules that can use whatever CSS properties we want. So, for example, for this LinkedIn link on hover, we can set its font weight to, say, bold.
+
+And now when I hover over the link, it becomes bold. We can make it become italic on hover like this, or we can increase its font size or decrease. Let's set it to 20 pixels on hover and it becomes much bigger when we hover over it. Or we can make it uppercase.
+
+And notice that now all these CSS properties are applied when we hover over the link. Well, changing our links to this on hover is a little bit too extreme for a regular website on the internet. But for learning purposes, I would encourage you to experiment with these properties and set whatever values you want.
+
+As you learn more CSS properties, you'll see that with pseudo-classes you can have very cool effects for your HTML elements.
+</Lesson 51>
+
+<Lesson 52>
+What's also awesome about pseudo classes is that you can use them to target any HTML elements, not just links. Let me quickly show you that with paragraphs and images. For that, I'll create a new file and call it other elements. Oops, I missed the L character at the end here.
+
+Then in this file, I'll add two paragraphs. The first one will be paragraph one, and the second one will be paragraph two, like this. So this is just regular text. When I hover over it, nothing happens, just my cursor changes to text. So let's try to use what we've learned and change the default behavior of these paragraphs with pseudo classes.
+
+Now let's add the style element and target their normal state with a tag selector. We'll set their text color to royal blue in their normal state.
+
+And now let's make these paragraphs more interactive. Let's make them appear more like links. For that, we'll add another rule that targets all the paragraphs with a tag selector. And then I'll use the hover pseudoclass to target them on hover. We know that we can use text decoration underline to make them underlined. So save, reload, and now
+
+These paragraphs, they become underlined when we hover over them. As you can see, the Hover pseudoclass works with paragraphs as well. And in fact, it works with any HTML element. Notice that right now our cursor changes to this text cursor on hover.
+
+But let's change this behavior to turn it into a pointer just like with links. And for that, we'll extend this CSS rule and we'll use another CSS property called cursor. And the value will be pointer.
+
+Now when we hover over a paragraph our cursor changes to a pointer just like with links. Most of the time for your projects you'll use the pointer value for the cursor property but it has so many more values and it can be a fun exercise for you to play with those values. For example if I change pointer to cross hair
+
+like this. This makes our cursor to become this plus symbol on hover. So if you want to have more practice and just fun with CSS, open this web page and try using different values for the cursor property and see what results they produce. And lastly, let's target the active state of the paragraphs
+
+and we'll make their font size a little bit smaller, so let's say 15 pixels when we click them. I know that this value is a little bit smaller than the default font size of paragraphs because the default size of all paragraphs is 16 pixels, which means that all paragraphs have font size 16 pixels like this.
+
+But this value comes by default from the styles that the browser applies to all text. So if I reload the page and hover over the paragraph, my cursor changes to this plus symbol. And if I click on our paragraph, it becomes a little bit smaller, which means that both these pseudo classes work on paragraphs as well.
+</Lesson 52>
+
+<Lesson 53>
+Lastly, let me show you how to use pseudoclasses with images. For that we'll add an image to our page.
+
+Let's use an image from our previous tutorials. So I think in this one, yes, we had this images folder and inside it there is this community icon image. So let's use this image. If you don't have it, just put the following URL here in the src attribute instead. And I'll use a relative URL to reference this image here.
+
+Okay, the image we want is in this folder, and we're starting our relative URL path from this file, which means that we need to go one folder up to be able to reference this folder. And to go one folder up, we can type two periods. So this means go one folder up from the current file. And because the current file is in the tutorial 7 folder,
+
+One folder up is my website folder.
+
+Now, to go inside my website folder here, we need to type forward slash. And then we want to go into tutorial 03 folder, which is this one. Then the images, so slash again, images. Then inside the icons folder. And lastly, I'll need to use the file name, so it's communityicon.png.
+
+And now if I reload the page, here is this huge image. Now let's style it. So I suggest that we target the image using a tag selector like this. Because in our case, this will be the only image on this page that we style.
+
+And we'll save a little bit of time here by not using a class selector because we won't need to add the class attribute here. So first let's make this image smaller and I think the 50 pixels should be enough.
+
+Yes! Next, let's make this image to become bigger on hover and for that we'll add yet another CSS rule that targets its hover state. Notice that I'm using the hover pseudoclass here again and the way I use it here is no different from the way I use it here or from how we've used it
+
+like here with links. So I'll go back to our other elements file and let's set the width to be just slightly bigger than the width in its original state.
+
+And let's also set the cursor to be a pointer on hover. Now save, reload and when I hover over the image it becomes bigger and the cursor changes to a pointer.
+
+Lastly, let's shrink this image a little bit when we click on it. I would ask you to do this, so pause the video and add another CSS rule that uses the active pseudo class to make this image smaller when we click on it. And set its width to 52 pixels.
+
+Okay, now let's do this together. So for that, I'll target our image in its active state. Oops, we don't need this. And the width is gonna be 52 pixels here. Reload, and when I hover over the image, it's bigger. And when I click it, it becomes a bit smaller, like this.
+
+And so with all this, you can see that we can use pseudoclasses not only with links, but also with other HTML elements like paragraphs, images, and all the rest. This will be useful when we get to creating the Reddit clone project. We'll use pseudoclasses there to style these collapsible section headers, for example, because we don't want them to be links. And to make them look like this, we'll need to use pseudoclasses.
+</Lesson 53>

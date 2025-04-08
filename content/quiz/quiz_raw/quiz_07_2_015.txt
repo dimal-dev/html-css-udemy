@@ -1,0 +1,157 @@
+<lessons the quizz covers>
+  Lesson 48, Lesson 49, Lesson 50
+</lessons the quizz covers>
+<Insert after>
+  Lesson 50
+</Insert after>
+<Quizz Title>
+  Hover, Click, Style!
+</Quizz Title>
+<Quizz description>
+  You're doing great—let's see if you can make all your links behave just the way you want them.
+</Quizz description>
+
+<Question 1>
+  <Description>
+    What CSS property removes the underline from text?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>text-decoration: none;</Content>
+    <Explanation>Why? This removes all decorative lines from text, including underlines.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>font-style: normal;</Content>
+    <Explanation>Why? font-style controls italics and normal font, not underlines.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>border: 0;</Content>
+    <Explanation>Why? border removes outer borders, not text decoration.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 49
+  </Where discussed>
+</Question 1>
+
+<Question 2>
+  <Description>
+    Which value of the text-decoration property makes text underlined?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>bold</Content>
+    <Explanation>Why? bold is used for font-weight, not text-decoration.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>highlight</Content>
+    <Explanation>Why? There is no value 'highlight' for text-decoration.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>underline</Content>
+    <Explanation>Why? underline draws a line beneath the text.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 49
+  </Where discussed>
+</Question 2>
+
+<Question 3>
+  <Description>
+    Real-world: You want links to show a line only when hovered. What two rules do you need?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>a:hover { text-decoration: none; } and a { text-decoration: underline; }</Content>
+    <Explanation>Why? This setup does the opposite of what is needed.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>a { text-decoration: none; } and a:hover { text-decoration: underline; }</Content>
+    <Explanation>Why? This removes the line by default and adds it only on hover.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>a:link { text-decoration: underline; } and a:hover { text-decoration: none; }</Content>
+    <Explanation>Why? This also reverses the desired effect.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 50
+  </Where discussed>
+</Question 3>
+
+<Question 4>
+  <Description>
+    Why does styling all links with tag selectors save time?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>Because tag selectors only apply to visited links</Content>
+    <Explanation>Why? Tag selectors apply to all matching elements, not just visited ones.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Because tag selectors are always stronger than class selectors</Content>
+    <Explanation>Why? Class selectors are actually more specific than tag selectors.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>Because it applies styles to every link without needing classes</Content>
+    <Explanation>Why? Tag selectors affect all elements of that type, so you don’t repeat rules.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 50
+  </Where discussed>
+</Question 4>
+
+<Question 4>
+  <Description>
+    Which rule should come first to make hover and active styles work properly?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>.link:hover { color: royalblue; } then .link:active { color: blue; }</Content>
+    <Explanation>Why? When specificity is the same, the rule that comes later overrides the earlier one.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>.link:active { color: blue; } then .link:hover { color: royalblue; }</Content>
+    <Explanation>Why? This causes :hover to override :active when both are triggered.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>The order doesn’t matter if both use the same selector</Content>
+    <Explanation>Why? CSS resolves conflicts by order when specificity is equal.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 48
+  </Where discussed>
+</Question 4>
+
+<Question 5>
+  <Description>
+    Slightly challenging: Why might your hover effect not appear even if your CSS is correct?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>Hover pseudoclass is only supported on <img> tags</Content>
+    <Explanation>Why? :hover works on many elements, not just images.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>The link is already styled with higher specificity</Content>
+    <Explanation>Why? More specific rules can override your :hover effect unless managed properly.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>The hover pseudoclass must be declared in HTML</Content>
+    <Explanation>Why? Pseudoclasses are written in CSS, not HTML.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 48
+  </Where discussed>
+</Question 5>
+

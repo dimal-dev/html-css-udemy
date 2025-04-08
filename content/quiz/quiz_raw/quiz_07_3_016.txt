@@ -1,0 +1,204 @@
+<lessons the quizz covers>
+  Lesson 51, Lesson 52, Lesson 53
+</lessons the quizz covers>
+<Insert after>
+  Lesson 53
+</Insert after>
+<Quizz Title>
+  Make Anything React: Pseudoclass Mastery
+</Quizz Title>
+<Quizz description>
+  You've learned how pseudoclasses work with any element—now let's test your skills!
+</Quizz description>
+
+<Question 1>
+  <Description>
+    Which HTML elements can you use pseudoclasses like :hover and :active with?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>Only <a> tags</Content>
+    <Explanation>Why? While links are common, pseudoclasses work with many HTML elements.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>Any HTML element</Content>
+    <Explanation>Why? Pseudoclasses like :hover and :active can be used with paragraphs, images, and more.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Only form elements</Content>
+    <Explanation>Why? Pseudoclasses are not limited to form elements and can style a wide range of elements.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 52
+  </Where discussed>
+</Question 1>
+
+<Question 2>
+  <Description>
+    What CSS property changes the mouse pointer icon?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>text-decoration</Content>
+    <Explanation>Why? This controls underlines and other decorative text styles, not cursors.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>cursor</Content>
+    <Explanation>Why? The cursor property sets the mouse pointer style when hovering over elements.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>font-style</Content>
+    <Explanation>Why? This property changes the style of text, like italic, not the pointer.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 52
+  </Where discussed>
+</Question 2>
+
+<Question 3>
+  <Description>
+    What value makes the mouse pointer look like a clickable hand?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>default</Content>
+    <Explanation>Why? This value keeps the pointer as a regular arrow, not a clickable hand.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>crosshair</Content>
+    <Explanation>Why? crosshair shows a plus symbol, not a pointer hand.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>pointer</Content>
+    <Explanation>Why? pointer displays the hand icon typically used for clickable elements like links.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 52
+  </Where discussed>
+</Question 3>
+
+<Question 4>
+  <Description>
+    What does the CSS rule img:active { width: 52px; } do?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Temporarily changes the image size while it's being clicked</Content>
+    <Explanation>Why? :active applies only during the moment the image is clicked, changing its width briefly.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Changes the image size permanently after clicking</Content>
+    <Explanation>Why? :active applies only while the element is actively clicked—not after.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Zooms the image when hovered</Content>
+    <Explanation>Why? That behavior would require the :hover pseudoclass, not :active.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 53
+  </Where discussed>
+</Question 4>
+
+<Question 5>
+  <Description>
+    Diagnostic: Why might your image not grow on hover even with img:hover { width: 60px; }?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>You forgot to set the original width smaller than 60px</Content>
+    <Explanation>Why? If the default size is already 60px or more, increasing the size to 60px has no visible effect.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>:hover can only be used on text elements</Content>
+    <Explanation>Why? :hover works on any element, including images.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>You must add JavaScript to make hover work</Content>
+    <Explanation>Why? Hover behavior in CSS works without JavaScript.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 53
+  </Where discussed>
+</Question 5>
+
+<Question 6>
+  <Description>
+    Which property and value combination makes a paragraph bold when hovered?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>font-style: bold;</Content>
+    <Explanation>Why? font-style controls italic or normal text, not bold.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>font-weight: bold;</Content>
+    <Explanation>Why? font-weight controls how thick the text appears; 'bold' is a valid value.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>text-transform: bold;</Content>
+    <Explanation>Why? text-transform changes case (uppercase, lowercase), not boldness.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 51
+  </Where discussed>
+</Question 6>
+
+<Question 7>
+  <Description>
+    What happens if you use multiple CSS properties inside a pseudoclass like :hover?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>Only the last property is applied</Content>
+    <Explanation>Why? All valid properties inside the rule block are applied when the pseudoclass is active.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>It causes a CSS error</Content>
+    <Explanation>Why? CSS allows multiple properties in any selector or pseudoclass rule block.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>All the properties inside the rule are applied during hover</Content>
+    <Explanation>Why? CSS applies all valid properties defined inside the hover pseudoclass block.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 51
+  </Where discussed>
+</Question 7>
+
+<Question 8>
+  <Description>
+    What does the following rule do? p:hover { font-size: 20px; text-transform: uppercase; }
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Makes the paragraph larger and uppercase when hovered</Content>
+    <Explanation>Why? font-size increases the text size and text-transform changes it to uppercase.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Changes the font to Times New Roman</Content>
+    <Explanation>Why? font-family changes fonts, not font-size or text-transform.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Adds bold styling and shadow effects</Content>
+    <Explanation>Why? Neither font-weight nor text-shadow is used in the rule.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 51
+  </Where discussed>
+</Question 8>
