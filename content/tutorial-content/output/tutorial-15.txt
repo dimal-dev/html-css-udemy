@@ -1,0 +1,192 @@
+<Lesson_111>
+Next up, we'll learn how to add shadows with CSS. For that, create a simple HTML5 page with just one div inside the body that we're going to be experimenting on. To generate the skeleton of the page, use the !tab shortcut. Okay. Also, we're going to need a CSS rule that targets the div.
+
+I've added these simple styles to make the div a little bit prettier. So if you want, add these too. Here we're making the div 120 pixels wide with some padding and margin and border. And also we're adding these nice round corners. And so the div is gonna look like this in the browser. Nothing crazy and no shadows so far.
+
+Now let's add a shadow to the div. For that we'll use a new property called box-shadow. We're gonna move our shadow 4 pixels to the right, space, 4 pixels down, space. We'll start with no blur, so 0, and again, space. The shadow is gonna be of the same size as the element, so 0, 2, and space. And let's make it black.
+
+The shadow value might seem complicated at first, but we'll discuss its every part and you'll see that it's easy to use. So this is gonna add this to our element. The shadow is black, 4 pixels down, 4 pixels to the right, the same size and without any blur.
+
+Now I'm going to inspect the div to open the developer tools so that we can easily discuss and experiment with the shadow. And let's switch to the styles tab to see the box shadow property.
+
+So, the BoxShadow property is what we typically use to add shadows to our HTML elements. If I turn the property off, the shadow is gone, and if I turn it on, it's back. The first value here configures where our shadow is horizontally.
+
+If I increase the value, the shadow moves more to the right. If I decrease the value, it moves to the left and when it becomes negative, the shadow is to the left of the element. So, use the first value to configure how far the shadow is to the right or to the left.
+
+The second value configures the vertical position of our shadow. If I increase it, the shadow moves further down. And if I decrease it, the shadow moves up. When the second value is negative, the shadow goes above the element. And when it's positive, the shadow is below the element. So the first two values of the BoxShadow property configure where the shadow is.
+
+Now I'll reload the page to reset the shadow position to its original value. Next, let's change the third value to one pixel and see what happens to our shadow. And... Okay, it became a little blurry.
+
+And this is what the third value does. It configures how blurry the shadow is. The higher the third value is, the blurrier the shadow becomes. And when we set it to 0, there is no blur. Also, we can't use negative values for blur. If I try to do this, the shadow disappears completely.
+
+because this value is not valid. So use the third value to configure how blurry your shadow will be. And I'll reload the page to reset the value. Next, let's set the fourth value here to 1 pixel and see what happens in the browser.
+
+Reload the page. Okay, it made our shadow to grow in size a little bit. Which means that the fourth value affects the size of the shadow. If I increase the value, the shadow grows from all sides. And if I decrease the value, it shrinks. Also here we can use negative values, which makes the shadow to be less than the element.
+
+Let me move our shadow 40 pixels to the right, maybe even 400 pixels to the right, so that you can see that more easily, like this. And I'll reset the value again. And finally, the last value here sets the color of our shadow. Just like with background colors and text colors and border colors, we can use color keywords here, like black or red.
+
+And we can also use RGB and HEX colors here too. Let me show you. For that I'm gonna remove the black color here. And next I'm gonna type RGB to use an RGB color here. And then let's come up with some random numbers between 0 and 255 for each color channel.
+
+So for the red let's use, say, 132 and for the green it's going to be 25 and for the blue 194. This sets the color of our shadow to this.
+
+Also, notice that the shadow repeats the shape of our element. And it has these round corners, just like the element. If I remove the border-radius property, it's gonna change the corners of our element and our shadow to this. And this is how you add shadows with the box-shadow property.
+
+Use the first value to configure its horizontal position. Use the second value to configure its vertical position. Use the third value to configure how blurry the shadow is. Use the fourth value to configure the size of your shadow. And the fifth value to configure its color.
+</Lesson_111>
+
+<Lesson_112>
+Here we're using the box-shadow property to add one shadow to the element. But we can use the property to add multiple shadows to one element if we want. Let me show you. So to add multiple shadows to one element we simply need to separate them with a comma.
+
+And then we can add a second shadow just like we added the first one. So I'm going to copy the first shadow and then paste it after the comma.
+
+Now let's change this and this to negative fours to place the second shadow four pixels to the left and four pixels up. Let's also change the shadow color to green. And so now this should add, yes, the second shadow to our element.
+
+Notice that we can configure these two shadows separately. So here we positioned the second shadow differently. Let's also set the blur here to 0 and the extra size to 0.2. And now the second shadow isn't blurry and it's a little bit smaller in the browser.
+
+And now here is a challenge for you. Add a third shadow to this div. And for that use a comma, just like we used for the second shadow. Make the third shadow to be 12 pixels to the right and 10 pixels up. Add 2 pixels of blur, no extra size, and it'll be red. So pause the video and try to add that third shadow to this div.
+
+Okay, and now let's do this together. To add the third shadow, I'm gonna add a comma here. We want it to be 12 pixels to the right, so the value will be positive. And then 10 pixels up, this is why the value is negative. Then 2 pixels of blur, no extra size. And the color will be red.
+
+And if I reload the page, here is our third shadow. This is how you add multiple shadows to one element in CSS. Now let's have some fun and make the shadows appear only when we hover over the div and also animate it. For that, we'll add another CSS rule that targets the hover state of the div.
+
+Then we'll move the box shadow property into this new rule to make the shadow appear only on hover. Like this. Now let's make the shadows to appear smoothly on hover. For that we'll need to add the transition property to the main rule to make it smooth both on hover and hover out. And here we want to transition the box shadow property
+
+Like this. Let's set the duration of the transition to half a second. And now when I hover over the div the shadows appear smoothly and when I hover out the div they disappear smoothly. Like this. For some reason I find this oddly satisfying. So this means that we can animate our shadows using the transition property.
+
+Okay, and here's an extra challenge for you to have more practice. Change the current CSS code for the shadows to be visible all the time. And then make them smoothly change their position to the opposite on hover. Like this. So pause the video and try to code this behavior.
+
+And this is it for shadows. Additionally, if you want to improve your learning, then I would highly recommend to pause the video after each topic and then try to come up with one or two challenges for yourself where you can apply the topic that you learned. And then try to write code to complete those challenges. I used this approach when I was learning how to code and it helped me a lot.
+</Lesson_112>
+
+<Lesson_113>
+Next up, let's discuss overflows in CSS. For that, I've created a simple HTML5 page and I used the !tab shortcut to generate the skeleton of the page. There's also a div with this class and this empty CSS rule that targets the div.
+
+Now let's fill the div with some text. For that we'll write lorem and then multiply it by 3. The bigger this multiplier is, the more text VS Code will generate. And then I'll press tab. So this created this latin text that is called lorem ipsum.
+
+The text has no special meaning and is commonly used as a text placeholder to have some content to style. In the browser, it's gonna look like this. Just some placeholder text. And let's also add some border around the text. It's gonna be one pixel solid green, like this. Now, because this text is inside a div, which is a block element, it takes the whole width available.
+
+And when there is not enough horizontal space, the browser places the text that follows on the next line. This continues until the whole text is displayed. The content area of this div by default is as big as the content itself. The border is around the content and everything looks fine.
+
+Now let's restrict the height of this div to 210 pixels and see what happens. Reload the page. Okay, this made the border to overlap the text. And part of the text goes beyond the border, which means that this part of the text that goes beyond the border is outside the content area of the div. And now this text outside the border overflows the div.
+
+Okay, but what does this mean and how does it affect the page? Well, first of all, you can see that the text and the border are now overlapping. Then, if I add another element after the div, let's add a paragraph, and it will be a paragraph of text.
+
+When I reload the page, notice that the overflowing text now falls onto the paragraph. So this overflowing content is visible but doesn't push other elements away. And most likely you wouldn't want your content to look like this.
+
+So let's discuss how we can handle this. Okay, so first of all, overflow is what happens when there is too much content to fit in an element. Like in our case, there is too much text to fit in the div. When this happens, by default, CSS just shows the content that overflows, like here.
+
+but we can manage that with CSS using the overflow property. Let's see what we can do with it. So by default, the value is visible, which makes the content that overflows to be displayed by the browser.
+
+We can set the value to hidden. This does exactly what it says and hides the content when it overflows. But often we want to show scroll bars to be able to scroll and see the rest of the content. For that we can change the value to scroll, like this. And now I can scroll down to see the rest of the text.
+
+When we're using the scroll value, the actual appearance in the browser depends on your operating system and also the browser you're using to view the page and the browser settings. For example, in Chrome on Mac OS, the scroll bar only visible when there is overflow and I'm scrolling the content. But in Chrome on Windows, I've got both horizontal and vertical scroll bars visible all the time.
+
+even when there is no overflowing content. And this is what happens when you're using the scroll value for the overflow property. But if you want the scroll bars to only be visible when there is overflow, then use the auto value instead. This allows the browser to figure out if it should display scroll bars. And in Chrome on macOS it works exactly the same as with the scroll value.
+
+But on Windows, now there is only this vertical scrollbar and there is no horizontal scrollbar. And if there is no overflow, then the scrollbars are not displayed. Okay, so by default the browser moves your text to the next line if there is not enough horizontal space. This creates this vertical overflow and this vertical scrollbar. But now let's use another CSS property called whitespace.
+
+to make our text stay on the same line so that we create horizontal overflow. And we want to use the no wrap value here for that. So this will make our text stay on the same line. And if I reload the page, it's on the same line. And now there is this horizontal overflow and we can see the horizontal scroll to see the rest of the text.
+
+And in this scenario, if I change the overflow value to hidden, then this hides all that horizontal overflowing content and there are no scroll bars to see it. So this is how you can use the overflow property to control how the browser handles overflow for your content.
+
+And in the Reddit clone project, we'll use the overflow property to create these two scroll bars for the fixed sidebars.
+
+And now here is a challenge for you to practice overflows. Try to use an image inside a div instead of text. And then make the width and height of the div smaller than the width and the height of your image. And then apply the overflow property to the div to hide the rest of the image. Then add scroll bars to be able to see the rest of the image by scrolling inside the div.
+</Lesson_113>
+
+<Lesson_114>
+Next up we'll learn how to use the transform property in CSS to rotate, scale and move elements on our page. For that we've got this simple HTML5 page and also this button. The button has this class and also there is an empty CSS rule that targets the button and also this CSS rule that adds some padding inside the body to have space for our experiments.
+
+We haven't discussed buttons before, but they are very simple HTML elements that create buttons like this. And whatever text we put inside the button, it's gonna appear on the page as a clickable button because the browser styles its hover and also active states by default. And when I click this button, nothing happens because most of the time we need to apply JavaScript to make the button do something.
+
+Now let's learn what we can do with the transform property and we're going to use this button for our experiment. First, let's write here the following. Transform, rotate, parenthesis, and then 30deg for degrees. And this rotates the button 30 degrees clockwise.
+
+The bigger the value in parentheses is, the more the button is rotated clockwise. So if I set it to 130 degrees, then it's going to look like this. If I set it to 230 degrees, it's going to look like this. And the value for the full turn is 360 degrees.
+
+Setting the value to 360 makes the button to rotate the full turn and it's going to look the same as when we set it to 0 here. It's impossible to tell that it's been rotated with the 360 value because the rotation happens instantly.
+
+But let's make it gradual so that you can see it better and it's also fun. So for that, we'll update this selector to target only the hover state of the button. And if I hover over the button now, again, nothing happens because the rotation happens instantly.
+
+And to make it happen over time, when we hover over the button, we'll add another CSS rule that targets the button in its old state. Then we'll use the transition property, and we want smooth transition for the transform property like this. Let's make it over one second. Now, when I hover over the button, it smoothly rotates and makes one full turn.
+
+And if we want to rotate it in the opposite direction we can use negative value here. So if I change this to negative 360 then it's going to rotate the button counterclockwise like this.
+
+What's important is that when the transform property is applied to an element, it only affects how the element looks. It doesn't affect other elements on the page. So, for example, if I add a div beside the button and then fill it with some text. So I'm going to write lorem and press tab. This adds this text to the page. And when I hover over the button,
+
+It rotates, overlaps the text, but doesn't push the text or doesn't affect it in any way.
+</Lesson_114>
+
+<Lesson_115>
+Another thing we can do with the Transform property is we can change the size of our elements. So let's remove this and write the following. Scale, parenthesis, 200%. And with this, if I hover over the button,
+
+It becomes two times bigger smoothly over one second. So the scale here allows us to resize our elements. 100% here is for the normal size of our elements. And we can use values that are under 100 to make elements smaller and over 100 to make elements bigger. So if I change this value to say 50% and also let's the transition to happen more quickly.
+
+And now, when I hover over the button, it becomes this small. Now here is a challenge for you. Use the transform property to increase the button size to 102% on hover and also add another CSS rule that targets the active state of the button and uses the transform property to decrease the button size to 95% when we click it. Now pause the video and try to code that.
+
+Now let's do it together. We want to scale this button to 102% on hover, like this. Then we'll add another CSS rule to target the active state of the button.
+
+Here we want to use the transform property to scale the button down to 95%. So now when I hover over the button it becomes slightly bigger and when I click the button it becomes smaller.
+
+Great! What's cool about the transform property is that we can use it with any HTML elements. For example, we can also use it to scale this div. So let's use the selector list we learned in the previous tutorial to also scale the div on hover and on click. For that, I'll extend this rule and write comma, then div, colon, hover.
+
+And so here we're targeting both the button in its hover state and also all the divs in their hover state. And then we set their transform property to scale to 102%. Now, when I hover over the div, it becomes bigger. Notice that the change happens instantly.
+
+This is because in this rule we are adding the transition property only to the button. Let's fix that and also use the selector list to target all the divs.
+
+And this is better. Next, let's also scale down the div on click. This will be a challenge for you. So extend this CSS rule to also target the divs, so that when we click the div, it scales down to 95%, just like this button. So pause this video and try to complete the challenge.
+
+Okay, now let me do this. So I'm going to write div active and this selector list ensures that the transform property is applied also to all the divs in their active state. And now when I click this div it becomes smaller.
+</Lesson_115>
+
+<Lesson_116>
+There is one more feature of the transform property that I'd like to show you. We can use it to move elements around. Let's do that on hover and move elements 10 pixels to the right. To do this, I'm gonna remove this and then I'll write translate and parenthesis.
+
+Inside of the parentheses we can specify a value here in pixels, like 10 pixels. This should move the button and the divs on hover 10 pixels to the right from their original position. If I reload the page and hover over the div, 10 pixels to the right and the button too. If we want to move the element further away, we can just use a bigger value here and it's going to look like this.
+
+Let me undo it to 10 pixels because 50 is too much. Okay, so this moves elements horizontally. To move elements vertically, we can add a comma here. And then we can use a value in pixels here too. If I write 15 pixels here, this will move our elements 15 pixels down, but also 10 pixels to the right.
+
+Like this. And this. If we want to move our elements to the left instead of the right, then use a negative value here. And this makes our elements move to the left. And if we want to move them up instead of down, we can use a negative value here. Like this.
+
+And this is how you can use the transform property to rotate, scale and move elements around without affecting other elements.
+</Lesson_116>
+
+<Lesson_117>
+Before we discuss how to use the Opacity property, I'm going to remove all these styles and rules. And I'll leave only this rule that targets the button. Next, let's add the Transform property.
+
+which is going to rotate the button 90 degrees clockwise like this. And let's also make the button two times bigger. For that I'll update this property and write here space and then scale 200 pixels. And this makes our button two times bigger. So to apply multiple transformations just separate them with a space.
+
+Okay, these transformations made our button quite big and now it's overlapping this text. And we did all of that so that we can start learning a new CSS property called Opacity that is widely used and can be quite handy. So the property is Opacity and its default value is 1. This means that our button by default is fully opaque, that is, we cannot see anything behind it.
+
+Now let's change the opacity to 0.9. This makes our button to be a little bit transparent and now we can see the content that's behind it. If we decrease the value even more to say 0.5 then the button will become even more transparent and we can see the content behind it better.
+
+And if I set the opacity value to 0, this makes the button to become fully transparent and we cannot see it on the page. But the button is still there and it's fully functioning. We just cannot see it. The opacity property is widely used for different animations.
+
+For example, in the Bootstrap library, which is one of the most popular CSS libraries nowadays, notice that when I launch the model, it appears gradually from zero opacity to fully opaque. And there's also this gray backdrop that is partially transparent here too.
+
+So we can configure the opacity with values that are between 0 and 1, where 1 makes the element to be fully opaque and 0 makes it to be fully transparent. And if I set a value to something in the middle, this will make the element partially transparent.
+
+Now, when we use the opacity property, it's been applied to everything in that element. I mean, notice that the border of this button is transparent and also its background is transparent and also the text. And if there were any nested HTML elements inside this button, the opacity would affect them too. So the opacity property affects every part of the element and also its children elements.
+</Lesson_117>
+
+<Lesson_118>
+Sometimes we want to only change the opacity of some parts of an element. So let me show you how we can do that with colors. And for that I'm going to set the background color property of our color to be RGB and 239, 239 and 239.
+
+And also let me remove the opacity property. So this sets the background color to this. And if I reload the page, the background color looks like this. But setting the background also resets the border styles. But this doesn't matter for now. And now let's make only the background of our button to be slightly transparent. For that, we will update the color value here. And we will add the A letter to the color format.
+
+Now this tells the browser that we also want to configure the opacity of the background color. And it's A because it's for alpha channel which comes from computer graphics and for our purposes we can think of this as just opacity.
+
+And this allows us to add a fourth value to our color. And just like with the Opacity property, we can use values in the range between 0 and 1 for the fourth value. Let's set it to 0.5. And so this should make this color to be 50% transparent.
+
+And if I reload the page, it becomes transparent. But notice that now only the background color is this transparent. And this text and the border, they are fully opaque. What's cool here is that we can use the RGBA color format in all the places where we used the RGB to configure color. So you can use this for the text color, the border color, the background color, the shadow color, and so on.
+
+Let me show you this with the border color. We'll add the border property and it's going to be 2 pixels solid RGBA. And we'll use the black color here, so all zeros. And let's make this color to be fully opaque at first. So for that I set the value to 1. And this makes it look like this on the page.
+
+And when the color is fully opaque, this means that we cannot see through it. But if I reduce this value and set it to, say, 0.7 and reload the page, now we can see through the border. Because now it's 70% opaque and 30% transparent.
+
+The less opaque the element, or the more it's transparent, the better we can see through the color. And so here is a challenge for you. Change the color of this text to be black, but to be 50% transparent. And after that, make the color of the text to be fully transparent, so that we cannot see the text at all. So now pause the video and try to code that.
+
+Now let's do this together. For that, I'll add the color property to set the text color. We'll use the RGBA color format. Then we'll add all zeros to make it black. To make the color 50% transparent or half transparent, I'll use the 0.5 value like this. This makes the text to be black and also half transparent.
+
+Now, to make it fully transparent, I'm going to update the value and set it to 0. And there you go! Completely invisible text. So, use the RGBA color format if you want to configure the transparency of your colors. And also use the Opacity property to configure the overall transparency of your elements.
+</Lesson_118>
+

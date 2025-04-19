@@ -1,0 +1,224 @@
+<Lesson_101>
+In this tutorial, we'll learn how to use the Descendant Combinator, the Child Combinator, Selector List, the ID Selector, and more. You'll use them all the time in your CSS code. We'll start by generating an HTML5 page structure, !tab. Let's change the title to More on Selectors.
+
+Okay, next I'll paste this HTML code that I prepared beforehand in the body to save us a little bit of time. Here we've got three unordered lists and a few list items, and each list has its own class. And on the page they will look like this, just regular HTML lists.
+
+Now let's simulate some tasks with selectors that you might meet in the real world to style these lists. Suppose that we want to style the list items of the food list and set the border around them. Sounds easy, right? You've seen that many times. So let's do this.
+
+For that we'll need to create a style element in the head and then a rule that targets these li elements with some selector and then applies some CSS property.
+
+This is not actual CSS code. This, in programming, is called pseudocode. Pseudocode helps us to outline some sort of a plan of what we're going to do. And it's not real code that computers can understand and execute. It's for humans to demonstrate the essence of what we're creating, mostly using just plain English to make it easy to understand.
+
+Okay, so for the property we'll use the border because we want to add border around the list items. And we'll set the border to one pixel solid green. Now the selector. So far we know two types, tag selectors and class selectors.
+
+If we use the tag selector, so li, because we want to style the elements in this list, that will add the border not only to the food list items, but to all list items on the page. However, we want to target only these,
+
+So the tag selector won't help us here and we need to use something else. We could use the class selector instead. For that we'll need to assign a class to each of these list items. Let's do that. I'll add the class attribute here and it's going to be food list item. Then I'll copy the class to the remaining list items and
+
+Now we can remove this tag selector and target this class. And this actually achieves our purpose. Now only the food list items have the border around them. However, using classes here has its pros and cons. For certain cases it might be great. For example, when you need to style only some of these list items, you can just remove the class and the item won't receive the border.
+
+And also the class selector is easy to use and easy to understand. But as a developer you might not always have access to the HTML code because most of the time it's separated from the styles. And often the HTML code is generated either by JavaScript in the browser or by some back-end programming language.
+
+And to add or change the class, you might need to change the actual code, which add risks to break the code. So in certain cases, using classes to target HTML elements has its downsides and might not even be possible at all. Luckily, CSS gives us more ways to target HTML elements.
+
+And it's a good thing to know about them and consider the best option for your specific case. So let's learn how we could target these list items differently. We'll do that for the remaining lists and leave this one like this so that you can see the difference.
+
+Okay, the goal is still the same. We want to add border to the animal list items. For that, I'll add another CSS rule, but this time I'll use something new and write the following. .animalList, space, li, and then curly brackets. I'll explain this in a moment, but first, let's make sure that it does what we want.
+
+And we want it to have a border of one pixel solid and let's make it red. Great! They received the red border, it works. Now let's discuss how it works. First of all, this whole thing is a CSS selector too. But just a bit more complex one that combines these two selectors.
+
+You already know that if we write it like this, then we're targeting all the li elements on the page. But when we add a space and then this class selector to the left, it means that we want to find all the list items, but only inside the elements with this class name.
+
+So when we use two or more selectors with a space in between them like this, it's just like having multiple filters. It means find all the elements using this selector and then only inside of them target the elements using this selector and apply to them these styles.
+
+Or we can think of this in the reverse order, from right to left. So here we're telling the browser to apply these tiles to the elements that match this selector, but are only inside the elements that match this selector.
+
+An important thing to know here is that the styles will only be applied to the elements specified by the last selector to the right. In our case it's this LI. And all the other selectors to the left are just additional filters. So these styles will not be applied to the animal list.
+
+They will only be applied to the list items inside. And you can see that there is no border around the whole list in the browser, only individual borders around each of the list items. You can also think of this as sort of how categories work on Amazon. If you want to find a monitor, you first select computers, which narrows down all Amazon products to only computers.
+
+In a similar way, this is what this first selector does here. It says we only want to look into the elements with the AnimalList class. Then, on Amazon, we can narrow it down even more and apply another filter, Monitors.
+
+And this opens a page that has only monitors, which is only a fraction of all the products that Amazon has. And just like we selected monitors inside computers on Amazon, here we are targeting only the list items that are inside the elements with the AnimalList class.
+
+And this is what this space does. It combines two selectors into one that targets more specific elements. In CSS, this space between two selectors is called descendant combinator.
+
+And descendant simply means that we are targeting this that is somewhere inside of this. So descendant is for child elements, whatever deep they are nested inside of this. And it's called combinator because we're using it to combine two selectors into one, more complex.
+
+Now I'm going to ask you to pause this video and do the same but for the list items of the website list. So add another CSS rule and use the descendant combinator to target all the list items of the website list and set their border to be one pixel solid blue. Now pause the video and try to code it and after that we'll do it together.
+
+Okay, first we want to target the website list by its class name like this. Then I'll add a space to use the descendant combinator to go inside the website list. And then I'll write li to target only the list items that are inside the website list. We want to set their border to one pixel solid blue.
+
+And this should be enough. Good.
+</Lesson_101>
+
+<Lesson_102>
+What's also useful is that we can put any selectors we want to the left and to the right of the descendant combinator. So, for example, we could write something like this. div, then a space, and then a class selector, like text, bold.
+
+And then set, for example, font-weight to bold. Here we're using the descendant combinator to say that we want to only look inside divs and target only the elements with the text bold class.
+
+Now let me paste here this HTML code that I prepared beforehand. There are two divs here that contain paragraphs with some text. And also some text that's wrapped into these span elements.
+
+Notice that only these two spans have the TextBold class. And if I reload the page, only their text is bold. If I remove the class from this span, then its text becomes just regular text. And only the MoreText3 is bold because its span has the TextBold class and it's inside this div.
+
+And it is this way because we've got this CSS rule that targets only the text bold elements inside divs. But notice that this span is not a direct child of the div. It's deeper, it's inside the paragraph.
+
+But this rule is still applied and the text is bold. It works because when we're using the descendant combinator it doesn't matter whether the element is a direct child or nested like 50 levels deep.
+
+What matters is that this must be nested somewhere inside this. And if I move this span outside the div, for example here, then it's no longer inside any div and this rule is not applied to it anymore.
+
+so it became just regular text. But as soon as I put it inside any div, like literally anywhere, let's put it for example here, then it will get its styles back. Also notice that here first goes the tag selector and then the class selector. And it's perfectly fine
+</Lesson_102>
+
+<Lesson_103>
+Another cool feature is that we can chain multiple combinators together. So, for example, if I type here space P, then we've got two descendant combinators here, and this whole selector is now even more specific. This now means search inside divs anywhere deep for paragraphs and anywhere deep of those paragraphs for the elements with the text bold class name.
+
+and then apply these styles to them. So now the element with the TextBolt class must be nested inside a paragraph that must be nested inside a div for these styles to be applied. And notice that our span is now nested inside a div but not inside a paragraph.
+
+And if I reload the page, the rule is not applied to it anymore. But if I move it inside a paragraph, for example, here, then it matches this selector and the styles are applied.
+
+I can even move it inside this span. Yes, we can nest spans inside spans and the styles will be applied to the element. Let me format it to improve the readability of our code. And like this and also this.
+
+This works because for the descendant combinator it doesn't matter how deep we put it inside the other elements as long as the text bold is inside a paragraph which is inside a div. To demonstrate you more that nesting levels are not important to the descendant combinator I'm gonna wrap this foot list in a div like this.
+
+And then inside the pizza list item, I'm going to format it a little bit and add a paragraph. And then inside the paragraph, I'm going to add a span with the text class, with the text bold. And it's going to say test one.
+
+Now, if I've done everything right, this text should also become bold because I have a div that contains a paragraph many levels deep with the text bold class inside. And this is what this rule targets. So reload the page and it's bold.
+
+so for the descendant combinator it is important that they are inside each other in the right order and it's not important how deep they are inside each other
+</Lesson_103>
+
+<Lesson_104>
+One caveat with paragraphs. Remember that we're allowed to put only text and text elements like spans or anchor tags inside paragraphs. But we're not allowed to put any block elements inside paragraphs like headings or lists or list items. And if I remove the paragraph here and wrap the list,
+
+inside a paragraph like this. You might expect this to work and this to be bold, but most likely it won't. Because this is invalid HTML. We're not allowed to put lists and other block elements inside paragraphs. And let me reload the page. The text is no longer bold.
+
+Though technically, here, in our source code, in our file, the hierarchy is correct. So we have a div inside a paragraph and that contains the TextBolt class for the CSS rule to be applied.
+
+but in reality it's not applied in the browser and the reason is that this is invalid html and the browser tries to fix it in way it thinks the best here and if i inspect the page
+
+You can see that actually the browser doesn't wrap this list in a paragraph like we asked it to do. It adds an empty paragraph before the list and after the list instead. And because of this, the textBoldSpan is now not inside any paragraph. It's only inside this div. And this is why
+
+This rule is not applied in this case. So, don't put anything except text and text elements inside paragraphs. Otherwise, you are risking to get weird and unexpected results.
+
+To fix this, if we need for some reason to wrap the list in two block elements, we can change the paragraph to a div like this. And as we discussed, divs can contain other divs and block elements inside them.
+
+And also we need to update the rule and change p to div. So now here we're targeting divs that contain other divs that contain somewhere inside of them the TextBolt class. And if I reload the page the styles are back.
+</Lesson_104>
+
+<Lesson_105>
+Before we continue, let me clean this code a little bit. I'll remove these divs, like this, and also these. And also, let's update this rule to target only the food list classes and the textball class inside of them. And okay, this works.
+
+So when we're writing it this way, it literally means style the elements that have the TextBolt class anywhere inside the food list. And this span fits that criteria because it's inside the food list and it has the TextBolt class.
+
+But if we add the TextBolt class, for example, to this Steak list item, it also fits that criteria and matches this selector. Because the list item has the TextBolt class now and is inside the food list. And if I reload the page, it becomes Bolt2.
+
+Oh, and in case if you didn't know, we can add many classes to an element like this if we just separate them with a space. Okay, but what if we want this TextBolt class to only be applied to items of the food list specifically, but not to this span, despite that it has the TextBolt class?
+
+There are many ways to achieve this in CSS and what we'll do here is we'll learn another combinator. For that let's replace this space here with a greater than symbol like this. And now if I reload the page only the stake list item is bold and the span text is normal.
+
+Now, this is because what this does is limits the search to only direct children of the element with the food list class. I mean that it targets only the text bold elements that are directly inside the food list element.
+
+In our case, this ul has the FoodList class and its direct children are all of these li elements. And so the browser targets only those li elements that have the TextBolt class. But what about this span? It also has the TextBolt class.
+
+Well, the span is also a child of the ul element, but it's not a direct child. Because between the ul and the span there is this li element. You can think of this as this ul element is a father to this li element.
+
+And it also is a grandfather to the span element. And this greater than symbol is called child combinator. And it targets only direct children of the selector to the left. It doesn't target the grandchildren and the grand-grandchildren and so on. And because the span is a grandchild of this food list ul, it doesn't match this selector.
+
+On the other hand, if I replace the child combinator with a space, which is a descendant combinator, now this targets all the direct children and all the grandchildren and the grand-grandchildren and so on. And in this case, the span element also matches the rule and its text is bold. Okay, I'll undo this. Like this.
+</Lesson_105>
+
+<Lesson_106>
+We can also chain the child and the descendant combinators. Let me show you. For that, I'll add a span to the stake list item, like this. And it's gonna say test2. And now I'll add a space here, and then I'll write span.
+
+This works here in the same way as when we were chaining multiple descendant combinators. And so this means that we are targeting the span elements that are anywhere inside the TextBold class elements that are direct children of the FoodList class elements. And if I reload the page, only the Test2 span becomes bold.
+
+Also, we're allowed to put spaces around the child combinator to improve readability. This will work the same and it doesn't change anything except for the readability of the code.
+</Lesson_106>
+
+<Lesson_107>
+Now let me show you another useful CSS feature. Sometimes you need to apply the same styles to different elements. For example, suppose that we wanted to make the border green both for the food list items and also for the animal list items.
+
+and to achieve this we could just copy this style like this and it would work so this solves the task but the code is now a little bit more fragile because if we later decide to change the style of this border to say dotted
+
+We'll need to remember to change it in both places here and here like this. So we'll need to do more work here and also we'll have higher chances to break the code if we forget to update the code in all places.
+
+And the more rules like this you have, the higher chances that you forget. CSS allows us to do it better. We can join these two rules by adding a comma like this. And I can remove this one. And so here we are saying that we want to target all the elements of this selector.
+
+And all the elements of this selector. And then set their border. And now if I reload the page, both lists have this dotted style. And if later we decide to update its color to, say, red, we will need to update only one place, which makes our code more robust. And we can add more selectors to this list. Just use a comma before every new selector.
+
+So here is a challenge. Pause this video and make the border of the website list items red and dotted too by adding it to this rule using the comma and also don't forget to remove this rule.
+
+Now let's do this together. I'll add a comma and a space. A space is not required here, but it makes the code easier to read. And then I'll copy this and paste it here and also remove the rule. And there we go. The red dotted border here too.
+
+Now what's even better for the code readability here is to put every selector in the selector list on a separate line like this. This doesn't change how the rule works but it makes it easier to read and understand. And so what this says is that we want to target all these elements and also these elements and also these elements and apply this border to all of them.
+</Lesson_107>
+
+<Lesson_108>
+Another type of selector you'll encounter is ID selector. It's widely used, but often misused. From the previous tutorials, you know that we can also add the ID attribute to HTML elements. For example, we can add an ID of Awesome.
+
+food here to this list and then we can target this list from our css code using this id with the id selector to do that we'll type hash and then the id awesome food that we want to target
+
+So just like we add a period in front of class selectors, we add a hash in front of id selectors. And now let's use this to add some border to this list. It's going to be three pixel solid black
+
+border. And there it is. Think of the id attribute as a much more specific and limited version of the class attribute. You can assign the same class to many HTML elements, but you cannot assign the same id to many HTML elements.
+
+So this is valid. But if I do, say, this, awesome food item, and then copy it here and here, then this is invalid. Because only one HTML element on your entire web page can have the same ID. And two or more elements cannot share the same ID.
+
+Because this is what an ID is supposed to be — a unique identifier of one thing. So let me undo this. Also, with classes you can assign two or more classes to one HTML element. But unlike classes, we cannot add more than one ID to an element. So we cannot do something like
+
+this. This makes our HTML code invalid. And if I reload the page, notice that the border around the list is gone. So don't do this and use only one ID per one HTML element. From all that you can see that classes are much more flexible than IDs. And in most cases it's better to use classes. Okay, another feature of IDs in CSS is related to selectivity.
+
+Remember that we can have conflicts between CSS rules. It's when two or more CSS rules are trying to set the same CSS property of the same HTML element. And we also discussed that in those conflicts, a rule with a class selector always wins over a rule with a tag selector.
+
+But now that we've learned about ID selectors, what happens if we have a conflict between a class selector and an ID selector? For example, if I add another CSS rule that uses a class selector to target the same list, and I'm going to use it to set the border, but this time it's going to be two pixels dotted papaya whip.
+
+Now, these two rules are competing over the border property, so they are in conflict. And in this conflict wins the rule that uses an ID selector. Because it's way more specific than a class selector. And an ID selector is more specific than a class selector because we can add an ID to only one HTML element on the whole web page.
+
+Whereas we can have many elements that share the same class. And now if I reload the page, the border is black and three pixels. And if I change the color here to gold, then it becomes gold. So remember, in conflicts, just like in the rock-paper-scissors game, an ID selector always beats a class selector and a tag selector.
+
+And a class selector always beats a tag selector. And even a million class selectors combined cannot win over a single ID selector. And the same is true between class selectors and tag selectors.
+
+Now, because ID selectors are so strong, it's actually considered not a good practice to use them. Because if you're styling something with an ID selector, it's tough to override the role later without making your CSS code more complicated.
+
+IDs are meant to be unique within a page, and using them for styling goes against the flexible, reusable nature of CSS. So use classes instead, because classes are easier to reuse and override. You can apply the same class to many HTML elements, making your CSS more flexible and simpler. But this is a recommendation for styling with CSS.
+
+A different story is for JavaScript and HTML. When you start learning JavaScript, you'll use IDs to target elements. And in HTML, IDs are useful for labels and forms and links within one page.
+
+So, again, the general recommendation is to stick to classes in HTML for a simpler, more usable and maintainable code. I covered IDs here because often people either don't know or ignore these best practices and still are using IDs. But now, when you encounter them, you will be prepared.
+</Lesson_108>
+
+<Lesson_109>
+Lists, by default, have certain styles. First of all, the ul element and the li elements, they are all block elements. And so they have all the features of block elements, like taking the whole width available and their vertical margins and paddings push other elements away and so on.
+
+Also, unordered list items by default have these bullet points to the left. Sometimes you want these bullet points to be visible, but more often you don't. So let's learn how to hide them. And we'll do that for the food list. It's actually super simple. For that we need to target the ul element itself.
+
+And we've already got two CSS rules that are targeting that list. Let's stick to the best practices and remove the id rule and also the id attribute because we don't need it anymore. And for our task it's fine that the border is this papayawhip2px
+
+okay so to remove these bullet points we need to target the list so the ul element and this does this rule and now inside we'll write list style and the value will be none and when I reload the page they are gone
+
+So the ListStyle property configures the look of the bullet points. You can do fun stuff with it, but most of the time you'll use it to just hide the bullet points. Also, notice that there is this padding to the left between the list border and the list items. Most of the time we don't want to have it here. And to remove it, we can set the padding left to 0. Okay, no padding.
+
+Now, for more practice, I'll ask you to pause this video and do the same for the remaining lists. Use the ListStyle property to hide their bullet points and also remove the padding to the left.
+
+Now let's do this together. So I'm going to copy this class and then add another CSS rule that targets the list UL element itself. And to hide the bullet points, we want to use the list style property. The value will be none. Okay. Now to remove the padding, I'm going to write padding left and it will be zero and the padding is gone.
+
+And because the second list needs the same styles as this one, let's use selector list, so comma, to target it too. So for that I'm gonna copy the class name and then write comma, enter, and we'll target the list using the class selector. And so as you learned, now this targets the first list and also the second list and applies these styles to both of them.
+
+And if I reload the page, this should look the same as this. And it works!
+</Lesson_109>
+
+<Lesson_110>
+The last thing that I'd like to discuss about lists is that in HTML we're only allowed to add list items as direct children of lists. What I mean is that we can only add more list items inside this list, like this. And this is perfectly fine.
+
+but we're not allowed to add any other types of HTML elements directly into UL or OL elements. This means that we are not allowed to add divs or anchor elements or images and so on directly into UL elements.
+
+Only list items are allowed. And if we want to add these inside any list, we can just put them inside any list item as its children. And this is allowed and it's now a valid HTML code.
+
+Now, because we are allowed to only use list items in lists, lists are widely used for things like menus, where you have a consistent structure. And if I open, for example, Amazon, and then its category list, and then I'll inspect its categories, notice that they all are list items inside this unordered list.
+
+and then inside each list item they have, for example, this div and this list item is a link and so on. The reason for doing this is that it makes the code easier to maintain and also modify.
+
+Because if you want to add one more item in this menu, you know that you need to add another list item. Because you can't just add whatever elements you want directly inside this list. And as you'll see later, we'll also use this approach for the Reddit clone project.
+</Lesson_110>
+

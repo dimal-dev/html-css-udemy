@@ -1,0 +1,244 @@
+<Lesson_193>
+Now we'll move on to creating this sidebar. The good news is that you already know how to do like 95% of it. There are a few places that might be challenging, for example, these collapsible sections with the animated arrows on toggle. So our plan will be to create this sidebar container so that it stays fixed when we scroll the main content and also so that we can scroll the content of the sidebar container.
+
+And also we'll create these three menu items and the custom feeds collapsible section together. Then, based on that, you will create the rest of the sidebar as a practice exercise. Okay, now let's look at the sidebar and think about what things we're going to need to create first. I think that, as always, we'll need a container element for the entire sidebar. And that container will be scrollable when the content overflows.
+
+Next, notice that the sidebar contains these groups of clickable elements, where each group is separated by a thin border. And also, when we scroll the main content, the sidebar stays fixed on the screen. And as you probably remember from our previous tutorials, this means that we need to use some sort of CSS positioning to make the sidebar fixed on the screen. Okay, I think that we already have a good general picture of what we need to do.
+
+So let's open our index.html file to see what html we've got here already to start with. Okay, earlier we created this div for the sidebar. I think we can use this div but let's change it to an unordered list and let's also replace the text with an empty list item.
+
+Okay, so this unordered list will be the main container for our sidebar, and each list item will be a smaller container for a group of these menu items. So each group of these menu items will have its own li element inside this main sidebar container.
+
+and we'll do this by adding another unordered list here and this will contain a list of this smaller group of list items or we can call it a sidebar section and let's a class right away we'll call this sidebar section and then again an empty list item
+
+where this ally will be for let's say home so write home and then another ally for popular so popular popular and then all so let's add all so now we've got a list inside a list
+
+And you can think of these two nested lists just as you think about your nested lists in Google Docs, where each li in the main ul is for the whole sidebar section, and then the nested ul contains a list of particular menu items.
+
+So later we'll add more of these li elements because we'll want more sections. Now notice that each menu item contains of an image and some text. So let's save this home icon in our icons folder.
+
+And then let's add an image, img, for our home icon. The path will be images, icons, and then home.svg And let's also put our menu item text inside a div with the SidebarSectionItemDetails class like this
+
+So reload the page. Well, this is not very impressive. So we're going to need to make some serious CSS styling here.
+</Lesson_193>
+
+<Lesson_194>
+This sidebar is a new big component and I think it's a good idea to create a separate stylesheet for it. So let's go to VS Code, open Explorer and then in the CSS
+
+folder let's create a new file and we'll name it sidebar.css and this is where we're going to put all our CSS code related to the sidebar and the first thing I'd like to do is remove these default list styles for that let's inspect the sidebar to copy the class name and we're going to target the sidebar and write list style none
+
+to remove the bullets and also we'll write margin 0 and padding 0 to reset the default margins and padding. Let's also close the explorer because we don't need it anymore. And this will look like this on our page. But wait, nothing's changed. And so here's a question. Why do you think our styles were not applied?
+
+I think that this is because we forgot to include our new sidebar.css inside the index.html file. So let's do that. And at this point, it should be easy for you to do this. Just copy the link element and change the search to sidebar.
+
+There you go. And if I reload the page, now our styles are applied. Let's also reset the default styles of the nested list. For that, let's copy its class name and then in our style sheet, let's extend this CSS selector.
+
+and we'll use a selector list so i'm going to write comma and then we'll target our nested sidebar list as well and remember that this comma is a selector list in css which means that we want to apply these styles to this element and this element which helps us to avoid duplication in our code i mean that we can write this instead of writing it
+
+like this and having two separate rules where notice that these styles are actually duplicated so sometimes we can use a selector list to avoid code duplication okay and next to better see the dimensions of our sidebar let's add a temporary background and we want to add background only to the outer sidebar
+
+So we can add another CSS rule here that targets the same sidebar and changes its background color to say light golden yellow.
+
+and remember that in CSS we can have multiple CSS rules that target the same HTML element and change different styles in those rules and all these styles from here and here will be applied to our sidebar so if I reload our page
+
+Now we've got this yellow background behind the sidebar, which helps us to see that our sidebar is this wide by default, which we don't want. And we want our sidebar to be this wide. So let's inspect the sidebar and get its width. So we need to set the width to 220. So width 220 pixels. And if I reload the page, this is better.
+
+And don't worry about the content being under the sidebar, we will reposition it later. Okay, next. I see here this thin border on the right side of the sidebar and also this empty space around the content, which is most likely padding. And at this point these should be easy for you to add, so let's add them. Or you can add these yourself, which would be even better.
+
+So if you want, pause the video and add this border to the right and this empty space from the right, top and left sides of this sidebar. Okay, so I'm gonna inspect the sidebar and the padding is 4 and 4 and 16 and 16. And also let's copy the border. Where is the border? There it is, border right. So we want to set the right border
+
+this value and then padding to 4 pixels and 16 pixels. And it's gonna look like this. Great! And let's also comment out the background color because now the border is enough to see the sidebar boundaries. And this is starting to look like the sidebar we want.
+</Lesson_194>
+
+<Lesson_195>
+Next, let's start styling individual sidebar items. And you can see here that we want to put the icon and the text on the same line and align them vertically.
+
+And as you've probably guessed, this is a job for Flexbox. And at this point, I suppose that you know how to do this pretty well. So I'm not going to go into detail here. But what I want to point out is that these sidebar items are actually links to other pages. On the original Reddit website, this one goes to the homepage and this one goes to the popular posts and so on. So let's upgrade our sidebar items to links.
+
+And for this, we're going to go to the index.html file, find our sidebar. Okay. And this li element here represents an individual sidebar item. So to make it a clickable link, let's simply wrap the content of the list item inside the a element like this.
+
+Let's also leave the href attribute empty to make our lives easier, so that if you click on this link, it's gonna reload our current page. And if you want, you can put here an actual URL like https://reddit.com
+
+And this should lead to the main Reddit page. But I'm gonna leave this empty because this is a learning project where we can use some, let's say, cheats to make our lives easier. On a real website, you'll put an actual URL here in the href attribute.
+
+Okay, let's also assign it a class and we'll call it sidebar link. And now our item should become a clickable link on the page. So I'm going to reload the page, create, and if I click on the link, this reloads our page.
+
+But notice that now, because the home text is inside a link, it receives these default link styles. And we need to remove them. To remove them, we'll need to change the text decoration, color and font size values. And let's remove this underlying decoration from this text, and then I'll leave it to you to write the remaining styles.
+
+Okay so for this I'm going to inspect the link and then copy its class name. Then to remove this underlying text decoration we'll go to our sidebar style sheet and we'll add another rule that targets our sidebar links. Here we'll write text decoration none and okay. Now the text is clean. Next for more practice I'm going to ask you to pause this video and write the rest of the item styles.
+
+So your goal will be to write the remaining CSS style to make this single home sidebar item to look like here. You'll need to use flexbox to put the icon and text on the same line and center them vertically. Then use the gap property to add the space in between. Use padding to add the space around the item. And also make sure that you handle the hover and active states.
+
+Also, don't forget to adjust the text color and font size, because they are pretty subtle and hard to notice. Once you have finished the home item, then take its HTML and add the popular and all items as well. And if you get stuck, use the dev tools and inspect the reference page to see the solution. And I'm gonna speed up the video to not bore you and save us some time, because you already know how to do all this.
+
+There you go. Now you should have a similar looking sidebar with three items you can hover over and click. Next, let's add this bottom border under the sidebar section and some padding as well.
+
+For that I'm going to inspect the sidebar section to get its bottom border value. Okay, there it is. I'm going to copy the value and then we'll add a new CSS rule that targets sidebar and then list items inside the sidebar but only the list items that are direct children of the sidebar because these are containers for our sidebar sections.
+
+I mean that we want to target only these list items and we don't want to target these. So this is why we used the child combinator and not the descendant combinator. But you know what? Let me show you the difference. So if you write it like this and then border bottom, then I'm going to paste the value. So with this, if I reload our page, there is the border.
+
+But if I change this child combinator to the space, which is the descendant combinator, and then reload our page, notice that now, additionally to this bottom border, we've got the border after each list item inside the sidebar. We don't want this, and so I'm gonna revert to the child combinator.
+
+And this is better. Then let's also add this padding which is 12 and 0. So I'm going to write padding 12 pixels and 0 and this will look like this. Great! And I think that we have finished the first sidebar section and we're ready to move on to creating this one.
+
+which is going to be an interesting component to create because we'll need to create this section header that will hide and show our section items below and we'll also animate this arrow
+</Lesson_195>
+
+<Lesson_196>
+So how do we create something like this? Well, actually we already have one component that works similar to what we want here. Remember this profile menu and how we used a label connected to a checkbox with a few clever CSS selectors to achieve this?
+
+We can use this approach here as well. And so for that we'll create a new sidebar section just like the previous one. And then, just like here, we could use a checkbox and a label to toggle the visibility of these sidebar items.
+
+So first let's add the new sidebar section and for that we can simply copy this whole list item and paste it here which is going to look like this. Next let's remove this and this list item so that we have only one left here.
+
+And now we can update the icon and the text here and replace them with these. So I'll quickly inspect the item then copy its text and then save the image as plus. All right. And then I'll paste the text here like this and the image name should be plus.
+
+And if I reload the page, this is better. Now we have something to collapse. But we already knew all that. And now let's move on to creating this new and exciting section header that we'll use to collapse our menu items. Okay, so first of all, let's save this image.
+
+and it's called down.svg okay visually the header goes before in this section items so we'll need to add the label element before label element before the ul element
+
+Inside the label we'll add the name of our section header, custom feeds, and then we'll add an image. The source will be images, icons, down.svg
+
+This is for our animated icon. And this label is going to look like this on our page. Text and an icon. Next we'll need a checkbox that will connect with this label. We'll use the checkbox and a tilde combinator to target the sidebar section.
+
+This means we need to add the checkbox as one of its siblings somewhere before the list. Let's add it even before the label in put type checkbox because we'll use the checkbox to style this image as well. Next, let's connect the checkbox to the label.
+
+And for that we'll need to add an ID inside the checkbox. Let's call it SidebarCollapseCheckbox and then also CustomFeeds. We added this because remember that every ID has to be unique on the entire page. And we will add several collapsible sections inside our sidebar, which means that we're going to have multiple of these checkboxes.
+
+And we need to make sure that each of those checkboxes has a unique id value. And for that we'll change this ending part of the id for every checkbox. Next we'll use this id value inside the for attribute to connect the label to the checkbox.
+
+And finally let's add the SidebarCollapse checkbox class to the checkbox and also let's add the SidebarCollapseLabel class to the label so that we can easily target them from our CSS code.
+
+And if we reload our page, this is how it's going to look like by default. And if we click on the label, this toggles the checkbox, which means that they are connected properly. And now we're ready to write some CSS to hide and show the sidebar section when we toggle the checkbox. So for that, I'm going to inspect the checkbox, then copy its class name,
+
+and then inside our sidebar.css file let's add a new role where we will target the checkbox and when the checkbox is checked we'll use the tilde combinator to target the sidebar section so I'm gonna add the sidebar section here and here we'll set its display property to none
+
+And with this, now when I click on the header, nothing happens because I need to reload our page to apply those new styles. Once again, I'm going to click on the header and the section is hidden. And when I click on the label again, this shows the section. Okay, so this works as we want it.
+</Lesson_196>
+
+<Lesson_197>
+Next, let's make this icon animated when we show and hide our section. So when our section is collapsed, we want the arrow point down. And when the section is expanded, we want it to point up. And this is actually quite easy to do. And for that, we'll use the transform property to rotate the icon. And we also want to animate the icon between these two states.
+
+So we'll use the transition property to animate the rotation. Okay, so when the sidebar section is expanded we want the arrow to point up, but now by default it's pointing down. So let's change that and I'm gonna inspect the image to see how we can target it from our CSS code. Okay, it doesn't have a class, so to target the image we can either add a class to this image
+
+Or we can start from its parent, this label, and use the child combinator along with the tag selector. Usually it's safer to add a class to the image, but let's use the second approach here to practice using combinators more. So I'm going to copy the label class, and then we're going to add a new rule that targets the label, then a child combinator, and then the image.
+
+This targets our arrow icon and to make it point up we can rotate it 180 degrees. For that we'll write transform and then rotate Z. In CSS you can rotate your elements in all three dimensions along the Z, Y and X axes. In our case and most of the time you'll rotate your elements as you see them so you'll use the Z axis.
+
+And then inside the parentheses we pass the value in degrees and it'll be 180 deg. And this should be enough to flip our image. And if I reload the page, there you go. Now the arrow is pointing up.
+
+Next, let's make the arrow point down when the section is collapsed. For this, we'll need to target the arrow when the section is collapsed and change its transform value to 0 degrees. Okay, our section is collapsed when this checkbox is checked. So let's copy that and start a new selector. So when the checkbox is checked,
+
+I mean, when this checkbox is checked, we want to go inside this label and target our arrow image. And because this label is also a sibling to the checkbox and goes after the checkbox in our HTML code,
+
+We can use the Subsequent Sibling Combinator as well. So in our new selector let's write tilde and then we can just copy this selector and paste it here because this points to the label and then we want to go inside the label and target the image.
+
+And in this case we want to change the transform property. Here we want to set rotateZ to 0 degrees. So I'm going to change this to just 0. And now when I reload the page by default our arrow points up and when we collapse the section it points down.
+
+Great! This is exactly what we want. And so this is how you use the transform and rotateZ function to rotate your elements. And finally we want this rotation to be gradual like here. Probably you remember from our previous tutorials that we can use the transition property to animate our elements.
+
+We want to animate the rotation both when we collapse and when we expand our sections. So for that we're going to need to add our transition property to this rule. Because then the transition property will be applied to this image when the checkbox is checked and when it's not checked.
+
+and here as a value we want to specify the CSS property we want to transition which is the transform property transform form property then goes a space and then we set the transition duration let's start with one second and if I reload our page and toggle our section
+
+Now the arrow is animated when we collapse or expand it. But I think it is too slow, so let's decrease this value and set it to something like 0.25 seconds and reload the page. Great! I think that this is what we want.
+
+Yes. And lastly let's hide the checkbox because we don't need to see it anymore. And for that we can simply target the checkbox by its class name and write display none. Reload the page. Perfect. Okay and with this I think that we've discussed all the parts of this sidebar section that are either new to you or might be challenging.
+
+And next, as a practice exercise, I'm going to ask you to finish styling this collapsible header. And for this, you'll need to place the arrow on the right side of the label. You'll also need to make the label text uppercase, so use the text transform property to make the text uppercase. And you'll also need to adjust the text color and size.
+
+And then add some CSS to handle the hover and active states for this label. Use this reference page to get the property values you need and also to compare your solution. And again, you already know everything you need to style this label, so don't worry, pause the video and try to code this. And I will speed up this part of the video where I'm going to do this as well.
+
+Okay, now the label is properly styled. Well done!
+</Lesson_197>
+
+<Lesson_198>
+The next task for you will be to add the remaining sidebar sections. I mean this one, and this one, and this one, and resources, communities, and recent sections. And for that, for the recent communities and resources sections, you can copy and use the same HTML code that we used for the custom feed. I mean that you can use this. Where is it?
+
+this whole li element so all this code and for these two remaining sections you can use the same html code that we used for the first section so for most of these sections all you need to do is copy the html then save these icons and change the text and images of your new section
+
+but you'll also need to make some other adjustments. Inside the recent section you'll need to make these images into circles. For that you can use the same border radius approach we used before. Also notice that in the communities section you'll need to add this favorite button which is just a button containing an image that you can style
+
+the same way that we styled, for example, these buttons. And don't forget to handle the hover and active state of the button. And one important caveat. When you copy the code of your collapsible sections, don't forget to adjust this part of your checkbox ID inside the checkbox and also inside the floor attribute.
+
+of the label. Otherwise your collapse behavior might not work and wrong section might be collapsed. So for example if you copy this, let me show you, if you copy this for the recent section just change this part of the id to recent to make it unique and then also change the for attribute to recent to connect your label with the new id.
+
+So, pause the video and add these remaining sidebar sections. And don't skip this, because this is a great opportunity for you to have more practice. I'm going to add these sections as well, but I will speed up the video. Okay, now all the sidebar sections are completed. You've done a huge job. Well done!
+</Lesson_198>
+
+<Lesson_199>
+Next, before we make our sidebar scrollable, let's add this copyright link. This is just a regular HTML link with slightly modified text styles and this extra padding from the top. Also, notice that there is no line between the last section and the link.
+
+This means that we'll need to remove this line from our last section. Okay, let's start with the link first and then we'll remove border after that. So first let's copy the text of the link and then we'll go to our index.html file. And I think that we can add our link in after the last sidebar section. So let's collapse the section to make our code less crowded. For our link we'll use
+
+an anchor element and its href attribute will be empty for the same reasons that we left the other href attributes empty here and then I'm going to paste the text we just copied and to reference our link from the CSS code let's add a class it's going to be copyright link also notice this little guy here
+
+In most cases, pasting the copyright symbol into your code is fine because these days almost all browsers and devices support UTF-8 encoding. But we could make our code a bit more robust and stable and replace this symbol with an equivalent HTML entity, which is copy.
+
+And remember that an HTML entity is just a safe way to put special symbols in your code. So when we write it like this, it's going to look like...
+
+this on our page now that we've got this link here we'll need to write some css to make it look like this so we'll need to adjust its text color font size and also handle the hover and active state and also normal state
+
+Also we'll need to add this padding at the top. Okay so at this point I assume that you know how to do all this because we've done similar tasks enough times so far in this course. So I will leave writing all these styles for you as a practice exercise. So pause the video and do this. And I'm going to do this too but I will speed up the video.
+
+Okay, great. And as always, if you get stuck styling this link, use the DevTools to inspect the reference page to see how it's done here.
+</Lesson_199>
+
+<Lesson_200>
+And now let's remove this border. For that I want to show you one more pseudo class. Now let's look at the HTML structure of our sidebar. We've got this unordered list where each li element is a sidebar section with the bottom border after each section. And we want to have this bottom border for all these sections but the last.
+
+And this means that we need to somehow target the last section, which is this li element, and remove its bottom border. There are several ways we could target this last li element. For example, we could modify our HTML code and add a class to this last li element and use the class to target it from our CSS code.
+
+And while this would work, it would make our code less flexible. Because if we wanted to change the order of our sections, we'd need to make sure that this last li element always has that class. Luckily, there is an easier and more robust way to target this last li element in CSS. Let me show you. In our style sheet, we already have a rule that targets, there it is,
+
+the rule that targets our list items in the sidebar. Now let's copy this selector and add a new rule that we will modify slightly to target only the last li element. And for that we'll use a new pseudoclass called LastChild.
+
+This does exactly what we want. It always targets only the last element out of these. And in the last li element, we want to remove the bottom border. So bottom border none. And if I reload the page, the border disappeared. The last child pseudoclass is pretty straightforward. It just does what it says. Use the last child pseudoclass when you want to target only the last element out of several siblings.
+</Lesson_200>
+
+<Lesson_201>
+Next let's make our sidebar no taller than our screen and we'll add a scroll bar if our sidebar has more content than we can fit on our screen. We'll start by making our sidebar to stay on the screen even when we scroll like this.
+
+For that we'll use CSS positioning. We want to position the entire sidebar so we're going to target its container. Let's find the rule and there it is. And remember that this targets the outer UL element that serves as a container for the entire sidebar. And to make our sidebar fixed we'll update this rule and we'll write position fixed.
+
+And remember that fixed position works just like absolute position. The main difference is that with the fixed position when we scroll the element stays on the screen. And now this unlocks the top, right, left and bottom properties to position our sidebar.
+
+We want to make sure that our sidebar starts at the left edge of the page so for that we'll set the left property to zero and this is just a precaution in case we mess up some other HTML or other styles. Right now this shouldn't change anything so when I reload
+
+our page, the sidebar stays in the same position and the content div is now here because when we set the fixed position for our sidebar, other elements without positioning, one of which is this content div, they act as if the sidebar does not exist. Next, let's set the top property to make sure that our sidebar is properly positioned from the top. Now if we set the top property
+
+to zero as well and reload the page. Now it overlaps the header. To fix this we need to move the sidebar down by the height of the header. So let's get that value. For that I'm going to inspect the header and under the computed tab we can see that its height is 56 pixels.
+
+and also notice that it's got a one pixel bottom border that we need to take into account as well so 56 plus 1 is 57 pixels in total and this is the value that we're gonna set here 57 pixels from the top and if I reload the page
+
+Now the sidebar and the header, they do not overlap. Now the only problem left here is that the content still overlaps the sidebar. Don't worry about this at the moment, we fix this when we start styling the content component, I mean this thing.
+
+So for now just ignore this and we will continue styling the sidebar. Next we will configure the height of the sidebar to fit on the screen and for this we'll use the same approach that we used for the drop-down. Let's quickly look at what we did. So I'm going to open this search style sheet
+
+And remember that we use the VH, which are relative to the height of our screen. So 100 VH is 100% of the visible area. And we use the calc function to subtract a couple of values in pixels from this on the fly, which were the height of the header and a little bit of extra space.
+
+So let's use the same approach but for our sidebar. Okay, so what we want here is our sidebar height to be the same as the height of the visible area of the page minus this distance from the top.
+
+and we already know this distance from the top because it is 57 pixels so here we'll use the height property because unlike the drop down we want our sidebar height to be always the same no matter how much content it has I mean even when our sidebar has less content than the height of the visible area of the page we want its height to stay the same and next we'll write calc
+
+and then inside the calc function 100vh minus the distance from the top which is 57 pixels and when I reload the page nothing changed because remember that by default anything above the current height of
+
+the sidebar we set is visible it just overflows but if I try to scroll the page the sidebar is now fixed here and we can't see the rest of its content and we don't want that we want to make it scrollable instead and just like with the drop down
+
+We'll use the overflowY property and we'll set it to auto. And it's overflowY because we only want to show the vertical scrollbar. If I reload the page, now our sidebar should be scrollable. And if I scroll, yes, it's scrollable.
+
+Now remember that different platforms, even if you're using the same browser, handle the scrollbar differently. In Chrome, on macOS, the scrollbar is only visible when we use it. And if I move the cursor away, it disappears. On Windows, for example, the scrollbar looks differently and it's almost always visible. We can make this behavior more consistent and only show the scrollbar when we hover over the sidebar.
+
+And for that, we'll use a couple of new CSS properties that are supported by almost 75% of modern web browsers. First, we'll change the size of the scroll bar. And for that, we'll use the scrollBarWidth property. And let's set it to thin. This should make your scroll bar a little bit thinner.
+
+Next we'll use the scrollbar-scrollbar-color property to configure its color. And here we'll write transparent and then also a space and then transparent. We used two values here because we can configure the background color of the scrollbar, I mean of this thing, and then also the color of the moving part of the scrollbar.
+
+And if I reload our page, now the scrollbar is not visible, but we still can scroll in our sidebar. And next, let's show our scrollbar on hover. To show the scrollbar on hover, we'll add another CSS rule where we'll target the hover state of the sidebar. And here we'll set the scrollbar color property to auto.
+
+This will use the default color value for our scroll bar and with this now when I reload the page then hover over the scroll bar and scroll down the scroll bar becomes visible and this is how we can style our scroll bar using these two properties.
+
+And I think we have finished creating the sidebar. Congratulations, you've done most of this yourself, which means that you have successfully learned the coding skills and are well on your way to mastering CSS. Because the sidebar is a pretty complex CSS component with these collapsible sections, this little arrow animation and plenty of different elements inside. The sidebar adjusts to the height of your screen
+
+It is scrollable if needed and as you'll see later it remains fixed on your screen when we scroll through the main content. And now we're going to move on to creating the main content area of this page.
+</Lesson_201>
+

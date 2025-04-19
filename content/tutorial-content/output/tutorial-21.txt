@@ -1,0 +1,324 @@
+<Lesson_155>
+Now we're going to move on to creating this drop-down that appears when we click on the text field. The drop-down consists of the search result list with the styles for hover and click and the trending today section that consists of a list of posts also with styles for hover and click states and these line separators.
+
+The drop-down is scrollable, it has rounded corners and casts a nice shadow. This drop-down is a complex, beautiful and interesting component to create. It'll help us to see in practice how to use different kinds of CSS positioning. We'll use Flexbox a lot here and a lot of other cool stuff. So, how would I approach creating an element as complex as this drop-down?
+
+Well, in the same way we approached creating this whole web page, let's break the dropdown into pieces that are small enough for us to easily create. Let's think about the first piece that we can create. We need an HTML element that will contain all the smaller elements. And div would be a perfect container element here because it allows us to put block and text elements inside of it.
+
+So let's add that div. We'll open the index.html file and we'll place it inside the search div after the search input. And I'll explain why it's a good idea to put it here in a moment.
+
+It'll certainly need a class that will target from our CSS code. This div will be for the search results drop down. So I think the name search results is descriptive enough here. And as for the content, let's just simply write here search results to start from somewhere. And if I reload our page, there it is.
+
+Notice that by default it's inside the search div and it's at the end because it's one of its flex children.
+
+But we don't want that. What we want is to take it from the normal document flow and place it under the search bar over the other content on the page. Earlier in this course, you learned that we can do this by using the absolute and other types of CSS positioning. So let's copy this class name and add a rule for the search result and set the position property to absolute.
+
+Now, notice that the search results div is no longer a flex child. It has been moved here and now overlaps the content of the search bar. To make the search results div easier to see, let's make its background color green. Okay, now we can clearly see its boundaries and that it's hiding the zoom icon and a part of the search field.
+
+We'll fix that later and now let's see how we can position it properly. Remember that when we use the absolute position we unlock special properties for that element which are top, right, bottom and left. They will allow us to move the element around the screen. So let's set the top property to 0 and the left property to 0,2 and see what happens.
+
+Okay, that moved the div to the top left corner of the page. That's a start, but ideally what we want is that the top and left properties to work relative to the top left corner of the search bar.
+
+so that if we decide to move the search bar somewhere else or if we decide to adopt our page to support mobile then it's going to be really easy to do. So to make the top and left properties be relative to our search bar which is this HTML element and it's a parent of the search results div we can also use the position property and set the position of
+
+the search bar to relative. So for that I'm gonna add position relative here. Now if I reload the page, notice that the search results div now is absolutely positioned relative to the search div. This is because remember that when we apply position relative to an element as we are doing here for the search, then if it has a child element
+
+with the absolute position, which is this search results div, then the top, left, right, and bottom properties of this absolutely positioned child are now calculated from the top, left, right, and bottom of the relative positioned parent.
+
+To put it simply, notice that when the search div has a position relative, the search results is at its top left corner. But if I turn off the relative position, then the search results is moved to the top left corner of the page. So setting the relative position to the search is what we want to easily position the search results.
+</Lesson_155>
+
+<Lesson_156>
+Next, let's make it as wide as the search div. What the relative position also allows is to set the width of its absolutely positioned child, so the width, to 100% like this. And this makes the search results div be as wide as its relatively positioned parent, which is the search div.
+
+And this is exactly what we want. Now let me show you what happens if I turn off the relative position here. Without it, the search results div is as wide as the page. Because it's now absolutely positioned relative to the page itself and has its width property set to 100%.
+
+There are times when you want a behavior like this, for example, when you're creating a modal window. But in our case, we want the search results to be as wide as the search bar. And for that, we need its position to be relative. Next, to make the dropdown content start right below the search, we're going to use padding.
+
+And we will set the top padding of the search results div to be equal to the height of the search div.
+
+If this sounds confusing, don't worry, you'll see what I mean after we do this. So let's calculate the search height, which is its vertical padding, so 10 plus 10, 20. And also we'll add its content height, which is this, but we'll round it up, or technically seal, to 19 pixels.
+
+which means that the total current search height is 39 pixels. And we'll use this value to set the top padding of the search results to 39 pixels. So for that I'm going to write padding top 39 pixels.
+
+Whoops, pixels and reload the page. Great! Now the content of the search results container starts right after the search. But the problem is that the drop-down covers the search and we don't want that. To fix this we need to put the drop-down or the search results
+
+behind the search somehow. And because the drop-down is absolutely positioned, we can use the z-index property. And one side note, when I say the drop-down, I actually mean search results div. So I'm going to use the drop-down or the search results div interchangeably. And back to the z-index.
+
+If you have a hard time remembering these positioning related properties, go back to the CSS positioning section of this course and watch it to refresh your knowledge, because it's certainly useful to come back and review that material from time to time.
+
+By default, all positioned elements have their z-index set to 0, which means that if the search z-index is 0 and we want to put the search results behind it,
+
+Then we can set its z-index to a smaller number, which will be minus one. So z-index minus one. And if I reload the page, there you go. Now the search is on top and we can use it and the drop-down is behind.
+
+Also, notice that the drop-down content starts right below the search. This is because we set its top padding to the same value as the height of the search. And that created several issues here. First, the drop-down corners are not the same as the search corners. And we don't want them to be like this.
+
+So to fix this, we can go to VS Code and just copy the border radius from the search and put it here. And when I reload the page, okay, this is better. And this is a padding issue, we'll fix it later. And so another issue here is that the dropdown is now not only behind the search, but it's also behind all the page content.
+
+I can tell this because its background color is green, but we can still see this gray border here. To better demonstrate this, I'll quickly set the background color of the sidebar div to red. So for that I'm gonna... Okay, this is...
+
+a sidebar and I'll add in your role background color red reload the page notice that this sidebar covers the drop-down but we want the opposite we want the drop-down to be in front of it
+
+So to fix this, we'll use positioning again. We'll change the position property of the header element, which is a parent of the search, and search results. So we'll set the position property of the header to relative.
+
+This will allow us to use the z-index property to lift the header up, which will also lift up its positioned children, one of which is this search results div. So let's find the header rule. Oh, it's here. And we'll add position.
+
+relative here. And this alone will not fix the issue because the header has a default z-index of 0. But if we set its z-index to any integer that is greater than 0, say 1, and this will fix the issue. And move the header and its children along with the search results to the front.
+
+Now the drop-down is above the rest of the content. So it's about this sidebar and it's above this border, but it's behind the search. And now we can remove this red and green backgrounds. So I'm going to remove this one, this one, and let's also remove this CSS rule. Great.
+</Lesson_156>
+
+<Lesson_157>
+Notice that now that we removed the green background we can see the green line here. This is because by default the background is transparent. But we don't want that, we want it to be white. And for that we actually want the background color property here, but instead of green we want it to be white. And when I reload the page
+
+Notice that the border is no longer visible where the drop-down is. Next, let's add this shadow to the drop-down so that we can easily see its boundaries. For that, we're going to go to the reference page and inspect the drop-down. Now, the problem is that as soon as I inspected the drop-down,
+
+the input lost his focus and so the drop-down disappeared. So for now as a temporary solution to this issue let's just select this search results div here because I know that we need to select this one and I'll show you a better way a little bit later. Okay, usually it's not practical to type in shadows manually because they contain custom colors and it's easy to make a mistake. So under the styles tab let's collapse the emulation
+
+We're interested in this BoxShadow property and let's just copy the whole value here and then go to our code and add BoxShadow and paste the value. This is what I was talking about. This value is too complex and not practical to type in manually because it's really easy to make a mistake here. And let me quickly format the value to make it more readable.
+
+Okay, this means that we're going to add two shadows here that are separated by a comma. And in the first shadow, this first value, this zero, means where the shadow is horizontally. And zero means that it's just right behind an element. The second value moves the shadow vertically. One pixel means that the shadow will be placed one pixel down.
+
+Next, the third value configures how blurry the shadow will be. So it's going to be four pixels blurry. And the fourth value here determines how big or small the shadow is relative to the size of its element. Zero means that the shadow is the same size as the search results div. And the last value is the color of the shadow.
+
+Here we're using the RGBA color format, which allows us to set the color and its transparency as the fourth value. So this color is black, but very transparent. And then the second shadow here is kind of the same, except it's four pixels lower. And now if I reload the page,
+
+The drop-down has this nice shadow and looks much better. Great! I think we have finished creating the drop-down container.
+</Lesson_157>
+
+<Lesson_158>
+Let's see. We're going to need a scrollable element to hold all these search results and trending items. We can also add this line to the element using the border property.
+
+So let's create the scrollable container. For that, I'm going to add another div here. Let's also add a class. We'll call it SearchResultsScrollable. And we'll need a closing div tag. And also, let's write SearchResults in here.
+
+And if I reload the page, visually, nothing has changed because divs are just container elements. But now we can style the new div. So I think let's add this line to the div. And for that, I'm going to copy this class name and add another CSS rule inside our style sheet. We can add the line in many different ways, but the easiest is to use the border property.
+
+The line will be above the content of the div, so we'll set the top border. And as for the border value, we'll copy it from this reference page, because just as with shadows, it's important to understand a border value, but there is no practical advantage to typing in manually. So I'm going to inspect this to get the value. There it is. I will copy this border top value from here.
+
+And then here we'll write border top and paste the value. And this should look like this.
+
+There is our border and next let's move it down to match the header line. We'll do this by increasing the top padding value of the search results to push the content down along with the top border here. And what we can do is we can first find out the value we need in the developer tools.
+
+Then we'll update the style sheet. So for that let's select on the search results and open the styles tab. Then we'll click here and increase the top padding and 47 is good enough.
+
+Once again, keep in mind that when we change the styles in the DevTools, it only has a temporary effect. When we reload the page, all the changes are reverted. So when you use the DevTools, don't forget to move your changes to actual style sheets. And this is what I'm going to do now. We need to set this padding top to 47 pixels. There you go.
+</Lesson_158>
+
+<Lesson_159>
+Now we can start building the Recent Searches component. The Recent Searches component is just a list of items where each item consists of an image, some text, and then a button. And when we hover over an item or click on it, it is highlighted.
+
+and also notice that the same thing happens with the remove button. To create this recent searches component we'll use the split into smaller pieces approach again. We will need a container element like a div for the entire component and then we will put a bunch of smaller elements inside. Most of the time when you have a component with multiple similar elements like here, it's better to use a list element.
+
+and usually it's an unordered list so let's add a list for that in index.html file I'm gonna remove this text and add a ul element remember that ul is short for an unordered list let's add a class right away we'll call it recent searches
+
+Remember that ul is a block element by default and it's a container where we put list items. So let's add our first list item and for that we'll use an li element.
+
+Usually it's a little bit better to also assign a class to these list items and target them by their class name from CSS. But I think you already learned how to do that really well. So for the sake of practice, we'll use different CSS selectors here. And because of that, we're not going to assign any classes to this list item.
+
+And next let's also add markup for this image, this text and this button. We'll start by adding an image here and we'll add the src attribute and leave it empty for now. Then let's create the community folder under the images, community.
+
+We created this folder just to organize our images, and let's save this little image inside our new community folder. Make sure that you save that image inside a community folder too. And then let's point to this image using a relative path, which will be images, community, and community-icon1.png.
+
+And let's also add the community image class to this image. And if I reload the page... Okay, this is nice. Next we'll add a div element for the actual recent search. And for that I'm going to copy this text and in our HTML file I'll add a div with a class about recent search value.
+
+and we'll paste the text and okay there is the text and for this we'll need to add a button element so let's add a button here
+
+and also a class. It's going to be RecentSearchRemove. And to have this icon as our button, we're going to need to add an image inside this button. Now for the image, we'll create a new folder under Images, and the folder will be Icons. And this is where we'll save this remove icon.
+
+Notice that the actual icon name is close.svg. Okay, we created these subfolders because we're going to have a lot of icons and community images. And this way, it's going to be easier to work with them. Then we'll point to this close icon from our HTML code. So images, icons, close.svg. And if I reload the page, amazing.
+</Lesson_159>
+
+<Lesson_160>
+Now we've got all the HTML elements we need and we can start styling these. Because this isn't that pretty. First, let's remove this black bullet from our list items. The browser adds these bullets by default, but we don't want to have it like this.
+
+So to remove this bullet we need to style the list container which is this ul element and for that we'll copy its class name and inside the search.css file we'll add another css rule. Probably you remember that the property we need to hide those bullets is called list style and to remove the bullets we'll set it to none.
+
+And great! That removed the default bullets from our list items. Next, notice that by default the elements inside the search item go from top to bottom. Or we could say that this is a vertical layout. Okay, so what can we do to make them go from left to right? Nowadays, most of the time, the answer is Flexbox. So let's use Flexbox.
+
+Now we want this image and this div and this button to be on the same line, which means we have to make their parent, which is this list item, a flex container. Notice that this list item doesn't have a class, so we can't just target it by its class name from our CSS code. What other options do we have?
+
+We could use a tag selector like this. But the problem is that this will target all li elements from all other lists on the page. So we need to narrow down this selector. And what we could do is limit it to the list items only inside the recent searches. And we can use the child combinator for that.
+
+To use the child combinator, I'm going to update this and target the recent searches class first, then I'll type space greater than space, where these spaces are optional and we use them here to improve the code readability.
+
+but this greater than symbol is not optional. You probably remember from previous tutorials in this course what this selector means. It means target only the li elements that are direct children of the recent searches class. And now let's add here display flex to turn each of these list items into a flex container. And when I reload the page
+
+Okay, now the elements are positioned from left to right because they are now flex children and the flex direction is row by default, which places them horizontally. Also because the aligned items is set to stretch by default, the button and text are stretched vertically to match the height of the tallest flex child, which is this image.
+
+And we can enable flex-debug here for this list item to see this better. These dashed lines show the boundaries of each of these flex children. Now let's change this and set the align-align-items property to center, which will return them to their natural size and center them vertically.
+</Lesson_160>
+
+<Lesson_161>
+Next, let's style the flex children one by one, starting with this image. And based on what we see here, we'll need to make the image much, much smaller. Let's inspect the image to see the actual values that we need to use. Okay, its width and height is 16 pixels. We'll use that.
+
+Now to target the image we can use its class name so let's copy the class name here and then we'll write period and then paste the class name and then we'll write width 16 pixels and height 16 pixels
+
+When I reload the page, this is better. Okay, let's turn off the flex debug and adjust the spacing on the left side of the community image compared with this. Notice that we've got more space here than we need. First of all, let's investigate where this space is coming from because we didn't set it explicitly.
+
+Normally, the fastest way to find out is to hover over the space and then inspect. I inspect it with the mouse, but usually I use a keyboard shortcut. It's much faster and more convenient, so I recommend you to learn the shortcut. To learn the shortcut, you can hover over this little inspect button here in the DevTools,
+
+And after a few seconds, you'll see a tooltip with the shortcut. It's Command Shift C for Mac and Control Shift C for Windows. Okay, so let's try the shortcut to inspect this space and then click on the space.
+
+and it is selected the list of the recent searches and when I hover the mouse over the list in DOMtree notice the green rectangle on the left which is padding and in the box model
+
+Here you can see that this is a 40 pixel padding here. So this is where the space on the left side is coming from. Now let's remove this padding from the list because we will add it to individual list items. And we've already got a rule that targets the list here. So let's use this rule and set its padding to zero.
+
+In our case, it's not important to specifically target only the left padding, so we can use this shorthand property that targets all the sides because it's less typing and makes our code a bit simpler. Okay, and when I reload the page,
+
+This is good, but notice that there is also this extra space at the top and bottom of the list. And if we look at the box model again, we can see that there is a default 16-pixel margin at the top and bottom of the list.
+
+Let's remove this margin as well. For that we can also use the margin shorthand property and we'll set it to zero from all sides. And we're using the shorthand property for the same reason as we used it for padding because the left and right margins were zero anyway and we wanted to remove the top and bottom margins. And this way our code is a little simpler.
+
+Great! Now that we've removed the default space we can configure it to our liking. So to add the space around the search item we'll use padding and the reason for that is that notice that on the reference page every search item has this space around it and when I hover over a search item or click it
+
+It receives this gray background and the empty space receives the background too. And remember that when we assign a background to an element, its padding will receive this background, but its margin will not. And because we want this space to receive this gray background, we will use the padding property.
+
+Now let's inspect this list item to find out what panning values we're going to use. And to inspect this item, I'm going to use the keyboard shortcut. So Command Shift C for Mac or Control Shift C for Windows. Then I'm going to hover over the free space and click on it.
+
+Okay, so the values for our padding will be 4 pixels for the top and bottom and 24 pixels for the left and right Now we already have this CSS rule that targets all list items in research searches So let's extend this rule and add padding and we want 4 pixels for the top and bottom and 24 pixels for the left and right
+
+And when I reload our page, this is better. And next, notice that when I hover over a list item in the recent searches, here it changes color and cursor becomes a pointer. Let's add this behavior to our items as well.
+
+And this is easy. We need to add a CSS rule that targets the list items in their hover state and then set the background color property and the cursor to pointer. And then to get the background color, we can use the DevTools and inspect the search item, then set its emulated state to hover, and then copy its background color here.
+
+And we've done this enough times, so I'm gonna ask you to pause this video and do it yourself first. Then we'll do this together so that you can check your solution.
+
+Okay, so I'm going to copy the color from here and then go to VS Code and add a new CSS rule that will target recent searches. Then the direct child combinator and li to target list items inside the recent searches. And here we'll set the background color property.
+
+and I'll paste the color we copied earlier. We also want to change the cursor to pointer on hover and this rule actually targets the normal state of list items so let's add colon hover to target the hover state.
+
+And now when I reload the page, there you go. When we hover over list item, it gets highlighted. Great. Next, I'm going to ask you to style the active state of this list item. So when we click it, like here, it should change its background color as well.
+
+So pause the video and add another CSS rule that targets the active state of search items. Use the DevTools to emulate its active state and get the background color you need. And also don't worry about the search corners getting like this on hover. We'll fix that after you finish handling the active state.
+</Lesson_161>
+
+<Lesson_162>
+Okay, now let's do this together. So to handle the active state, I'm going to emulate it to copy the background color that we need. Then we'll need another CSS rule that targets the active state. Here I'll set the background color to the one I copied.
+
+And we actually don't need to set the cursor to pointer here, because when we click on an element, our cursor is over the element, so we're in the hover state at the same time. So this should be enough. And when I reload the page, look at that!
+
+Now we're handling the active state as well. Good. Next, let's fix these ugly corners here. We don't have them in the normal state because in the normal state we have a default background color that is completely transparent or invisible.
+
+And because we have the padding from left here and right here, which is also fully transparent because it inherits the default background color, we only see the round corners of the search container behind it.
+
+But when we hover over the search item or click on it, we're now setting its background color, and now it covers the corners and the shadow of the container. And actually, the content area ends where the round corners of the container end. It's just that by default, the browser doesn't hide the content that overflows, as you learned in the previous tutorials.
+
+This means that we can easily fix this by hiding whatever overflows the search container. To do this, we'll need to find the search results. Okay, there it is, the search results rule, which is our container for the entire search drop-down. And here we'll add another property, which will be overflow-hidden. And this should hide any content that is outside of
+
+this element. And when I reload the page, now if I hover over the search item or click on it, everything is fine. Because we asked the browser to hide anything inside the search results element that overflows, including this background that we're setting here.
+
+Now that we have taken care of the hover and active states, notice that when I click on the search item, or even when I hover over it, there is this white background behind the image and it's a square. But if we look at the reference page, here it is a circle. So why is that and how we can make it a circle on our page as well?
+
+Well, the reason is that this white background is only a part of the image itself. And we can make it a circle by rounding the corners of the image. And as you already know, we do this by using the BorderRadius property.
+
+Now, this image is a square, and to make it a circle, we can just set its border radius to half of its width. Because if the radius is half of the width, the corners will bend so that they meet in the middle of each side, creating a perfect circle. And to do that, let's find the rule that targets our images. There it is. And we'll set the border
+
+radius property to half of its width, which is 8 pixels. And when I reload the page and hover over or click, great, now it's a perfect circle.
+</Lesson_162>
+
+<Lesson_163>
+Next, let's add this space between the image and the text because we don't have it right now.
+
+Okay, how do we do this? Think about what CSS properties we already know that can help us with this. Okay, two that come to my mind are the padding and margin properties. Both can do what we want, but I think conceptually the margin property would be better here because it adds space outside of an element.
+
+And this space here is between the elements, so it's outside. So we could add the margin to the right side of the image or to the left side of the text. And that would be a good solution. But since their parent, so this li element, is also a flex container, we have a third option here.
+
+And probably you've already guessed what that is. We can use the gap property, which sets the distance between flex items. And so for more practice, let's use the gap property. We use the gap property on flex containers and our list items are flex containers. Let me show you. Yes, they are flex containers. And so let's find the rule that targets our list items. There it is.
+
+This is the rule we're interested in, and I'm gonna write here gap. Let's start with, say, 10 pixels to see if it works, and then we'll get the correct value from the reference page. And if I reload the page, good, it works because there is this extra space. But notice that the gap property has added 10 pixels of space not only between these, but also between these two.
+
+This is because the gap property adds space between each flex item in the flex container. Most of the time you want this, but sometimes you want to add space between just some flex items, but not all of them. And in that case, use the margin property instead of the gap.
+
+But in our case, the gap property is perfectly fine. Now let's get the exact value for the gap. And let's hide this. So the gap value is 14 pixels. And I'm going to update this, reload the page.
+
+Perfect. Next, let's move this button to the right, just like we have it here. To do that, I want to show you a couple of tricks that professional developers use. And the first trick is to set the left margin of this button to automatically take up all the free space that's left after the text. And that left margin will push the button to the right.
+
+So let's do that. It's also important to make sure that we set the margin on the button element itself and not on its children, I mean not on this image. This is because the free space that the left margin will take up
+
+is inside the flex container not inside the button itself because remember that flex items are the elements that are direct children of a flex container but children of flex items like this image they are not flex items
+
+Okay, so to set the left margin of this button, let's go to VS Code and find the rule that targets the button. Probably we don't have that rule, so let's add one and I'm gonna copy this class name and search inside the file to make sure that we don't have the rule. Yeah, so let's add a new one, target the button, and here we'll write margin
+
+left auto and this auto value tells the browser to assign to this margin all the unused horizontal space that is left inside the flex container. So watch what happens when I reload the page.
+
+And there you go. The button is right at the end of the flex container. And if I inspect the button, notice that this orange rectangle on the left, that's our left margin. It's taking up all the unused horizontal space. It almost reaches the edge of the text. And this extra empty space is actually the 14 pixels gap we set earlier.
+
+What's cool about this auto margin is that if we add more content in the elements to the left, so, for example, if we make this image wider or increase the gap or add more text, like, say, this. Now, see how the margin automatically adjusted and the button stays perfectly in the same place.
+
+This is a common way to position the last flex item on the right side of the flex container. Now let me show you another way to achieve this. First, we'll remove this auto margin and reload the page.
+
+And so the second way to push this button to the right is to make this element with the text take up all the space available. And just like with the auto left margin, this will push the remove button to the right.
+
+From previous tutorials we know that we use the flex-grow property on a flex-item to add all the available space to it and that we only use the flex-grow property on flex-items not the flex-container itself and that by default the value of the flex-grow property is zero and if we set it to one the flex-item will get all the available space
+
+And so this is what we're going to do.
+
+To push the remove button to the right, we want to grow the search value div. I mean, this one. I don't think that we have a CSS rule that targets this div yet, but to be sure, let's copy the class name and search in our style sheet. Okay, we don't have the rule. And to search in this file, I use the Command F keyboard shortcut for Mac, or it's Control F for Windows.
+
+And another way is to go inside the edit menu and there is this find option here. But I encourage you to learn this shortcut because you're going to be searching things a lot and it's going to save you a lot of time over the years. Okay, and now let's add a new rule that targets the search value. And here we want to set the flex
+
+grow property to one and that should give the element all the available space. And if I reload the page, there you go.
+
+Now the remove button is at the end of the flex container. So the same result as with margin-left-auto. Okay, and so how do you know when to use the margin-left-auto approach and when to use the flex-row approach? In our case, both approaches are fine. And you want to use the auto-left-margin approach when you want to push the last flex item to the right and keep the natural width of the remaining flex items intact.
+
+For example, if I search for MDN and open their website, in navigation menus like this, if you want to keep the natural size of your menu items, but also push the rest to the right, like this theme button, you want to use the auto margin approach here.
+
+because you don't want your navigation items grow. And so this is how it looks like when the auto margin is used to push the rest of the items to the right.
+
+The Tools item here has its natural size and it looks good. And this is how it looks like when the Flex Grow 1 is used here instead of the Auto Margin. Notice how the Tools item is stretched horizontally and it just looks wrong. So if you want to keep the natural size of your elements, use the Margin Auto Approach. But for the cases where you want to grow your Flex items, use the Flex Grow Approach.
+</Lesson_163>
+
+<Lesson_164>
+Next, let's handle the hover and active states for the button, like here. So when we hover over the button, the cursor should become a pointer and a gray circle should appear behind the image. And when we click the button, the circle should change color. So how do we make this gray circle? Well, we can set the background color of the button.
+
+And to make it a circle, we can set its border radius property to half of the width, as we did with the community image here. And to make the button background bigger than the image, we already know that we can use padding. So let's do all this.
+
+First, we need to find out the value of the background color here. And as usual, I'm going to inspect the element and then emulate the hover state to enable the hover rule. And don't worry that the dropdown disappeared. In this case, the rules are still visible here. Let me increase this. There you go. There is the rule. I'll copy this color.
+
+And inside our VS Code, we already have this empty CSS rule that targets our button. So let's use this rule. I'm going to write background, background color, and then paste the color. And let's also change it to target the hover state. Let's also change the cursor to a pointer.
+
+And if I reload our page, an ugly gray rectangle appears on hover. And if I inspect the button, you can see that it gets this default padding and this is why the background is slightly bigger than the image. And let's disable this flex debug information because we don't need it right now.
+
+Okay, so let's change the padding to be the same from all sides to make it a perfect square. I'm not gonna guess the padding value because we can just use the dev tools to get it from the reference page. And I'm gonna inspect.
+
+this button the padding is 8 pixels from all sides and this is what we're gonna set here padding 8 pixels reload our page and now the button jumps back and forth on hover because the padding changes from the default in the normal state to the larger one in the hover state
+
+And to avoid this we can add another CSS rule that targets the normal state of this button and move the padding property to the rule so that it will be applied in all states. And for that I'm gonna copy this and add one more rule just before the hover rule and this is where we're gonna move the padding property.
+
+And now this works properly. Next, let's change this square to a circle. For that, we'll need to set the border radius property to half the width. And because we're using padding property here to calculate half the width, we have to add the padding to the width and then divide it by two, which is a bit tedious.
+
+There is a better way, we can set the value, so we can write border, border, radius, and set the value here to be 50%, which in this case means to use half the width. And now if I reload the page, we've got almost a perfect gray circle.
+
+Okay, so what's going on here and how can we fix it? Now, the reason is that this button is not a perfect circle, it's in this image. Now, if you look at the image itself, it looks like it's just a perfect square, so it's 16 by 16.
+
+And because the button has the same padding from all sides, this should be a perfect circle. But it's not. So again, look at the content area of the image. It's just a perfect square. But if we look at the content area of the button, which is this blue area, notice that it's not the same as the image. It is a bit taller.
+
+And this is why our button is not a perfect circle. Now we've got this extra space in the content area inside the button because images are by default inline elements in CSS. Or simply put, CSS treats images sort of like regular text and by default CSS elevates images a bit to handle certain text characters well.
+
+And to fix this, we can apply a special property to our image. So for that, let's target the image. To apply that property, first, we need to add a CSS rule that will target the image. And notice that this image doesn't have a class. So let's use a combination of selectors to target it. For that, I'm going to copy this class name from its parent, which is this button.
+
+and then in our CSS code we'll add another rule and we can just write img here so use a tag selector with this space which here is a descendant combinator that allows us to target all the image elements inside this class no matter how deep they are nested within or we can use the direct child combinator
+
+And you already know how this works. So both combinators will be fine in this case. Okay, and so this targets our image. And now to fix it, let's write vertical align bottom. Now this will remove that little elevation from our image. And if I reload the page, there you go. Now the button is a perfect circle.
+
+I won't explain the vertical align property here in detail because I think there are much more important things to learn at the beginning. And there is one more thing. Almost 100% of the time we don't want this elevation behavior with our images by default. Because notice, for example, when I switch tabs back and forth with the reference page,
+
+You can see that the Reddit logo on our page is slightly elevated as well. So I suggest that we fix this elevation behavior for all images on our page. And for that, what we can do is we can simply remove this part. And now this CSS rule is applied to all images on our page. And if I reload our page,
+
+Notice that this button stays a perfect circle, but also this image is now aligned with the image on the reference page. And lastly, because this rule affects all the images on our page, so it's not just search related, I suggest that we move this rule into this style sheet that we created for the cases just like this one. And if I reload our page, everything should stay the same.
+
+Great. Next, notice this black border around the button. The browser adds this black border to buttons by default when we change their styles. We don't want this border here because there is no border on the reference page around these buttons. So I'm going to ask you to pause this video and remove this border because you already know how to do this.
+</Lesson_164>
+
+<Lesson_165>
+Let me quickly remove the border as well. So for that I'm going to write border and the value will be none. And there you go. Next let's deal with the active state, that is when we click on the button. And in the active state we want to change the button's background color. So for that let's emulate the active state and copy the color from here.
+
+This is a very transparent black color. Let's add another CSS rule, recentSearchRemove, that targets the active state of these buttons. And here we want to set the backgroundColor property to this one. Reload the page and there you go. Now the button changes its background color. OnClick.
+
+And actually, congratulations! We're done writing styles for the search items. Now we just need to add the HTML code for the rest of the search items from here. Let me resize the developer tools to see the drop-down better.
+
+So to add the remaining search items, we'll need to save each of these community icons and duplicate the first search item HTML four times. Then change the path to the community image for each of them and their search text. So pause this video and do that yourself. I mean, add these remaining search items. And I'm going to speed up the video because there is nothing new here.
+
+Normally, you don't have to do this repetitive work manually because you have a programming language that does all this work. You'll learn about it in future courses when we get to JavaScript and other programming languages. And when I reload the page, there they are, the remaining search items. Well done!
+</Lesson_165>
+

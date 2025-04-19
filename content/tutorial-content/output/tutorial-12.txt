@@ -1,0 +1,192 @@
+<Lesson_88>
+So far, for our web pages, we've been using only the content part of HTML. For example, we could create a paragraph like this and then see it in the browser. However, this is only a piece of a proper web page, so let's learn how to create the rest.
+
+But before this, know that starting from this tutorial, I'll create the files under my website folder. And I won't have the tutorials folders anymore here. This will make the file structure in the Explorer easier to navigate during these tutorials. And also, by convention, we name the HTML file of the main web page index.html. This is why I named this one index.html.
+
+Okay, and now let's continue to the tutorial. I'll remove this for now and then I'll type exclamation mark and press tab.
+
+In VS Code, this creates all this HTML code and this is what the proper HTML5 page looks like. If I reload the page in the browser, it's empty. And so let's go over this code line by line and see what it means and how to use it and where to add our content.
+
+Okay, the first line is a DOCTYPE declaration. And this one tells the browser that this page will be an HTML5 page. HTML5 is the latest and most frequently used HTML version at this moment. And this is what you want to use like for all of your websites. So this DOCTYPE ensures that the web page is rendered properly according to the modern HTML specifications and features.
+
+And without this Doctype line, browsers may switch to the Quirks mode, which mimics the behavior of older browsers to support outdated code. And so our page might display differently across browsers, it might break modern CSS or JavaScript features, and our page might have layout problems like incorrect margins, fonts, or element positioning.
+
+The doc type is not an HTML tag. It's an instruction that tells the browser which version of HTML we will use for this page.
+
+And the good news is that you don't need to remember how to add this. Just generate it using the !tab shortcut or Google HTML5 doctype and copy it. Next goes the HTML element. The HTML element is the root element that contains every other element of our web page.
+
+It wraps all the content of our page and tells the browser that this content inside is HTML. It's like saying everything from here to here is my website. Without the HTML element, browsers might still render the page, but it won't be fully compliant with HTML standards, which can cause unpredictable behavior across different browsers.
+
+Also, it is a good practice to add the lang attribute to the opening HTML tag. This way, we specify the primary language of our page's content. For English, it's gonna be en. Okay, inside the HTML element, first comes the head element. Our web page visitors cannot see it, because this element and its contents are for the browser and search engines.
+
+Typically, it has information about your website, like the page title, character set, and links to CSS or JavaScript files, and many more. So the head element stores all the essential behind-the-scenes information.
+
+Next, these two meta tags inside the head element are just useful settings that is good to have for all web pages. The first one specifies that our web page is using the UTF-8 character encoding, which is what you want to use like 99.9% of the time. This character encoding tells the browser how to properly interpret and display characters on the page.
+
+And if you don't include it, the browser might guess the wrong encoding, leading to incorrect or garbled text, especially with non-English characters. Different symbols and special characters may not display correctly, so it's good to always have it in the head element.
+
+And this meta tag controls how our web page is displayed on mobile devices and tablets. It makes sure that your web page is shown at its actual size without being zoomed in or out when it's first loaded.
+
+Next, one of the things that you normally configure inside the head element is you set the title of your web page. And the content of this element appears in the browser tab like this and also when the page is being bookmarked. It's also used by search engines as the main title in search results.
+
+So, for example, if I change this to, say, cats and dogs, then it's going to be cats and dogs in here. If you don't include the title tag, several things can happen. So let me remove it. Now, the browser may show a generic or incomplete name, like the URL of the page, which looks unprofessional.
+
+then search engines may not know how to properly display or rank the page, affecting visibility in search results. Also, when users bookmark the page, the name may not be clear or it's gonna be just a URL. So, adding the title improves usability and SEO.
+</Lesson_88>
+
+<Lesson_89>
+Finally, we have the body element. This is where all the visible parts of your website will be. Text, images, videos that you want to show, place them here. At this point, our web page is empty. This is because the body element doesn't contain anything. But let me put back the paragraph. Paragraph of text here.
+
+And now it's here on the page. And so without the body element, the visible content would be disorganized, or it may be displayed improperly, as the browser wouldn't know where the main content starts. And so if you want to add any content to your web page, put it inside the body element.
+
+Okay, so far, if we wanted to add some CSS to our web page, we would have just added the style element beside the content, like this. And then we could just write some CSS code inside the style element. It works, you can do this, but the best practice most of the time is to put the style element inside the head element, like this. And then we can write the same CSS code in here just as before.
+
+So, for example, if we wanted to change the text color of this paragraph, we could just write p and then color royal blue, royal blue, and now the color of this text is royal blue. So this works the same way as before, as putting it beside the content, but it's a better and more recommended way.
+
+And it's better to place it here and not inside the body element, beside the content, because when CSS is before the page's content, the styles are applied immediately when the page renders. And our page will be rendered faster, because the browser will know how to style elements before they appear.
+
+And we'll also have cleaner code structure because we'll have the page structure inside the body element and its appearance inside the head element. And so now our web page is structured correctly according to HTML5 standards.
+
+This page structure is a good foundation for your web pages to work well across different browsers and devices. And you don't need to write all this yourself. In VS Code you can just type exclamation mark and then press tab.
+
+and VS Code will generate the code for you. I personally don't remember how to write all this manually because you don't need to write it from scratch very often and there is no additional benefit in writing it manually. But it's very important to understand what every part of this page structure means so that you know where to put it and how to change it to your benefit.
+</Lesson_89>
+
+<Lesson_90>
+Next up, let's discuss how to structure our web pages. For that, we will look at this Wikipedia page about supercomputers. This page has some structure, and because of this structure, it's easier for us to navigate it. For example, it has this heading, and we can easily see that this page is about supercomputers. Next, on this page, there are these paragraphs that are related to this main header.
+
+Then after these paragraphs if I scroll down goes this history subheader and you can kind of tell that this is a history of supercomputers so this header is related to the main page header. And then if I scroll down goes a bunch of paragraphs about the history of supercomputers. Then goes this sub subheader of the history that also contains some paragraphs and some information.
+
+And so the structure of this web page looks similar to the one you have in books. I mean like actual physical books where you have the title of the book and then topics and then subtopics and so on. Most of the time the web page is supposed to have a structure like the ones you have in books.
+
+And, for example, if I scroll down even further, way, way down, we have this table about the stages of supercomputer application. And this table has rows and columns and corresponding headers.
+
+So this HTML table looks kind of similar to the one you have in books or articles or in Google Spreadsheets. And if I scroll down even further, I will get to this bullet list of related links and also this numbered list of references. And so this whole web page has good structure that helps us navigate it.
+
+Without this structure, if we remove all of it and leave only the content, this page would look like this. So it's just a big pile of text, which is quite hard to navigate and find the information we want.
+
+And so in this tutorial, we'll learn how to add structure to our pages with headers, lists and tables. Okay, and for that we'll start from a blank file and generate the proper HTML 5 page skeleton. To do that, I'll type exclamation mark and then press tab.
+
+And also we will use this wiki page about supercomputers as our reference page. So to open it you can just google wiki supercomputer like this and then open this link. Or you can use the link from the description.
+
+Okay, we are creating the page about supercomputers, so our title is going to be supercomputer. And one of the things that title does is that it sets the name of the tab of our web page when we open it. So if I refresh it, now it says supercomputer here.
+
+Next, the content we want to show on the page goes into the body element. Okay, so let's start by adding this supercomputer heading to our page. It's the main heading of this page and I know this because the main heading of the page is supposed to tell us what this whole web page is about. And to add the main heading to our web page,
+
+we use the h1 element. This one is going to say supercomputer, so I'll just copy the text here. This creates the h1 heading on our page. By default it's bold and has large font size. The purpose of the h1 element is to contain a very short description, often it's one sentence of what the whole page is about.
+</Lesson_90>
+
+<Lesson_91>
+Next on this page goes this paragraph that tells us more about supercomputers. And let's add it to our page. So I'm gonna add the paragraph here. And this creates a paragraph on our page. I'll resize these windows because we have plenty of text to work with, like this.
+
+Okay, notice that the h1 element by default adds a lot of space above and below. And the space is actually margin. And if I inspect this element we can see that it's margin right here.
+
+Okay. And this structure actually makes sense. We're used to it. Like this is a topic here and this tells us more about the topic. And it makes sense here in the code. Like this is the topic. This tells us more. It's a paragraph. And it also makes sense on the page. I think let's add one more paragraph to have a bit more content about supercomputers. Like here. Like this.
+
+And now we have this heading and two paragraphs that tell us something about supercomputers. Okay, if I scroll down, on this page we have this history subheading. It is related to supercomputers, to the main heading. It tells us about their history. So this history subheading is still a part of the whole supercomputer topic, but it's just a smaller part of it.
+
+And let's also add this subheading to our page. To add it, this time we'll use the h2 element that's going to say history. This creates this history subheading. It's a bit smaller than the main heading and it has less space around.
+
+Because this is how the browser styles the H2 subheaders by default. Then we can add a couple of more, or just copy a couple of more paragraphs about the history, like this. And also let's copy a second one right away, like this. And now we've got this history part of this page.
+
+where there is a clear heading and a couple of paragraphs that are telling us something about the history of supercomputers.
+</Lesson_91>
+
+<Lesson_92>
+If we want to add a subheading for the history, we can go down one level more and use the H3 element, which is kind of like a sub subheading. And this time let's just write here history.
+
+subheading instead and maybe a couple of paragraph 1 and also paragraph 2 and this creates a the history subheading here which is a little bit smaller than the history heading and much smaller than the supercomputer main heading. Also we're not limited to adding only the paragraph elements after the headings and subheadings.
+
+We can use links, images, forms, tables, lists, divs and so on. So for example here we can add a div that has a link that leads to some website and like this which makes this link and if we want we can add a paragraph of text here and maybe another div inside with
+
+another link. I'm just going to leave the href attribute empty and the text will be another link. For some reason I write links. And maybe we would want to add an image and for the SRC let's just copy, let's say, this funny image here. I'm going to paste it. And so all this is valid content that we can add after a subheading or a heading.
+
+And on the web page it will look something like this. We can improve how this all looks using CSS, but this is actually a valid HTML structure. And so it's up to us to decide what content goes after a heading. But there are some important things to know about headings. Their main goal is to define hierarchy of topics and subtopics on the page.
+</Lesson_92>
+
+<Lesson_93>
+Now let's talk about lists. There are two main types, unordered and ordered lists. First up, unordered lists. Unordered lists use bullet points to list items. We use them when the order doesn't matter. Let's create a list for the Apocalypse Survival Kit. We start our list with the UL tag.
+
+which is short for unordered list. It's a container for all the list items. We create each item in the list with the li tag, which stands for list item. I'm gonna quickly fill up our list.
+
+There you go, an unordered list. Now, for the things where order is important, we use an ordered list. We create it with the ol tag. It works just like an ordered list, but each item is automatically numbered by the browser. Let's create an ordered list on how to become a pirate. For the list items, we use the same li tag. I'm gonna quickly fill up our list.
+
+Hmm, this seems to be right. Both type of lists can be nested inside each other to create sublists. This is super handy for organizing information that falls under different categories. For instance, let me quickly create a nested list for birthday present ideas.
+
+There you go. Lists are not just for text. You can also have images, links, and other HTML elements as list items. And there you have it, lists in HTML.
+</Lesson_93>
+
+<Lesson_94>
+Now let's discuss tables. Tables in HTML are like the tables you see in a spreadsheet. They let you organize your data neatly in rows and columns. To create a table we use the table tag. It's a container for all table content.
+
+Inside our table, we need rows. We use the tr tag for table rows. Each row can have one or more cells. To create header cells, we use the th tag. It stands for table header. One th pair for one header cell. I want three cells for headers. The first column will be planet. The second, favorite pizza. And the third is weird topping.
+
+Great! We have the first row and its table headers. Let's add some data. We'll have another table row. Inside we have the td tag or table data. It's for our standard cell content. The first cell is for a planet. It's gonna be Zog.
+
+The second cell is for favorite pizza, galactic pepperoni. And the weird topping is space olives. Great, now we've got one planet in our table. Notice that the text inside table header cells is bold and centered by default. These are the default styles that our browser adds.
+
+Normally, you change the appearance of your tables with CSS, like borders, size, colors, and more, which is going to be a topic for future videos. I want to add one more planet. So, tr for new table row. It's important to match the number of cells in every row to keep your table organized.
+
+If our first row has three header cells, each row after that should have three data cells to keep everything aligned. The first cell now is blips. The second cell is cheesy meteor showers and moon mushrooms.
+
+And there you go! Blitz is in our table. This is how you create tables with HTML. You start with the table tag to create your table. Add rows with tr and fill those rows with header cells th and data cells td.
+</Lesson_94>
+
+<Lesson_95>
+Now let's add huge gaps to our heading and many line breaks like this. When I refresh the page, you can see that the browser removed all the extra spaces and new lines. Multiple spaces, new lines, and tabs become one single space.
+
+It's like HTML is on a strict diet. This means if you try to format your HTML with extra spaces or line breaks for readability, the browser will simply ignore it. Why? Well, HTML is designed to display content in the most efficient way possible.
+
+The browser strips out unnecessary white space to keep things tidy and readable for your users. But what if we actually wanted to show all these spaces and line breaks? We've got two tools for that. HTML entities and the pretag. HTML entities are special codes that help us to add different interesting symbols to our web page.
+
+For a space that the browser won't ignore or remove, we write ampersand and bsp semicolon, which stands for non-breaking space. This is an HTML entity for a space that the browser will always recognize. One entity creates one space.
+
+So if I want like five consecutive spaces that browser won't strip away, I'll add five non-breaking space entities.
+
+Now we have one, two, three, four, five spaces. One initial regular space and five more created by the HTML entities. So the syntax for an HTML entity is ampersand and then the entity name followed by a semicolon. There are many many HTML entities you can have fun with.
+
+Just google HTML entity list and use any of those websites. Let's remove all extra new lines and add an h2 element that has a few entities from a playing card suit. There you go. Some characters are reserved in HTML. They have a specific function.
+
+like less than or greater than symbols, which we use to create tags. To display these characters as part of your content, we also use HTML entities. For example, if we want this opening h2 tag and closing h2 tag to appear as is in the browser, I need to use HTML entities instead of the less than or greater than symbols. Let me first replace this with plain content.
+
+This way it's going to be easier for us to read. Then I'll change less than to ampersand lt, less than, semicolon, and greater than to ampersand gt, greater than, semicolon. I'll do the same for the closing header tag. Now we can see those symbols in the browser and it's just plain text.
+
+I'll remove everything again except for the h1 element. Let's say we want to show text or code exactly as we type it, with all its spaces and line breaks. It would be very cumbersome to achieve that with HTML entities. That's where the pre tag helps. Pre stands for pre-formatted text. I'll put back our little story as the content.
+
+and a couple of new lines so that we had more formatting. Whatever you put inside a pre-tag will appear exactly as you type it, including all spaces and line breaks.
+
+It's like saying, keep this text the way I wrote it, please. Here, the pre tag ensures that the text keeps its formatting and all the extra spaces and new lines remain visible. It's a handy tag for when you need to display code snippets or formatted text.
+</Lesson_95>
+
+<Lesson_96>
+Now let me show you a few examples of how to use headings correctly and how to do it the wrong way. So this is a valid HTML structure that we're supposed to have. Here we've got only one h1 element.
+
+that tells us what this whole page is about. And you can use this pan element to style a portion of text inside because this pan is just a container element for styling text without any special meaning. But you cannot put paragraphs, other headings, forms, inputs, and other HTML elements inside the h1 element. Then, after this heading, goes this optional content.
+
+You can have it or you can omit it. Then you can add one or more H2 headings for the subtopics related to the main topic. And these subtopics can also have some optional content or we can just have those topics without any content.
+
+And the subheadings can have their own subheadings all the way down to the H6 level. And you'll have smaller and smaller and smaller text and less space around them with every level town, with the biggest text for the H1 heading and the smallest text for the H6 heading.
+
+So this is the subtopic of the main topic and this is subtopic of this topic and this is subtopic of this topic and so on. I've indented them for us to easily see the hierarchy here.
+
+and you don't need to indent your subheadings like this. It's here only for us to see the hierarchy here. In reality, this HTML structure would be formatted something like this. Because this topic-subtopic relation is about using the right header elements in the right order, but we're not nesting them literally inside each other in the code. And typically for any complex enough website, the HTML code would look more like this.
+
+where you'd have a div, which is just an empty container element for grouping stuff together and styling it. And inside the div you'd have your main heading, then you'd have your content with many divs and other HTML elements. And then, at some point, somewhere within your nested HTML elements you'll have your h2 subheading.
+
+then maybe more of these nested divs and somewhere inside all this nested html you'll have your h3 heading and all this is actually valid html because for the heading elements it's not important how many divs you wrap them inside or how much content is in between them
+
+And what matters for them is the order they go in your code and the correct heading levels. And the correct order is that the H1 heading must go first in your code, then if needed somewhere down the road you'll have an H2 as a subheading for the H1.
+
+Then also if you need you'll have an h3 as a subheading for the h2. Then you might have another h2 that will have an h3 and maybe an h4. But most of the time you'll be using like an h1 and h2 and very rarely an h3. And so for HTML headings and their valid structure it's important to have this order of headings and not important what other elements surround them.
+
+Now let me show you examples of what not to do with your headings. It's considered a bad practice to have more than one H1 heading on your webpage. So don't add two or more H1 headings to your webpages. Also, it's not recommended to add paragraphs and divs to your heading elements.
+
+Also, it's not a good practice to add headings inside your headings. Also, don't skip your heading levels. It's not good to go from H1 directly to H3 without having an H2, because it doesn't make sense. So instead of this, it's recommended to have an H1, then an H2 and then an H3, if needed.
+
+And the last important thing to know about your headings is that they are for the structure of your web page, not the appearance. So don't use the heading elements if you just want to make some text bigger. I mean, don't use the heading elements with the text that you wouldn't say that it's actually a heading for the content that follows. If you want to make some text bigger, just use divs or paragraphs or span elements and add some CSS, but don't use headings.
+
+Use headings only for the structure, for the text that's actually a heading. Like, for example, on this Wikipedia page, this is a heading. Its role is to help you to see what content that follows this heading is about. As your homework, take, for example, this Wikipedia page on black holes and try to recreate its structure.
+
+So make sure that the page you create makes the proper title in the tab. Then it has this proper main heading. Then you can add a couple of paragraphs that follow. And maybe if you feel like it, a couple of images from here. And then go through the page and add this history heading and maybe this general relativity heading. And add all the headings, subheadings that you encounter on this page.
+</Lesson_96>
+

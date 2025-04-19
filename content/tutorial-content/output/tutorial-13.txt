@@ -1,0 +1,108 @@
+<Lesson_100>
+Let's talk about creating a drop down list in HTML. Let's add one to our form. We use select and option tags for this. Our drop down is gonna be for choosing your pizza sauce. We'll start with the select tag. It's the container that holds all the sauce options.
+
+This is where we put the name attribute for this dropdown. The name attribute is what gets sent to the server when you submit the form. I'll put sauce. Inside, we add option tags for each choice. To add the tomato sauce option, I'll write option, then the value attribute. Each option has a value.
+
+which is what gets sent to the server when you pick that option. I'll write tomato. Then the text between the opening and closing option tags is what you see in the drop down list. It's gonna be tomato. Now let's add more sauces. For each sauce, we add an option element. I'll add barbecue and pesto.
+
+There you go. Now we can select the sauce we want for our pizza. I'll choose barbecue.
+
+And there it is, our barbecue medium sized pizza with cheese. Let's also add a label that's gonna be Sauce, capital S. Don't forget to make sure that the for attribute is the same as the ID. Otherwise, they won't be linked. Let's also add a horizontal rule to separate it visually even more. This is better.
+
+Notice that when this page loads, we have the tomato option selected by default. But what if I want the barbecue sauce to be selected by default? Because why not? It's a great sauce. For that, we can use the selected attribute. It's kind of like the checked attribute, but for the option tag. So I'll add the selected attribute to the barbecue option. Great, the barbecue option is selected by default when this page loads.
+
+And that's it! Now you know how to add drop-down lists to your page.
+</Lesson_100>
+
+<Lesson_97>
+Let's discuss forms. Forms on the web are like, for example, the forms you fill out to order a pizza. They ask for information, you give it to them, and then they do something with that information. Let's actually create a simple login form. First up is the form tag. It's a container for all the inputs and buttons. In the opening form tag, we add the action attribute. The action attribute
+
+tells the browser where to send the form data when the user submits the form. I'll paste this URL here. It points to a little PHP script I've prepared on my website that processes the form data we submit. This script will just simply show us the data we submitted.
+
+Next, I'll set the method attribute. We need the method attribute to configure how to send the data to the server. Usually, it's either GET or POST. With GET, your answers are sent through the URL. With POST, they are sent behind the scenes, which is more secure. I'll use POST. And I recommend you always use POST.
+
+It's a secure way to send data to the web server. If you don't add the method attribute, the browser will use the get method by default, which we don't want. Now let's add some fields to our form. For that, we use the input tag. Inputs are like blank fields on a form. The input tag is super versatile. We can have text fields, password fields, checkboxes, radio buttons, and more. To configure that,
+
+I'll use the type attribute. The type tells the browser what kind of information you're expecting. This field will be for the user's name, so text. Then we need to add the name attribute. The name attribute is for the server to recognize the data from this input.
+
+We can use whatever name we want. A good practice is to use a name that reflects what kind of information we expect from this input. In our case, it's the user's name. So I'll write USERNAME. This is the camel case naming convention, where the first word is all lowercase and the following words start with a capital letter.
+
+Input is a self-closing tag, so I can just leave it like this. At this point, if I refresh the page, we have just an empty input box where I can type in something, like pizza guy. I can add the placeholder attribute to show some text when the input is empty. Let's put something like type in your login.
+
+Now it's better. And when I start typing something, the placeholder is gone. We can also set a default value for this input with the value attribute. I'll set pizza guy here.
+
+Now we have some initial value that the user can change. If I remove this value, we have our placeholder text here. Now let's add a password field. I'll add another input tag. This time the type will be password. The name attribute will be user password, camel case.
+
+Again, it's for the server to recognize the data from this input. I won't add the value attribute. So by default, it's gonna have an empty value. The placeholder will be type in your password. Now we have one more field. And if I type in something, it's all hidden.
+
+Let's add labels to our inputs. To create a label, we use the label tag and write the actual label in it. For email, I'll simply write username, colon. For password, it's gonna be password, colon.
+
+Now it's more clear what to put inside those fields. Notice that everything stays on the same line. It's because labels by default are in line elements too. I want our labels to be on separate lines. For that we could use the BR tag after the text input, like this. Now it's on the next line.
+
+Or we could use paragraphs, which are block level elements and they start on the new line. Let's use them. I'll remove br and I'll put our label input pairs inside paragraphs like this. There you go. Notice that we have extra margin now because paragraphs have those margins by default.
+
+Now, if I remove these label tags, I'll still have the same text on the page. So why do we need to have label tags at all? That's because labels give us a cool feature. We can link a label to an input. For that, we'll use a couple of new attributes. Inside this label, I'll use the for attribute, which is gonna be LoginUserName in camelCase again.
+
+The second attribute we need is the ID attribute in the input we're linking our label to. We put the same value here as in the for attribute. Now, this label and this input are linked. One caveat, make sure that this ID value is unique on this page. That is, no other element has the same ID. Otherwise, it won't work.
+
+Let's do the same for the password. I need to make sure that both the for attribute and the id attribute have unique value. It's gonna be login user password. The same for the id here. Now if I refresh the page, it seems that nothing has changed visually. But now if I click on the label, it focuses on this input, which means they are linked. The same for the password field.
+
+Labels make your forms easier to use, especially on mobile, and for people using screen readers. Also, this feature is very convenient with checkboxes and radio buttons, which we'll discuss in a minute.
+
+This is all great, we have our input fields, but how do we submit this form? We need a button to click. Let's add that. I want this button to be inside a paragraph two, just for visuals. To create the actual button, I can use surprisingly the input tag again, but the type will now be submit.
+
+And to set the text of this button, we use the value attribute. I'll write just log in. The submit button doesn't need to have a name, because it's not like it has any data to send to the server. It's just a button. When we click it, it packages up all the form data and sends it off to the server based on the form's action and method.
+
+Let's do that. For username, I'll type in pizza76. For password, it's gonna be cheese. Submit. And there is our data. It's key value pairs, where the key is the input name, and the value is the actual data that we typed into this input. There is our pizza76 for username and cheese for password.
+
+Let me go back and quickly type in different values. Now it's underscore soda underscore for username and 3 a.m. in the morning for password. Submit. And there they are, our input values. And that's the basics of HTML forms. You start your form with the form tag. You put all the inputs inside. You add labels with the label tag.
+</Lesson_97>
+
+<Lesson_98>
+Let's make our form about pizzas. I'll remove our login form inputs except for the submit, where I'll change the value to just order this pizza. Let's discuss checkboxes. To add a checkbox to our form, I'll use the input tag with the type attribute set to checkbox.
+
+Next goes the name attribute, which is useful when you're sending data to the server. I'll put toppings. Then goes the value. I'll put cheese. This value will be sent to the server when this checkbox is checked and the form is submitted. There you go. It's not pretty, but still a checkbox. I can select it and submit it.
+
+There is our topping cheese. This value only goes to the server when the checkbox is selected. Let me show you that. If I don't select the checkbox, the server will not receive the value when the form is submitted. At this stage, it's almost impossible for users to figure out what this checkbox is about. We need a label here.
+
+You already know how to add labels to inputs and link them together. I'll write label for, the value is gonna be topping cheese. And I'll add ID to the input, which will be topping cheese too. The ID must be unique for each element on the page. Don't forget to add the actual label, cheese.
+
+Now it's clear. Clicking on the label will also toggle the checkbox. This is nice for usability. But don't forget to link your label with the input using the same value for the for and id attributes. Otherwise, it won't work.
+
+Checkboxes are great when you want to give users multiple options and allow them to select more than one. It's like having a list of toppings for a pizza where you can pick just what you like. You might want mushrooms, pepperoni, or olives.
+
+Now let's add a few more to make a list of toppings. Each one will be on a separate line, so I'll start with the p tag. The label tag, this topping will be mushrooms, so I'll add four topping mushrooms. Then the actual label is mushrooms. Now the input, type checkbox, name toppings, the value this time mushrooms.
+
+And the ID value will be the same as before. I'll quickly repeat the same for the pepperoni and olive toppings.
+
+There you go. But now, if I select two or more toppings and submit the form, the server receives only the last checkbox value. That's because of the way we specified the name of our checkboxes. When we have only one checkbox, this works.
+
+But with multiple checkboxes that share the same name, we need to add square brackets, like this, for it to work properly. Think of it as telling the server all these checkboxes are related and part of the same group named toppings.
+
+So all the checkboxes in the group must share the same name with the square brackets. Now if I select all those checkboxes and submit the form, we have all the values on the server.
+
+Let's say that the cheese topping is popular, and we want it to be already pre-selected when someone visits our page. For that, we have the checked attribute. I'm gonna just add the checked attribute like this. It's like saying, yes, cheese is a great choice, so let's include it from the start.
+
+The checked attribute doesn't need a value. Its presence alone does the work. Now, this checkbox is always checked by default. And this is how you add checkboxes to your forms.
+</Lesson_98>
+
+<Lesson_99>
+Let's move on to radio buttons. Radio buttons are great when you want the user to choose just one option from a few choices, like their favorite pizza size. You can't have both small and medium size for one pizza. Let's add the ability to choose pizza size to our form. So I'll add the P element because I want all the options to be on separate lines. I'll write input type.
+
+And I'm gonna use radio because we want a radio button here. Then the name attribute will be pizza size camel case. This button is for a small pizza, so the value will be small. I'm planning to have a label for this radio button, so I'll add ID. Its value will be pizza size small.
+
+Next, I'll add label for pizza size small, small is for the content. Let's also add the HR element here to separate sizes from toppings. Here is our radio button, I can select it. The label is to the right because we put the label element after the input in our code. Now let's add options for medium and large pizzas.
+
+Each radio button is its own input tag. So I'll add p and then input type radio. For the name attribute, we give all the pizza size radio buttons the same name, pizza size. This is crucial. It tells the browser these radio buttons are grouped together. Only one can be selected at a time within this group.
+
+The value attribute specifies the value sent to the server if this option is selected. For medium size, it's medium. The ID attribute is gonna be pizza-size-medium. I'll add the label the same way here. 4 will be pizza-size-medium. The content is medium.
+
+This is great. Now, if I select one radio button, the other one is deselected. And if I select the medium size pizza size and a couple of toppings and submit this form, the server receives all of that.
+
+Now I'll quickly add a radio button for the large pizza size. So p tag again, input radio, the name is still pizza size. The value will be large and the ID is gonna be pizza size large. Remember, we want the ID attribute to be unique. And don't forget the closing greater than symbol and the label.
+
+There you go, all the sizes are available now. If we want a radio button to be preselected, we can add the checked attribute to it. It's the same as with checkboxes. The only difference is that only one radio button in a group can be checked by default. This means I can add the checked attribute to only one of the inputs that has the pizza size name, the medium size radio preselected.
+
+And that's it. This is how you add radio buttons to your forms. Remember, radio buttons are like single choice questions. Use the same name attribute for all buttons in the group and set a unique value for each option.
+</Lesson_99>
+

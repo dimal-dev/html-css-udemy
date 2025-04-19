@@ -1,0 +1,200 @@
+<Lesson_202>
+And now we're going to move on to creating the main content area of this page. The main content of this page is everything that goes below the header and to the right of the sidebar. The whole component might look different from what we've created so far, but if we take a closer look at the smaller elements here, we'll see that we already know how to create most of them.
+
+For example, this banner is just a big image, and we already know how to add and style images. And this is just a big bold text. Then these buttons, we already know how to style buttons. We can click on this one to toggle this little menu that we can add by using the same approach that we used for the profile menu. And if we continue examining the main content, we'll see that most of its elements are just like this.
+
+I mean that they are similar to what we've created so far. But we'll find a few new and interesting things here as well. For example, this sidebar on the right is sticky. This means that if we scroll down this page at first, the sidebar goes up along with all content.
+
+But as soon as we reach a certain point, the sidebar becomes fixed and will stay on the screen as we continue scrolling. So we'll learn how to do this. Also, we'll learn how to use the Font Awesome library to add these icons inside these filter by flare buttons. Font Awesome is one of the most popular icon libraries. It's easy to use and important to learn.
+
+And it has a free version with plenty of beautiful icons. If this main content component seems like a very difficult component to create, don't worry. When we start creating it element by element, you'll see that it's actually easier than it looks. Especially if you've done all the previous practice exercises.
+
+Now let's discuss our plan how we're going to create this main content component. So together we'll create container elements to outline the layout for each sub-component. We'll also discuss the new topics and the parts that might be challenging. After that you will be well equipped to create all of the remaining elements as a practice exercise. But if you want to get the most of it I would recommend you to pause the video and go ahead of me
+
+and try to create this whole component yourself first and then return back and watch the video. This way you'll get the most out of this. Okay and now let's start creating this together. First, as always, we'll need a container element for this entire content area.
+
+And actually we already have it. Remember that currently it overlaps the sidebar. So let's fix this and make sure that our content starts right after the sidebar. For that let's think about why the content overlaps the sidebar in the first place.
+
+Well, if you remember, this is because the sidebar has its position property set to fixed, which puts the sidebar on its own layer and makes it invisible for the content div. It's like our sidebar is now a ghost for the content. So as a fix, we can just fill this side of the content with padding that will be the same size as the sidebar.
+
+So first, let's go to our index.html file and let's rename the content class to, say, main to make it less confusing. And this main component looks like a big independent component with a lot of styles to me. And because of this, it seems like a good idea to create a new style sheet specifically for this component.
+
+So let's open our file explorer and find the css folder and here we'll add a new file and we'll call it main.css just like we call our component and this is where we'll put all the styles related to the main component
+
+In here we'll target our main div by its class name and we'll set its padding left to some large value, say 300 pixels. This is just an initial value to get us started, we'll get the exact value we need from the reference page in a moment. Next we'll need to include our new style sheet, otherwise the styles will not be applied, so for that we'll need another link element and I'll replace this with main.
+
+This should be sufficient, so I'm going to close the file explorer and then let's reload our page. Now our content starts after the sidebar and if we inspect it, we'll see that this is just a lot of padding that is pushing the content to the right. We could have also used margin here to push our content. So if I replace padding left with margin left, margin left,
+
+and reload our page, notice that the content is exactly where it was. But now it's the margin that's pushing our content to the right. In most cases it doesn't matter whether you use margin or padding, but here we're going to need the padding and not the margin because of this subtle background that we'll add later to our main content.
+
+So I'm gonna undo this and we'll use the padding. Reload our page. Good. Now let's adjust the padding to make sure that we're using the correct value and we'll get it from the reference page. It's 265 from the left, but I also notice 8 pixels from the top and from the right. So let's add these as well.
+
+for that we'll upgrade this to a shorthand property remember that the first value here will be our padding from the top so it's 8 pixels then goes our padding from the right 8 pixels again now it's got 0 pixels or no padding from the bottom so we'll write 0 here and then 265 from the left and this is the padding we want reload our page perfect
+</Lesson_202>
+
+<Lesson_203>
+Next, let's add this light gray background to our content. For that, we're going to inspect it here and then we'll just copy the color from the DevTools. Then we'll add the background color property to our container and then paste the value. And reload our page. Great! Now the background is here, but I noticed two problems. The first one is that we've got not that many content here.
+
+And because of this, the background doesn't fill the rest of the screen. The second problem is that we don't want this gray background to be behind the sidebar. Because notice that on the reference page, the gray background stops right before the sidebar. First, let's fix the height of our background. It's very easy to do, because in CSS, just like there is the maxHeight property, there is also the minHeight property.
+
+and it does exactly what it says it puts a limit on the minimum height of our element so if we set the min height of our container min height to say 100 pixels now this means that the height of our main div cannot be less than 100 pixels but if you add more content to the element it can grow taller and so if I reload our page
+
+Now the main content height is 100 pixels and notice that this grows the background area as well and the background is bigger. Okay, I'd like our background to fill at least the visible area of this page and we already know a unit of measurement that can help us achieve that.
+
+and I'm talking about the VH viewport height so let's change the pixels here to VH which means that we want our main div to be at least as tall as our screen but we also allow it to grow taller as we add more content and if I reload the page
+
+Great! This is much better. Next, we'll address the second problem and we'll fix the background of our sidebar. This is very easy to do. We'll just need to set the background color of the sidebar's container. So let's open the sidebar style sheet. And this is the rule that targets the container. And I see here this background color property that we commented out earlier.
+
+Let's uncomment it and change its value to white. Now, if I reload our page, this is what we want.
+</Lesson_203>
+
+<Lesson_204>
+Next, let's work on this part of the main component. It will be a smaller sub-component that I suggest we call the main head. We can divide it in two parts, this big banner image and also this row of the elements below the banner image.
+
+Okay, so for better code organization, I suggest that we put the code of this main subcomponent inside a container element as well. So inside index.html file, let's scroll down here.
+
+and in the main div we'll add another div that'll have the main head class then let's add this big banner image so for that I'm going to save the image let's save it in the community folder the name is communitybanner.png then in our code let's add an image the src will be images community and then community communitybanner.png
+
+We'll need to style this image so I suggest that we add a class here to make it easier for us to target the image. How about MainHeadBanner?
+
+And now if I reload our page, okay, this image is really huge. So let's make it smaller. And if we look at the reference page, we'll see that the banner image is as wide as the main div itself. And when I resize the browser window, the banner image follows as well.
+
+So to achieve this, we can either use flexbox and the flex-grow property, which I think will be an overkill. Or we can just set the banner image width to 100%, which means be as wide as your parent. Let's use the width approach.
+
+and set the image width, so for that we're going to need to copy the class, and set the image width to 100%. With this, if I reload our page, now the banner is fully visible and when I resize the browser window, the image follows the width of the main content.
+
+Next, notice that the banner image has these round corners that I'm going to ask you to style by yourself and we will go ahead and work on this part.
+
+For this row, we'll need a little container as well. So let's add it inside our head div. Here we'll add just another div and we'll call it mainHeadInfo. I'm going to put a text placeholder here, say mainHeadInfo, and then reload our page to make sure that it's there. It is. And now I'm going to ask you to do another practice exercise.
+
+which will be much harder than the previous one. I will ask you to add and style all these elements yourself, because you actually already know how to create all this.
+
+So your goal will be to add and style all these elements so that they look the same as on the reference page, including this behavior. When we click on this button, it toggles this little menu. The only thing that you can skip is making this image overlap the banner.
+
+Because we're going to do this together, where I'll show you how to use the relative position to achieve this. And so when you finish styling this little sub-component, it should look like this.
+
+If you've completed the practice exercise, at this point you should have a similar looking section, which means that you're ready to use the relative position to move the section up so that the circle image overlaps the banner. And if you haven't completed the exercise, then do it. I'll wait.
+</Lesson_204>
+
+<Lesson_205>
+Okay, we want this image to overlap the banner, like here. And notice that the image is inside the community div, which is inside the main.head.info div, which contains the whole row. And so this will be the div that we'll apply the relative position to.
+
+And remember that when we set a relative position to an element, we can use the top, right, left and bottom properties to move that element from its original position. So let's try doing that. So let's copy this class name and let's find the rule that targets it. And this is the rule that targets the div that we want to move up. Let's make its position relative here.
+
+and you already know about the relative position from the tutorial on positioning. Okay, this alone will not move our div. So let's add the top property here and then set it to some negative value, say negative 30 pixels, to see what happens on the page.
+
+Reload our page. Okay, this moved the section 30 pixels up and now the image overlaps the banner. And actually this is it. This is how easy to use the relative position to move our elements relative to their original position.
+
+But notice that now, because the whole row is 30 pixels up, these buttons are also overlapping the banner. And notice that they are also stretched to match the height of the whole row. We don't want this and we can easily fix this.
+
+which is going to be a next task for you. Think about how you could use the alignItems property to fix this and position these buttons at the bottom of the row, like we have it on the reference page here. And this should also fix them being stretched. Here is a hint for you. Use the flexEnd value for that. And when you'll do this, you'll have it like this.
+</Lesson_205>
+
+<Lesson_206>
+Now let's move on to creating this list of posts and this sidebar on the right. The good news here is that you already know almost everything you need to create these. And we'll use this as an opportunity to further improve your coding skills. You've already seen in this course how to create and style similar elements.
+
+So here's your next task. You'll need to create this whole list of posts and this sidebar on the right. And make sure that your posts and your sidebar look the same as on the reference page. Use the dev tools to get all the values you need and in case you get stuck. And also there are a few things that you don't need to do because we'll do them together later.
+
+You don't need to make your sidebar sticky like this. You don't need to make the sidebar scrollable, because there are certain pitfalls there that we'll discuss later. Also add these flare buttons, but don't add the icons, because we'll learn how to use the Font Awesome library to add these.
+
+But except for these, everything else should look and work the same as on the reference page. Again, if you get stuck, use the DevTools to see what elements and styles you can use to create these components. So, roll up your sleeves and get to coding. I'm gonna code these two and I'll see you when you finish. Okay, when you finish, you'll have something similar to this.
+
+And if not, then go do this. It's important.
+</Lesson_206>
+
+<Lesson_207>
+So I'm gonna assume that you've created all these components and let's go ahead and learn how to use Font Awesome. Font Awesome is one of the most popular icon libraries that we can use on our websites and that has thousands of free icons. So let's discuss how we can use it for our Flare buttons. There are many ways that we can do this and one of the most popular and I think the easiest way that we can do this is by including it just like we included the Google Fonts.
+
+So for that, let's google Font Awesome CDN. Remember that CDN is an online service that helps us use images, CSS styles and other types of media on our websites more easily. Until next, let's open this first link to cdn.js. Here we can select a Font Awesome version that we want to use.
+
+6.7.2 is the latest version at the time of recording, so I'm going to use this one. And then we're interested in this first link, font awesome, all mincss. On the right side we've got these three icons, click on the middle one to copy the link tag.
+
+And this will copy the HTML that we'll need to use on our website to include Font Awesome. Then let's open our index.html file and scroll up to the head element. And here let's paste the link tag we copied right after the last link element. And this will load the Font Awesome library from the CDN.
+
+If you're having any troubles finding and copying this link tag, then another option for you can be to open the reference page, then right-click on any empty area on the page and select View Page Source. This will open the actual source code of the reference page.
+
+And here in the head element find the last link element that points to the Font Awesome library. Then copy the entire link element and use it in your index.html file. Okay, now we're ready to add our first Font Awesome icon.
+
+and for that let's go to our chrome browser and google font awesome awesome just font awesome without cdn search for that and then open this first link that leads to the font awesome website and then open the icons page here we've got this search bar where you can search for some icons let's type in image and then press enter
+
+And this will find all the Font Awesome icons related to the word image. And it has found more than 1,000 icons related to this word. We have a free version of Font Awesome, so we'll use these first two icons that don't have the Pro label on them, which means that these are free to use.
+
+Let's click on the first icon that will open this pop-up that gives us different ways of using this icon. And we're interested in the HTML tab where we can get the HTML that we need to add to our page to use this icon. And to copy this HTML just click anywhere inside the eye element like this.
+
+and this will copy the HTML to your clipboard. And the I-element is a simple text element that makes your text italic, which you can use to wrap up parts of your text like technical terms. In practice, you'll rarely use the I-element and mostly in cases like this when we're using this external library.
+
+Next, let's open our index.html and find the Flare buttons and let's find the FanMade. Let me search for the FanMade. Okay, there it is. So find the FanMade button and here paste the HTML that we copied on the Font Awesome page. And now if you open your page and reload it, you should be able to see this image icon.
+
+Next, to add the icon in the funny button, let's go to the Font Awesome website, close this pop-up, scroll up and search for Grin. And don't forget to press Enter to run the search. Then let's scroll down and this one looks like the right icon to me.
+
+Then click on the eye element to copy the code and then inside our index.html file let's paste the code and reload the page. There you go, there is the second icon. And this is actually how easy it is to add icons to your web page with Font Awesome.
+
+Okay, and again, as a practice exercise, add the remaining icons. Search for comments to get the discussion icon, then circle exclamation for the spoiler, and then newspaper for the news. And I will quickly add the icons as well, but I'm going to speed up the video.
+
+So we've added all these icons using the Font Awesome library. And notice that once we've included the correct link to the library, adding and using all these icons became a pretty easy task. And this is what I like about these icon libraries.
+</Lesson_207>
+
+<Lesson_208>
+Next, before we make our sidebar sticky, notice this ugly empty space at the place where we should actually have the header. And this happens because our header remains in its original position when we scroll. But it should actually remain at the top when we scroll, just like we have it on the reference page. So let's fix this.
+
+You probably remember from our previous tutorials that this is pretty easy to do. All we need is to change the header's position to fixed and adjust its distance from the top. For that, let's open header.css file. And I've got just too many tabs over here, so I'm gonna close a few and then open the header.css file.
+
+And if we scroll up, right at the top of the file there is this CSS rule that targets the header container. And it's already using the relative position. Let's change it to fixed. And this should be sufficient for our purposes, because our header goes first in our HTML code.
+
+so it will be displayed right at the top but just to be sure that everything works even if somebody decides to add some html elements before our header let's explicitly set its top position to zero and now if I reload our page and then scroll
+
+Notice that our header remains fixed at the top. But there are a couple of new problems here that we need to fix. The first one is now our header doesn't take up all the available width. And this is because of how by default the fixed and absolute position work.
+
+There are several ways that we can fix this. One of which is we can use the left and right CSS properties to stretch our header between the left and right edges of the page. And for that, let's update our rule and set left to zero and right to zero as well. And now if I reload our page, the header takes up 100% of the width available.
+
+Another problem we've got here is now their header position is fixed. It doesn't exist for the main content. The main content is displayed as if the header doesn't exist. And so they overlap. To fix this we can use padding to push the main content down. We can add padding to the main content just by increasing its top value.
+
+It will work, but the main downside of it is by doing this we are coupling our main component with the header component, which means that when we make some changes to the header that affect its height, we'll also need to adjust the top padding of the main component.
+
+which makes our code more coupled and more fragile. And in general, it's a good practice in programming to decouple your components and your code to make them less dependent on each other. And so to not couple our header and our main components, we could add that padding to the body element.
+
+for that we'll need to find out the exact padding value that we want to use here which is going to be the height of our header so under the computed tab we can see that it's 56 plus 1 pixel so it's 57 pixels and now let's open our page.css file where we've got this css rule that targets our body element and here we want to write padding top 57 pixels and if I reload our page great
+
+The padding we've added just now compensates for the positioned header and it pushes our content down and this looks much better. And now it might seem that all our problems with the header are fixed but notice what happens if I scroll. The header starts to look weird again because its background is transparent and we can see it through our header.
+
+To fix this, we can just set its background to be white. So background color, white, white, reload our page, and this is much better.
+</Lesson_208>
+
+<Lesson_209>
+Next, we're going to make our sidebar on the right to work the following way. At first, it will act just like a regular HTML element. And when we scroll down like this, it will scroll with other elements. But once we get to a certain distance from the top of the page, it will become fixed and stay on the screen as we continue to scroll.
+
+And this behavior is called sticky. And it's actually pretty easy to create this sticky behavior in CSS. For that, we're going to use another type of positioning. But first, let's look at how our sidebar currently works. Currently, when I scroll down, it works just like a regular element, where it stays in its original position. And when I scroll and scroll and scroll, the sidebar eventually disappears.
+
+And so to change its behavior, let's open the stylesheet and find its container. There it is. Here we'll write position Sticky. Now, this alone won't do much. So when I reload our page and then scroll down, notice that our sidebar actually doesn't work like we want it. And it works just like it worked before. This is because for the Sticky position to work, we need to use another property.
+
+and it's gonna be the top property and let's set it to 100 pixels and see what happens. So reload our page, then I'm gonna scroll down and
+
+Notice that when I reached a certain point, which actually was 100 pixels from the top of the visible area of the page, the sidebar became fixed and now it stays on the screen when I scroll. And when I scroll up, once I reach the original position of the sidebar, it stays at its original position.
+
+And this is how easy to achieve this sticky behavior. For that we just use the position sticky and then we just use the top or the bottom properties for it to work vertically or the left or right properties for it to work horizontally. And let's make sure that we're using the right value for the top property so that our sidebar is positioned
+
+just like on the reference page. And for that, I'm going to use the dev tools to get the top value, which is 70 pixels. So let's set that 70 pixels, reload our page, and perfect. Now this distance from the top is correct.
+</Lesson_209>
+
+<Lesson_210>
+Next, notice that on our page we only see a part of the sidebar and to see the rest of the sidebar we have to scroll down to the bottom of the page. Whereas on the reference page we can scroll inside the sidebar to see its content. So we want our right sidebar to be scrollable the same way as our left sidebar. And to achieve this we can use the same approach that we used for the left sidebar
+
+Remember that for that we used the height property to limit the height of the sidebar and the VH or viewport height units of measurement for it to be relative to the screen size and we also adjusted its overflow property to make it scrollable. I covered this in detail when we created the left sidebar so I will not bore you by repeating it and the task for you will be to make your sidebar scrollable just like on the reference page.
+
+Again, for that, use the same approach that we used for the left sidebar. And if you need to remember it, just watch the section of this course where we created the left sidebar. So pause this video and make your right sidebar scrollable. And I'm going to do this as well, but I'll speed up the video.
+
+Okay, notice that when I applied the same approach as with the left sidebar, the width of the right sidebar, it seems that it became broken, even though we have explicitly set its width to 270 pixels. So what happened to the width of this sidebar? And the reason for this is because we set the sidebar's overflow property to auto and our sidebar, let me inspect it,
+
+it's also a flex item of this main body flex container and by default its flex shrink value is 1 which means that the browser can reduce its width if it wants and so because of all this the browser ignores the explicit width value that we set here and what it does it sets the width of the right sidebar to the width of its longest word to ensure that this element is displayed properly
+
+And the fix here is actually simple. We can forbid the browser from shrinking our sidebar by setting its, let me do this here, flex shrink property to zero. And when I reload our page, now our sidebar is as wide as we set it here. And it is scrollable and looks and works in the same way as it works here. Awesome.
+
+And I think that this is it for the sidebar and also for this entire Reddit webpage. So congratulations, we finally did it! We have created this entire webpage. And it's beautiful, and it's complex, and you've coded most of this webpage yourself.
+</Lesson_210>
+
+<Lesson_211>
+Congratulations, you have finished building this reddit clone project. You did an amazing job. You are now among the rare elite learners who have completed this project. And now to take your coding skills to the next level, complete one of these challenges. Challenge 1. Set the project aside, create a new folder and rebuild it from scratch on your own.
+
+Challenge 2. Open the course resource page, use the Reddit Hades project as a reference, and build it from scratch. Once you've completed one of these challenges, you'll be ready for your next step, learning JavaScript.
+</Lesson_211>
+

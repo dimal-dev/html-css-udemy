@@ -1,0 +1,414 @@
+<Lesson_180>
+Next we're going to move on to the header actions where we're going to create and style these buttons along with the tooltips that are displayed on hover. Okay, first let's analyze this. As always for better code structure we'll put all the header actions inside a container element to treat it as a single component.
+
+These header actions look similar to me. They are a bunch of buttons with tooltips, and the last action toggles the profile menu. So I suggest that we put them all in an unordered list, where each action will be a list item. This way we'll make our code more restrictive and predictable.
+
+Okay, let's go to our index file to see what HTML we already have here. This is a dummy div that we put here earlier as a placeholder. Let's change it to an unordered list here and also here. Then we'll remove this text and add our first list item for this header action.
+
+Let's also add a class here right away for us to easily target this from our CSS code. And we'll call it headerHeaderAction. Next, let's add a button inside this list item with some dummy text, say, button, or maybe action1. And let's see how this looks on our page. Good, that's a start.
+
+Okay, notice that every header action on the reference page is an image. So let's replace the text inside our button with this image. For that I'm gonna save the image inside the icons folder because the image looks like an icon to me.
+
+and then in our HTML code I'm gonna remove this text and add an image element and the source attribute will be... okay let's see we've got images and then icons and I believe the icon we just saved is advertise.svg so I'll write images icons and then advertise.svg
+
+Great! Next, let's reset the default list styles and hide the bullet and also remove the padding. You can pause the video and do this yourself first for more practice or you can follow along. Okay, to reset the default list styles we need to create a rule for the list itself. So I'm gonna copy its class name.
+
+And then we'll add our rule inside the header.css file and not inside the search.css file because our header actions are not related to the search but they are related to the header. So we'll target our list by its class name and to remove the bullets we'll set its list style property to none. None.
+
+And we'll also reset its padding to 0 and margin as well. And this will look like this on our page. Great! Next, let's remove these default button styles as well. Okay, our button... This button doesn't have a class. So we can use a combinator and target it starting from the list item.
+
+Or we can add a class to the button and target it directly by its class name. Let's use the child combinator for more practice here since we're using classes all the time anyway.
+
+So it'll be a class selector, then a child combinator, and then a tag selector. Let's copy this class name and start our selector by targeting this class. Then we'll use the child combinator and then a tag selector to target the button. So this child combinator ensures that we're targeting only the button elements that are direct children of the elements with the header action class.
+
+And for these buttons, which is this button, we want to remove the border and the gray background. To remove the border, I'm gonna write border and then none. And it's gonna look like this. And to remove the gray background, I'm gonna write background color and then transparent to make the background color completely invisible. And this will look like this. Great.
+</Lesson_180>
+
+<Lesson_181>
+Now let's make our button look like this on hover. You already saw how to do this when we created the remove button in the search drop-down. Here it's similar but with important differences. Notice that when we click on the button here the background becomes transparent again instead of becoming slightly darker as it was here.
+
+Next, the size of the images is different here, but the grey background circle is the same size for each button. And because of these differences, we're going to use a different approach here. We'll use a fixed width and height. You already know everything you need to style this hover and click behavior for these buttons.
+
+So if you want a challenge, I'm going to ask you to pause this video and try to add these styles yourself. Style only the buttons. You don't need to create these tooltips or this notification count or this online indicator element. And I would encourage you to do this exercise because it will be really good for building your CSS skills.
+
+Now let's add these styles together. First we'll need to explicitly set the width and height of our buttons to keep their background the same size. And let's see what those are. So it's 40 by 40.
+
+Okay, so we'll add width 40 pixels here and also height 40 pixels here, because this rule targets our action buttons. And reload the page. No major changes, only our button was shifted slightly to the left.
+
+But let's inspect our button to check if our styles were applied correctly. Okay, I can see the width and height here, so they are applied, great. And if I go to the computed tab to check the box model, what I see here is that the content dimensions are not 40 by 40, which is weird, right? Because we set these to be 40 by 40 explicitly.
+
+I also notice here this vertical and horizontal paddings and what's interesting here is that if we add the horizontal padding so 6 plus 6 is 12 and the content width 12 plus 28 is 40 which is the exact value that we set for our width here
+
+and also if we add the vertical padding and the content height here so 1 plus 1, 2 and 2 plus 38 is 40 which is again the height that we set in our CSS code so it seems that for some strange reason the width and height here is padding plus the content size
+
+But why is that? Well, this is because in CSS we can control how our width and height values are distributed within an element. There is a special CSS property called box sizing that controls whether we include padding, like here, when we set our width and height. And for our buttons, the property box sizing
+
+is set to border-box which means include padding and border in the width and height value. This value is fine for our purposes because the background we add to our buttons next will also be behind padding. But if we want our width and height properties to affect only the content size we can either remove padding or change the box sizing value to content-box.
+
+Let's remove the padding because it requires less changes here but if you're curious try changing the box sizing value to content box and see what happens. Okay and to remove this padding I'm gonna add padding 0 here and reload our page.
+
+Notice that now that there is no padding here, the size of the content is exactly 40 by 40 pixels. Next, for our button, we're going to make the background color change to this one, like here, and also turn the cursor into a pointer.
+
+and for that let's emulate the hover state for the button and make sure that the right button is selected in the DOM tree here then let's copy the background color here and in our code we'll add a new rule that targets
+
+our buttons like this and we want to target the hover state here and on hover we want to set the background color property to the value we just copied and also cursor to a pointer go to our page reload and perfect okay and this is a square on hover but we want it to be a circle like this so i would ask you to pause this video and make this a circle
+
+Okay, we already know that we can use the border-radius property and set its value to 50% to make it a circle. And because by default the background color of these buttons is transparent, it actually doesn't matter where we put the border-radius property. So we can add it here.
+
+in this CSS role or in this CSS role. Let's add it here so border radius and then 50% and this will look like this. Fantastic! Okay,
+
+Notice that the image inside the button is already vertically and horizontally centered. This is because images behave in many ways like text in CSS. And text in buttons is vertically and horizontally centered by default.
+
+And if you want to place an image or text inside a button in a different way, you can use flexbox, positioning or paddings. But for our purposes, this default behavior is fine. Next, let's handle the active state of the button here.
+
+Okay, so when we click the button, we need to make its background color transparent. And to do that, let's add another rule that targets the active state of the button. And here we want to change the background color to transparent, just like we do this here.
+
+Okay, and if we reload our page, hover over the button and click it. There you go. Now it's transparent. Perfect.
+</Lesson_181>
+
+<Lesson_182>
+I think this button is ready, so let's add these remaining buttons. And we'll add just the buttons without these tooltips or these indicators.
+
+So pause the video, download these images from this reference page. Then just duplicate this HTML, the first button, four times, one for each button. And then update the src attribute for each button to show the right icon. And I'm going to do this as well, but I'll speed up the video.
+
+Also make sure that you use the .png file extension for the avatar and not the SVG like with the rest of the icons. If you use the SVG, here this image will not be loaded. And reload the page. Okay, this doesn't look good. This is because we need to handle a few things here. First of all, this avatar image is too big and we need to make it smaller.
+
+So let's get the correct size from the reference page and it's 32 by 32 and notice that this image is a square which means that we can set only the width and its height will be adjusted automatically.
+
+Now to target specifically the avatar image and not the rest let's add a class here it's going to be HeaderActionAvatar and then we'll copy the class and add a new CSS rule that targets the class and remember that we want to set the width to 32 pixels so let's write width 32 pixels here reload the page
+
+Great! Now the image has the right size and let's make it a circle. And that should be easy, right? Just need to use the border radius property and set it to 50%. Great! Next, let's position our header actions horizontally and for that we can make their parent, which is this ul element, a flex container.
+
+because each header action is an li element here the ul element has this class so let's copy the class and in vs code i think we already have a rule that targets the class and to find the rule let's search in the class and we'll use a keyboard shortcut command f for mac and i'll paste the class and there is the rule
+
+We want to make it a flex container, so for that we'll write display flex. Now let's reload the page. Great! This is what we want. All header actions are here and look pretty good.
+</Lesson_182>
+
+<Lesson_183>
+Now that these buttons are all in place let's add these two indicators. We'll start with this notification counter and notice that it overlaps the button so it's going to be a good place to use CSS positioning. As you probably remember from previous tutorials we can use different types of positioning to move our elements anywhere we want on our page without interfering with other elements.
+
+And we discussed the relative, absolute and fixed types of positioning. So again, as a challenge, think of what type of positioning would you use to create this indicator here. And maybe, if you feel confident enough, try to create this notification indicator yourself first.
+
+As always, it's going to be awesome for building your CSS skills. But if you don't feel confident enough, don't worry, we're going to create this indicator together. Our plan will be the following. We'll add HTML code for this indicator, then we'll style it, and then we'll position it properly.
+
+Now, what HTML code do we need to add here? Well, there is this number that reflects how many unread notifications we have and we can add this number just as text in our HTML code and then make it white.
+
+Then this text is inside this red circle which can be a simple div element that contains the text and also has background color and uses the border radius property to turn a square into a circle. This means that what we can do is we can find the open inbox button and inside the button element after the image we can add a div that contains number one.
+
+Let's also assign a class to this div. We'll name it NotificationCounter. And if we reload our page, there it is. For now, it's just a regular black text on a separate line, because div is a block element.
+
+Now let's add the red background and set the text color to white so I'm gonna get the background color value. Okay it's red so let's copy the class name and inside the header file we'll add another CSS rule background color red and text oops and color white and this will look like
+
+this. Okay that's a start but we're gonna make it so much better. First let's make it a circle. Notice that at the moment the div is a rectangle and not a square and it's a rectangle because it's a block element and by default block elements take up all the horizontal space available in their parent. Now we haven't tried setting border width to 50% for rectangular elements
+
+So let's see what happens if we do this for this element. And here I'm going to write border radius 50%, reload the page. Well, it looks like a squished circle. And to make it a proper circle, we need to make sure that its width and height values are the same. So let's get these from the reference page and they are 16 by 16.
+
+So let's add these with 16 pixels and height.
+
+Height 16 pixels as well. Reload the page. There you go, now it's a circle. Next, let's adjust the size of the text inside the div because on the reference page the number looks noticeably smaller. And as you know, there are several ways to get the font size. Let's inspect the element and under the computed tab we'll filter by the font size.
+
+And here we can see that we need to set the font size to 10 pixels. So let's do this. Font size 10 pixels. And this will look like this on our page. Okay, this is nice. And now let's center the number vertically and horizontally inside the circle.
+
+For that we'll use flexbox. So I'm gonna write display flex here to make it a flex container. Then justify content center to center the text horizontally. And then align items center to center it vertically. And there you go. Now it's centered perfectly.
+</Lesson_183>
+
+<Lesson_184>
+Next, we will position this counter in the top right corner, just like here. And for that we're going to use CSS positioning. What we want to do here is position this indicator relative to the inbox button.
+
+And so we'll use the absolute position on the indicator to be able to move it around. And then we want to use the relative position on the inbox button, which is the parent of the indicator, so that the absolute position of the indicator works relative to the inbox button and not the whole page itself.
+
+Okay, first let's assign the relative position to the Inbox button. For that, let's inspect the button to figure out how we can target it from our CSS code. Because the button or its parent don't have any unique class name or ID that we can use to narrow our CSS selector down to target specifically this button.
+
+So to target the button let's assign it a class. For that I'm going to go to our index.html and write class and let's call it InboxButton.
+
+Now we can use this class in our CSS code. So let's add a new rule and target the button. And remember that we want to set the relative position here like this. Because again with this we can change the position of the notification counter to absolute and move it relative to the inbox button. So let's do that.
+
+and write position absolute here and this is going to look like this on the page where now the inbox button is in its normal place because the counter is absolutely positioned and on its own layer and it doesn't interfere with other elements on the page so it's like this indicator does not exist for this button
+
+Next let's move this indicator to the top right corner here. For that we can use the top and right properties that we unlocked when we applied the absolute position. So let's start from something and right here top 0 and right 0.
+
+And okay, this is a start. Now it's exactly in the top right corner. And next we're going to get and set the exact values to position it like here. So I'll inspect the indicator here and then go to the Styles tab.
+
+And here you can see that we need to set the top to 4 pixels and we can leave the right property at 0 pixels. So 4 pixels here and perfect. And this is it. I think we have completed the Unread Notifications indicator. And next, for you to have more practice, I'm going to ask you to pause the video and style the screen online indicator.
+
+It's going to be quite similar to what we did with the notifications indicator, just with some minor changes. You'll need to use the bottom property instead of the top property to position it in the bottom right corner. You'll also use the green color for the background that you can get by inspecting this indicator from here. Also notice that it has this one pixel solid white border around it.
+
+Which shouldn't be a problem for you to add because we've done this many times before. Also, notice that the indicator is not an image. It's a div with fixed width and height. And also a green background. And it's a circle because of the BorderRadius property. So now pause this video and style this indicator. And I'm gonna speed up the video to save us some time.
+
+And if you get stuck, you can always inspect the reference page to see the solution or use the link to the code solution from the description. Great!
+</Lesson_184>
+
+<Lesson_185>
+Now that we've created all these header actions, let's add these tooltips. And by a tooltip, I mean this white text on the black background that appears when we hover over a button. And remember that this tooltip is displayed all the time because we emulated the hover state on the Advertise button.
+
+And the good news is that you already know pretty much everything you need to create these tooltips. And so again, I would encourage you to go ahead and try coding them yourself first. But there are a few things where you might get stuck. For example, how do we make these tooltips appear on hover?
+
+To solve this, we can use a child combinator similar to how we solved this for the search, where we show the dropdown when we click on the input. Another tricky place can be the profile menu button, where the tooltip is further to the left to stay on the screen. And we can solve this by adding another class to the tooltip and adjusting the position from the right.
+
+Remember that we can add more than one class to any HTML element and then target them separately from CSS. Or we could add a unique class to this button and then target the tooltip using the descendant combinator. Okay, pause this video and try to code these tooltips.
+
+And now let's code these together. Okay, we already have the hover state emulated for the advertise button, which makes it easier for us to work with its tooltip.
+
+So let's look at the tooltip and think what we need to do to create it. First of all we'll need a container element like a div where we'll put this text and this gray background. The tooltip appears below the header border and above this image but it doesn't push them anywhere which means we need to use some kind of positioning here and most likely it's going to be absolute positioning.
+
+just as with these indicators i think it's going to be really convenient to position the tooltip relative to the button it's associated with which means that just with the indicators we'll need to put the html of
+
+the tooltip inside the corresponding button and then make sure that all these buttons with the tooltips have the relative position assigned to them in our CSS. Okay, I think we have a good initial plan, so let's start creating all this. I'm gonna inspect this tooltip and copy the text because I'm a little bit lazy to type it all in.
+
+And next in our code, let's find the advertise button. There it is. And then we'll add the tooltip div inside the button. And I'll paste the text here. It doesn't matter whether the div is after the image or before the image.
+
+But for me it makes more sense to put it after the image because I think of the image as the primary content of the button and the tooltip as the secondary content because it's visible only under certain conditions. Let's also add a class to this div so that we can easily target it from our CSS code. Let's name it headerActionTooltip and then we'll change the position of our tooltip
+
+So here in our CSS, we'll change the position to absolute. And reload our page. Okay, there it is, our absolutely positioned div. Next, let's add all the easy styles. I mean, the text color, background color, padding, font size, and also border radius. At this point, it should be really easy for you to add all those. So I'm gonna speed up the video to get to more fun stuff.
+
+Okay, and this is what you should have by now. And now let's get to the fun stuff and position it properly. Okay, notice that each tooltip appears under its corresponding button.
+
+And if, for example, we move these buttons to a different place on the page, we'd like their tooltips to move along with the buttons. And you already know that for that we can assign a relative position to each of these buttons. And I think that we already have a rule that targets our buttons. And there it is. So let's extend
+
+this rule and write position relative here. Now, since this changes position to relative for every header action button, these two rules are redundant.
+
+because they are doing the same but for these two buttons. So we can just remove them to make our code less cluttered. Okay, and if I reload the code, nothing changed for these indicators which means that the rule works. And now all these buttons have the relative position. Notice that the tooltip text is now placed on three lines. This is because we changed the tooltip's position to absolute and because of that
+
+Now it wants to be as wide as its relatively positioned parent button. But the current width of the button is not enough to fit all the tooltip's text on one line.
+
+And so the browser puts the text on separate lines to make the width of the tooltip as close as possible to the width of the button. This is how it works by default, but we want this text to be on one line. And we're going to use a new CSS property to achieve this. Let's go to VS Code and inside this rule that targets the tooltip container, we will write white space, no wrap.
+
+Like this. And this tells the browser that we don't want to break up our text into individual words, like here, to put these on separate lines when there is not enough horizontal space.
+
+And so now if I reload the page, there you go, our tooltip text is on one line. So use whitespace, no wrap, when you want to force your text to stay on the same line.
+</Lesson_185>
+
+<Lesson_186>
+Next, let's place the tooltip in the correct position under the button. And we want it to be slightly below the button. And we also want the center of the tooltip to be aligned with the center of the button, like this. First, let's position the tooltip slightly below the button.
+
+And if we look closely, notice that the tooltip starts right after the header bottom border. We'll use this as a marker that we positioned our tooltip properly. Remember that we applied the absolute position to our tooltip, so this means that we can use the top and bottom properties to move our tooltip down.
+
+And because this tooltip is inside the button with the relative position, I mean with position relative, if we use the top property on the tooltip, so if we write something like top
+
+let's say zero then because of this the tooltip will start right where the top edge of the button is and if we use the bottom property here bottom property here instead
+
+So with bottom zero. With this, our tooltip bottom edge will be right where the button's bottom edge is. And so if we use the bottom property to move the tooltip down, we're going to need to use negative values like this. And notice that as I decrease the bottom property value, the tooltip moves down.
+
+So we can use either the top or the bottom properties. And how would I decide which one to use? And so in this specific case, I would use the top property.
+
+And then I would increase its value until the tooltip reaches the border. Remember that we need our tooltip to be just below the bottom border of the header. So this is a proper position, which means that the 49 pixels is the value that we're going to set in our stylesheet like this. And OK.
+
+And the reason why I would use the top property and not the bottom in this specific case is because I know that the height of its parent, which is this button, the height of this button is fixed. And because with the top property we start at the top edge of the button and the button's height is fixed,
+
+This means that this distance will less likely to be changed in the future than, for example, the font size of the tooltip's text, or maybe its padding, and those influence the height of the tooltip. And if we use the bottom property and the height of the tooltip changed, then we'd need to update the bottom property every time that happens.
+
+Otherwise, the tooltip will be in the wrong place. So in this specific case, if we use the top property to position our tooltip, we make our tooltip slightly more resilient to changes. Next, let's align the center of the tooltip with the center of the button.
+
+like here. And this might seem a little tricky, but I think it's an interesting and useful approach to learn. We will achieve this in two steps. Notice that right now the left edge of the tooltip is exactly where the left edge of the button is.
+
+And so the first step will be to make our tooltip start where the middle of the button is. So we want our tooltip to start here. For that we can use the left property. And because our tooltip is absolutely positioned, we can use the left property to move the tooltip to the right. And so let's write left.
+
+and then 50 and then instead of pixels let's write here % and if we reload our page now the tooltip starts right where the middle of its parent button is when we write it like this it means move this element 50% of the width of my parent which is the parent of this tooltip is this button
+
+So, move me 50% of the width of my parent, and so now the left edge of the tooltip is aligned with the center of this button. And we want to align not the left edge, but the center of the tooltip with the center of the button. So, let's move on to the step 2 of achieving that.
+
+Okay, so if we start from the left edge of the tooltip and go 50% of its width to the right, we'll end up right at its center.
+
+This means that if we somehow would be able to move the tooltip 50% of its width to the left, its center would be perfectly aligned with the center of the button. So, how could we do that? First of all, we cannot touch this property, because otherwise we'd break what we achieved in the first step.
+
+And so here we'll use another property that you're already familiar from our previous tutorials and it's called transform. And remember that to move our element horizontally we need to use a special function here called translateX.
+
+And inside the parentheses we can use a value in pixels, so for example if we write here 10 pixels and reload our page, the tooltip has been moved 10 pixels to the right from its initial position. And we can use negative values like this to move it to the left. And so here we can use a value in pixels or we can use a value in percent.
+
+And if we use percents here, then this distance will be based on the width of this element. And so translate x negative 10 percent means move the tooltip to the left, and the distance this is moved to the left is 10 percent of the width of the tooltip.
+
+So if we want this tooltip to be moved 50% of its width to the left, we can just write here 50% instead of 10. And if I reload the page, this is exactly what we wanted. Now their centers are aligned. And what's great about using percents here and not pixels, with percents we can change the amount of text in the tooltip. So let's change it to something like this.
+
+And the tooltip will still be perfectly aligned with the button. And this is great because notice that each of these tooltips has a different amount of text. Great!
+</Lesson_186>
+
+<Lesson_187>
+Now that we've positioned the tooltip properly, let's change our CSS to show the tooltip only when we hover over the button. For that, we'll change this rule to hide the tooltip by default, so display none. And this will make the tooltip stay hidden. And next, let's show the tooltip when we hover over the button.
+
+And for this, we'll use a clever way of combining CSS selector with pseudo classes and combinators. First of all, notice that our button doesn't have a class, but its parent does have this class. And so to target the button, let's start our selector from targeting its parent. And then we'll use a child combinator to target the button. So let's add a new CSS role. And here we are targeting the parent of the button.
+
+and then a child combinator and then button and you already know what this selector means it means target only button html elements that are direct children of the elements that have the header action class
+
+and we want to target only the hover state of the button and when the button is in the hover state we want to target its tooltip and notice that the tooltip is nested inside the button so it's its child and because this tooltip is nested inside the button we can target the tooltip
+
+and add here a space and then target the tooltip by its class name and then apply some styles here. Remember that this is a descendant combinator which means that this must be somewhere inside this and while this might look complicated to you at the moment
+
+In a couple of moments you'll see that it's actually not. So first of all this is a valid CSS selector and what it means is that we want to target this element only when this button is in the hover state and also the button must be a direct child of this element
+
+and that this must be nested somewhere inside this button. I mean because of this, this element must be a child of the button, but not necessarily its direct child. And so only when the button is in the hover state we want to target this element, which is our tooltip, and then apply the styles that we're going to write.
+
+And remember that we want to show the tooltip when the button is in the hover state. So for that we can simply write display block.
+
+And now I'll reload the page. The tooltip is hidden by default. And if I hover over the button, the tooltip is visible. Awesome! And this is how you create the tooltips that appear on hover. What's cool about our tooltip is that now we can easily add it to the remaining buttons. So, for example, if we want a tooltip for this button, all we have to do is to find this HTML, copy it,
+
+Then paste inside the button.
+
+And just change the text here, which should be OpenChat, so OpenChat, oh, lowercase chat. And voila! Now we've got two tooltips. And also notice that it's also positioned correctly because we used the relative positioning with relative values in percents here and here, instead of hard-coded values in pixels.
+
+And this is why. Next, let's quickly add the rest of the tooltips. And I'm going to speed up the video because it will be just copy-pasting and changing the text. And great! Three more tooltips.
+</Lesson_187>
+
+<Lesson_188>
+Great! Three more tooltips. Okay, and these two are fine, but I don't like where this one is. Because notice that it goes beyond the screen. And to fix this, we can align it not with the center of the button, but align its right side with the right side of the button. Which is easier than it sounds. First, notice that this tooltip
+
+I mean, this tooltip is inside this button with the ProfileMenuButton class. And we will use this to override certain properties of the tooltip. For that, let's copy the class and inside the header.css file, let's create a new CSS rule and target the class. Then we'll use the descendant combinator to target only the tooltip that's inside the ProfileMenuButton.
+
+We can also use the child combinator here instead like this. Both are fine here, but I think using the descendant combinator here makes our component more robust in case we change the HTML inside the button and nest the tooltip somewhere deeper inside it.
+
+If you remember, in our first CSS tutorials in this course, we talked about specificity of selectors in CSS and that we can use it to override certain styles of an element in case we want. And because this CSS selector is more specific than this CSS selector,
+
+and it's more specific because we're using two classes instead of one and so because this CSS selector is more specific we can override any of these properties if we want inside
+
+this CSS rule. And first of all here we want to set the right property to zero so that the right edge of this tooltip starts where the right edge of the button is. But we also need to reset its left value because if we leave it like this then the tooltip will have its
+
+right property set to 0 and also its left property will still be set to 50%. You know what? Let's see what it's going to look like if we let like this. And when I reload the page and... Okay, not good. This is because when we set both the left and right properties the browser stretches or squeezes our tooltip to fit those properties.
+
+And if we want to keep the original size of the tooltip, we need to reset the left property. For that, we can set the left property to auto here. This changes the left property only for the ProfileMenuButton tooltip and doesn't change it for all the remaining tooltips.
+
+And now if I reload the page, that fixed the width issue. So now the tooltip width is fine and it's fully visible, but it's too far to the left. And this is because here we're also moving the tooltip 50% of its width to the left. And so to fix this, we also need to reset the transform property for the profile menu button tooltip.
+
+And to reset the transform property only for the tooltip, we can set its value here, transform, to none. And now if I reload the page, great, now the tooltip is displayed where we want it. It's fully visible on the screen and its right edge is aligned with the right edge of the button. And also, because in this rule we're targeting only the profile menu button tooltip,
+
+and changing some of its styles. These affect only the ProfileMenuButton tooltip, but the rest of the tooltips work as usual, and their center is aligned with the center of the corresponding button. Great! And with this, I think that we're done creating these tooltips. So congratulations, we've done a good job! And hopefully now you can see how CSS positioning helps us create these nice-looking and useful elements.
+</Lesson_188>
+
+<Lesson_189>
+Next, let's go ahead and create this nice-looking profile menu. We can hide and show the menu by clicking on the avatar, and we usually use JavaScript to achieve this behavior, because we need to track the state of the component and toggle the state when our users click the avatar. And in this course, I assume that you don't know JavaScript yet, so we'll use a cool trick to achieve this behavior with just HTML and CSS.
+
+And we've already discussed almost everything you need to create this profile menu. For example, we created a container element similar to this one for the search drop-down, and you saw how to use the absolute and relative position to place it where we want it, and also how to add shadows and rounded corners, and so on.
+
+So I'm not going to go into detail here about what we've already discussed, and I'm going to focus on new things, where the main one is how to make the profile menu appear and disappear when we click on the avatar here. And to achieve this stateful behavior, we'll use a label, HTML element, a checkbox, and a clever CSS selector. First, let's quickly refresh our knowledge on how to use labels with checkboxes and how to connect them in HTML.
+
+For that let's go to our index.html and find the profile menu button and after the profile menu button we'll add a new label element with some label text inside and next to the label let's add an input and it's going to be a checkbox
+
+And this will result in this on our page where we can check and uncheck the input and this label does nothing at the moment when I click it. Now remember that in HTML we can connect a label with an input so that when we click on the label it affects the input.
+
+And to demonstrate you this, let's connect these two. To connect them, we'll need to add an ID to the input and let's call it something like profile menu visibility checkbox.
+
+Remember that this ID must be unique on the page. Only one element on the entire page can have this ID. And so it's better to use more descriptive names for your IDs. And then we'll use this ID value for the for attribute in this label.
+
+And so to connect a label with an input, we must use the same value for the for attribute inside the label and the id attribute inside the input. And now they should be connected. Let's check this and I'm going to reload the page. And now if I click on the label, notice it toggles the checkbox. This means that they are connected.
+
+An important side effect here is that now we can move the label in our code and they still will be connected. So, for example, let's move it somewhere here, after the content div. Reload the page. There is our label.
+
+And now notice that when I click on the label, this toggles the checkbox, which means that they are still connected. So as long as the for attribute of this label matches the id attribute of this checkbox, they remain connected.
+
+Now let's experiment with this even further. What if we move this label inside the profile menu button, for example, here. Okay, I'm gonna hide the explorer to have more space. And what if we now, instead of this text inside the label, place the avatar image like this. And let's remove this extra line.
+
+Okay, and now if I reload the page, the label text is gone and if I click on the image, notice that it still toggles the checkbox, which means that the label is still connected to the checkbox. Great! Next, let's add a div after the input and we'll assign it with a class right away and we'll call the class ProfileMenu. And we'll also put some initial text, how about just ProfileMenu.
+
+And if we reload the page, there it is. And if I click on the avatar image, the checkbox gets checked or unchecked and nothing happens to the text. But what if we wanted, for example, to make this profile menu text green only when the checkbox is checked and to keep it black when the checkbox is unchecked?
+
+Is this possible in CSS? Well, yes. And let me show you how we can do this. For that, we'll add a class to this input and we'll call it ProfileMenuVisibility. And we'll use this class to target the checkbox from our CSS.
+
+And so I'm going to copy the class name and add a new CSS rule like this. And I think that you already know pretty well that if we want to style the hover state of an element we can use the hover pseudoclass like this. And for checkboxes in CSS we have another pseudoclass and it's called checked.
+
+And so when we write it like this, this targets only the checked state of the checkbox. And now we can apply our styles to the checkbox only when it's checked. And so if I write color green here and then reload our page and toggle the checkbox, nothing has happened. Well, this is expected because our checkbox, even in its checked state, has no text inside.
+
+And so this color property does not change anything here. Besides, we don't want to style the checkbox itself. We want to set the green text color of the profile menu text. And this text is inside the
+
+div that follows the checkbox and if we look closely we'll notice that this div is actually a sibling of this checkbox and because it goes after the checkbox we can use the subsequent sibling or tilde combinator to target the div when the checkbox is in the checked state and if this all sounds complicated let me just show you the final selector in our CSS code
+
+So when the checkbox is checked, we want to use the subsequent sibling combinator or tilde to target the profile menu div and set its text color to green. And now if I reload the page, this should do the trick. And if I toggle the checkbox, notice that the profile menu text is now green. And if I uncheck the checkbox, the profile menu text becomes black.
+
+So this is how you can style other elements based on your checkbox's state.
+</Lesson_189>
+
+<Lesson_190>
+This is interesting, but how does this help us to show and hide the profile menu when we click the avatar here? Well, first of all, notice that because we have connected the label to the checkbox, now when we click on the avatar, it toggles the checkbox, which affects the profile menu text. And also, we're not limited to only changing the text color, we can set any CSS property we want, including the display property.
+
+So, for example, we can add display none here to hide the profile menu when the checkbox is checked. And now if I reload the page and toggle the checkbox, notice that this hides the profile menu. And if I untoggle the checkbox, this shows the profile menu. And also we can do the opposite. I mean that we can hide our profile menu like this display
+
+none by default and this is wrong so let me remove this period so this will hide our profile menu text by default and then we can change this to block to show the profile menu when the checkbox is checked
+
+And now if I reload the page, the profile menu is hidden. And if I click on the avatar, this shows the profile menu. This means that we have achieved the most important part of what we wanted. We can hide and show the profile menu by clicking on the avatar. The only problem is that we can still see the checkbox.
+
+And the good news is that we can hide it easily without any harm to this functionality. So let's hide the checkbox and for that we can target the checkbox by its class name like this and copy this display none style or definition
+
+and reload our page. The checkbox is hidden by default and so is the profile menu. And now if I click on the avatar notice that this shows the profile menu and if I click on the avatar again this hides the profile menu.
+
+which is exactly what we wanted. And this is how we can keep the state of our profile menu inside our checkbox without using any JavaScript. And for that we use a label and a checkbox. We connect those with the for attribute and the id attribute. We hide the checkbox with display none.
+
+and we use the subsequent sibling combinator to toggle the visibility of the element that we want to show or hide. Great! Now notice how the layout shifts. I mean how these buttons move when we toggle the profile menu visibility.
+
+And we don't want this to happen. To fix this, we can use absolute positioning. For that, I'm gonna add position absolute here. And okay, this is better. Next, it would be great to see the boundaries of the profile menu better, so let's add a white background and also this shadow and also round corners to the profile menu.
+
+and it's easy we can just inspect the profile menu element here let's resize the developer tools we need to set border radius to 10 pixels and let's copy the box shadow value right away and then here we'll write box shadow like this and then we'll paste the value then we'll set border
+
+radius to 10 pixels and also background color to white. And when we reload our page, let's show the menu. And okay, this is better. Next, let's position the menu properly. I mean, let's position it like here, so that the right edge of the menu is aligned with the right edge of the button. And it's also slightly below the header border.
+
+And because we are already experienced users of the DevTools, we're not going to guess those values. We'll just use the DevTools to get the values. So we'll need to set the top property to 50 pixels and the right property to 0. And it's top 50 pixels, right 0 pixels, and reload our page. And now the profile menu, well, it's not positioned properly. Why is that?
+
+Well, because our div is absolutely positioned, and these two properties work either relative to its closest parent with its position set to relative, or if there is none, they work relative to the page itself. And we want this profile menu to be relative to the profile menu button,
+
+but they are siblings so even though the button itself has the relative position it's not useful for our case because we need a parent of the profile menu to have relative position so for example this header action list item and notice that the shape of the button I mean
+
+this button and the shape of the list item on the page they have the same shape and the same position so we can change the position of this list item to relative and this should do the trick and now it doesn't have any positioning applied except for the default position and I think that we can safely change the position property of all these header accents and set it to relative and for that we're going to use this
+
+class and add a new rule to target all header actions and we'll set position to relative. And now if I reload our page and show the profile menu, notice that it's positioned properly because now the profile menu is positioned relative to the header action.
+</Lesson_190>
+
+<Lesson_191>
+Next, what I notice here is that our cursor is not a pointer when we hover over the avatar. And this is because we added the label element here. I mean this label element. And we can easily fix this by adding a class to this label and then a CSS rule that sets its cursor to a pointer and hover. So let's do this quickly.
+
+I'm going to add a class to the label. It's going to be HeaderActionAvatarLabel. We'll copy the class and then we'll add an onHover rule where we'll change its cursor value to a pointer on hover just like this.
+
+Perfect. Next, notice that the profile menu currently takes up as little width as possible and this is because its position is set to absolute and it tries to match its width to the width of its closest parent with a relative position.
+
+So this is the same issue that we had with our tooltips. And we fixed this for our tooltips by using the whitespace property and the no-wrap value. And that worked because our tooltips have only one line of text. But as you can see here, our profile menu has multiple rows. So we'll need to use something else to fix this issue.
+
+And another way to fix this is to explicitly set the width of the profile menu. Let's do this. I'm gonna get the width from the reference page and it is...
+
+256 pixels. Next, inside our rule, I mean this rule that targets our profile menu container, we'll add width 256 pixels. Then reload the page and this is better. What I also noticed here is when the profile menu is visible and we hover over the avatar, the tooltip becomes visible, which looks ugly.
+
+And in this scenario, we can fix this and hide the tooltip with a clever mix of different CSS selectors and combinators. And to do this, first, let's think in detail how we want this to work. So, when the profile menu is displayed, that is, when the checkbox we made invisible is checked,
+
+And when we hover over the avatar, we want the tooltip to stay hidden. But when the profile menu is not displayed, that is, when the checkbox is unchecked, we want this tooltip to be visible just like now.
+
+This means that we only need to hide the tooltip when the profile menu is visible, that is, when the checkbox behind the scene is checked. Now let's look at our HTML code and what selectors we can use and what elements we need to target. Okay, so this is the checkbox that controls whether the profile menu is visible. And we're using the Subsequent Sibling Combinator to target the profile menu.
+
+And we described a moment ago that we also want to use this checkbox to determine whether to display this tooltip or not. So how about we move this checkbox up here so that we could use a subsequent Simulink combinator to target both the tooltip and the profile menu.
+
+First, let's check whether the ProfileMenuToggle functionality works, and it works. And this works because, notice, that despite that we moved the checkbox away from the ProfileMenu, the checkbox and the ProfileMenu are still siblings, and the ProfileMenu still goes after the checkbox in our code. And so this is sufficient to use the SubsequentSiblingCombinator to target the ProfileMenu.
+
+Now what we also can do is use the Subsequence Sibling Combinator to target the tooltip in the following way. We can start from the checkbox, then use the Subsequence Sibling Combinator to include this button, because this button is also a sibling of this checkbox and is located after the checkbox. Then we can use the Child or the Descendant Combinator to go inside the button and target this tooltip.
+
+And again, this is less complicated than it sounds. So let me show you. We want to start our selector from this checkbox. So I'm going to copy its class name and we'll start a new CSS rule here. Then we'll use the subsequent sibling combinator where we want to target this button. So I'm going to copy this class name and
+
+Paste it here. Then we want to go inside the button, so I'm going to type space to use the descendant combinator. And then we want to target this tooltip, so again I'm going to copy its class name and paste it here. This tooltip is a direct child of the button, so both the descendant combinator and the child combinator would work here.
+
+We will use the descendant combinator because it gives us a little more flexibility to nest the tooltip as deep inside this button as we want it to. And then we want to hide the tooltip, so display none.
+
+Now let's quickly go over this selector. So here we want to start from the elements with this class name. Then we're using the tilde combinator to target only their siblings that go after these elements in our HTML code and also have this class name. And then inside these elements we want to target only the elements with this class name.
+
+And so it's like, start with these, find these, then on the same level as these, find these that must go after these. And then inside these, find these tooltips and apply these styles.
+
+But remember that we want to hide the tooltip only when the profile menu is visible, that is, when this checkbox is checked, so when it's checked, and also only when we hover over the button. And this selector still works just as we discussed previously,
+
+but requires the checkbox to be checked and also this button to have the cursor over it. Okay, now let's see whether our smart selector works. So reload the page. When I hover over the avatar, the tooltip will appear. Good. And when I click, the profile menu appears and the tooltip is gone. Perfect. So this means that our selector is working properly.
+
+Okay, and if you feel that you don't understand this selector or any other complex CSS selector, you can just break it up into pieces like this and then think about each piece and add one by one until you can easily understand the whole selector.
+
+And even though I created this selector, when I look at it as a whole, I feel like, wow, this is too complex and I am probably too stupid to understand it. But when I go through each part individually, then suddenly I feel like I can understand this.
+</Lesson_191>
+
+<Lesson_192>
+Let's see what we can do next. I think that at this point we've covered all the new things needed to create the profile menu. And what's left is to fill our profile menu with this content and style the content. I mean we'll need to add and style these menu items. And actually you already know how to do this because we have created similar components before.
+
+And so this is a perfect opportunity for you to practice everything we've learned so far. And because my main goal in this course is to help you build your HTML and CSS skills, I'll ask you to create and style these menu items yourself. And I'm going to give you a few hints on how to approach this. First, we use a div as a container here. I would recommend changing this to an unordered list and using the li elements for each menu item.
+
+Then notice that the avatar with the online indicator is the same as the one we created here. This means that you can use the same approach to create it. Then to organize your menu items like this or like this with two or more elements in one row, you can use Flexbox just like we used Flexbox to style the recent search items here in the drop-down.
+
+Then, to create this menu item, when we have this little sub-component with this icon and this text inside, you can put these inside a div and turn the div into a FlexContainer. And remember that we can nest FlexContainers inside each other without any restrictions. This means that we can make this whole menu item a FlexContainer, and then we can make one of its children a FlexContainer as well.
+
+Then you can handle the hover and active states for your menu items in the same way as we handle them here. And as for the icons here, you can download them directly by right-clicking on them and then using the Save Image As. Or you can open the course assets page, I mean this one, and use the icons from this page where I collected all the images from the Reddit page for you.
+
+Okay, so roll up your sleeves and get to work. Don't skip creating this profile menu. It's going to be hard, but trying to code is probably one of the most important things that you can do to build your coding skills. If you don't practice coding, you have very high chances of ending up in the so-called tutorial hell, where you spend a lot of time watching tutorials, but you're not actually building your skills.
+
+Okay, and finally, if you get stuck, don't worry, maybe take a little break and then use the development tools to inspect this reference page to see how it's implemented under the hood. Or you can check out the earlier tutorials of this course where we created similar components. Now pause this video and write some code. I'll create the profile menu as well, but I will speed up this part of the video.
+
+Okay, this beautiful profile menu is ready. I hope you've created it. If not, this is a perfect time for you to pause the video and do this exercise. And now I think that we have finished creating the whole header component. Congratulations! The only thing that's left is to make sure that the header is fixed at the top, like here.
+
+But for now we don't have enough content on our page to be able to scroll down. So let's make our header fixed at the top after we create the main section of the page. Because at that point it's going to be easier for us to test that. And now we'll move on to creating this sidebar.
+</Lesson_192>
+

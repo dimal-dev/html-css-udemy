@@ -1,0 +1,146 @@
+<Lesson_12>
+In this tutorial, we will learn how to create links to another page or a website with HTML. For example, this list of popular communities is a bunch of links. And if we click one of these links, we will go to another page. So let's start by creating a new web page.
+
+To do that, in VS Code, we'll click this icon to create a new file and we'll name the file links.html. Make sure that the file name ends with .html, otherwise it won't work.
+
+Then we'll press Enter to actually create the file, and we'll close the File Explorer to have more space. Inside our new file, let's add a link that will open reddit.com. To create the link, we'll type left angle bracket, A, right angle bracket. Notice that VS Code added the closing tag for us because links have a closing tag.
+
+Then, between the tags, we'll type link to Reddit. We will see this text on our website. Next, inside the opening tag, we'll type space href equals, and then between the double quotes, we'll type https://www.reddit.
+
+and make sure that you type it exactly as you see it here. Then we'll save the file and to open it in the browser, we'll go to the website's folder, then right-click on the file, open with, Google Chrome.
+
+I'm going to zoom in to see it better. And now we have a web page with this link to Reddit. And if we click this link, we will go to the Reddit website. Let's return to our web page and learn how the link works. So we use the a element to add a link to our page. A is short for anchor.
+
+The content of the A element is what we see on our page as the link that we can click. So if we change it to this is a link, then we'll see this is a link. And if we change it to Reddit,
+
+Now it's reddit. For the anchor element to actually be a link and open a website when we click it, we need to use the href attribute. Let's delete the href attribute and see what happens to the page. So when we reload it, this becomes just text that doesn't lead anywhere and we cannot click it.
+
+And if we put back the href attribute, this becomes a clickable link again. As you learned from the previous tutorial, this is an attribute name. href is short for hypertext reference with just a fancy name for link.
+
+Then we use the equal sign to tell the browser that we're setting the href attribute with the link that goes to the right of the equal sign between the double quotes. This link is the actual link we want to open when we click it. And if we change this link to google.com, then save and reload the page, the text of the link we see here is still Reddit.
+
+But now this link leads to google.com. And if we click it, we open Google, just like we set in the href attribute.
+</Lesson_12>
+
+<Lesson_13>
+Okay, let's go back to our web page. Having it like this is not a good practice. If our link says it's Reddit, then it must point to Reddit, not Google. And to fix this, we can either change the text or the href link. Let's change the text to Google.
+
+Save. Reload. Good. Now our link is accurate because it says Google and when we click it, it opens Google.
+
+Let's also add another link to Reddit to have more practice. To do that, on the new line, we'll write left angle bracket A to create the anchor element. Next, we'll add the href attribute to configure where this link will go. And then between the double quotes, we'll put the actual link. Usually, you don't need to memorize this link value, and you can just copy it from somewhere else.
+
+There are plenty of places from where you can copy the link address. And most often you copy it from other websites. So let's use Google to get the link to Reddit. And to open Google, we can use the link we just created. Next, we'll search for Reddit. And then hover over this text, right-click, and click Copy link address.
+
+To paste the link here between the quotes, you can either right-click here and select Paste, or you can use a keyboard shortcut, which is Command V for Mac or Control V for Windows. Memorize this shortcut because you'll copy and paste text and links frequently while coding. It's gonna save you a ton of time. Let's use the keyboard shortcut, so Command V,
+
+And here is the link to Reddit. Then after the closing double quote we'll type right angle bracket and the text we would like to display on our web page will be Reddit. Save the file. Go back to our web page.
+
+And now we have links to Google and to Reddit. And this is how easy it is to create links with HTML. For that we use the a, or anchor, element. What we put inside the content of the element we will see on the web page as the text we can click.
+
+We configure what page will open when we click the link with the href attribute. We put the website address as the value here between the quotes.
+</Lesson_13>
+
+<Lesson_14>
+This href attribute is actually unique to links. We cannot use it with other elements like paragraphs or inputs.
+
+Now let's learn a little bit more about the href value, which is the actual link, or it's often called a URL. A URL is short for Uniform Resource Locator, which simply is an address of a certain webpage or file, like video or image, on the Internet. It's what you put into your browser's address bar to open a website.
+
+Now let's learn the basics of URLs, because as a developer, you'll use them all the time. For that, on our web page, let's click the Reddit link to open reddit.com. Next, let's click on the address bar a couple of times to reveal the whole URL. So this part of the URL is called authority, which is basically the address of where the whole website is.
+
+For the Reddit it's this, and for Google it's this. And this part of the URL is called a domain name. To have a domain name like reddit.com or google.com you need to go to a special online service where you can buy and register a domain name.
+
+Okay, inside this whole reddit.com website there are many pages. And if we click, for example, on this fitness link, a new page opens and the URL changes. The website address is still the same, it's reddit.com.
+
+But now there is this additional part slash r slash fitness. This additional part is called a path. A path points to a specific page on reddit.com. If we go to another page, let's click, for example, on this post.
+
+The website's address is still the same, it's red.com, but the path to this page changes. Okay, and the last URL component we'll discuss is this. It is called a scheme. A scheme tells the browser how to find and load the web page or the file our URL points to.
+
+Most of the links on the Internet start with the HTTPS scheme. HTTPS is short for Hypertext Transfer Protocol Secure, which is simply a special way to pack and deliver a web page or content over the Internet to you. And HTTPS encrypts the web page content so that nobody except you can see it.
+
+So, links from the Internet start with HTTPS, followed by the website address, and then the path to a specific web page. And this colon and two slashes are the part of the URL syntax, they separate the scheme from the website's address.
+
+And these were the basics of URLs. Don't worry about memorizing all this right away. You'll encounter links frequently and learn how they work over time.
+</Lesson_14>
+
+<Lesson_15>
+Now let's go back to our web page. Currently, our links open in the same tab. If we click the reddit.com link, we go to reddit.com in the same browser tab we clicked that link. And the same works for the Google link. But sometimes we want our links to open in a new tab.
+
+For example, on YouTube, any link you click in the description opens a new tab. So let's learn how to do this for the Reddit link. For that, in our code, we'll put the cursor here and add a space after the href attribute.
+
+Because remember, according to HTML syntax, we need to separate our attributes with at least one space or a new line. Then we'll type target equals and the value will be underscore blank. Save.
+
+Reload the page and now when we click the link it opens a new tab. What's important is that this makes only the Reddit link to open in a new tab.
+
+The Google link still opens in the same tab because we're not setting its target attribute to the underscore blank value. And this will be a task for you to have more practice. Make the Google link to open in a new tab when clicked. For that, use the target attribute and set its value exactly to underscore blank.
+</Lesson_15>
+
+<Lesson_16>
+Before we continue, let's turn on one very useful VS Code feature. It's called Word Wrap. So now, if I resize the VS Code window, our links become too long and we need to scroll to see the rest. To fix that, let's enable Word Wrap and see the difference. For that, let's go to Settings,
+
+Then in the search field type WordRep. By default it's turned off. Let's change it to on. Then we'll close the settings tab. And now we can see the whole Reddit link without scrolling. What the WordRep does is that it displays that extra code that otherwise would go outside of the editor window.
+
+And Wordwrap only affects how VS Code displays the code. It doesn't affect the actual content of the file. It makes our code to be completely visible horizontally on the screen. I recommend keeping the Wordwrap turned on because it makes working with code much easier, especially when we start working on the Reddit clone project that has more code. And now let me resize VS Code back.
+</Lesson_16>
+
+<Lesson_17>
+These two links point to other websites on the Internet, and they are called external links. External links are the links on your website that point to other websites. We can also have internal links. Internal links point to other web pages within the same website.
+
+For example, when we open Reddit, these links are internal. And when we click them, we go to another webpage, but it's still on the same Reddit website. So now let's learn how to create such internal links. For that, we'll close the Reddit page.
+
+And in VS Code, we'll open the file explorer. Now let's create a new file and we'll call it links-internal.html.
+
+In this file, let's create an internal link that opens the attributes.html when clicked. For that, we will write left angle bracket A space href equals, and we'll leave the value empty for now. Then, after the closing quote, write right angle bracket, and inside the content, let's add attributes page.
+
+And now let's learn a shorter way to open this file in the browser. For that, we can left-click on its name in the Explorer
+
+then drag to the tabs area in the browser here, then release the mouse button. This opens our new web page in the browser. Let me zoom in to see it better. And now we have a web page with this link. Currently, the href attribute is empty, which makes our link to reload the page when we click it.
+
+So if you want your link to reload the current page when clicked, just leave its href attribute empty. Now let's change the href here to actually open the attributes.html page when this link is clicked. This is quite easy to do. For that, here we'll just write attributes
+
+Save. Reload. And now, when we click this link, it opens the attributes.html webpage.
+
+This works because both the link internal and the attributes files are in the same folder. So in HTML, when the files are in the same folder, we can use just their names as a URL. Let's add another anchor element here and point to the links.html file.
+
+For that, as usual, we'll type left angle bracket A and space href equals. Then, because the links.html file is in the same folder as our file, we can just use its name in the href attribute. So links.html. And then the text will be external
+
+links. Save the file back to our web page and now we have two links here. If you click this link it opens the links.html file. Now let's rename the links.html file to links-external to have consistent naming for our files.
+
+Now this is better. This file contains internal links and this file contains external. And now, if we reload the page, we get this error that our file could not be accessed.
+
+This is because we have renamed this file, but our link still refers to the old filename, which is links.html. And this file no longer exists. To fix this, let's change this URL to reflect the new filename. For that, we will click in the address bar and then place the cursor here. Then we just need to add "-external".
+
+because this is the new name of our file. And if we press Enter, it works. Now let me zoom in a little bit. What we also need to do is to fix the file name here, because now it points to the old file. And if we try to use this link in this state, so if we click this link, it tries to open the old file and fails.
+
+And the fix is actually quite simple. We just simply need to change this to use the new file name. So we'll type "-external", save, back. And now if we click the link, it works properly.
+</Lesson_17>
+
+<Lesson_18>
+Notice that in our code we mentioned only the filename, links-external. But when we open it in the browser, the URL in the address bar is actually quite longer. It starts with the same filename, links-external, like here, then follows the name of our website's folder, then it's desktop, it's where we created our website's folder,
+
+and then it goes further up until it reaches the root folder. On Windows, the path will be similar, only you'll have the C or D drive at the top.
+
+So this full path from the top all the way down to our file name is called an absolute path. An absolute path is the complete or full path to the web page starting from the protocol and including the full path to the file. Here the protocol is file because the links-external is on our computer.
+
+This is an absolute path to the file on our computer. An absolute path can also be to a web page on the internet like this. This is an absolute path to a web page on the internet because it includes the protocol, the website address and also the path to the page.
+
+So inside our links external, these two URLs that we're using to create the links, they both are absolute URLs. On the contrary, in the link internal file, these URLs are relative. They are called relative because they target other web pages relative to the current one.
+
+Relative URLs, they don't include the full path to the web page. And also we can see that these URLs are relative because they don't have a protocol or a full path to the files. This file contains only relative URLs and this one only absolute URLs. But we can have both absolute and relative URLs in one file.
+
+To test this, let's copy these relative URLs, paste them here, and see what happens in the browser. And if we save and reload, now we have four links here. Two internal links that point to our web pages, and two external links that point to Google and Reddit. And if we click this link, it opens our attributes page, and if we click
+
+This link, it opens Google. Now that we have both internal and external links here in one file, this file name is no longer accurate. So let's rename it to just links. Good. Reload the page. And there is that same error that our file could not be accessed.
+
+We already know that this is because we're trying to open the old links-external file which no longer exists and so the browser cannot find it. To fix this we can simply modify the URL to reflect the new file name. Enter. Great. Also let's remove this link because it points to the old version of this file itself. Save.
+
+Reload. And now we have three links, two absolute and one relative. Lastly, let's also delete this file because we don't need it anymore.
+
+Okay, before we continue to the practice exercises, let's review what we've learned so far. We learned that we use the a or anchor HTML element to add a clickable link to our web page. The content of the a element will be visible and clickable on the page. We use the href attribute to set the destination or the URL where we go after clicking that link.
+
+We also learned that URL or Universe Resource Locator is just a fancy term for a link. And that URLs can be absolute and relative. An absolute URL contains the full path to a web page or resource.
+
+It has a protocol, the website address, and the path to the webpage on that website. We learned that almost all the links on the Internet start with the HTTPS protocol, which is a secure way to deliver content over the Internet.
+
+We also learned that a relative URL is a path relative to the current webpage. And we learned that to make a link open in a new tab, we use the target attribute with the underscore blank value.
+</Lesson_18>
+

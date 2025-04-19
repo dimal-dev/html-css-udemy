@@ -1,0 +1,196 @@
+<Lesson_79>
+So this is the old sidebar we created in the tutorial number three, and this is the improved version of the sidebar we will create in this tutorial. And we will also learn two more HTML elements that professional developers use for building complex websites.
+
+To follow along, create an HTML file and open it in the browser. That should be sufficient. If you want to have the same setup as I do, then create the tutorial11 folder and the sidebar improved file in it. Then open it as a separate window. Then open this URL in another window like this, to easily see the final design we want to create here.
+
+Once you've created and opened the file, we are ready to start. The first thing we'll add to our page is this title and description. So let's start with the title, select and copy it. So far we've been using for this paragraphs.
+
+But now we will use a new HTML element called div to create the title of the sidebar and also we will copy the description and create another div element and paste the description here too. And when we reload the page in the browser, let me zoom in a little bit, we have the title and description on their separate lines.
+
+So divs are block elements, like paragraphs, and each div starts a new line. Unlike paragraphs, divs don't have default margins. This is why there is no extra vertical space between the title and description.
+
+To show you the difference, I will quickly create the same description and title, but now using paragraphs. And when we reload the page, notice that there is this extra space around the paragraphs text. And on the contrary,
+
+There is none here for divs. Okay, and the most important feature that divs have and paragraphs don't is that we can next divs inside each other and additional content as much as we want. And we cannot do this with paragraphs.
+
+So let me show you what I mean and for example we will create a div that also contains a link, let's say link one, and it also has another div with another link and also another div inside with some text.
+
+so here we have a div inside a div inside a div with some text and also links beside the divs and we can nest it as much as we want but with paragraphs we cannot do this
+
+So we cannot create a paragraph that has a link but also has another paragraph inside with another link and another paragraph with some text. So this is invalid HTML.
+
+this is because of how HTML is designed to represent text. A paragraph element is designed to hold a single block of text like this and if we try to nest paragraphs inside each other like this it confuses the browser because it can't properly determine
+
+where one paragraph ends and another begins. Think of how text goes inside books. Usually we don't have paragraphs that are nested inside paragraphs. In books, paragraphs usually have some text or images and they follow one after another.
+
+And so HTML is designed this way and doesn't allow nesting paragraphs like this to keep the text structure clear and simple. But if we want to create websites that arrange elements in more complex ways, like, for example, this block of stats, we need to group or nest HTML elements inside each other. And this is what we need divs for.
+
+Divs are different from paragraphs because they are designed to be containers for other elements, not just text. Div is short for division and it's a generic block element that we use as a container that can hold anything. Text, images, other HTML elements, including other divs.
+
+Okay, and so this is invalid HTML. Let's remove it. To keep things simple, we've been using paragraphs to organize and separate elements on our page. But now we know enough CSS to start using divs and create more professional web pages. So from now on, we will be using divs instead of paragraphs as containers for our elements.
+</Lesson_79>
+
+<Lesson_80>
+Now to see how to create more complex structures with divs, let's create this stats component first. And after that, we will style the title and description. So first we need to remove all this extra HTML and reload the page, good. Now it looks like stats have these three separate sections that are positioned on the same line.
+
+So let's first create a div element that will be a container for all these sections. And inside this div we will create three more divs with simple text, one div for each section.
+
+And now when we reload the page each section is on its own line because divs are block elements and by default they start a new line. But on the reference page the sections are on the same line.
+
+And from the previous tutorial, we know that we can use the display property and set it to inline block for each of these divs to make them go on the same line. So for that, we will add a class and let's name it StatsSection.
+
+And let's add this class to every section div so that we can target them from our CSS code. And next to write CSS, let's add the style element. Here we will add a new CSS rule that targets our divs with the stats section class. And inside this rule, we will add the display property.
+
+And we want to make each of these divs an inline block element. And for that, we use the inline block value. And when we reload the page, now every div is on its own line. And I noticed that the number for the third section is missing. Okay, this is better.
+
+Now, if we inspect these devs using the developer tools, you can see that because they are inline block elements, they take up as much space as their content. But we didn't change the type of their parent dev, so it's still a block element. And you can see that it takes up the whole line here.
+
+Okay, so on the reference page each section has a title and a description and they are positioned on their own lines inside a section but the sections itself they go one after another on the same line.
+
+So let's see how we can use divs to create this for the first section. First, we will remove this text and then add one more div instead. It's gonna be for the title, so we will write the 603k text here. And we will add another div for the description, so the text will be members.
+
+And notice that now we have three nesting levels here, which is a div, inside a div, inside a div. The outermost div is for the stats component itself. It's like a big box for all the stats elements of this component. The second nesting level is for each section. It's like a smaller box that holds the section elements.
+
+And the third nesting level is for the actual title and description of each section. And now when we reload the page, notice the first section is still on the same line with the other sections, but it's taller. To see this better, let's add a border, which is going to be one pixel solid green around each section and reload. There is border.
+
+And so it's easier to notice that all the three sections are on the same line and just the first section is taller because now it has more content inside. So this section div is like a box with two smaller boxes inside, one for title and another for a description.
+
+both the title and the description they are on their own lines because they are each inside of a div and divs are block elements by default. But notice that they are on their separate lines inside this section div. They do not affect anything outside so they don't move these two sections to the next lines.
+
+And what's also interesting that they both take up the full width available, but available inside this div. And so the more content we add to this div, for example, let's add a link, link one.
+
+the more it grows and if we add another link here so it's going to be link two the link goes on the same line but now this section grows horizontally and so all these elements inside this div are just its content
+
+And it's kind of like having a little isolated web page inside this div. And what happens outside of this div is none of their business. And so this is why these two sections remain on the same line.
+</Lesson_80>
+
+<Lesson_81>
+Now let's learn a few new terms in CSS. A layout is how HTML elements are organized on the page. A vertical layout is when we arrange elements one below the other like a list. So these title and description go vertically one below the other and they have a vertical layout.
+
+A horizontal layout is when we arrange elements side by side and so these sections go side by side and they have a horizontal layout. To create professional looking web pages we combine and nest
+
+horizontal and vertical layouts. Like, for example, in this sidebar, we have different layouts combined together. A vertical layout, because these elements are stacked vertically. Then some parts of the page have a horizontal layout, like the stats. And then inside each section, we have the vertical layout. And divs help us to create these complex layouts.
+
+Okay, now let's finish creating the stat sections. So we will remove these two links. And also this border. Okay. And then let's create HTML for these two sections. For that we will remove
+
+this text and add one more div. This is for the second section title. So it's 73 and then we'll add another div. It's going to have the online text and also we need to add a little image.
+
+for the screen online indicator. So we'll write img and then for the src attribute we will just simply copy this image address and then we'll paste it here. Don't forget to add closing angle bracket, okay?
+
+Notice that when we reload the page, there is this missing image icon here. This is because we have an invalid HTML here, because I accidentally removed the opening double quote. And now when we reload the page, the image is loaded. And the original size of this image is too big, so let's make it smaller.
+
+For that, we will add a class here that's gonna be OnlineImage. And then we will copy this class and add another CSS rule that will set the width of this image to, say, 10 pixels. Reload, and now the image is smaller, but I think we need to make it a little smaller. So let's use the 8 pixels here. Reload, perfect.
+
+Next, let's create HTML for this third section. And then we will style the sections. So for the third section, we will remove this text and add one more div. And I will copy this text. Then we'll need another div for description. And I'm going to be lazy again and just copy the text and paste it here. And when we reload the page, we have structure for all these sections.
+</Lesson_81>
+
+<Lesson_82>
+We have structure for all these sections, and now let's style them one by one. To style section headers, let's add a class to each of them. We will name it StatsSectionTitle. And then we can just copy the class with space and paste it for every section title.
+
+Next we will copy the class name and we'll target it in CSS. All section titles are bold. So first let's make them bold. For that we will add the font-weight property and the value will be bold. Okay, this makes them bold.
+
+And it looks like we need to make our titles a little bit smaller. So for that, we will use the font size property. And let's start with 15 pixels. Reload the page. And I think it should be a little smaller. So let's use 14 pixels.
+
+I think this is enough. Next, let's style descriptions. So for that we need to add a class first to every description. The class will be StatsSectionDescription.
+
+And just as with titles, we will copy it and paste to every description. And then we will copy the class name and add another CSS rule that targets all the divs that have this class. And first, let's make the description smaller.
+
+So description looks even smaller to me than the title. So I think we can set the font size to 13 pixels. Reload and maybe to 12.
+
+This is good enough. Next, let's set its color. To do this, we will use the developer tools to get the precise text color. And to open the developer tools, we will use the keyboard shortcut Command Shift C, and then hover over the description and click it to select. And then to get the text color, we will go to the computed tab,
+
+And here we will filter by the color property name. We are interested in the, let me resize this a little bit, in the color property and let's copy its RGB value. And then we will add the color property here and paste the value we just copied. And when we reload the page, our text has this correct color. And now let me resize it back.
+
+What I also notice is that there is more space between the title and the description on the reference page than we have on our page.
+
+And we know from the previous tutorial that to add more space outside of an element we can use the margin. In our case let's add margin at the top of the description. So for that we will write margin top and let's start with 5 pixels because there is not much space here. Reload the page and there is more space above the descriptions.
+
+But based on what I can see on the reference page, I think we need a little less space here. So let's reduce the value to three pixels. Reload. Perfect. Next, what I notice is that there is more space between the sections.
+
+And again we can add more space between the sections using margin. So to do this let's add some margin to the right of each section. So in our code this CSS rule targets our sections. I mean it targets these div containers, div elements for every section.
+
+So let's add some margin here and we will type margin right. And let's start with 30 pixels. Reload. Great. There is this extra space and we need to reduce it a little bit. So let's set it to say 25 pixels.
+
+Perfect. And lastly, for this stats component, we have this extra space above it. So again, to add this space, we can use margins. And because we want to add the space to the whole container, we need to target this outermost div that holds all the stats elements. For that, let's add a class to this div to target it from the CSS code. And the class will be StatsContainer.
+
+And now we can just simply use this class to target the div like this and add some margin to the top. And let's add, say, 10 pixels of margin from the top. Great! I think for now this space is enough.
+</Lesson_82>
+
+<Lesson_83>
+Now that we finished creating the stat component, let's go back and style this title and description. To style this title, let's make it bold first. So for that, we will add a class here and let's call it SidebarTitle. Then we will copy
+
+class name and add another CSS rule which will set font-weight to bold. Next, it looks like this title has a slightly different color than ours. So let's inspect the title to get the color value.
+
+And then we'll add the color property here and paste the new color value. Reload. Now the title has this slightly different shade of black. Also, we need to make our title a little bit smaller. So let's change its font size to say 14 pixels. Reload. Great.
+
+And also notice that this title has some extra space below and above. We already know how to add that extra space. We can just use the margin-top property and set it to, say, 4 pixels to add some margin from the top and margin-bottom to 5 pixels to add some margin from the bottom. Reload. Great. Next, we will style the description.
+
+This description has a different text color. So let's inspect it to get that color. And I'm going to resize the window to see this color value and we'll copy it. And then to apply this color value, we need to add a class to our description first. And it's going to be sidebar description.
+
+Then we will target this class sidebar description and add the color property and paste the value we just copied. Reload. And now our description has the same text color as this. And let me resize back to fully see our page. Next, let's decrease the font size of the description. So we'll set it to, say, 14 pixels.
+
+Okay, this is better. And it looks like we need to increase the line height too. So for that, let's add the line height property and we'll set it to 22 pixels. No, it is too much. Let's reduce it to 18 pixels. Reload. Okay, this is better.
+</Lesson_83>
+
+<Lesson_84>
+What I also notice about the description here is that these two words are bold. So to make them bold we know that we can use the font-width property, but the problem is that to make these two words bold and not affect the rest of the sentence,
+
+we need to place them inside a separate HTML element. And we could use the div element for that and then add the display inline property. But the good news is that HTML has exactly the same element as div, but only for text. And it's called span. So let's wrap this text into the span element and reload the page.
+
+Notice that nothing has changed. That's because the span itself is an inline element and it's just a container for text and text elements. And span doesn't have any styles and we edit like this, it changes nothing visually on the page. But now we can target this span from our CSS.
+
+To do that, we will add a class and we'll call it TextBold because we want to make this text bold. And next, we will add a new CSS rule that targets our new span element using this class. And we want to set the font weight to bold here.
+
+Reload the page and there you go. The text is bold. So use the span element when you want to style a portion of your text. The span is an inline element and it doesn't have any default styles.
+</Lesson_84>
+
+<Lesson_85>
+I think we have two more things to fix about this title and description before we move on to creating this straight line. So from what I see here, we need to add some more space above the title. So let's increase the margin top of the sidebar title to say 12 pixels, reload. Okay, let's increase it more to 15 pixels.
+
+I think this is enough and also let's set the width of this description div because it looks like the lines here are shorter. So to do this let's scroll down to the sidebar description rule and we'll add the width property and let's set it to say 270 pixels.
+
+Reload and nothing changes. This means that we need to decrease the width here and let's set it to, let's see, 250, reload. Great, now we are ready to create this straight line here.
+
+okay let's close the developer tools for now to me this straight line looks like a part of this bigger component for this sidebar poster so let's add a div that will be a container for this whole component
+
+And we know that we can set the top border of the div to have this straight line. Okay, so for that we will add a new div. And this is gonna be a container for this whole component. So let's add a class and the class will be sidebar-image-container.
+
+Inside this container, we will need one more div for the sidebar image text. So let's write sidebar image and also add a class right away. The class will be sidebar image title.
+
+And lastly, let's add the image itself. For that, we will right click the image and copy its URL. And then we will add the IMG element. And in its source, we will paste the URL we just copied. And don't forget the closing angle bracket. Now let's go to our page, close developer tools and reload it. Great. Now we have the text, the image and the whole container that we can style.
+</Lesson_85>
+
+<Lesson_86>
+First, let's add this border at the top here. To do that, we will select the class name and add one more CSS rule to target the container. And next, we'll write border. It's a thin border, so let's start with one pixel, solid, gray.
+
+Reload the page. Great, now we have this border around the container but we only need this border to be at the top so we will add dash top here and reload the page. Okay, now the border is only at the top.
+
+Next let's change the color of this border to make it match the reference page. To get the precise color for our border let's inspect this element and then we will go to the styles tab and there is this CSS property that sets the border here.
+
+And so we will copy only the color here and then remove the color keyword and paste the color. And now when we reload the page, the color is correct. Next, we will add some space above the border. And for that, we use margins. So margin top, and let's make it two pixels. Reload. And I think we need to increase it to three pixels and maybe four. Okay, this is good enough.
+
+And there's a lot of this free space inside the container below the border. So we will use paddings. We only need the space at the top. So we will use the padding top property. And let's start with 20 pixels. Reload. Okay, 20 pixels seems to be fine here.
+
+The next element that we will style is this sidebar image text. We need to make it uppercase and also change its text color. So to style the title let's copy its class name and
+
+create a new css rule and to make the text uppercase we use text transform the value will be uppercase reload okay it's uppercase and you already know how to get the color for this title so we will inspect it here and go to the computer tab and in here we will search for the color keyword scroll down until we find the actual color
+
+And let's copy this color. And then we will paste that color, reload, and the color is exactly the same. It also seems that we need to decrease the font size of the title to 14, probably, pixels. No, it is too small. Let's increase it to 15 pixels. Okay, this is good enough.
+</Lesson_86>
+
+<Lesson_87>
+I think we are ready to style the image. But before we do this, notice that there is more extra space between the text and the image. In our case, because we used the div element, which is a block element, to hold our sidebar image text,
+
+We can add this extra space using margin-bottom. So let's scroll down to the title rule and margin-bottom. Let's say it will be 10 pixels. Reload the page and we need to increase it a little bit more. So it's going to be 12 pixels.
+
+Perfect. And to make our image to look the same as here, we need to decrease its width. So for that, let's add a class SidebarImage, copy the class name, and then we will set width to, say, 200 pixels.
+
+Reload. Okay, we need to increase the width a little bit and let's set it to, say, to 30 pixels. Okay, perfect. Lastly, notice that the border here is aligned with the image and our border is not.
+
+So to fix this we can reduce the width of this container that has this border and we will set it the same as the width of this image. So we will copy this property and just paste it here.
+
+And I think this is it. We now have created this improved version of the sidebar using the box model and also the div and span elements. So the most important thing to remember about divs is that they are containers for other elements and we can nest as many divs as we want. It's like putting boxes inside boxes inside boxes.
+
+But if you feel like you don't fully understand how divs work, don't worry. From now on, we will use divs a lot in this course and also when we will be creating the Reddit clone project. So you'll have plenty of examples to learn from.
+</Lesson_87>
+

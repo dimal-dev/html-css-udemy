@@ -1,0 +1,146 @@
+<Lesson_60>
+In this tutorial, we will learn a vital tool that professional developers use all the time. It's called the Developer Tools, and it comes with Chrome. To explore the Developer Tools, we'll use one of the pages we have created in the previous tutorials.
+
+For that, open the sidebar.html from tutorial 6. It'll be our guinea pig as we learn the developer tools. If you don't have this file, then open this URL, and you'll have everything we need. Once you've opened the page, we're ready to start. Now, let's learn how to open the developer tools. To do that, go to the View menu, then Developer, and then click Developer Tools.
+
+And it opens this panel, which is the Developer Tools. Now let's position it at the bottom of the page. For that, we will hover over these three dots and then click them. And then we will click this icon to place the Developer Tools at the bottom of the page.
+
+And let me zoom in the view here to see it better. And I'm gonna resize it to make it bigger. These developer tools give us extended access to the features and information about the current page that regular users don't have. So let's explore what we can do with the developer tools.
+
+Right now we are interested in this Elements tab. You might have it open by default already. If not, just click it. So in this left area we can see the HTML elements of the current page. Here we have the elements that we have created, like these paragraphs and image.
+
+and also a few more elements like body and head and the HTML element that we will learn a bit later in this course. A quick side note. You'll have different class names than I do here because you have a newer version of this web page. Don't worry, it won't make a difference for this lesson. Now back to the tutorial.
+
+We can click on these triangles to look deeper into the HTML structure of this page. Also notice that when we hover over an element here, it also gets highlighted on the page. So here we can view the HTML elements of the current page and also modify them.
+
+Let's actually modify this paragraph in place and remove this pipe hideous part. To do that we need to hover over the element we want to modify and then right-click it and in this context menu click on the Edit as HTML. This opens this little in-place editor
+
+where we can change the HTML code of this element like we want. So we will select this text and then remove it. And then to apply the changes we will just click on any other HTML element like this. And now the Hades paragraph has this new modified text.
+
+If we want to undo the changes that we just did, we can press the Command Z keyboard shortcut for Mac or Control Z for Windows. Also, we can delete any element here. So let's delete this sidebar text paragraph. For that, I'm going to right-click it and then select the Delete Element option. And this removes the element from the page.
+
+Again, to undo the changes and return back the element that we deleted, we can press Command Z for Mac or Control Z for Windows. This functionality is useful for debugging the web page, that is, learning how to fix it when something doesn't work as we want it to.
+
+Next, to have a little bit more practice, pause this video and change this number to 159 using the developer tools. Then, also using the developer tools, delete this image and this paragraph.
+
+Once you delete them, undo all those changes using the Command Z for Mac or Control Z for Windows.
+
+Okay, now let's do it together. So to change this number to 159, I'm gonna right-click this HTML element, then select Edit as HTML. And then I'm gonna replace the number text with 159. Then I'll click on this paragraph outside of the editor.
+
+Next, to delete this image, I'm going to find it in the developer tools and then right-click, delete element. Then we will repeat this for this paragraph. So delete element 2.
+
+Okay, and to undo the changes to the HTML structure, I'll make sure that the focus is in the developer tools, so I'll click any element here and then let's press command Z until all the changes are reverted. Great!
+</Lesson_60>
+
+<Lesson_61>
+Notice that when we left-click on the elements here, the area to the right gets updated. So this area is for the HTML structure of the current page and this area is for CSS.
+
+So here we can see the styles that the selected element gets. For example, this is the custom CSS rule that we wrote when we created the sidebar HTML in the previous tutorial.
+
+And also this is the CSS rule that the browser adds by default to this paragraph. And also for our custom CSS rule we can click this file name here to open the actual CSS code with this rule. And this is the code of the web page that we created. Let's click on the Elements tab to go back.
+
+So here we can see the CSS rules that are applied to the selected element. But we also can modify these rules in place. So a useful feature for this is that when we hover over a CSS property here, the checkbox appears. And when we uncheck it, this disables this CSS property.
+
+If we check it, the property gets applied again. This is useful when we develop our website and also when we debug some problems or errors. Also, we can modify these property values directly in place here. For that, let's select the image text paragraph here and we'll change the text transform value from uppercase to lowercase.
+
+And to apply the changes, I'm gonna hit Enter. Notice that when we changed this property value to lowercase, the text became actually lowercase. Let's also change this text to red. And as soon as we applied the new value, the text color becomes red on the page.
+
+We can not only modify the existing properties here but we also can add new properties to CSS rules. For that click right after the opening curly bracket and this adds this new line here and according to the rules of the CSS syntax first goes the property name so let's add the font
+
+size property and then to specify the value we hit the tab key on the keyboard and let's change it to say 25 pixels. Enter to apply the changes. And now this changes the font size of this paragraph to 25 pixels.
+</Lesson_61>
+
+<Lesson_62>
+Next, let's open this computed tab. This tab, just like the styles tab and all the remaining tabs here, it shows the information about the selected element. So under the computed tab first goes this area that shows the box modal for the selected element.
+
+We will explore the box model in the next tutorial and now let's scroll down further and I'll resize this area to better see these properties. So here we can see the list of all CSS properties with their final values after the browser performs all the calculations.
+
+To see the full list of the properties that this element gets, we will check this ShowAll checkbox. As you can see, there are a lot of extra properties that the browser adds to an element by default. So if you don't see these properties, make sure that this ShowAll checkbox is checked.
+
+Okay, remember I told you in the previous lesson that there is an easy way to find out the default font size for our HTML element.
+
+This is actually the place to get that font size. So let's do this for the members count paragraph. For that, first we need to select the paragraph. So click it to select. And then under the computed tab, we can scroll down until we find the font size property.
+
+Okay, so the font size for this paragraph is 14 pixels, which is the custom font size that we set in that tutorial when we created this sidebar. And let's click on another element, like the sidebar text, and the font size now is gray, which means that this is a default value. And notice that the value is 16 pixels.
+
+And so this is where I got the 16 pixels value for our previous tutorials. Okay, so we can find the properties we're interested here manually by scrolling down and searching for them. But there is a more convenient way to do this. Right at the top of this list, there is this filter input. And if we click it and start typing the property name we're interested in. Let's write font.
+
+Now we have only the properties that have the font word in their property name. And if we continue typing and write the font size, so the exact name of this property, the list decreases even further and we can easily see the font size property and its value right away.
+
+Now to instantly clear this input and see the remaining properties, we can click this icon. And when the filter input is empty, the full list of the properties applied to the selected element is back.
+</Lesson_62>
+
+<Lesson_63>
+To close the Developer Tools, click here. And now let me show you another way to open Developer Tools, which is to right-click anywhere on the page and then select the Inspect option. And this opens the Developer Tools too. What's awesome about the Developer Tools is that we can open them not only on our pages, but on any website we want.
+
+So let's try to open them on Stack Overflow. For that I'm gonna create a new tab in Chrome and then type in stackoverflow.com.
+
+Enter. This is the website you will find yourself quite often as a developer. It's the website where you will find the answers to many of your questions while creating websites. And to open the developer tools here, we can right-click anywhere on the page and then click Inspect. Let's close this message. So now we have the developer tools here open.
+
+And we can learn more about the HTML and CSS code of the Stack Overflow main page. Okay, remember in the previous exercises there were exact RGB and hex values for the background colors for the links that you created.
+
+I mean the links like this one or this one. So let's learn how to get those colors from a website like Stack Overflow. Let's get the background color for the normal state of this signup link.
+
+As you already know, we can get the final property values of any element from this computed tab. But for that, we need to find and select this link in this area. Okay, so if we try to find it manually, it can be quite problematic and a tough task because there are hundreds of HTML elements on this page. So there is a better way to find and select this link in the developer tools.
+
+To do that, what we can do is we can hover over the link we want to select and let's do this for the login link and then we right-click it and select the inspect option.
+
+And this finds and selects the link in the developer tools. Another way to select any element on the current web page is to use this little inspect button. So to use it, first we need to click it to activate.
+
+When it's activated its color is blue which means that now we are in the inspect mode and we can hover over any element on the web page like this sign up link and then click it. This selects the link in the developer tools.
+
+Once the link is selected here, we can find out its background color under the computed tab. So if you don't have the computed tab selected, just click it. And then to find the property, let's write its name in the filter input. So background color. And by typing it here, we ask it to show only the properties that have the background color in their name. And
+
+There it is, the value of the background color we are looking for. Now we can just select it and copy it like regular text with Command C for Mac or Control C for Windows, and then use the copied value in our CSS code. Okay, if we hover over this Inspect button here,
+
+this little tooltip will appear. What's important about this tooltip is this part that shows us the keyboard shortcut we can use to activate this inspect button. So for Mac it's Command-Shift-C and for Windows it's Control-Shift-C. And if we use this shortcut the inspect button activates.
+
+And now we can hover over an element on this page, like for example this home link, and click it to select in the developer tools. And we can see its properties under the computed tab. If we want, we can use its background color, which is this shade of gray.
+
+even if the developer tools are closed, so let's close them. And if we use the Inspect shortcut, so press Command-Shift-C, it opens the developer tools and activates the Inspect button simultaneously. And we can use it right away to select an element we want on the page. Let's select this Login link again and find out its current text color.
+
+We already know that the property that sets the text color is called just color and to get its value we can go to the computed tab and we can filter properties by their names so we'll type color here to show only the properties that contain the color word and
+
+Here is the color property and its value. And we can select the value and copy it and use however we want. I highly recommend you memorize and use this shortcut. So it's Command Shift C for Mac and Control Shift C for Windows.
+
+because you will inspect different HTML elements on the page quite often when you create websites and the shortcut makes it faster and easier to do.
+</Lesson_63>
+
+<Lesson_64>
+Next, let me show you one more great feature that the developer tools offer. And not all software developers know about this feature, but it's incredibly useful. So first, let's inspect the signup link again. To do that, we'll use the shortcut command shift C for Mac and control shift C for Windows. Then click the link.
+
+And it gets selected here and we can see its properties under the computed tab. Okay, so this is the value the background color property has when the link is in its normal state. But if we hover over the link, it changes its background color. And when we click the link, the background color changes again.
+
+And despite the link is selected in the developer tools, when we hover over it, the background color value here is not updated. It is still from the normal link state.
+
+So how do we inspect this link in its hover state or in its active state when we click it? To do this, we need to make sure that the link is selected in the developer tools. It is right now. If not, just use the inspect shortcut and select the link.
+
+Then we will go to the styles tab and here there is this little hover button. Let's click it, which opens this area that allows us to emulate different states for the selected element. Let's emulate the hover state. To do that, we'll just simply check this checkbox. And because of this, the link switches to the hover state and its background is different.
+
+So when this hover checkbox is checked, even though we're not actually hovering over the link, it behaves as if we are. To return the link back to its normal state, we can simply uncheck this checkbox. And notice when we check and uncheck this checkbox, the link changes as if we are actually hovering over it and then moving the cursor away.
+
+Let's leave the hover state checked and switch to the computed tab. And then find the background color property. And now its value is actually the value the link gets in its hover state.
+
+And we can use this value, like copy it, then paste into our CSS code. Next, let's go back to the styles tab and uncheck the hover state. Then check the active checkbox, which emulates the active state for this link as if we actually clicked it. And now, under the computed tab, the background color property is different again.
+
+This is the value the link has in its active state. And if we want to return the link back to its normal state, we simply go to the Styles tab and uncheck all the checkboxes here.
+
+We can emulate different states not only for this link, but for any elements we inspect on the page. To practice this, I'll ask you to do the same for the Login button. Find out its background color in the Normal state, in the Hover state, and in the Active state.
+</Lesson_64>
+
+<Lesson_65>
+Next, let's discuss the last important thing we need to know about developer tools for now. Remember that we can modify the page with the developer tools. For example, let's turn on the inspect mode and inspect the sign up link to select it here. And then let's right click it and delete the link. This removes the link from the page.
+
+Then, let's change the text color of this login link to black. For that, I'll use the keyboard shortcut to inspect the link. And we will close this emulation area by clicking the Hove button.
+
+And then we can add a CSS property specifically to this link element in this element style rule. So for that we click it here. Let's type color tab black, enter. This makes the text color of this link black. Next,
+
+Let's reload the page. So I'm going to click it here. And when we reloaded the page, now the sign up link is back and the login link text color is back to its original color.
+
+This all means that all the changes to the page we do with the developer tools are only visible to us. Other page visitors cannot see these changes. And when we leave the page or reload it, all the changes are gone and the page is being reset to its original state.
+
+So when you change something about the page with the developer tools, all those changes are temporary. And when you leave this page, they are gone. This is really convenient for learning website development and debugging different problems. And it also gives us the freedom to experiment and not be afraid to break something.
+
+Okay, and now we have learned the most important basics about using the developer tools. We will use them a lot from now on in this course and when we will be developing the Reddit clone project.
+</Lesson_65>
+

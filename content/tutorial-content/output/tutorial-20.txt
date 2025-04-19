@@ -1,0 +1,188 @@
+<Lesson_148>
+Great! Next, we'll start working on the search. Let's take a closer look at what we have here, because it's going to be quite an interesting and challenging component. First of all, notice that when I hover the mouse over the search, this gray background color appears. And it has these rounded corners.
+
+Now, the search itself consists of the Zoom icon and the text field with the search Reddit placeholder. We learned how to create text fields with placeholders at the beginning of the course, so this is going to be a good opportunity to remember how to do this.
+
+Next, when I click on the text field, it expands and the drop-down with the search results appears. For this project, the search results don't change when I type some text, like React, into the input field.
+
+That's because to get that behavior, we would need to know and use at least JavaScript. And this course is focused on HTML and CSS. But in the future, I'm planning to create JavaScript tutorials as well, so we can make our websites more interactive and dynamic.
+
+Okay, notice that the search results drop-down is scrollable and consists of two parts. The subreddits and what's trending today. They have many different elements, hover and click states and look quite professional.
+
+We can click on the search results and they'll change their appearance. But nothing else happens when we click because, as I said, we'd have to use JavaScript or some back-end programming language for that. Also, notice that the search casts this nice-looking shadow when it has focus.
+
+But if I click anywhere outside of it, the shadow disappears along with search results. So, let's start creating all this. First of all, I suggest that we create a separate file for the search styles. We'll call it search.css. Here we'll have the CSS code that only styles the search.
+
+We could put these styles in the header.css, but I think putting them in search.css is better. It'll make it easier to work with the header and search code, because the search will require quite a lot of CSS code, and it's quite independent of the header styles.
+
+So the code separation is logical and easy for other developers to understand. Next, we'll include our new CSS file here to apply whatever styles we will write in it. So I'm gonna write search.
+
+Great! The way I would approach creating this search bar is the same way we have approached creating this whole web page. I mean, let's break it down into smaller pieces and create them one at a time.
+
+I think that a good and small enough part to create will be this text field along with the zoom icon. The zoom icon is just an image, so let's download it and then we'll add it to our page. And this icon image uses a different image format called SVG.
+
+It's short for Scalable Vector Graphics. We can scale these images up as much as we want and they will maintain their quality and look great. Okay, we already created a div container for the search earlier, so let's use it. For that, let's remove this dummy text and add an image element. And it will point to images slash search SVG.
+
+And when I reload the page, there is the zoom icon.
+</Lesson_148>
+
+<Lesson_149>
+Next, let's add the text field. For this, we'll use an input element after the image. The type will be text and then a closing angle bracket because input is a void element. And it's gonna look like this on the page.
+
+It is a good start, but we can make it so much better. First of all, let's add this search Reddit placeholder. If you remember how to do this, I would encourage you to pause this video right now and add the search Reddit placeholder yourself. Okay. So to add the placeholder, we'll use the placeholder attribute. The value will be search Reddit.
+
+And when I reload the page, OK, now when the input is empty, we can see the placeholder. But as soon as we start typing, the placeholder disappears. Next, notice that there is no border around the input here. And when I click on it, there is no border either. But our input has this border by default. And when I click on it, the border becomes bigger.
+
+So let's get rid of this border. For that, we'll add a class to the input class, because we'll need to target it from our CSS code somehow. And let's call it SearchInput.
+
+Then inside the search stylesheet we'll target the input by the class SearchInput and we'll set the border to none to remove it completely. And now when I reload the page
+
+The input has no border by default. This is great, but what about the border when I click on the input? Okay, the border is still here. But why is that? Well, it's because what we see here is not actually a border. It's an outline.
+
+Outline is a line outside of the element's border. Outlines don't take up any space, so they don't affect the layout of the document in any way. And we can configure outlines using the outline property in a similar-to-borders way. To remove the outline, we can write outline here,
+
+and also set it to none. And now when I click on the input there is no line outside.
+</Lesson_149>
+
+<Lesson_150>
+Next, let's add this gray background to our input, which will appear on hover like this. I can't tell the color value by just looking at it, so again we'll use the dev tools to find out what color we're gonna use. Now, because the background appears not only when the cursor
+
+is over the input itself, but also when it's over the zoom icon and the empty area outside. This all means that the hover rule targets a parent element of the input. And this can be a direct parent or a parent higher in the DOM tree. And it usually takes a little time to examine the DOM tree in the DevTools to find the actual element.
+
+We need to start somewhere. So to find the element in our case, hover over the search area to make the background appear. And then, because we already know that it's not the input element we're interested in, move the cursor closer to the edge of the background, but make sure that the background is still visible, like this. And then right-click and select Inspect.
+
+This will inspect this div in the DevTools. To check whether this is the one, let's emulate the hover state and see what happens on the page.
+
+Remember that in order to make the browser act as if we're actually hovering over the div on the page, we can go to the styles tab and click on this button and then select the hover option. This will emulate the hover state for the div and okay, the background has appeared, which means that this is the element we're looking for.
+
+Okay, notice that since the hover state is emulated here, there is an additional CSS rule activated here for this element, and we can see the actual background color that we can use. But if I uncheck the hover option, the rule is gone. So I'm gonna turn the hover option back on, and we can copy the color value from here.
+
+Also, as you know, you can use the computed tab for the same purpose and search for the background color property and get the value from here, which will be a more reliable option because here you have the final property value after all calculations.
+
+but I wanted to show you another option where you can get the value because under the styles tab the browser shows all the rules that are applied to this element okay so we need to target this div from our CSS code for the reasons we just discussed and if we look at our code index.html the container div for our search
+
+already has this class because we added it earlier so we're going to use it from our css code. I'll write .search then we want to set the background color property to the value we just copied
+
+I didn't add the hover pseudoclass here to make it easier to test and adjust these styles. And once we've got all the styles right, we'll change them to appear only on hover. This little technique will make your development process a little bit easier.
+
+Okay, and now when I reload our page, you can see that we've got some background here, but it looks broken. This is because the input has a white background color by default, which overlaps with our gray background. And to fix this, we're going to make it transparent instead of white, so that we can see the background behind the input.
+
+to make the background color of our input transparent we're gonna go to our search.css and inside the rule that targets our input we'll write background color and then transparent this makes the background color of our input completely invisible and we should be able to see the gray background behind it and when I reload the page there you go
+</Lesson_150>
+
+<Lesson_151>
+Next, notice that the image and the input are not vertically aligned. This is because by default images are inline elements and the way they are aligned vertically. To fix this we can turn the flex div into a flex container
+
+and for that we'll right here display display flex like this this is better okay next notice that there is more space here between the zoom icon and the text field than we've got here so let's fix that
+
+And I'm going to ask you to pause this video and think about how we could add this space. What CSS properties have you learned in this course that can help you do that?
+
+Okay, there is one Flexbox-specific property and one property from CSS box model. I'm talking about the gap and the margin properties. Try using the gap property to add more space here and then we'll do it together. So pause this video and add this space.
+
+Okay, we use the gap property on a flex container, so for that this is our flex container, we'll add it to this rule. Let's start with 5 pixels and then we'll get an exact value from the reference design.
+
+And good. And to get the exact value we need there, I'm gonna inspect this. The value is 10 pixels, so we're gonna set this to 10 pixels as well, which will look like this. Okay, next let's make our background take up more space around the search, like we have it here.
+
+How do we do that? Well, we know at least two ways. The first one would be to explicitly set the height and width of the searched div, and the second one would be to use padding. And as a challenge and exercise, I would encourage you to pause this video again and achieve this using each way.
+
+I mean, use the width and height properties and set the height and width of the search div so that there is enough space outside. And you'll also need to add some margin to the left side of the zoom icon.
+
+and use the alignItems flexbox property to prevent the image from stretching. Don't skip these challenges. They can be hard, but I think they are the most important part of learning how to code. You will progress much faster if you try to complete them.
+
+Okay, and then the second challenge for you will be the following. Use the padding and the width property to add that same extra background area.
+</Lesson_151>
+
+<Lesson_152>
+Now let's do this together. So to start with something, let's set the search width to say 500 pixels and the search height to 35 pixels. And when I reload the page, notice that the background area is bigger and so is the zoom icon. Why is that?
+
+Well, remember that our search div is now a flex container because we set the display property to flex here. And remember that when we do this, the browser sets the alignItems property by default to stretch.
+
+So this is added for us automatically and this then stretches the flex items to the same height as the flex container. Remember that if the search div is a flex container then it's direct children so this image and this input are flex items.
+
+Let me demonstrate you this. So I'm gonna change the height property here and look at how the zoom icon gets bigger or smaller when I change the height of the flex container in the DevTools.
+
+And the same thing happens to the input element because it's also a flex child of the search div. We don't see it as clearly because it's a text input and its size is controlled by the font-size property. But if I hover over the input in the dev tools,
+
+You can see that the input is also stretched plus some default padding. Now I'm going to reload the page to reset these values. And to fix this, we can change the alignItems property from Stretch to Center. So let's do that. I'm going to change Stretch to Center. Reload the page. And look at that!
+
+Now they are centered vertically and the icon isn't stretched. Next, to have this extra background on the left side, we can add some margin from the left of the zoom icon. This will push the image and the input to the right, and because margins are transparent, we'll see the gray background of the search div.
+
+Now to target the image, let's add a class right here and we'll call it SearchImage. And then we'll use this class to add a new CSS rule here to target the image.
+
+We want the margin on the left side, so we'll use the margin-left property. Let's set it to 10 pixels here to see if it's applied correctly and then we'll set an exact value. Reload the page. Yes, look how the image horizontal margin pushes everything inside the search div to the right and which created
+
+free gray space on the left side. To get the exact margin value here I'm going to inspect the search div and then we're interested in the padding value because this web page uses the padding approach that we're going to implement next. So it's 16 pixels and I'm gonna change this to 16 pixels too and great the left side is finished.
+
+Next, notice that the text field on our page only takes up part of the space available in the search div. And when I start typing something, we'll quickly hit the limit and some of the text will be hidden. But on the reference page, the input is much wider and takes up all the width available. And if I start typing here,
+
+We have much more space until we reach that limit. So how do we do that on our page? A good way is to use the flex-grow property. Remember that by default it's zero for all flex children and this means that any extra space like this available in a flex container is not used.
+
+Now, in the DevTools we can display additional information about a Flex container and its children by clicking on this Flex badge. And this is how it displays the extra space that is available. It is there because we manually set the width of the whole search div to 500 pixels a bit earlier. And notice that if I turn off
+
+the width property in the DevTools, all the extra space is gone. So we can use the flex-grow property to add this available space to the input.
+
+And for that, let's set the flex grow property to 1 here. And with this, if I reload the page, now the input takes up all that space. And we can type in more text before it gets hidden.
+
+Notice that the text in the input almost reaches the edge of the search div, whereas on the reference page there is more space here. To add this space we also need to add margin to the right side of the input. And notice that the amount of space here is the same on both sides, which means we need to set the same 16 pixels margin.
+
+So I'm gonna copy this and paste it here because we want to set the margin right of the search input, not the search image. So I'm gonna change this to right and reload the page. Let's type in a lot of text here. Great! We've got the same amount of space here and here.
+
+Now let's use the exact width and height as we have on the reference page. We are interested in the width of the search div, which is 528 pixels. And for the height, we're going to need to add the height of the content. So I'm going to round this up to 19 pixels. And padding, so it's 10 plus 10, 20 plus 19 is 39 pixels.
+
+And we're doing this because remember that padding is included in the background of an element. So we'll set width to 529 and height to 39 pixels. And reload the page. Great. Now the search bar looks much more like the one on the reference page. And this is how you add the extra space with the background to the search bar using the approach number one.
+
+So to use it we set the height and width of the search container, then the left and right margins of the first and last children. In some cases this approach is better and in some cases it's worse.
+
+As a developer, you're constantly weighing the pros and cons of different solutions. And it's a great skill to know how to do that. This is why I'm not going to give you the answer right away, but I'm going to show you step by step how to compare and choose. So let's look at the second approach, which is to use padding. And for that, I'm going to remove the margins here and here, and also the height property here. And it'll look like this.
+
+To use padding here, let's go to the reference page and take the values directly from the developer tools. And it's for the search div, so it's 10 pixels for the top and bottom paddings and 16 pixels for the left and right. And because padding adds transparent space inside an element and expands its background,
+
+We'll set the padding property on the search div because we want to expand its background. And for that, in our code, I'm going to add padding, and then 10 pixels for the top padding, 16 pixels for the right padding, 10 pixels for the bottom padding, and 16 pixels for the left padding.
+
+Remember that this is a shorthand property and we can use it in individual panning values like this. And the values here go clockwise from the top. So top, right, bottom and left. And if the values are symmetrical, that is, if the top and bottom padding are the same and the right and left pannings are the same,
+
+We can remove the last two values and it will work the same. And with this padding, now if I reload the page, the search bar looks the same as with margins. But notice how much faster and easier we achieved this, instead of setting the left and right margins separately in two places and also setting the height property.
+
+We just added the padding property to the search container and that's it. And this way is also easier to maintain because the padding values are in one place instead of two. And also we don't have to bother calculating the height. So, when you want to add empty space inside an element like this, start with padding. Often it's going to be a great solution.
+</Lesson_152>
+
+<Lesson_153>
+Next, let's increase the size of the placeholder and the text inside the input. Because notice that on the reference page the text is slightly bigger. Okay, and this is very easy to do. We'll just change the font size of the input.
+
+And for that we'll find the rule that targets our input and write font-size. We'll start from 20 pixels to make the changes easy to see. And the placeholder is bigger and if I start typing anything here the text is bigger too. So if you want to change the size of text inside an input use the font-size property.
+
+Now let's find out what font size value we actually need to set in our input. And I'm going to search for the font size. It's 14 pixels. And this is what we're going to set here. And reload our page. Great. Now the text is exactly the same. Next, let's make these corners round like here.
+
+Remember that for that we use the border-radius property. Let's add it to the search container because this is where the gray background is. So we'll type border-radius and let's start with 10 pixels and we'll adjust the value in the DevTools to get it right.
+
+Reload the page. Now the corners are slightly rounded. Let's increase the value here until we're satisfied with our corners. I'm using the up and down arrow keys on the keyboard to increase and decrease the value. So I'm gonna increase it a little bit more. And I think 20 pixels is good enough. So let's stop here and update our style sheet.
+
+so that the changes become permanent. Because if we leave 10 pixels here and reload the page, those changes will be removed. So when you're experimenting with your styles in the DevTools, don't forget to transfer those changes to your CSS files. Like this. And voila! We've got beautiful rounded corners here. Let me disable the FlexDebug information.
+</Lesson_153>
+
+<Lesson_154>
+Finally, we need to make the background appear on hover, like on the reference page. Let me reload the reference page to reset the hover emulation. So we want the background, the gray background, to appear only on hover, like this.
+
+Remember that to style an HTML element when we hover over it, we use the hover pseudoclass. So let's add another CSS rule that also targets the search div. And if we add the hover pseudoclass like this, we'll only hover here, it's hover state. So any styles that we put in this rule will only be applied when we hover over the search element.
+
+We want the gray background to appear only on hover, so let's move this property into the hover role, and that should be enough. And reload the page. Now the background is transparent initially, and when I move the cursor over the input, it turns gray. And when I move the cursor away, the background becomes transparent again. Okay, so I think we have recreated this part perfectly.
+
+And before we go any further and start working on the drop-down, let's make the background color of the search bar transition smoothly. We're gonna do that to practice transitions and make the search bar look more professional.
+
+So what we want here is that when we hover the mouse over the search bar, instead of the gray background appearing immediately like this, it should appear gradually. And when we move the cursor away, it should also disappear gradually. So it should look like this.
+
+And earlier in this course you learned that we use the transition property to achieve this behavior. So, remember that to transition a property in both states, when we hover over the search bar and when we move the cursor away,
+
+We need to configure transition in this rule and not in the one that targets the hover state. So I'm gonna write transition here. First goes the name of the property we want to transition. So it's gonna be background-color. Then goes a space and then the duration of the transition.
+
+Let's say one second. And now, when we reload the page, notice that background transitions smoothly between the two states. But I think it is too slow, so let's make the transition faster. And we'll change it to something like 0.3 seconds. Now this is better.
+
+And remember that we put the transition property in the main rule to make the transition happen between all states, because the hover rule automatically gets all the styles from the main rule, including the transition property.
+
+So if we put it here, then the browser will automatically apply it here under the hood. And it's not just the transition property. The browser applies all the properties from the main role in a similar way as if we just put it here like this.
+
+So with pseudoclasses like hover, this means apply all the styles from the main rule plus the styles from the hover rule. And so we can remove all these and it's going to mean the same thing.
+
+And I would also encourage you to do a little experiment. Try moving the transition property to the hover rule and see how that affects the search bar behavior.
+</Lesson_154>
+

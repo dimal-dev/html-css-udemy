@@ -1,0 +1,334 @@
+<Lesson_170>
+Just as with the recent searches, we'll need a container element for the entire list. So let's create one. Let's go to vscode index.html and find a place where we can add that container.
+
+And here we can collapse the trending today header to make our code easier to navigate. After the header div, let's add a ul element that will be the container for our list. Let's assign it a class of trending today items.
+
+Inside a UL element we're only allowed to use ListItems as its direct children. So let's add our first ListItem and it's going to have a class of TrendingTodayItem.
+
+So the idea here is the ul element will be a container for many trending today items and a list item will be a smaller container for whatever elements we will put in it. Now let's go back to the reference page to figure out what to do next.
+
+Now, because I accidentally reloaded this page earlier, the browser removed all changes that I made in the DevTools, including the focus state emulation for this input. So if I click somewhere outside the input, the drop-down disappears, which we don't want. So I'm going to quickly turn the focus emulation state on for the input.
+
+Okay, notice that I turned it on for the div, which is wrong and the drop-down is not displayed in this case. So what I want to do instead, I want to turn this off and then inspect the input and turn on the focus option again. There you go. So with these emulations you need to be quite precise.
+
+Okay, back to the trending list. So here we can see that each trending item is made up of two smaller parts. This information on the left and the preview picture on the right. And if I scroll down we can see that it's true for every trending item.
+
+And so because of this, I think that it is a good idea to add two more elements inside our list item. A div that will contain all this information on the left side and an image for this preview. Okay, so let's add the div and the class will be trending-today-item-info. Which is a rather lengthy class name. And I'll hide the explorer to have
+
+more space inside our editor. Okay and also we'll need an image and I'll leave the source attribute empty for now and its class will be trending today item preview.
+
+And this will look like this. Okay, great. Now we've got a list with one empty item here. Let's start filling it with content. To complete the HTML structure of our list item, let's add this title, description and image first.
+
+Then we'll style these and then we'll add the source and we'll style other things. Okay, so let's copy the title text right away and inside our info div let's add another one and the class will be
+
+say trending today item title and I'll paste the title text in here then I'll add another div for the description its class will be unsurprisingly trending today item description and let's copy the description from here and paste it here
+
+And you know what? I think that let's skip adding HTML code for this right now and let's save the trending preview image and start styling. Okay, why don't we create a new folder for the trending images and save it there. It's preview1.png.
+
+Now let's set the source attribute here to point to the preview image we just saved. So it's going to be images trending and then preview1.jpg. And now we've got some HTML to style here, which looks like this.
+</Lesson_170>
+
+<Lesson_171>
+First of all, why don't we get rid of this bullet and also this default padding and margin that the browser adds to all lists? We don't have a rule that targets this list, so I'm going to copy its class name and then in our search.css, let's add
+
+a CSS rule that targets the list. Here we want to set the list style property to none to hide the default bullets and okay the bullet is gone so this rule works correctly.
+
+and next we'll reset the default padding like this and the default margin like this and okay good they are gone okay so by default these are stacked on top of each other because divs and we used a div for the description and for the title so divs are block elements and they push everything like this image on the next line
+
+But we want to place these and the preview image, like here, on the same line to have the preview image on the right side and info on the left side So to place these side by side we can make their parent element which is this list item
+
+We can make it a flex container and for that we're going to do what's probably become an unconscious habit already for you. We're going to copy this class name and we'll add another CSS rule here and we'll set the display property to flex.
+
+This makes our trending list item a flex container and also adds sensible flex defaults, one of which is the flex-direction row that places its children on the same line like this. Great!
+
+Now that they are on the same line, we can start adjusting their properties. What I notice here is that now that we removed the default padding and margin from the list, we need to manually add the space around this list item. Well, because notice that here there is some space around this list item and around other items as well.
+
+Also notice that when I hover over this item, the extra space also gets the background color, which means that this space is padding. Okay, let's inspect the list item to get the exact padding value we need to set.
+
+And it's 8 pixels from the top and bottom and 16 pixels from the left and right. So let's add this padding to our list item. And it's gonna be padding 8 pixels and 16 pixels.
+
+And okay, this looks much better. Now let's style the title. And from what I can see here, it's bold, so let's make ours bold as well. And for that I'm gonna copy the class name of the title here and add another CSS rule.
+
+And as you learned in the tutorial on styling text, to make our text bold, we use the font-weight property and the value will be bold. When I reload our page, the title is bold. But now what I notice here is that the color of our title is more black than we have here. So let's inspect the title to get its color value. Okay.
+
+I'm going to copy the value and what I also notice here is that the font size on the reference page is set to 14 pixels for the title. So we'll add this to our title as well. Font size 14, 14 pixels and color will be this one.
+
+And when I reload the page, great, but now the title looks smaller. In fact, it looks much smaller than we have it here. You might think that this is weird because we set the font size, we use the exact value for the font size as on the reference page. But the thing is that if I zoom in here and here, notice that their fonts are different.
+
+So here we've got the same story, the same difference as we had with the trending header. And if I inspect the title and then I'm going to filter for the font family, you can see that the title uses the Roboto font as well. And when I inspect our title and filter for the font family, it turns out that it uses the Times font.
+
+And so this is why they look so different in shape and size. You already know how to fix this. We need to set the Roboto font for our title as well. But before we do this, actually take a good look at the recent searches font here and here. Notice that they are different as well. Because on the reference page, the font is Roboto again.
+
+And on our page, the font is Times Again. And in fact, if we spend some time and check every text element on this reference page, we'll see that all the text on this page uses the Roboto font. I mean, in the search bar and in the sidebar and for this sidebar. So, like, everywhere.
+
+And because it's used everywhere on the page, it's not a good idea to manually set it for every single element. I mean, target these elements separately, like, for example, the Trending Today header and set their font family to Roboto.
+
+And the reason why it's a bad idea is because it's very repetitive and hard to change in the future. And so there is a better way in CSS to achieve the same thing. And this is what we'll do next. So what we want to do is somehow configure our page so that all text uses the Roboto font.
+
+And for that, we're going to use an awesome CSS feature called inheritance. Let me show you. Okay, both the item title and item description are divs that contain their own text and they are children of the item info div.
+
+Now watch what happens when we set the Roboto font not for the title and description elements individually, but for their parent, the item info div. So we'll copy the info class and add one more rule and set the font family property to Roboto.
+
+So in this rule we're setting the Roboto font for this div that contains both the title and the description. So let's see what happens to their text when I reload the page. Notice that both the title and description font has changed to Roboto even though we set it to their parent.
+
+And this is called inheritance. It's when we set a CSS property for an element and all its children get the same value as well. But if you want, you can override that property for individual elements. So, for example, if we want, we can change the font of the description text.
+
+Okay, most text properties are inherited. I'm gonna put on the screen the most commonly used CSS properties that are inherited. Inheritance is a very convenient and useful CSS feature. And we're not limited to the direct children of an element. For example, if we set the font family property for this div to Roboto, all of its children, no matter how deep they're nested, would get the Roboto font.
+
+And we can take advantage of this and go even further up. For example, if we set the Roboto font for the body element, then all its children, that is, all the elements on our page will inherit it by default. So let's do this and see what happens.
+
+But before that, let's remove this CSS rule and let's find the second one. So let's remove this CSS rule to make them all use the default font like this. Next, let's open page.css where we already have a rule that targets the body element. And then let's extend this rule and set font family to Roboto.
+
+And let's also specify the sans-serif font family as a fallback. Now pay attention to what happens to all the text on this page when I reload it. And okay. Notice that the font is now Roboto not only for the trending section, but also for the search items and header actions and the sidebar and the content.
+
+So all text on our page is now Roboto. And this is how powerful inheritance is in CSS. With just one line of CSS, with just only this style that we assigned to the body element, we have changed the font family for every text element on the page.
+</Lesson_171>
+
+<Lesson_172>
+Now let's style the description text. For that, let's go to the reference page and see what we're going to need to do. Okay, we'll need to adjust its font size, color, and probably the amount of space above and below.
+
+Let's start with the font size and color. I'm gonna inspect the description and under the styles tab we can see the font size value. It's 12 pixels and also let's copy the color right away.
+
+I don't remember the class name that our description has, so I'm gonna inspect it. Okay, it's trending today, item description. So let's add a new rule in the search CSS file that targets the class. It's trending today, item description.
+
+Here we'll set the font size to 12 pixels and the color property to this color. And great, this is better. And before we add the space above and below the description, let's add this element that I would call the source of the trending item to see how the bottom space below the description affects the layout.
+
+The way we create and style this is very similar to the way we did it for the recent search items. We'll need a container element here, so a div will be a good choice, then an image and this text. And we'll use Flexbox to center these vertically and configure what little space these have in between. So if you're up for some practice, pause the video and try to create this little source component
+
+you already know everything you need to create it.
+
+Now let's do this quickly together. I'm going to save this image in the community folder. Then I'll copy this subreddit text. This source component is below the description and it's to the left of the preview image, which means that we need to add it to the container that holds these elements. Okay, let's find that. And it's this trending-today-item-info div.
+
+So we'll add our new div after the item description, and the class will be TrendingTodayItemSource. Inside the div let's add an image, and the source will be images, community, and then community icon 6, if I remember this correctly.
+
+We want to style this image but to have more practice with different kinds of CSS selectors we're not going to assign it a class and we'll use something else in our CSS code. Next we'll add a span element for the subreddit name and we're not going to assign it a class as well.
+
+In our case, there is no difference here between using a span element or a div element because its content is text and also because we'll make its parent, so this div, a flex container. Okay, now that we've got the HTML code prepared, let's style it.
+
+So this looks like this on our page. Let's start by resizing the source image. It looks like this on the reference page. So we're going to need to make it a circle and much smaller. Let's inspect it to get its width right away. So it's 16 pixels. Then we need to figure out how to target our image from our CSS code.
+
+It doesn't have a class, so think what CSS selector would you use to target specifically this image. Okay, so to target this image I would start with this div and then use the child combinator and a tag selector.
+
+So let's copy this class name and then at the end of the search.css file we'll add a new CSS rule that targets the class and then here's the child combinator and then img
+
+Remember that we want to set the width here to 16 pixels and we're only setting the width here because the image we're using is a square so its height is equal to its width and if you only set the width property here
+
+The browser will automatically adjust the height based on the proportions of the image. So if it's a square, the height will automatically be the same as the width. So it's going to be 16 pixels too. And this will look like this on our page. Now that the image is the right size, let's make it a circle. For that, we're going to need to set the border radius property.
+
+to half of the width of the image. And we can use an absolute value, which will be 8 pixels. Or we can use a relative value in percents, so 50%. We'll use the relative value because this makes our code a little more flexible and robust. Because now if we change the width, then the border radius will be adjusted automatically. And reload the page.
+
+Good, now it's a circle. Next, I'm going to ask you to pause the video and adjust the size and color of this text to match the text on the reference page.
+
+use the DevTools to get the right values, and also use Flexbox to align these and adjust space where needed. And I'm gonna speed up the video because I don't want to bore you by repeating the same explanation over and over again. I think you already know how to do this well enough. And if you get stuck, just rewind the video to where we styled a similar element, like for example, this RecentSearch component.
+
+Okay, now pause the video and finish styling this little source component.
+</Lesson_172>
+
+<Lesson_173>
+Now that we've styled the source component, let's go back to the item description and adjust the space above and below. So we'll need to increase the distance between the description and title and also between the description and the source component. And the space we're going to add is between these elements and conceptually we use margin for that.
+
+In our case, it can be the top and bottom margin of the description, or it can be the bottom margin of the title and the top margin of the source component.
+
+Let's add the top and bottom margin to the description because that way we're going to need to configure those in one CSS rule. So let's inspect the description to get the correct values. And we can get them either from here or in the computed tab here.
+
+And it's 2 pixels for the top margin and 8 pixels for the bottom margin. Okay, now let's go to VS Code. This is the rule where we style the description. And here we've got two ways of configuring those margins.
+
+We can use two properties that will target different size. I mean that we can write margin-top 2 pixels for the top margin and margin-bottom 8 pixels for the bottom margin.
+
+Or we can use the shorthand property, so just margin, and write it like this, 2 pixels for the top margin, then 0 pixels for the right margin, 8 pixels for the bottom margin, and we can omit setting the left margin, because when we write it like this, it's going to be 0. And we can write it like this, because notice that on the reference page there are no right and left margins for the description element.
+
+So we can set those margins using this way or this way. This one is more concise and this one is more wordy. The main benefit of this way is that it's more concise, but the downside of this is that it requires a little bit more thinking and it's harder to understand it right away. The main downside of this way
+
+is that it's more wordy, but for me this is easier to read and understand and requires less effort to read and understand compared to this one. So I'm gonna go with this one because I always prioritize code readability because developers spend way more time reading code than writing code.
+
+And most of the time it's a good idea to optimize your code for readability. Okay, now the spacing is right and it looks better. And next we want to make this info component take up all the available width.
+
+so that this preview image is pushed to the right. For this we can use the flex grow property because the item info div is a flex item, meaning it's a direct child of this flex container.
+
+I don't remember whether we have a rule for item info, so let's search for it No, we don't have a rule for it, so let's add one, like this And here we'll write flex grow 1
+
+to add all the available space in the flex container to this div. And now the preview image is pushed to the right because the item info element now takes up more horizontal space.
+
+Okay the left side of the trending item looks ready to me but just in case let's check it out on the reference page to see if we need to adjust something and let's go over the elements 8 and 16 here and 8 and 16 here and let's also inspect
+
+This one? Oh, I see. So we missed this padding. Notice that there is no padding here. I mean the top and bottom padding. They are barely noticeable, but they're still an important part of the design.
+
+So let's add these. It's 8 pixels for the top padding and 16 pixels for the bottom padding. So in the item info rule, we'll write padding top 8 pixels and padding bottom 16 pixels. And reload the page. Perfect. And now we have finished styling the left side of the trending item.
+</Lesson_173>
+
+<Lesson_174>
+And we're ready to move on to the preview image. So let's see what we need to do here. Okay, the first thing I see here is that we need to adjust the width and the height of the image. Let's get the actual values from the DevTools.
+
+we need to set its width to 96 pixels and its height to 72 pixels and we haven't styled the preview image yet so we don't have a CSS rule specifically for the image so let's copy its class name to add one okay and inside this rule we want to set the width to 96 pixels and height property to 72 pixels
+
+And if we reload the page, okay, now the image is smaller, but notice that the image is kind of squished vertically. And it'll be easier to see if I turn off the height property in the DevTools.
+
+This gave the image its natural height and this is how it looks in its original aspect ratio and this is how it looks when we set its height manually. So the image is squished on our page but if we look
+
+at the reference page. The image is not squished and it has also the custom height and the custom width. So how can we achieve this? For that there is another CSS property we can use to ask CSS to preserve the original aspect ratio of an image.
+
+and it's called ObjectFit. The ObjectFit property controls how our images and other media elements are displayed when their natural dimensions don't match the size we set. And by adjusting this property we can decide whether the image will be stretched, squished, cropped or kept in its original proportions. Let's set this property to cover
+
+and see what happens. And if I reload our page... Okay, now the image is not squished and it's slightly cropped at the top and the bottom. So when we set the Object Fit property to Cover, it makes sure that our image is displayed without any distortion and it crops the excess parts at the edges if necessary.
+
+So use object fit cover to preserve your image's natural aspect ratio. If you're interested in learning more about the object fit property, google for MDN object fit and open this page. And here you can learn the rest of the values that you can use for with this property and their effects on your images. Okay,
+
+Next let's add rounded corners for this image and for that we'll use the border radius property again and its value is going to be border radius it's going to be five pixels and great
+
+Now let me show you one thing that's different about our image compared to the reference page. If I turn on the flex debug view here, notice that the preview image is placed at the top of the flex container and there is this blank space below the image. Even though the align items property is still set to stretch by default. This is because we manually set the height of this image
+
+and this height is less than the height of this flex container, which is this list item element. So in this case the browser places the image at the top and there is this free space at the bottom. But if we look at the reference page here and turn on the
+
+flex-debug, you can see that the preview image is centered vertically and that leftover space is evenly distributed above and below the image. So to fix this for our image we can either use the align-items property on the flex-container, so on this today item, to vertically center all of its children, which is this image and this item info div to the left.
+
+Or we can use the AlignSelf property on the preview image to just change the position of this image and not affect this div to the left. We've had some practice with the AlignItems property, so let's use the AlignSelf property this time.
+
+Remember that the alignItems property must be used on a flex container because it affects all of its children. Whereas the alignSelf property must be used on flex items because it affects individual flex items. And this is why we're going to add it to the image preview, which is a flex item.
+
+The values we use with the alignSelf property are mostly the same as with the alignItems property. So to center it vertically, we're going to write center. And if I reload the page, now the image is vertically centered in the flex container, which is exactly what we wanted.
+
+So, to recap, we're using the alignSelf property to vertically center one flex item, which is this preview image, while not changing the alignment of the rest of the flex items. Okay, let me turn this flex debug off.
+</Lesson_174>
+
+<Lesson_175>
+And the next thing we'll do is we'll add this thin border at the bottom of an item. And also we'll need to change the background color on hover and the cursor to pointer and also on click. You already know how to do this because we added the border here and we styled the hover and click states for the recent search items. So again, for the sake of practice, I'm going to ask you to add
+
+this border and these styles yourself. And as always use the developer tools to get the color and border values and also add this space between the preview image and the item info. And don't forget that if you want the search drop down to stay visible all the time and not disappear when you move the cursor away or click outside of the drop down
+
+For that, you need to emulate the focus state for the search input here in the DevTools. Otherwise, the drop-down will not be visible. And after you finish styling the first trending item, then add the remaining trending items. And now I'm gonna speed up the video to not bore you.
+
+Great! Now we've got all the trending items here with all the states working.
+</Lesson_175>
+
+<Lesson_176>
+Now we've got all the trending items here with all the states working. But this brings a new problem.
+
+there is too much content in the search drop-down to fit on one screen. This happens because by default our block elements grow vertically to fit all their content. In some cases we want this behavior but for the search drop-down we don't. What we want is to have it a certain maximum height and if it has more content than its maximum height then make it scrollable like on the reference page.
+
+And it's actually quite easy to do. Okay, so first let's find out what element is actually scrollable here. And from what I see, it's everything after this border.
+
+Now let's go back to our page and look at what HTML structure we have here. Notice that we've got this search results scrollable div and its content goes right after the border. And we even named the class scrollable. So this is the element we will constrain vertically. What we want to do here is use CSS
+
+to limit its height so that it's no higher than a certain value. For this, let's open the search style sheet and search for this class name. Okay, there is the rule that targets the div. Next, we'll extend this rule and we'll use a new CSS property called max-height. Let's set it to, say, 100 pixels.
+
+and this property does what it says it sets the height limit so the height of this element can be 100 pixels or less and if i reload the page now the height of this div so i mean the height of this div is 100 pixels and any content
+
+below will overflow and will be hidden. And it's hidden because we configured our dropdown earlier to do that. And if we look at its styles, the overflow hidden is what hides the overflowing content. And the content inside the search results scrollable is overflowing because we set its maximum height to 100 pixels.
+
+Now look what happens if I turn off the overflow hidden property. Now this content, because it's visible, goes beyond the drop-down, which is ugly and we don't want that. So I'm going to turn on the overflow property.
+
+Okay, but also we don't want to simply hide the overflowing content because it's not usable. What we want instead is to make this div scrollable when it overflows. For that we can configure the overflow property separately for the scrollable div.
+
+and we'll do it in this rule. We only want to add vertical scrolling so for that we'll configure its overflow overflow y. The overflow y configures the vertical overflow of our element and we'll use the auto value to show the scroll only when the content is overflowing.
+
+Reload the page and there you go. Now the content is scrollable and we have access to the rest of the content. Okay, but why do we need two divs here? I mean, why do we need to create the SearchResults div and then another div inside to add this scroll? Can't we just set the overflowY property to auto for the SearchResults div?
+
+and not bother with adding this second div. Let me show you what happens if we do this. For that, I'm going to comment out this here to disable this property. And okay, the scroll is gone. Next, in the search results div, I'm going to change this to overflowY and its value to auto. And look what happens when I reload the page.
+
+so now we have this scroll bar that overlaps the search field and this happens because our search result div actually overlaps the search field but we put it behind so it starts right where the search starts and if I try to scroll it looks like this
+
+And so this is why we need that second div, I mean this div, to have the scrollbar lower. Okay, now I'm gonna undo the changes and this is better. Now let me show you the difference between the maxHeight property and the height property.
+
+And currently we're using the maxHeight property and it makes sure that the height of the scrollable div is no greater than 100 pixels. But it also allows this div to be less than 100 pixels in height. So, for example, watch what happens if I remove some content from this div to make it shorter. And I'm going to remove a couple of these elements.
+
+Okay, notice since there is less content here the scroll disappeared and the div became shorter. Now let's use the height property instead and see what happens.
+
+As you remember in the DevTools we can change these properties in place and see the effect right away. So notice when we're using the Height property now when there is less content the div stays the same height and it's just blank space here which looks weird.
+
+So this is the main difference between the Height and the MaxHeight properties. When you use the Height property, your element will keep its height even if there is not enough content to fill it. And if you use the MaxHeight property, your element's height won't exceed the MaxHeight value, but the element will be shorter if there isn't enough content to fill it.
+
+And for certain tasks you want to use the Height property to maintain the element's height no matter what. And for some tasks, like with this drop-down, you want to use the MaxHeight property to make it more flexible and change its height based on its content within a certain range. Because it looks better if our drop-down gets shorter when there is less content. So we'll use the MaxHeight property.
+</Lesson_176>
+
+<Lesson_177>
+Next thing I notice is that our drop-down is too short. We set its max height to 100 pixels and probably 100 pixels is too small. But what value should we use here?
+
+Well, let's take a look at the reference page to see how the drop-down behaves here. First of all, notice that the drop-down on the reference page is no larger than the visible area of the screen. And if I change the size of the visible area, which we can do by resizing the browser window itself or the DevTools, notice how the drop-down changes its size as the visible area gets smaller or larger.
+
+And no matter how I resize the visible area, the drop-down never goes outside the visible area of the browser. Okay, so this behavior makes sense and it seems convenient. So how can we configure our drop-down's maximum height to be relative to the browser's visible area?
+
+For that, we'll use a new and awesome unit of measurement called vh, which is short for viewport height. Let me show you how this works. So for that, let's change the maximum height of the scrollable div to, say, 50 vh and see what happens in the browser.
+
+And if I reload our page, okay, the dropdown got bigger. And now if I resize the developer tools, you'll see that the dropdown resizes too. And this is kind of how we want it to work. Now, if we look closely at the scrollable div for which we set the maximum height to 50 VH, we'll see that its height is actually half or 50% of the visible area height.
+
+So, 1vh is actually 1% of the visible browser area height. Again, vh is short for viewport height.
+
+Viewport is just a fancy name for the part of the page you currently see in the browser. So, for example, if we change this to, say, 75 VH, then the maximum height of this element is going to be 75% of the visible browser area height. And if I reload the page, there it is. And if we set this to 100,
+
+the maximum height will be 100% of the visible area height, like this. But if we set the max height of the scrollable div to be no more than 100% of the visible area, how come it goes beyond the visible area right now? It's a good question. This is because the scrollable div does not start at the beginning of the visible area.
+
+It starts a little bit lower and if you scroll down you can see that its height is actually exactly 100% of the visible area. The drop-down is just positioned a little bit lower on the screen. This means that to position our drop-down like this we need to take into account this vertical distance. So we need to subtract from 100vh this distance and also this little distance.
+
+And this distance is actually the height of the header, which is... Let's use the DevTools to find out. Okay, so it's 56 pixels. So this is the value we need to subtract from the max height. And let's try that. We want it to be something like this. 100 minus 56 pixels. Unfortunately, writing it like this won't work.
+
+and when I reload the page, notice that now the drop-down is not limited in its height at all. This is because our CSS is now invalid and this max-height declaration is not applied at all. Okay, so this is not valid CSS and the good news is that we can make it work, we just need to use a special syntax to make it work.
+
+so to make it work we need to wrap it with the calc function and so this now works the way you would expect this calc function takes a single expression so this is an expression as its parameter and then the result of this calculation will be used as a value for the maxHeight property and if I reload the page
+
+Now the drop-down is fully visible on the screen. And so the calc function is useful when you have a relative value like this one and you want to mix it with an absolute value like this and perform some calculations.
+
+We can subtract, add, multiply and divide values inside the calc function. And we can do more than one operation here. And to show you that, let's make our drop-down a little shorter and let's make some free space below the drop-down.
+
+like we have it here so for that let's subtract say 10 pixels and reload the page and it worked and I think this is good enough and also it's not required to put two values here like this we could have simply joined them and use 66 pixels instead
+
+But I think having it like this makes our code better because now we can better understand what each value here means. Because 56 comes from the header and 10 more pixels we're subtracting it to add some space below the drop-down.
+
+And having it like this is better, but it's not enough. Because if other developers have to modify this code, they actually don't know what 56 or 10 pixels mean. So it's better to leave some clues here for them and for future us. And for that we can use CSS comments.
+
+where we can say that 56 pixels is the height of the header and 10 pixels is just space below. So this comment makes sense of these values and now it's easier to understand the code. And with the max height configured like this, now when I resize the visible area,
+
+The drop-down adjusts its size and it's scrollable like this. Okay, I think we're almost done with the drop-down and there are a few things we need to adjust in the Recent Searches component.
+
+Remember that earlier we changed the font for all our text to Roboto. And with this new font, notice that the search item text is slightly larger than here. And the text color is slightly different too. So let's adjust this text to match the text on the reference page. So I'll inspect
+
+this text and its font size is 14 pixels and let's also copy the color value and let's take a look at the structure here okay so the rule we need to extend is the recent search value so let's find the recent search value there it is here we want to set its font size to 14 pixels and the color to this one
+
+And if I reload the page... Great! Now this text matches the text on the reference page.
+</Lesson_177>
+
+<Lesson_178>
+And now there is one more thing that we need to do to finish styling the drop-down. We need to configure our drop-down so that it appears or it's only visible when the focus is in this search input. And for that we'll need to do a few things. First, notice that the drop-down is now visible by default on our page. So if I reload the page, the drop-down is visible.
+
+This is because we left it like this on purpose, and we haven't changed its default display value, which is block. So, at the moment, the default display value of our dropdown is block. The browser assigns this value by default, and the dropdown is visible. To hide the dropdown, we know that we can change this value to none.
+
+And this makes sure that this element is not displayed on the page at all. And this will hide the drop-down. Next, we want to display the drop-down only when the focus is on the search field. This means that we need to add a CSS rule that changes the display property of the drop-down to block when the focus is on the search field.
+
+And just as there are the hover and active pseudoclasses, there is the focus pseudoclass to style the focus state of our elements. Let me show you. Okay, so let's find the search input. This is the rule that styles our search input. And let's add another one right below. It's going to use the same class, but we'll write colon and then focus here.
+
+So this will style the focus state of our input. Let's set the text color to red and see what happens. And now when I reload the page, notice that when we focus on the search field and type some text, so CSS, let's say, it's red. And if I click somewhere outside the search field, it loses the focus and the red color is not applied.
+
+And so when we use the focus pseudo class, our styles are only applied when the focus is on the search field or on an element. Okay, here we're styling the input on focus, but our div, so this drop-down div, well, it's not an input and it goes after the input. So how can we target this div only when the focus is on this input?
+
+That's a great question and the answer is that we're going to learn another CSS combinator. And for that, let's quickly go over what we want to do. When the search input is in the focus state, we want to target the search results div and set its display property to block.
+
+Okay, so first of all, notice that both the input and the div are direct children of the same parent, the search div. And in this case, we call them siblings in HTML. So, because the search results div goes after the search input,
+
+in our HTML code and they both are siblings, we can use a special combinator to target the search results div. We can extend this rule and write tilde and then search results.
+
+this means when the search input is in focus target the elements that match this selector and these must be a sibling of these and also go after this element in the HTML code and in this case we want to set the display property to block
+
+And now, if I reload the page, the search results drop-down is hidden by default. And when I click on the search field, there you go, the drop-down becomes visible. Okay, so this combinator is called a subsequent sibling combinator because it targets, well, subsequent siblings.
+
+And again, when we're using this tilde combinator, it's important that this element comes after this element in our HTML code. Okay, to better demonstrate you this, let me copy this rule. Oh, you know what? Let's copy the entire rule and we'll add this CSS right next to the elements the rule targets. Okay, so I'm going to search for the search results div.
+
+And I'll add an HTML comment like this and paste our CSS rule. And remember that this is just an HTML comment. It doesn't do anything. It's just here for our convenience. Okay, so this tilde means that this, so this div, must be after this, so this div must be after this input in our HTML code. And that also
+
+these two must be siblings, which means that these two must have the same parent. And for example, if I move the search results div, so let me move it up,
+
+before the input. Because of this, now, where is the rule? Let me find it. So this rule will not be applied. So if I reload the page, now if I click on the input, the drop down is not visible.
+
+So for this selector that uses the tilde combinator to work, we need to make sure that this element, so this div, goes after the input. And now if I reload the page and click on the input, it works.
+</Lesson_178>
+
+<Lesson_179>
+Now let's see what happens if I click on something inside the drop-down, for example, on this. Okay, so the drop-down disappeared. Why is that? Well, it's because when we click anywhere in the drop-down, the search input loses its focus and our subsequent sibling rule is no longer applied.
+
+because we are explicitly saying here to show the search results only when there is focus on the search input. But this is not what we want. We want the drop-down to remain visible when we interact with it, including when we click on some of its elements. And probably this may seem difficult to achieve, but it's actually quite easy.
+
+And for that we can simply extend this rule and use the selector list. So I'm going to add a comma and here we can add another selector, so another condition for the dropdown to be visible. And it's when the cursor is above the dropdown, which is when the dropdown is in the hover state.
+
+Remember that when we have it like this, this means that we want to apply this to this or to this. So now if I reload the page and click on the input, it's in the focus state and the drop-down becomes visible. Then if I click here, for example, the input has lost its focus, but our cursor is still over the drop-down, so
+
+The on hover selector is active and the dropdown is still displayed. And this is why we now can click on the dropdown and it remains visible. But as soon as I move the cursor away, the dropdown disappears. Okay. I think that we have finished building the search component. It was a pretty complex component and you've learned a lot and you've done a great job.
+</Lesson_179>
+

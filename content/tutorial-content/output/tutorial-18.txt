@@ -1,0 +1,238 @@
+<Lesson_131>
+We use Flexbox when we have an element that contains one or more other elements. It can be a div with several paragraphs inside, or a paragraph that contains a link and an image, or a list that contains two list items, or a link that contains two spans, or even a form with some inputs.
+
+It doesn't matter what elements. So long as an element contains one or more elements, we can use Flexbox. Now let's see what we can do with Flexbox. And for that, let's take, for example, this div with paragraphs and some borders to easily see their boundaries. And by default, they're going to look like this in the browser.
+
+Now I'll show you different things we can do with these paragraphs using Flexbox. So we can put them on one row like this and place in the center of the div. We also can spread the free space between them evenly. Or we can place them on different sides. Or we can stretch them to fit their parent height. Or center them vertically if we want.
+
+or position like this, or change their width using some proportions, or place them like this. So there is plenty of stuff we can do with Flexbox to position and size elements. With Flexbox, with just a couple lines of CSS, we can do powerful things prior to that are very difficult and painful to achieve.
+
+So let's start learning how to do those cool things. We'll start with the simple HTML5 page that contains a div with three paragraphs inside. In addition to that, there are also these two CSS rules that add this border to the div and this border to the paragraphs. And also, we're removing the default margins of paragraphs because we don't need them.
+
+We're using different borders around paragraphs and div to easily see their size and also position. A quick refresher. You can create the skeleton of the page by using the !tab shortcut. And also, this is a child combinator, which means that here we're targeting all the paragraphs that are direct children of the div 1 class element.
+
+Okay, I think we're all set, and now let's turn on Flexbox for this div. For that, inside this CSS rule that targets the div, we'll write the following. display flex This enables Flexbox features for this div. And so now this div becomes a flex container. And it's children, so each of these paragraphs are now flex items.
+
+I'll add these HTML comments so that we can easily see where there is a flex container and where there are flex items here.
+
+And remember that these comments are for us in this code and the browser is going to ignore them. So by writing this, we enabled flexbox for this div and now we have access to special CSS properties that we only can use with flexcontainer and with flexitems. And in this tutorial, we'll discuss only these because I think they are the most useful to learn.
+
+Okay, now that we enabled Flexbox for the div, let's see what happens in the browser. Let me resize this a little bit. So, the paragraphs are now on the same line and take up the width needed for their content, even though they are block elements. This means that even though they are block elements, Flexbox is powerful enough to override their default behavior.
+
+And now they are positioned from left to right and there is some free space at the end of this div.
+</Lesson_131>
+
+<Lesson_132>
+Now let's learn how to place these paragraphs at the center of the flex container because you'll encounter this task quite often. So to center these flex items we're going to use a new property and we'll add it to the flex container which is this div and the property will be justifyContent. The value will be center.
+
+This does exactly what we want and places them at the center. It's important that we use the justify-content property in the CSS rule that configures the flex-container. In our case the flex-container is this div and this is why we put it here. The flex-container will always be the element that has the display-flex property and its direct children will be flex-items.
+
+Now Flexbox is smart enough, and if any of its flex items becomes bigger or smaller, it takes that into account. So for example, if I add more text to the first paragraph like this, and then reload the page, the flex children, which are all these paragraphs, are positioned to stay exactly at the center. So in our case, the justify content configures where the flex items are positioned horizontally.
+
+But it's not always horizontally and you'll see that later on. In addition to the center, it has more values that can be useful. I will list them on the screen here. Now pause this video and try to use these values and see how they affect the flex children.
+
+Great. And I'm going to change this to space between. And this distributed the free space between the flex items.
+</Lesson_132>
+
+<Lesson_133>
+Next, let's make one of the paragraphs taller. It doesn't matter which one, you can pick any of them, but I'm going to use this one. There are many ways we can make it taller. For me, it's easier to just add a couple of BR elements to this paragraph, like this.
+
+Okay, and if I reload the page, notice that this made the first paragraph taller because its text now has three lines, but what's interesting here is that the other two paragraphs grew in size too. This happened because by default all flex children are stretched to be as high as their flex container.
+
+Again, this div with the blue border is their flex container because we added the display flex property inside the CSS rule that targets the div. And so if it becomes taller, for any reason, it stretches all its flex children. And this div became taller because one of its flex children, specifically this paragraph, became taller.
+
+And so this increased the height of the flex container, which then stretched the other flex children. This is useful when you want your flex items to have the same height. Here is an example of how Amazon uses that to ensure if any of the items has a long title, it doesn't break the layout.
+
+We can also manually change the height of the container in CSS and it will stretch the flex items too. So if I set here the height to say 200 pixels, then look what happens to the flex items. But we're not always want our flex items to be stretched like this. So let's learn how to change this. For that we'll use a new property called alignItems.
+
+Notice that we also add it to the flex container. Its default value is stretch and you've already seen how it works. Now let's change this to center. So this positioned the flex items exactly at the center of the flex container vertically. And also the flex items are of their original height now.
+
+Great! Now I'm going to ask you to pause the video and try to use the following values for the alignItems property and see how it will affect the flex items.
+</Lesson_133>
+
+<Lesson_134>
+The next property that we'll explore is called flex-direction. This property substantially changes how things work inside a flex container. By default, its value is row. And before we try using another value for this property, let's discuss what this row means.
+
+So when we add the display flex property to an element, in our case it's this div, it becomes a flex container. And its children become flex items. So the paragraphs are flex items. But we already know that.
+
+Also, when we add the DisplayFlex property, the browser adds some default settings to the FlexContainer and FlexItems. One of those is the FlexDirection property and its default value is row, which means that the browser will place the FlexItems from left to right.
+
+And this direction of how the browser places the flex item is called the main axis. When the flex direction is row, the main axis goes from left to right. And we can use the justify content property to configure where exactly the flex items are positioned on the main axis.
+
+You already saw that when we used the justifyContent property to place them at the center of the flex container and then to distribute the free space between them. So when the flexDirection value is row, the main axis goes from left to right horizontally, and so the justifyContent property configures flexItem's position horizontally. Additionally, there is another axis called the cross axis.
+
+the cross axis goes in the opposite direction of the main axis. So when the flex direction is row, the main axis goes from left to right, and the cross axis goes from top to bottom. And we can figure how the flex items are positioned along the cross axis using the alignItems property.
+
+which means that when the flexDirection is row, the alignItems property configures the vertical position of flexItems. Now another value that we can use for the flexDirection property is column. Now watch closely what happens when I reload the page.
+
+Okay, it's as if now the items are positioned upside down. Now they're going from top to bottom and are centered horizontally, not vertically. This happened because when we set the flex direction property to column, we swap the main axis with the cross axis.
+
+Let's look at where those axes are now. So, when we set the flex direction to column, the flex items will go from top to bottom. This means that the main axis is going to be from top to bottom. And then the cross axis from left to right. So, if we compare this with the row value we had previously, we had the main axis here, but with the column, now we have the cross axis here instead.
+
+And the same happened to the cross axis. This means that when we changed the flex direction from row to column, the main and cross axis reversed. But notice that in both cases the justify content property aligns items along the main axis.
+
+And the alignItems property handles the cross axis, which means that in both cases we use the same properties to align flex items along the same axes, but we need to take into account where those axes are. Now here is a practical exercise for you.
+
+When the flex-direction value is column, try setting one by one the following values for the align-items and justify-content properties. But every time before you see the results in the browser, try to predict where the flex-items would be. And then reload the page and see what happens. If you get stuck, try using this visualization to see why you're having the results you're having.
+</Lesson_134>
+
+<Lesson_135>
+Notice that all these properties, justify content, align items, flex direction, we applied them to the flex container. And we need to apply them to a flex container because they influence all its flex items at once. If we try to apply them to flex items, it's gonna be invalid and they won't do anything. So if I copy these and also this one,
+
+We're using them with the flex items now. And if I reload the page, notice that the paragraphs are back to the flex box defaults now. They are placed from left to right, which means that the flex direction value is row, not column. And also they are at the beginning of the flex container and they are also stretched. This all means that these aren't working.
+
+But if I move them back to the flex container and reload the page, now they're applied.
+</Lesson_135>
+
+<Lesson_136>
+Before we discuss another property that we can use with a flex container, let's make some changes here. We'll set these to their defaults. So it's row and also flex start. It'll look like this. And let's also comment out this height property, which is going to disable it. And it's also going to stay in our code in case we'll need it. And it's going to look like this.
+
+Okay, so the next property we'll learn is called Gap. And we can set a value in pixels here. So let's set, for example, 10 pixels. And when I reload the page, notice that this added these 10 pixels of space between the paragraphs. So use the Gap property to add a fixed minimum amount of space between the flex items. The Gap sets a minimum amount of space. Let me show you what it means.
+
+Notice that there is this free positive amount of space at the end of the container. And now let's change the justify content to space between. And now if I reload the page, look closely what happens to the space between the flex items. It became bigger!
+
+And it became bigger because all that free extra space was distributed between the items. So the gap property doesn't care if there is more space between the items. The only thing it cares about is that it's not less than the gap we set here. So if I resize the window so that there is less free space between the paragraphs,
+
+Notice what happens when there is no free space at all. Notice that the gap still remains.
+
+Even when there is not enough space to fit in all the content inside the flex container, the gap is still there. And I'll resize it back like this. Okay. Now pause the video and try changing the gap value and see what happens. And also try to resize the browser window and see how it affects the space between your flex items.
+</Lesson_136>
+
+<Lesson_137>
+These properties are all applied to the flex container. Now let's start learning the properties we can use with flex items. We'll start with an easy one by adding a class to each of the paragraphs. So the first paragraph will get the paragraph 1 class, the second paragraph will get the paragraph 2, and the third one will get paragraph 3.
+
+Now, notice that all of our paragraphs are now stretched vertically because the alignItems property is set to stretch. And if we want, we can overwrite that for any of the flex items individually. Let's change the second paragraph to be centered vertically.
+
+and for that we'll target the second paragraph by its class name like this and then we'll use a new property called alignSelf. This property is just like the alignItems property but only for individual flex items. This means that we can use the same values here too.
+
+And to center the paragraph, we'll use the center value. And there we go. Now here is a challenge for you. Place the third paragraph at the bottom here. And for that, use the alignSelf property and the flexEnd value. So pause the video and try to code that.
+
+Now let's do this together. So first I'm going to target the third paragraph by its class name 2 and then we'll set the alignSelf to flexEnd. Like this. Great. And so the alignSelf property positions individual flex items along the cross axis just like the alignItems property.
+
+And the main difference between them is that we apply the alignItems property to a flex container, it affects all flex items, and with the alignSelf property we can target specific flex items separately. Okay, now let's remove these like this.
+</Lesson_137>
+
+<Lesson_138>
+The next property that we're going to learn is called flex-row. And let's set it to 1. But before we see what it does to our page, let's comment it out and prepare some things. First of all, let's disable the gap property. And then we'll place all of our paragraphs at the beginning of the flex-container. So it's going to be flex-start.
+
+And this will look like this in the browser. An important thing to notice here is that there is this natural size these flex items have. And it's their initial size before Flexbox resizes them. And also notice that there is this positive free space.
+
+And this positive free space is the total width of the flex container minus the total natural space of all flex items. If I resize the browser, the div becomes wider or shorter and there is more or less free space here.
+
+And so in flexbox we can add that positive free space to flexItems so that they grow in size. And we do that using the flexGrow property. If I uncomment it, so now it's applied to the second paragraph,
+
+This will ask Flexbox to add all this positive free space to the second paragraph. And so its final width will be its natural width plus the width of the free space. And if I reload the page...
+
+Notice that all that free space became a part of the second paragraph. And now if I resize the window, the second paragraph becomes bigger or smaller because all that positive free space is being added to its width.
+
+Notice that this doesn't apply to the first paragraph and the third paragraph. And when I resize the window, they keep their width. And only the second paragraph is being resized. This is because we only applied the flex-scroll property to the second paragraph.
+
+so the flex grow property configures how much of that free space a flex item gets and we use unitless values here like 1 or 5 or 0 and setting it to 0 means that that flex item won't get any additional free space and it's just going to be of its natural size like this
+
+And flex-grow-0 is what all flex items get by default. This is why when I resize the browser window by default they keep their natural size. And to prove you that I'm going to add another CSS rule that targets the first paragraph and I'll set the flex-grow-0 to all of them like this. And now if I reload the page
+
+Nothing changed, because they had that already anyway. So flex-grow-0 is their default value, and then we can use positive unitless numbers like 1 to configure how much of that free space the flex item gets. So this means that the first paragraph gets none of that free space,
+
+the third paragraph gets none of that free space. And all of that free space goes to the second paragraph. And if I reload the page, it looks like this. But what if I set the flex grow of the third paragraph to 1?
+
+Now, this means that all that positive free space now will be distributed between the second and the third paragraphs equally, because we're using the same numbers here. And if I reload the page, notice that half of that positive free space went to the third paragraph. And now when I resize the page, notice that the third and the second paragraphs will equally grow in size, like this.
+
+whereas the first paragraph keeps its natural size because its flex-grow is zero. Now here is a challenge for you. Pause the video and set the flex-grow of the first paragraph to 1 and see what happens in the browser. After that, try to resize the browser window and see what happens to their size. So pause the video and do that.
+
+Okay, now I'm gonna do this. I'll change it to 1, reload the page, and the first paragraph got a portion of that free space and crew. This all means that Flexbox distributes the positive free space between the flex items that have a positive flex grow value, like these.
+
+And these unitless values here, they set the ratio of how much of that free space each flex item will get. You can think of that free space as a cake that Flexbox divides into pieces and then decides how many pieces of that cake each flex item will get. For that, Flexbox adds all these unitless values from each flex item
+
+In our case, it's going to be 1 plus 1 plus 1, so 3 in total. Then flexbox divides that positive free space from the container by that total. So in this case, it's going to divide it by 3, so it'll have 3 pieces of that free space. And then it uses these flexgrow values to decide how many of those total pieces each flex item will get.
+
+And in our case, this first paragraph will get one piece, the second paragraph will also get one piece, and this one will get one piece too. They all will have an equal amount of that free space added to their size.
+
+But we can use different flex-grow numbers for different flex items. For example, let's set the flex-grow of the first paragraph to 2, the second paragraph to 3, and we'll leave this as 1. And now this means that the browser is going to divide the positive free space by the sum of these. So 2 plus 3 plus 1 is 6.
+
+This means that we'll have six pieces of free space, and then the first paragraph will get two pieces of that free space, the second paragraph will get three pieces, and the third paragraph will get one piece. And if I reload the page, you can see that they all have that corresponding amount of free space added to them based on these numbers.
+
+So here it's one piece, here it's two pieces, and here it's three pieces of that free space. And if I resize the window now, that free space is being distributed based on those proportions. Now pause the video and try setting the following values for the flex grow and then see how this plays out in the browser.
+</Lesson_138>
+
+<Lesson_139>
+Next, let's set their flexGrow to 1 to equally distribute the free space among these paragraphs. And because we're setting the same value for the flexGrow for each of these paragraphs, let's just move this here and remove the property from them like this.
+
+And this works because this rule targets all the paragraphs inside the div. And doing like this just makes our CSS code more efficient. And good. One interesting thing here to notice is that they are almost of the same size, but still a little bit different. And this is because their initial, or natural, size was slightly different.
+
+Let me comment that out for a second so that you can see that more easily. So originally, these two paragraphs are slightly wider than this paragraph. And what's important to know here is that when we enable the flex grow for these paragraphs,
+
+all that free space will be added on top of that natural space. So, for example, the final width of the first paragraph will be its natural width plus one-third of the positive free space that it gets from the FlexCrow. And this also will happen for the second and third paragraphs.
+
+So their natural width plus one-third of the positive free space. And if I uncomment the flex-grow property and reload the page, you can see that the amount of free space that was added to them is the same. It's their initial size what makes their final width different.
+
+Okay, so the default behavior here is to add that free space on top of their initial size. And if I add, for example, more content to the first paragraph, like this, and reload the page, the first paragraph becomes noticeably bigger than the other two.
+
+The flex grow still distributes that extra free space among these paragraphs, but because the initial size of the first paragraph is bigger, its final width will be bigger after all that extra free space is distributed. Okay, but is it possible to make the final size of the flex items to be based only on the proportions that we set using the flex grow?
+
+Well, and the answer is yes, otherwise I wouldn't have asked that question. And to achieve this, we'll learn another CSS property that's called flexBases. Its default value is auto, which means respect the initial or natural size of flex items.
+
+And because of this value Flexbox adds that free space on top of their natural size. But if we want we can change this and set here a value in pixels, like 30 pixels. This means that Flexbox won't use their content to determine their natural or initial size.
+
+And it's going to assume that their initial size is 30 pixels instead. If you want, you can check what this is going to do on the page. And I highly encourage you to do that. But I'm going to set its value to 0. Which means completely ignore the natural size of these flex items during the free space distribution.
+
+In other words, this tells Flexbox to act as if the natural size of all these flex items is zero. And if their natural size is zero, this means that all the width of this flex container is just free space. And all this free space will be distributed among these flex items, so these paragraphs, based on their flex grow value.
+
+And here we're setting it to 1 for all of them. So all the space inside this flex container should be distributed equally between them. And now if I reload the page, notice that our paragraphs now have the same width.
+
+Again, you can change the flex spaces and use some positive values like 50 pixels and then Flexbox will use 50 pixels as their natural size for all its calculations. But most likely you'll use either 0 to completely ignore their initial size or you'll use the default value which is auto to respect their initial size. And this will look like this in the browser.
+</Lesson_139>
+
+<Lesson_140>
+Now let's learn how to use the flex shrink property. So for that, let's update the text of our paragraphs. And this will be first paragraph becomes very long. Then second paragraph has even more text. And then the third paragraph, third paragraph tells us even, let's say just more.
+
+And let's also comment out the FlexGrow property and it's going to look like this. Notice that because we added more content inside our paragraphs, now there is not enough space inside the Flexbox to fit all this text in one line.
+
+And the browser moves all that extra text to the next line to display it nicely. And because of this, now here we have what's called negative free space. Negative free space is when there is less space available inside a flex container than we need to naturally fit our content.
+
+Or you can think of this in terms of overflows. For that, I turned off this default browser behavior, and you'll see in a moment how I did this. So now when I reload the page, notice that the browser is showing the paragraphs in their natural size, and all the text goes on one line, but their total natural size is bigger than the flex container width.
+
+And now this goes outside of the flex container and there is overflow. And you can think of this extra space that the content overflows as the negative free space. And by default, the browser tries to distribute that negative free space among the flex items.
+
+and it just removes that negative free space from their width to make their final width small enough to fit inside the container without overflowing it, which looks like this. And for that the browser uses the flex shrink
+
+property and its default value is 1 and so because of this by default the flex items are not overflowing the flex container because flex shrink 1 makes the browser distribute that negative free space among the flex items by making them smaller much like
+
+The flex-grow property distributes positive free space and it adds that positive free space to flex items. The flex-shrink property distributes the negative free space and subtracts it from our flex items.
+
+So this is how it works by default and if I set flex shrink value to zero this is going to tell the browser to not distribute the negative free space among flex items and they will overflow when there is not enough space like in this case.
+
+Also notice that the natural size of the third paragraph is actually smaller than the natural size of the second paragraph. And when the flex-basis value is set to auto, which is its default value, when we set the flex-shrink value to 1 and reload the page,
+
+The same thing happens here as with the flex grow. That negative free space was subtracted from the natural size of these flex items. And because of that, notice that the third paragraph is now smaller, because its natural size is smaller.
+
+You can actually think of the flex-shrink and flex-grow as two sides of the same coin. The flex-grow increases the size of flex items by adding positive free space. The flex-shrink property decreases the size of flex items by subtracting negative free space.
+
+One caveat here with the flex shrink will be when we want to make our flex items to be proportionally equal when they are shrinking like this. For that, just like with the flex grow, we could try setting the flex basis value to zero and expect them to be equal. But let me reload the page and see what happens. Hmm.
+
+They've got the same width, but it seems that the width is based on the width of their biggest word, which is paragraph. And if I change it here to, for example, a letter and reload the page, now this one is shorter.
+
+and they don't have the equal width. So just setting the flex basis to 0 doesn't help us here. So why is this happening? Well, remember that when we set the flex basis to 0, this means that we tell Flexbox that their natural or initial size is 0. And so their total natural size is also 0 in the eyes of Flexbox.
+
+And if the width is zero, there is no width to overflow. There is no negative free space. Because the width is zero, there is nothing to be subtracted. And in this case, the browser just makes them as wide as the minimum possible amount of content they can fit, and that's it. This all means that when we set the flexBasis property to zero,
+
+any positive values for the flex shrink, they are irrelevant in this scenario. Because the size is zero, there is no room for shrinking. And in this case, when the flex basis is zero, all the space inside the flex container is considered to be positive free space, which is governed by the flex grow property.
+
+So with this, the flex grow takes over completely. And to fix this and make them have the same width, we can just enable the flex grow to distribute all that positive free space between the flex items. So now let's reload the page and see what happens. Great! Now they've got the same width.
+
+So remember, flex-shrink makes sense only when the flex-basis property is either auto or greater than 0, like 100 pixels or something like that. Because in those cases, the flex items will have initial size, which might lead to negative free space. But when we set the flex-basis to 0, the flex-shrink property becomes irrelevant.
+</Lesson_140>
+
+<Lesson_141>
+And in CSS there is a property that combines these three properties. It's called flex. This is a shorthand property and we can put or configure all these values inside this one property.
+
+So to set this here, we can write here 1, the first value is for the flex grow, then also 1, separated by a space, the second value is for the flex shrink, and the third value is going to be for the flex bases, so it's 0. And so this means the same as this. It's just more concise. Let's remove these and this. And if I reload the page, nothing changed, meaning this works the same.
+
+And actually, this is a frequently used combination of these values. And because it's frequently used, there is even a shorter equivalent, which is just 1. Setting the flex property to 1 means that we want to set the flex grow property to 1,
+
+flex-string property to 1 and the flex-basis property to 0. And if I reload the page, nothing changes, because this works the same as this. And in the RatedClone project, this is what we're going to use most of the time. And if we want to make the first paragraph, for example, to be two times bigger, so to have the flex-grow property as
+
+2. We can just use the 2 value here, which means 2 for the flex-grow, 1 for the flex-shrink, and 0 for the flex-basis. And we can make the remaining paragraphs flex-value as 1, which is going to mean 1 for the flex-grow. And this will look like this in the browser, which makes the first paragraph two times bigger than the second and the third paragraph.
+
+And these were the basics of Flexbox! Congratulations, you've done a great job! And in case you feel overwhelmed, don't worry. Approach this theory multiple times and also try using Flexbox and over time it will all come together. And I'm gonna see you in the next tutorial where we start building the Reddit clone project and apply all what we've learned so far, including Flexbox.
+</Lesson_141>
+

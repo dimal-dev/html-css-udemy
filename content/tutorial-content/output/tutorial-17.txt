@@ -1,0 +1,136 @@
+<Lesson_124>
+Next up, you'll learn how to move an element relative to its original position on the screen and how to make it stay in the same position when scrolling. Then we'll use all that to create a simple modal window. By default, the browser displays HTML elements on the page in the order as they appear in HTML. In CSS, this is called normal flow. Block elements go top to bottom, inline elements go left
+
+to write. We can remove HTML elements from the normal flow and move them around with custom CSS. I'm going to close this example and we'll start from a blank page. We need some content to style, so I'm going to create three paragraphs. The first one is HTML for structure, the second will be CSS for styling, and the third one is going to be PHP for backend.
+
+Save the file. Refresh the page. Good. I'm going to zoom in a little bit. That's better. Now I'll style them a little bit. For that, I'll add a CSS rule. I'll use a tag selector to find all the paragraphs. Let's add a solid border for pixels. Solid. The color will be the royal blue.
+
+Okay, now I'd like them to have more space inside. So I'm going to add padding and also I'll make them a little shorter and I'd like to have them some background. I'll add padding 10 pixels to have padding from all sides. For the background, I'll paste a hex color and the width is going to be 300 pixels. Save the file, refresh the page. This is better.
+
+Now, let's say we want to move the CSS paragraph down and to the right. We could use margins for that. Let's add a class CSS to the paragraph and another CSS rule. Remember, if we want to move our element down with a margin from the top, so margin-top,
+
+What about 30 pixels? And if we want to move our element to the right, we add margin from the left. So margin left, 35 pixels. Save the file, refresh the page. Great. Now our paragraph is 30 pixels down and 35 pixels to the right. But it also pushed down the next paragraph. For certain tasks, that's fine. But for some, that's not.
+
+This time, I only want to move the CSS paragraph and not affect the others. In this case, margins won't help us. So let's remove both properties. Save the file, refresh the page. Okay, it's back to its original position. And now to only move the CSS paragraph and don't affect the other elements, we'll use a new property called position.
+
+The default value it has from the browser is static. This means act like a regular HTML element. For our goals, let's change it to relative. Save the file, refresh the page, and nothing has changed so far. But now we have access to additional properties, top, right, bottom, and left. Let's use the top property and see what happens.
+
+We'll set it to 15 pixels, save the file, refresh the page. Okay. It's 15 pixels lower from its original position and it didn't push the PHP paragraph down just what we wanted. And if I increase the top property, say to 30 pixels, save the file, refresh the page. It even starts to overlap with the PHP paragraph, but still doesn't push it away. Great.
+</Lesson_124>
+
+<Lesson_125>
+What about the other properties? Let's use the left property and see what happens. Say, 35 pixels. Save the file, refresh the page, and it's 35 pixels to the right. Great. Now, you might be thinking, that's weird. When we configured the top property, the browser moved our paragraph down, and when we set the left property, it moved to the right. The reason for that is that
+
+The top property sets the element's distance from the top and the left property sets the element's distance from the left. The same works for the bottom and right properties. Let's use them. I'm going to remove these, save the file, refresh the page. The paragraph is back to its normal position. Now I'll add bottom 30 pixels and right 35 pixels.
+
+Save the file, refresh the page. Now it's 30 pixels to the top and 35 pixels to the left. And part of this paragraph is now even outside of this page. So when we change position to relative, we can move then that element relative to its original location with the top right
+
+left and bottom properties. And this affects only where the element appears and doesn't push other elements away. And also notice that the browser keeps the space intact as if the element is still where it originally would be.
+</Lesson_125>
+
+<Lesson_126>
+The next interesting value for the position property is absolute. It's going to give us very different results. Save the file, refresh the page. Now, the CSS paragraph has moved to a completely different place. It's 35 pixels from the right and 30 pixels from the bottom of the browser window.
+
+Now, there is no empty space here. These two paragraphs just collapsed as if the CSS paragraph doesn't exist. That's because when we set position absolute, we have removed the CSS paragraph from the normal flow. That is, we have moved it from the layer where normal elements are to a separate layer.
+
+Okay, now let me show you what happens with different combinations of bottom, right, left, and top properties for an absolutely positioned element. If I comment out the bottom property, so only the right is applied, the browser places our paragraph 35 pixels from the right of the screen.
+
+and it keeps its original position vertically. Now, you might be asking, if it keeps its original position vertically, then it must be on the same level as the PHP paragraph. Why is it lower? That's a good question. The answer is that because now it's on its own separate layer, its top margin doesn't collapse. And so it's like when their margins
+
+are touching and there is no content between, their margins collapse. But there is content between the first and the third paragraphs. It's the CSS paragraph, you might argue. Well, the thing is that
+
+now its position is absolute, so it exists in its own little world, or its own layer, and it doesn't exist for these two paragraphs that are in the normal flow. This means that at this moment there is nothing in between these two paragraphs.
+
+and their margins are touching and collapsing. But the margin of this CSS paragraph doesn't collapse because it exists on its own separate layer, it doesn't touch anything at the moment, and so its margin pushes the CSS paragraph down.
+
+And when I inspect the paragraph, you can see that it's precisely 16 pixels lower than the PHP paragraph. And to stop margin collapsing for these two paragraphs, I can put literally any content in between. So
+
+I'm going to add the any text after the first paragraph. Save the file, refresh the page, and there you go. Now their margins don't collapse and these two paragraphs are on the same level. Margin collapsing can give you unexpected results. The main thing to remember here is that when there are two block level elements and their margins are touching,
+
+The browser will keep only the biggest margins of those two. Okay, back to positioning. If I comment out the right option, save the file, refresh the page, now the CSS paragraph is in its original position, but on its own separate layer.
+
+So, it overlaps the PHP paragraph. To prove that, I'm going to use the left property to move it, say, 80 pixels from the left. Save the file, refresh the page. Great, now it's moved 80 pixels from the left and you can see a part of the PHP paragraph. Let me zoom out a little bit to have more screen space.
+
+Now if I comment out the left property and add the top, say, 30 pixels, save the file, refresh the page, and it's now moved 30 pixels from the top. Nice!
+</Lesson_126>
+
+<Lesson_127>
+Another interesting and useful quality here is that if we use two opposite properties, like right and left, or top and bottom, let me uncomment the bottom property, save the file, refresh the page. So the browser has stretched the CSS paragraph to reach 30 pixels from the top and 30 pixels from the bottom. The same works for the right and left properties. I'll uncomment them.
+
+save the file, refresh the page, and that's not what we expected. The paragraph is clearly 80 pixels from the left, but it's not stretched up to 35 pixels from the right. Why is that? Well, that's because we manually constrain the width of all paragraphs to 300 pixels in this rule, and it prevents the CSS paragraph from being stretched with positioning. In CSS, many different properties can affect an element's dimensions.
+
+Some of them have stronger influence like the width property. To release our CSS paragraph from this 300 pixels constraint, we can override the width property specifically for our CSS paragraph. Remember, a class selector is stronger than a tag selector. The value is going to be auto. By doing that, we tell the browser there is no width constraint for this element.
+
+You can use other things to determine its width. Save the file, refresh the page and there you go. Now it's stretched just like we wanted. We will use this stretching feature in a couple of minutes to create our modal window.
+
+you'd want to stretch out an element completely and not have any empty space. For that, I'll change all the positioning values to zero. So the element will be zero pixels from the bottom, zero pixels from the right, zero pixels from the left, and zero pixels from the top, like this. Save the file, refresh the page, great. But notice that there is still this empty space at the top and bottom.
+
+Why is that? Let's use developer tools to find out. So option command I for Mac to open it. And I'm going to inspect our paragraph. Oh, okay. It's the default paragraphs margin adds that empty space. Let's reset it to zero. You already know how to do this from previous videos. So margin zero, save the file, refresh the page. Great. The empty space is gone. Let me close developer tools. And this is exactly what we need.
+</Lesson_127>
+
+<Lesson_128>
+Now, before we get into creating a modal window, we've got a couple more features to discuss. So for that, let's put back the CSS paragraph to the bottom right corner. I'll remove all this and add bottom 30 pixels, right 35 pixels, save the file, refresh the page. Okay. At this stage, our paragraph is at the bottom right corner of the page.
+
+and our page is only one screen high, but modern websites are usually longer than one screen. Let's emulate that. For that, I'm going to add class PHP to the third paragraph and a new CSS rule, class selector, and the height is going to be, say, 600 pixels. Save the file, refresh the page. Great, now our page is longer.
+
+And if I scroll down, our absolutely positioned CSS paragraph stays in its original place and eventually disappears. That's useful for some tasks. But for example, for modal windows, we would want it to stay fixed in the same place all the time. And it doesn't matter whether we scroll the page or not. For that, we'll use a different position value, which is fixed. Save the file, refresh the page.
+
+Now, when I scroll, our paragraph remains fixed in the bottom right corner all the time. Fixed position works the same as absolute. The only major difference is that the element always stays fixed relative to the screen. And we can figure where it's located with the same top, right, bottom, and left properties.
+
+Let me change bottom to top and right to left. Save the file, refresh the page. Great, it's fixed at the top left of the screen.
+</Lesson_128>
+
+<Lesson_129>
+Now let me add another paragraph. It's going to be for MySQL. So for MySQL for storing data. And let's make this paragraph fixed.
+
+at the top, 60 pixels from the top and 80 pixels from the left. Now, both paragraphs are fixed and they overlap. And sometimes you want several positioned elements to overlap like this. But also what you'd want is to control which element goes on top or behind.
+
+We can control that in several ways. At this moment, MySQL paragraph covers CSS paragraph.
+
+That's because by default, the browser displays them in the order they appear in HTML. And if I place a CSS paragraph in our HTML code after the MySQL paragraph, save the file, refresh the page, now it's on top. I wouldn't recommend, though, relying on the HTML order to control where they appear, because this makes our styles so fragile. And there is a much better way in CSS.
+
+We can use a CSS property called z-index to control what elements go on top or behind. Now, if I set the z-index for the MySQL paragraph to one, save the file, refresh the page, it goes to the front even though the CSS paragraph is later in the HTML code.
+
+Now, if we wanted the CSS paragraph to be on top of the MySQL paragraph, we could set its z-index to a bigger number, so at least two. Save the file, refresh the page. Great. We can also set
+
+z-index to negative values. By default, all HTML elements have zero as their z-index value. This means that if I set the z-index for the MySQL paragraph to minus one, it should go behind. Save the file, refresh the page. Nice. Now, it's behind the elements.
+
+Now we can only use the z-index property for positioned elements to change the order in which they appear on the page. If I set the z-index to the elements from the normal flow, let's say for this PHP paragraph, this won't affect the order the PHP paragraph appears on this page. Let me show you that. I'm going to set the z-index property for the PHP paragraph to a very high value, say 500. Save the file, refresh the page,
+
+and nothing has changed. The CSS paragraph is still on top. So z-index controls the layer order of positioned elements on your page. Higher numbers are on top. z-index only works on positioned elements, that is the elements with position relative, absolute, or fixed. It doesn't affect the elements with position static.
+
+and all the HTML elements have position static by default. Higher z-index values bring elements closer to the front. Lower z-index values push elements further behind. Z-index can have negative values, pushing elements behind others. Without z-index, positioned elements stack in the order they appear in HTML.
+</Lesson_129>
+
+<Lesson_130>
+Let's create a modal window using what we've learned so far. First, we'll need a div. It's going to have the modal class. And for the content, let's use a simple text, say something like, that's our modal content. And let's also add a thinking emoji here too. Save the file, refresh the page. And for now, it's just a regular div element, a part of the normal document flow.
+
+But usually, modals appear over content of the page, sort of like floating above the rest. And it doesn't matter whether we scroll it or not, the modal should stay in the center. Okay, you already know that for that behavior, a perfect candidate would be to use position fixed. I'll add a new CSS rule here, and it's gonna be modal.
+
+Position, fixed. And let's place it at the top. I'll use zero. When we use zero, we don't need to put any units of measure. So I'm going to leave it like this. Save the file, refresh the page. Great. Now it's at the top. Next, I want our modal to have a nice semi-transparent black background that covers the entire webpage.
+
+So I'm going to add the background property and I'll write RGB for the color. We want the black color, so all zeros, save the file, refresh the page. Okay, that's something. I think we need to make several improvements here. Let's make the background color semi-transparent. For that, we'll extend the color function and add the A character at the end.
+
+We've added it here to configure the alpha channel, that is the opacity of our color. Now we can add the fourth parameter, which is a decimal number between 0 and 1, where 0 is fully transparent, so the color disappears, and with 1, the color is fully opaque, like this. I want the color to be semi-transparent, so let's use 0.5.
+
+Save the file, refresh the page. Great. That's exactly what we need. Now, let's stretch the modal window to cover the whole page. You already know how to do that. First, I'll add the bottom property and it's going to be zero. This will stretch the modal vertically. Save the file, refresh the page. Good.
+
+Then I'll add left 0, right 0 to stretch our modal horizontally. Save the file, refresh the page. Good. It now covers the whole page. Notice that at this moment, the CSS paragraph is above our modal, but we want our modal window to be always on top. For that, I will assign the z-index a huge value, something like 1,000. Save the file, refresh the page.
+
+Great. And if I scroll the page, the modal follows. Now, it would be nice to have a white background for our content and to move it closer to the center of the screen. For that, I'll wrap modal's content with another div that's going to have the modal content class. Good.
+
+Save the file, refresh the page. No changes in the browser so far. This is expected because we need to add another CSS rule. It's going to be a class selector, so modal content, and we want to set the background to white.
+
+Now, I could have used an RGB color here, but because we don't need any flexibility and it's a little easier to type this keyword, I used the keyword. Save the file, refresh the page. Good. Now the background is white.
+
+Next, we need to position our content div. So I'm going to add the position property and it'll be absolute because we want to position it relative to the fixed parent. Save the file, refresh the page. Notice that now our div takes up as much space as its content, even though it's a block element. That's because when a block
+
+level element is absolutely positioned, it behaves differently and it only takes up as much space as its content. Okay, now let's move it closer to the center of the screen. For that, I'll add top, say, 100 pixels and left, say, 60 pixels.
+
+Save the file, refresh the page. It's better, but I want it to be more to the right. So I'm going to increase the value of the left property to 160 pixels. Save the file, refresh the page. This is better. Usually a modal window has a close button. So let's add the button element, close.
+
+And let's also separate it from the text with a horizontal line. Save the file, refresh the page. There you go. And lastly, let's add some padding. So I'll write padding 20 pixels to have a 20 pixels padding from all sides. Save the file, refresh the page. Nice. And there you go. We have created a modal window with CSS. If I scroll, it stays in the same place and it has a nice semi-transparent black background.
+
+that covers the whole page. Now, obviously, this is just an example and not a fully working modal. It's not interactive. If I click the close button, it doesn't close the modal window. That's because we'll need to write JavaScript code to handle that. But as your first modal window, I think it's great. So congratulations.
+</Lesson_130>
+

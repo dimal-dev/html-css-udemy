@@ -1,0 +1,140 @@
+<Lesson_54>
+Next up, we'll learn about backgrounds, colors, and transitions in CSS. And we'll use all this to style our links that look and work like this. And by the end of this tutorial, you'll be able to do all this yourself.
+
+Now, I've already created a folder for this tutorial and also this joblinks.html file. This is where we'll be doing all the coding. So, create the folder, create the file in it and then open it in Chrome. Next, we'll need HTML code to style. I'm gonna open this file from the previous tutorial and copy this HTML code at the top.
+
+And then I'm going to paste it into our new HTML file. And with that, we've got now three links to style.
+
+Now, notice that they all have an empty href attribute, which is like this here on purpose, so that our page just reloads when we click any of these links. And it's here like this, only to make our coding and testing easier. For the final website, you'd want to have these filled with actual URLs that lead to these corresponding websites. But for the learning purposes, we'll leave it like this.
+
+And now let's get to styling these links. The first thing I can tell about them is that their color is white and there is no text decoration for any of them. So let's write some CSS to remove the text decoration from our links and then make them all white.
+
+I'll start by adding a style element to write our CSS in. Then we'll target all the links on our page and remove their text decoration with text decoration none. Like this. Next, I'll make them all of white color.
+
+There you go. Now it's impossible to distinguish our links from the background because they both have the white color. And we can only tell that there is a link here because our cursor changes when I hover over this area where the link is. Or I can also try to select the area where the links are and this gentle selection color reveals our link's text.
+
+So now to make this link usable at all let's learn how to add a blue background like this with CSS. To do that we will target the link by its class name. So this is just a regular CSS rule we are writing here. Then to set the background color of this link we will use a new CSS property called background-color.
+
+And then we write here the name of the color that we want to use as the background color. We can use here color keywords just like with text. For example, we could write here red and get this red background. Now, I know that the name of this specific blue color is Dodger Blue. Well, because I learned it while I was preparing for this video.
+
+But normally you don't need to remember these specific names because you can open up the web page that contains all of them and just copy the color you want. Okay, and this makes the background color of our link.
+
+to be the same as this one. So by using the background color property we can change the color of the background of an HTML element. So this sets the color that will fill the space behind the content of the HTML element. And just as I said here we can use the same keywords that we used to set the color of text.
+</Lesson_54>
+
+<Lesson_55>
+Now notice that on this page the background color takes this extra space around the content from all sides. Whereas our link has maybe just a little bit of this extra space above and below the content. We can add this extra space by using a new property called padding.
+
+Here we can use a value in pixels. Let's set it to 5 pixels and see what happens. Reload and now we have this additional space around the content that this blue background fills up. Now padding is just empty space inside an element around its content. By writing here padding 5 pixels we are adding 5 pixels of empty space from all sides of this element.
+
+padding is the space inside an element. This is why the background color fills it here too.
+
+Now, padding is quite an important feature in CSS and we'll learn how to use it to our advantage in future tutorials in this course. For now, we'll use it to just add a little bit more of this background around our links. Okay, next, notice that here, when I hover over the link, its background color slightly changes.
+
+Let's do that for our link too. Because at this moment, when I hover over the link, its background color stays the same. And to implement this for our links, we'll learn a new way of setting colors in CSS. But before we do that, let's add another CSS rule that targets the hover state of our LinkedIn link.
+
+And we'll set its background color here to Dodger Blue 2, so like this, nothing changes, so that we have less things to do in the future. Next, let's open a new tab, go to google.com and search for Color Picker, which opens this Color Picker tool from Google.
+
+A color picker is a tool that lets us select colors visually. It displays this area for picking colors. Then there is this box that shows the color we've picked. And it also has these fields where we can see or change the specific color codes.
+
+Notice that when I select a color here, the color picker not only updates this box, but it also changes the values of color codes here. And these different fields are for different color formats.
+
+The most widely used ones are the HEX and the RGB formats, where RGB stands for red, green and blue. And each color here in the RGB format is represented by a number from 0 to 255.
+
+where 0 means none of that color, and 255 means the full intensity of that color. So, for example, when I select the purest red here, we've got 255 here for red, which means full intensity of the red color, and then 0 for green, which means none of green, and 0 for blue, so none for blue. So it's full red, no green, no blue.
+
+and if I change here to 0 for red and 255 for green now we have this pure green color because it's none for red maximum for green and none for blue and if I set this to 0 and then blue to 255 then we've got this pure blue and when we have them all as zeros we have this pure black color because it's
+
+None of any colors. And when we have them all to 55, like this, then it's white, which is all colors at full intensity.
+
+And so by mixing red, green and blue in different amounts, you can create any color. And don't worry, you don't need to remember exact values here. Normally, you would just select a color visually here and then just copy these numbers and use them in your CSS code.
+
+Now, the hex color uses the same approach as the RGB, but it just uses a different format for these numbers called hexadecimal. And hexadecimal numbers are just another way to think about numbers in math and programming. Now, if you don't know what a hexadecimal format is, don't worry. Normally, you just select the color you want and then copy this value with hash, which is important.
+
+and then paste it in your code as a color like this and if I save and reload the page now on hover we have this new color again you don't need to remember these exact values you just select your color like this
+
+The color picker does all the work of updating and calculating the actual final hexadecimal value and you just copy it with this hash symbol and paste it here, also with this hash symbol, save, reload, and now we have this color here. And for example, our Dodger blue color can also be represented in hex or RGB.
+
+To get its hex value, I'll open the MDN page with named colors we've seen previously in this course. For that, I'll go to google.com and then Google CSS named colors. Then I'll open this link, press Command F to search this page. Command F is for Mac and Control F is for Windows. Then I search for the Dodger Blue and here is the color.
+
+Now notice that in this adjacent column there is the hex value for the dodger blue color. Let's copy this hex value with the hash symbol and then we can paste it here in the color picker. But make sure that you paste it into this field.
+
+And notice that just as we pasted the Dodger Blue hex color here, the color picker displayed it visually. Now, the reason that we learned and did all this is for us to be able to select here a slightly lighter shade of Dodger Blue. So that then we can use it as the background color in the hover state here.
+
+And now let's take this hex color and make sure that you copy it with this hash symbol. Copied. And then let's remove this old color and paste our lighter version of Dodger Blue here. Now save. Reload. And now when I hover over the link, its background color changes to this slightly different shade of Dodger Blue.
+
+And this is it. This is how easy it is to use Color Picker to select the color we want. We just select that color and then copy its hex value, paste as our color, and then we can enjoy that new color on our page. Okay, let me revert it back to this one.
+</Lesson_55>
+
+<Lesson_56>
+Now, to use this color in its RGB representation, it's not sufficient to just copy these numbers and paste them like this here. If I do this and reload the page, now our background stays Dodger Blue. This is because using it like this is insufficient.
+
+To use an RGB color, we need to add RGB and then parentheses like this. And if I save and reload the page, now it should work on hover. Yes. So to use an RGB color from the color picker, you just select the color you want and then copy these numbers. They should be separated by a comma.
+
+And then, in your CSS code, first you need to write RGB, then open parenthesis, close parenthesis, and then in between the parenthesis paste those numbers. So it's 176 for the red, comma, 28 for the green, comma, and then 151 for blue. And if I save, reload, now it's this color. Okay, let me revert it.
+
+And great. Now, notice that as I click this link, its background color changes even more.
+
+Here is a challenge for you. Use the Color Picker tool and also the Active Pseudoclass to achieve that on our page too. Because right now, if I click the link, its background color stays the same. But what we want is for it to work like this. So pause this video and try to code the solution yourself, and then we'll do this together.
+
+So to make our link work like this when we click it, we'll need to add a new CSS rule that targets its active state. Then we want to change its background color like this, where we want to use an RGB color, but a slightly lighter one. So I'll copy this and then inside the color picker, I'll paste it here so that we can find a new color relative to our current one.
+
+And then I'll just select a lighter version of blue. I think that this one will be sufficient. Next, we can either copy its hex value or its RGB value. And I'm gonna copy its RGB value because we already have it here. And paste. Now save. Reload. Hover. Click. And the color changes to the new one. Great. I think this color is quite close to what we want to have here.
+</Lesson_56>
+
+<Lesson_57>
+Our page has two more links here hidden by this white color. And this one has them too. And they both change their background color when I hover over them and when I click them. You already know how to achieve this behavior. And so the next challenge for you will be to code this. So style these remaining links so that they work just as they work here.
+
+and you can get their hex colors on this web page. Just search for the forest green color for the Glassdoor link and Sienna for the Indeed link. Okay, so pause this video and try to code that.
+
+Now let's do it together. So we'll need one CSS rule for the glass door link and we'll set its background color to forest green. This makes it to look safe. This makes it to look like this.
+
+And notice that all these links have padding of 5 pixels, so we can move it up here. Good. And now we'll need another CSS rule for the active state and for the hover state. Make sure that you put the active state after the hover state rule.
+
+Then we'll get the hex value for the forest green color and we'll paste it right here. Now for the hover state, we want it to change slightly like this. So I'll replace the color here. And then for the active state, we'll use colors from here. So I'll paste this one here. Save, reload, and now
+
+on hover it's this color and when I click it it's this. And then I'm gonna repeat all this for the Indeed link like this.
+
+And the color we're interested in is Sienna. Its hex value is this one. We want to paste it right here. And then just select a slightly lighter version of the color and paste it here. And we'll choose a color like this one and paste it for the active state.
+
+Now, on our page, when I reload it, we've got this Indeed link with this normal background color. And when I hover over it, the color changes. And when I click it, the color changes even more. Great. Now, one of the main reasons for us to use the hex and RGB colors is because they give us more colors than the color keywords. And we have much better control over the colors we use with them.
+
+So if we compare, there are around 150 color names in CSS, like red, blue or green and so on. But with RGB and HEX we get up to 16 million colors. So use the HEX and RGB formats when you need to fine-tune your colors.
+</Lesson_57>
+
+<Lesson_58>
+Okay, what I also noticed is that on the reference page, the link becomes smaller on hover. And so let's do the same for our link. Now, by default, all links have their font size of 16 pixels. So the browser implicitly applies the font size of 16 pixels like this. And we can check that if I save and reload the page, nothing changes.
+
+And so to make this link a little bit smaller on hover, we just need to set its font size to a slightly smaller number. For example, we can set the font size here to 15 pixels on hover for the LinkedIn link. And now when I reload the page and hover over the link, it shrinks a little bit.
+
+notice that on hover not only the text becomes smaller but also the background becomes smaller too. This happens because remember that the background of an element it's the space behind the content, which for this link is this text, plus the padding space like this. So when the text becomes smaller the content area becomes smaller and so the background shrinks down too.
+</Lesson_58>
+
+<Lesson_59>
+Notice that on our page, when I hover over the link, it changes its size immediately, like this. So it jumps. And on this page, when I hover over the link, it transitions to the smaller size smoothly. So let's learn how to make it smooth on our page too. For that, we'll learn another CSS property called transition.
+
+So if I write here font size space one second save reload then when I hover over the link it changes its size smoothly and when I move the cursor away it goes back smoothly too. This happens because of this transition property which is used in CSS to create smooth animations when we're changing CSS properties.
+
+It helps make the changes look gradual rather than abrupt. So to configure a transition we start with the CSS property that we want to animate. Then we add a space and then we specify the duration of how long we want this transition to happen. So here we configure that whenever we change the font-size property we want that change to happen over one second.
+
+and if we want to animate more properties we just specify them using comma so let's animate also the background color property and for that we can just type here background color
+
+So the property name and then again the duration of that transition, so it's one second. And now if I save and reload the page, when I hover over it, the background of this link also transitions smoothly when I hover over it or click it.
+
+Now the reason why this transition happens smoothly first and when I click and release the mouse button it goes back immediately is because remember this is an HTML link and when I click it our page reloads. And when the page reloads the element appears first in its normal state.
+
+When the page reloads, it's kind of like when you reboot your computer. Everything starts from scratch. Okay, but I think one second is a little bit too much for this transition, so let's change it to half a second. And now it should happen two times faster. Like this. Like this.
+
+Now if we want smooth transitions between the element's normal styles and the styles we set with pseudoclasses, then we need to put the transition property inside the CSS rule that targets our element without any pseudoclasses.
+
+So, for example, if we move this transition to the rule that targets only the hover state of the element, then the element will smoothly animate when I hover over it. But watch what happens when I move the cursor away. The styles changed abruptly.
+
+Now, this happens because the styles from the hover CSS rule are applied only on hover. So when I hover over an element, the transition property is added immediately, which tells the browser to transition smoothly. But as we move the cursor away from the element, then this rule is not applied. The transition property is removed as soon as we move cursor away,
+
+And so there is no transition. And conversely, when we add the transition property to an element in its normal state, so to this one, now the transition property is applied to the element all the time in all its states.
+
+which means that the transition property is also present on hover and also present on click. Great! So next to master transitions pause this video and make the remaining links also transition smoothly when we
+
+hover over them and click them like this. And don't forget to extend their CSS styles to reduce their font size too. I'm not gonna code this because I believe that you already can do this yourself.
+</Lesson_59>
+

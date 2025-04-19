@@ -1,0 +1,192 @@
+<Lesson_142>
+This is what we'll create in this part of the course. It's a fairly complex web page with a lot of different elements, some of which are interactive, like this search bar that expands on focus. Here we'll have the opportunity to apply what we've learned so far in this course.
+
+Your first reaction might be, wow, this is a very complex web page. It's too much. How would you even create a web page like this? But don't be overwhelmed or discouraged. If we look closely, we'll see that this big and complex website is actually made up of smaller elements. For example, this logo is an image, and we know how to add and style images. Then these sidebar menu items, they consist of an image and some text.
+
+And so on. So the way I approach creating complex pages like this is I break them up into smaller pieces that I know how to create. It's like Lego, where you take small pieces and put them together to make big things. And that's what we're gonna do. We're gonna build this complex web page out of HTML elements that we already know how to create and style.
+
+Before we start, make sure you open the following URL in Chrome. And then click on the reddit-clone-web-dev link to open this web page, which is the finished version of what we're going to create. We will use it to see if we are on the right track. There is also this page that has all the images we need in a convenient format.
+
+You can use it to download or copy an absolute URL to an image for our project. Also note that there is this reddit-clone-hades version of the project. You will work on it after we finish the web dev page. So you'll have a great project to practice everything we're going to learn here. Okay, now back to our reference page.
+
+Let's start building it! First of all, we'll need an HTML file with a proper HTML5 page structure in it. And so, let's create that file. It's a standard naming convention in web development to call the main page of your website index.html. Next, we'll type exclamation mark and press tab to generate a proper HTML5 structure for our page.
+
+Here we'll change the title to Reddit Clone and then open our new page in the browser. There you go, an empty page that we can start filling in with content. I usually start creating pages like this by breaking them into the biggest chunks that make sense.
+
+This page, for example, I would divide into a header, which is this area, then a sidebar, which is this area. It is scrollable and has a lot of content. And then there is this third area, which is the main content of the page. It has this subreddit banner, a list of posts, and this sidebar to the right with additional information about this subreddit.
+
+So I would split this page into three big chunks, the header, the sidebar and the main content. We will start with the header, but it's convenient to create containers for all the big chunks to have them in place. It's usually easier to start by creating HTML elements and then styling them with CSS.
+
+Okay, so how do we choose what elements to use here for these three areas? Let's see. They all contain a lot of different elements, like this header has a logo, which is an image, a search bar, and so on. And then the sidebar has these links and buttons, and the main content has images, texts, buttons, and so on.
+
+This means that we need to use HTML elements that act as containers for other elements. And we already know that div and span elements are the most popular container elements.
+
+where divs are block elements and spans are text elements. Okay, so the next question is, how do we know which element, div or span, to choose, for example, for this header? To answer it, notice that all three containers will have block elements inside them. Like, for example, these menu items or posts with titles and paragraphs.
+
+And we know that in HTML we're not allowed to nest block elements inside inline elements. Otherwise it will result in invalid HTML and can be rendered incorrectly by some browsers. And this is why we will use divs. And usually it's safe to start with divs and then change them to spans or other elements as needed.
+
+okay so in our index.html file let's create a div for header and also a div for the sidebar and the content
+
+Let's also add classes to them right away so that we can easily target them from our CSS code in the future. And this one for the content. We've added this simple text like header or sidebar to easily see the purpose of the element on the page.
+
+We'll replace the text with actual content when we start working on a particular area. And this looks like this on the page.
+</Lesson_142>
+
+<Lesson_143>
+Now we are ready to work on the header. Okay. So just as we divided the whole page into three large areas, let's see how we can divide the header into even smaller chunks. I think that the first chunk will be this Reddit logo image. And if I inspect it, we can see that it's also a link. So we'll need a link and an image.
+
+The next chunk, I would say, is this search bar, which we will further divide into this search icon and the actual input element. And then the last chunk of the header is this area with buttons. A little side note. Please keep in mind that my main goal with this Reddit clone project is not to give you the right answer, but to show you how I think when I create these pages.
+
+I believe that this is going to be much more useful because then you'll be able to create different websites and tackle different tasks. Okay, so inside the header we'll need a link for the logo, a div that will be a container for the search, and a div that will be a container for these buttons. So let's add those.
+
+For that I will replace this header text with a link. Let's leave its href attribute empty so that when we click the link it refreshes the page. Then inside the link we'll put an image and the src attribute. Let's leave the attribute empty for a moment.
+
+We will also add the Reddit logo class to the image. We will use it later to target the image from our CSS code. And close the image tag like this. Then we'll add a div with the class search. And let's add the filler text search to see it on the page. Otherwise, the div would be completely invisible because it has no content.
+
+We will replace this text with actual HTML when we get to the search. And finally, we'll create another div with the class HeaderActions. It will also have some temporary filler text like HeaderActions.
+
+So this will be a skeleton of our header. Nothing crazy, just a few simple HTML elements. Let's also set the src attribute of this image. Here we'll need to set a URL to the logo image.
+
+One way would be to put an absolute URL here and to do this we could right-click on the logo image on the reference site and then select copy image address and then paste it here and with this when I reload our web page there is this logo image and also the search text and the header actions text.
+
+Now, the downside of using the absolute URL for our image is that if this website is down for some reason, the image won't be available for our users and they'll see something like this, which is not pretty and does not look very professional. Okay, so I added this extra character to break the URL on purpose, but the same thing happens when the website is down.
+
+So often, it can be a good idea to download the image, put it in the folder of your website and use a relative URL instead. Let's do that. For that, I'll right-click on the image, then select Save Image As. Then we'll save it into a folder that we can easily access. And for that, let's create a new folder for our website images.
+
+in the same folder where our index.html is. And we'll call the new folder images.
+
+And then save. Now you should see something like this. Images and the reddit logo.png image under images. Next to reference this logo image we will remove the absolute URL here. Then we'll write images because the images folder is in the same folder as the index.html file.
+
+Then we'll write slash to go into the images folder and then the name of the image, so reddit-logo.png. Now when I reload the page, the logo is still there. Great! In professional web development, hosting and loading images and other static files is a big and somewhat complex topic.
+
+There are several techniques for making sure that your images and other files load as quickly as possible, such as using a CDN, Content Delivery Network, which is a special system of servers distributed in different locations around the world.
+
+CDN makes it advantageous and quite reliable to use absolute URLs for your images. But these are more advanced topics that you don't need to worry about at this point. At this stage of your learning journey, I would recommend downloading images to your computer and using relative URLs. Because it's easier, more predictable and more stable for learning.
+
+Then, when you get to the advanced level, learn how and when to use CDNs with absolute URLs to your advantage.
+</Lesson_143>
+
+<Lesson_144>
+Now that we have this basic HTML structure for our header, let's start styling it. So far in this course, we haven't written a lot of CSS code, so we haven't had to organize our CSS much.
+
+But this is a pretty complex web page and it's gonna require a lot of CSS code. And here we're learning how to become professional developers. So it's a good idea to learn how to organize our code in a way that's easy to navigate and easy to extend. A very popular way to do this is to split your CSS code into multiple files.
+
+with each file containing styles for a portion of your page. There are many approaches to splitting the code. I suggest we split it based on the largest parts of the page. So, for example, we'll have one file that contains CSS code for the header, and then another CSS file for the sidebar, and one more for the main content.
+
+And maybe you will have additional CSS files for some components within these big parts. Okay, so let's create and include a CSS file for the header. And just like with images, it's a good idea to keep our CSS files in a separate folder.
+
+So, let's create a new folder and call it CSS. It's useful to group your files in folders in a meaningful way. Then, inside the CSS folder, we'll create a new file and we'll call it header.css. Notice that it's got a different icon than, for example, this PNG image or the HTML file.
+
+This is because VS Code uses its file extension to show the icon. And this makes our lives a little bit easier. We can name our CSS files whatever we want, but it's a good idea to choose names that reflect our intentions.
+
+This CSS file will contain styles for the header, and if we name it like this, it'll be much easier for us to find those styles in the future. And if you want to become a professional developer, start learning how to choose meaningful names for your files and other parts of your projects. It is an incredibly useful skill. I'll give you an example.
+
+Let's imagine that our project grew and we added more styles. But we spent some time choosing meaningful names for our files. For example, we created another file for the sidebar and one more for the content.
+
+and then maybe a search and maybe a footer.css. If you look at this folder, it's really easy to see where everything is located. For example, if you want to find the file that contains the search styles, it's easy. You can see that almost immediately. It's this file or the sidebar styles or any other styles in here.
+
+But suppose we were lazy and named our files like this instead. Let me quickly rename all these files.
+
+Now, with this, it's impossible to tell which file contains styles for the search, for example, or for the header, or for the sidebar. Now, in order to find those styles, we have to open these files one by one and look inside, which is much slower and wastes our time every time we need to find something here.
+
+And if, on top of that, we were lazy and didn't name our styles properly inside these files, like, for example, instead of naming our class header, which immediately tells us what it is. Imagine if we used something like class1 here, and then maybe class2, and so on.
+
+So now, combined with poorly chosen filenames, your life as a developer becomes quite painful. And it becomes very difficult to find or do anything in a project with such poorly chosen names. I've seen projects like this, and believe me, you don't want to end up there.
+
+So, we're not gonna do this and we'll choose meaningful names everywhere we can from the start. So, I'm gonna delete these files and rename this one to header. Great! Now we've got one empty file for the header styles. Now, if we want it to be applied to our page, we need to include it in our index.html file.
+
+For this, we'll add a link inside the head and it'll have the rel attribute. We'll set it to stylesheet. We need this to tell the browser that we're loading a file with CSS code. Next, we'll add an href attribute where we'll write a relative path to our header.css.
+
+so we'll write css because the css folder and the index.html file from which we're referencing our stylesheet they are in the same folder so we can start it like this then slash to go inside the css folder and then header.css
+
+And finally, don't forget to put a closing angle bracket at the end, because link is a void element, which means that it has no content inside just these attributes. Now, this should effectively load whatever CSS code we write inside the header.css file.
+
+It's empty at the moment, so nothing interesting is gonna happen on the page yet. So, reload the page. No changes. And to see that we've done everything right, let's set a background color for the header.
+
+And remember that our header already has this header class which we can use in our CSS code. So I'm going to write .header to target the div by the class name and let's set the background color to something light. Let's say light sky blue.
+
+It doesn't matter what color we choose here, it has to be something that we can easily see on the page. And great! This means our code is working and we have included the styles correctly.
+</Lesson_144>
+
+<Lesson_145>
+Let's resize this logo image because right now it's a little too big. To see what size we need to make it, let's open the reference page and use the developer tools to get the exact size value. Remember that to open the developer tools you can click on the item you're interested in and then inspect it, which opens the dev tools and selects the item at the same time.
+
+And here, if I go to the computed tab, you can see that the width is 115 pixels. We will use this value. Next, we need to target this image from our CSS code. For that, we'll use
+
+this class that we added along with this image. So I'm going to copy the class name and inside the header.css file I'll add another CSS rule that will use a class selector and I'm going to paste the class name here. And we want to set the width of the image to 115 pixels. Now when I reload this page the logo image is the right size.
+
+Now, before we continue styling the header, notice that there is this white space outside. We didn't set it, so let's see where it's coming from. For that, we will use the developer tools again, so right-click Inspect. Okay, we're not interested in the HTML element, because I think it's the body element, yes. The body element is the source of the space, specifically its default margin.
+
+And we can tell this because of the orange area outside the body. And inside the box model visualization, under the computed tab, you can see that the default margin is 8 pixels from all sides. Now, we don't want this default margin on our page, so let's remove it. For that, we need to write some styles that target the body element.
+
+And there is only one body element on the page at any given time, so we can safely target it by a tag selector. This means that we can do it like this. And I'll write margin 0 to remove margin from all sides.
+
+Remember that in CSS we don't need to write units of measure when we use the zero value. This is why I didn't write pixels here. And now when I reload the page, the margin has disappeared and the head takes up all the available space. But now we've got a problem here.
+
+Having this CSS rule in the header.css file is a bad practice. Because this rule, this code, has nothing to do with the header. So let's create another file, another stylesheet in the CSS folder, and we'll call it page.css.
+
+And then let's move this rule into this new stylesheet Inside page.css we'll have the styles that affect our page in general like this body.css rule
+
+Okay, and when you add a new CSS file like this one, don't forget to include it in your HTML page. Otherwise, your CSS code won't be applied. So, for example, if I reload the page, the default margin is back because we didn't include our new stylesheet into the index.html file.
+
+So to fix this we'll need to add another link element that will load page.css So I'm gonna write link rel stylesheet then href and we want to load it from the css folder and the file is page.css
+
+and closing angle bracket. This should load our new CSS style sheet. And yes, it works.
+</Lesson_145>
+
+<Lesson_146>
+Let's continue. I find it easier to go from top to bottom and from left to right when styling a web page. So, I suggest we add this space to the left side of the header.
+
+And typically, empty space around CSS elements is either margin or padding. Remember that we use margin when we want to add some space outside of an element, and we use padding when we want to add some space inside an element. We could use either of those to add the space, but I think it would be better to use padding here, because this space is a space inside the header.
+
+And also notice that we have the space from the left side of the header and from the right side of the header as well. So I'm gonna inspect the header to get the padding value and it's 16 pixels from the left side and 16 pixels from the right side.
+
+And also no padding from the top and no padding from the bottom. Okay, we have a rule. Yes, we already have a rule that targets our headers. So we're going to use this rule. And here we'll write padding.
+
+0 and 16 pixels. Remember that this is a shorthand property and when we set a value like this, this is 0 from the top and bottom and this is 16 pixels from left and right.
+
+And now when I reload the page, there you go. 16 pixels from the left and it's impossible to tell what panning we've got here from the right. But if I inspect the header, then you can see that it's panning from the right is 16 pixels.
+
+Okay, let's remove the background color because we don't need it anymore. Like this. And now that we don't have this background behind our header, I suggest that we add this border to make it clear where the header ends.
+
+and based on what I see here we only need the bottom border because there is no visible border on the sides and this border at the top is not a part of the page it's part of the browser window so it's just already there like this
+
+And this bottom border is a straight line, which means we'll use the solid value as its style. It's very thin, I bet its width is one pixel. So the only thing we need to get from the DevTools is its color.
+
+I don't think that it's practical to guess colors by eye and most likely this border is part of the header so I'm gonna select the header in the DevTools then under the computed tab after the box model we have a list of properties with their final values that the header has and make sure that the show all option is checked
+
+Let's filter here by border. Okay, and we're interested in the border bottom color value. It's an RGBA color, which means that we can configure the opacity of our color.
+
+All zeros for the red, green and blue colors means that it's a black color. And this 0.2 for the alpha channel means that it's only 20% visible. So it's a barely visible black border. Let's copy this value. So I'm going to select the RGBA value. Then
+
+Inside our header rule, we will write border-bottom like this because we want to add the border at the bottom side. And then first goes its width. We'll set it to one pixel here, then space, then goes its style. We'll use solid to have a straight line border, then a space again, and I'm going to paste the color and a semicolon.
+
+And if I reload our page... Great! Our header has this border which is identical to the border on the reference page. And we can easily see the boundaries of our header.
+</Lesson_146>
+
+<Lesson_147>
+Notice that the elements in the header on our page go vertically. I mean the Reddit logo, search and header actions. But on the reference page they are positioned horizontally. So how do we position these horizontally?
+
+One option would be to make them all in line block elements, which is fine, but there is a better way. We can use Flexbox. In fact, I would encourage us to use Flexbox as much as possible to master it, because it's an incredibly powerful and highly useful CSS feature. And I think knowing how to use Flexbox is a must for any modern web developer.
+
+Okay, so to enable flexbox for our header we can just write display flex in this rule which makes the header a flex container and its direct children flex items and also sets practical defaults for various flex properties. We can see that when I reload the page the header items are placed horizontally now.
+
+Next, let's center them vertically. And remember that for this we can use the AlignItemsFlex property which controls where the flex items are on the cross axis. So for that let's add AlignItems here and the value will be Center.
+
+and this will center flex items vertically in our case because the default flex direction is row which sets the cross axis from top to bottom and if we had the flex direction set to column then the align items center would center the flex item horizontally instead of vertically because the cross axis would go from left to right
+
+And when I reload the page, great, now they are centered vertically. Next, let's distribute this available free space between the logo search and header actions. We can do this by using the justify content property, which controls where the flex items are on the main axis.
+
+So for that, I'm going to write justify-content here and the value will be space-between. And this will distribute this free space like this. Notice how we improved the appearance of our header with just a few lines of code. This is what I love about CSS. You can see results almost immediately.
+
+What I want to do next is add this space from the top and bottom of the header, like here.
+
+A lot of times you'd use padding for that, and that would be a good choice. But in this particular case, we're going to use the Height property to set the height of the header, and you'll see why later. I don't know the exact height value for the header in pixels, so let's get it from the DevTools. For that I'm going to inspect the header and scroll up top.
+
+There it is. This is the height value which is 56 pixels. We see 55.994 here because of the way the DevTools handle this number.
+
+In practice, there is no visible difference between 56 and this number. Okay, so to set the height of our header, let's write height and then 56 pixels. And when we reload the page, great, now the height is 56 pixels.
+
+and the extra space is evenly distributed above and below the content. This is because each of these elements is a flex item and we centered them vertically using the alignItems property.
+</Lesson_147>
+

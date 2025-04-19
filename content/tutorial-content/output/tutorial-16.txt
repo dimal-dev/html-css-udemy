@@ -1,0 +1,144 @@
+<Lesson_119>
+Next, we'll look at HTML comments. You create a comment with less than, exclamation mark, dash dash to start, and dash dash greater than to end. Everything you type in between these markers, browser ignores and won't display. Let's write here PIZZA ORDERING FORM, all caps, for us to easily recognize what this form is about.
+
+Comments can also span multiple lines. Let's start a comment here and end it here. This way, our pizza size options won't appear on the page.
+
+There you go, our pizza-sized radio buttons are gone. HTML comments don't appear on the web page, but are visible in the page source code. So avoid leaving sensitive information there. To view the source code in Chrome, click View -> Developer -> View Source Code. And there they are, our comments.
+
+Comments are useful when you want to leave notes for yourself and other developers about what your code does. They are also useful when you're testing out different bits of code and want to temporarily turn off a piece without deleting it. You wrap it in a comment, and it's like it's not even there. That's what we did with the pizza size code.
+</Lesson_119>
+
+<Lesson_120>
+Let's discuss how to write comments in CSS. It's actually quite easy to do. In CSS, we start a comment with a slash and an asterisk, with no spaces or other symbols in between. Then,
+
+We can write any text we want, like green text, for example. The browser will ignore it anyway, because comments are for us, humans. We end our comment with an asterisk and a slash. Again, with no spaces or other symbols in between.
+
+Now, if I save the file and run the script, nothing has changed. That's because when the browser renders our web page, it ignores comments completely. But if we view the source code of this page, and for that I'm going to click the right mouse button in any free area of this web page, and select View Page Source, this is the HTML source code the browser uses to render the page, and there is our comment.
+
+And because comments do not affect how our page looks or works, we can also use comments to disable our code temporarily. It's great for quickly testing different CSS code without deleting it. I'm going to close the source code.
+
+Now let me show you how to use CSS comments to disable this declaration that turns paragraphs and company text color green. For that I'm gonna add slash asterisk to start a comment at the beginning of the declaration that I want to turn off and I'm gonna add asterisk slash to end this comment.
+
+Notice that VS Code changed the color of this code into gray. This means that it's now a CSS comment. And this part of the code is turned off. In programming, it's called to comment out this code. And if I save the file and refresh the page, now the paragraphs are black, so default color, and the header is blue. Let me uncomment this declaration. There you go.
+
+You can also comment out just a part of a line like this. And instead of green, I'm gonna write red. Save the file, refresh the page. Now the text is red and the green value is completely ignored by the browser. You can also comment out multiple lines. Let's disable all these CSS rules. For that, I'm gonna start our comment here and I'm gonna put the ending comment mark
+
+here. Save the file, refresh the page. Now those CSS rules aren't applied. If you are using a code editor like VS Code, there is a shortcut to toggle your comments. Let me show you. I'm gonna select our comment and go to the Edit menu and select the Toggle Line Comment option.
+
+There you go, VS Code uncommented this code. And if I want to comment out this code, I can go to the edit menu and use the toggle line comment option again. There you go. Now, VS Code commented out this code.
+
+You're gonna comment out and uncomment your code quite frequently. So I recommend you to learn the keyboard shortcut for this action. For that go to the Edit menu again and to the right of this option you can see the shortcut. For Mac the shortcut is command slash. So if I hit command slash now VS Code hasn't commented this portion of the code.
+
+I can also put the cursor on any line and use the command slash shortcut again. VS Code has commented this specific line where the cursor is. And if I use the shortcut again, VS Code hasn't commented this line.
+
+You can also comment out a portion of your code. For that, select the code you want to comment out, go to the edit menu and use the toggle block comment option. There you go. Now VS Code commented out only the selected portion of the code.
+
+And if I use that option again, the VS Code has uncommented this code. We can use those options to toggle comments in HTML too. So if I place the cursor somewhere on this line and hit command slash, now VS Code has turned this HTML into a comment. And if I hit command slash again, the comment is gone.
+
+If you're using a different code editor, like Sublime Text, just google what shortcut to use in your editor to toggle comments. It's a real time saver. So, to add comments in CSS, use slash asterisk to start a comment and asterisk slash to end that comment.
+
+Use comments in CSS to explain your code, where needed, or turn off parts of your CSS code. Comments might not look very useful, but you'll use them a lot during development to temporarily turn off and on bits of your code. And this is how you add comments in CSS.
+</Lesson_120>
+
+<Lesson_121>
+The next property, font family, is so powerful because it allows you to change the font of your text. This is the same text but different fonts are applied from five main font groups or generic font families. Serif, Sans Serif, Monospace, Cursive, and Fantasy.
+
+We'll discuss what a generic font family is in a minute. Now let me show you how to use the font family property. For that I'm going to remove the font style property because we don't need it for now and I'll write font family and we'll use the Tahoma font here. So when I refresh the page the second div's text should use the Tahoma font
+
+And we should be able to tell the difference between how the first and the second div's text look. So save the file. Back to the browser. Refresh the page. There you go. These two divs are using different fonts. If you run this code and the text didn't change, this means that the Tahoma font is not available in your browser. In this case, your browser uses the default font and the text in both divs should look the same.
+
+I'm going to replicate that and change the Tahoma name to something that 100% doesn't exist on my computer. So QWERTY and random. Save the file. Back to the browser. Refresh the page. Now they look the same. So when you specify the font that doesn't exist on user's computer, the browser will just use the default font available. When you want
+
+to use a font that contains spaces or special characters. You need to wrap that font name in quotes. As an example, I'm going to use the Courier Space New font. Save the file, back to the browser, refresh the page. This text now looks very different. We can also have a list of fonts as a value for the font family. For that, we just need to separate them with a comma. So I'm going to write
+
+comma space. In this case the browser will try to apply the first font from the left and if it's not available then it will use the second font from the list. If the second font is not available it will try to use the third font or if there are no fonts in this list the browser will just use the default font. Save the file, refers to page, there you go. Now the font is Tahoma.
+
+But if I change Tahoma's name to some gibberish, like this, save the file, refresh the page, now the font is Courier New. So the browser tried to apply the first font from this list, it wasn't available, and then the browser used the Courier New font. Let me change it back to Tahoma.
+
+If you want to make sure that the font you're using is most likely available in the user's web browser, you can use a what's called web safe font. To know what fonts are web safe, just google web safe fonts and open this first link from the three schools.
+
+And here is the list of the best web-safe fonts for HTML and CSS. These fonts are considered web-safe because they are available on most computers and devices. And we've already used the Tahoma and Courier new fonts from this list.
+
+Notice that there is additional text in parentheses. This is called a generic font family. A generic font family is a group of fonts that have common features. There are five most widely used generic font families on the web, and they are Serif, Sans Serif, Monospace, Cursive, and Fantasy. Serif fonts have small lines at the end of strokes. They are traditional and considered formal or classic.
+
+Sans-serif fonts lack small lines at the end of strokes. They are modern, clean, and used for readability. Monospace fonts have equal spacing between each character. They are great for code because letters align. Cursive fonts mimic handwriting, and fantasy fonts are decorative and often used for impact.
+
+We can use a generic font family instead of a specific font name. Let's do that for all five font families. For that, I'm gonna need to uncomment this bit of HTML and let's have two more. I'm gonna change this class to four and this class to five.
+
+Next I'll add a CSS rule that sets font family to serif for the first div. Then we'll change the font family of the second div to sans serif. Then we'll set the font family of the third div to monospace. Then we'll add another CSS rule for the div number four and its font family is going to be cursive.
+
+And another CSS rule for the div number 5 and its font family is going to be fantasy. Save the file, back to the browser and refresh the page. There you go! Now all five divs are using fonts from different font families.
+
+When we specify a generic font family, like Serif for example, the browser uses any font from this font family that is available in your website visitor's web browser. It's very safe to set a generic font family because the likelihood you have a font from this family is the highest.
+
+This is why if you want to set a font for your text, let's say for example I want to set the Poetson1 font for the text of the second column, a good practice would be to specify this font first, then to add a web-safe font, for example Tahoma, to the list as a fallback in case the Poetson1 is missing in the user's web browser, and then comma
+
+add a generic font family like Sans Serif, for example, as a fallback in case the Tahoma is missing. In this case, the browser will try to use the PoetsOn1 font first. If it's unavailable, it will try to apply the WebSafe font. And for the tiny group of users that don't even have the Tahoma font, the browser will use any Sans Serif font available.
+
+Let me show you now how big tech companies configure fonts for their websites. Apple, for example, for the text on their website sets three custom fonts first, then two web-safe fonts, and then a generic font family as a fallback.
+
+Amazon uses a custom font first, then a WebSafe font, and then the Sans Serif generic font family. YouTube uses a custom font first, then a WebSafe font, and then again the Sans Serif generic font family. Also notice that they all are using the Sans Serif generic font family as a fallback. That's because Sans Serif fonts are clean, modern, and have a good readability.
+
+So, I would recommend using the approach Amazon and YouTube apply. One custom font first, then a web-safe font, and then the Sans Serif font family. It's simple but safe, powerful, and flexible. Most of the time, you can even skip the custom font and start with a web-safe font.
+
+And this is how you set a font of your text. Use the font family property. Specify one or more fonts and separate them with comma. Wrap the font name in quotes if it contains spaces or special characters.
+</Lesson_121>
+
+<Lesson_122>
+Now let's discuss how to change the line height of your text. We can make our text to become less dense vertically or more dense. The line height property sets the height of each line of text. This is crucial for readability.
+
+Let's create that in code. I'll close this tab, and I will copy this text from Wikipedia about CSS. Now, to test this property, we'll need only one div. So I'm going to remove these two, and I will leave only one CSS rule here. Also, I will remove the font-weight property. Now, I'll paste the text from Wikipedia here,
+
+and we're ready to change the line height. So it's line height. A good practice is to use a unitless value for the line height. I'm gonna put one here. This number is a multiplier. The browser uses the font size of this element and multiplies by this number to calculate the line height.
+
+This is flexible and convenient. In our case, the line height of this text is going to be 1 multiplied by its font size. So it's going to be equal to its font size. Save the file and switch the tab. Refresh the page. Now this text is quite dense vertically. If I change, for example, the line height to 2, save the file, refresh the page,
+
+Now the line height is noticeably bigger. And if I set it to 3, save the file, refresh the page, now the line height of this text is three times of its font size. A good practice for text readability is to set the line height value somewhere between 1.5 and 2, where the sweet spot is 1.8.
+
+6. Save the file, refresh the page. This is much better. And this is how you set the line height of your text.
+</Lesson_122>
+
+<Lesson_123>
+Next up, you'll learn how to include external CSS files. Then, we'll include CSS Bootstrap and use a couple of its components. First, I'll show you how to create an external CSS file and use it on your web page. For that, we'll need a div element. It's gonna have the PHP class. Its content will be PHP is for backend.
+
+Now let's style it a bit. I'll use a class selector and make it 500 pixels wide. The padding is going to be 20 pixels from all sides. Let's align its text to the center and add a border 3 pixels solid royal blue. There is nothing special here. The goal is just to have some styles that we can use in the future. Save the file, refresh the page,
+
+Good. At this point, we're keeping our CSS code in this HTML, in the style element. This is convenient and sufficient in certain cases, like when learning CSS or for running quick experiments. But most of the time, especially when your website grows or you're doing professional web development, you want to keep your CSS code in a separate file.
+
+and then include and load that file into your HTML page. Let me show you how to do this. The goal is to move our CSS code to a separate file and include it into this web page. So we'll need to create a new file. For that I'm going to open the primary side panel, create a new file,
+
+and I'm gonna name it main.css. For your css files I recommend you choosing a file name that reflects the purpose of your css code. Like if you have a css file that contains styles for a navbar then name that file something like navbar.css.
+
+Choosing good names for your CSS files will make it easier for you and other developers to navigate your project. Now I'm going to move this CSS rule to our CSS file. And let's remove this line. Save the file. Great. And I'm also going to remove the style element. We don't need it anymore.
+
+Let's also close the primary sidebar, either use this option or this keyboard shortcut. I'm going to hit command B. If I save this file and refresh the page, our div is back to its default styles. Our custom styles are gone. That's because for these styles to be applied, we need to include our main CSS file into this index.html file.
+
+To do that, we'll add the link tag to the head element of the index.html file and specify the location of our CSS file with the href attribute. Our CSS file is in the same location as the index.html file.
+
+So I'll just put its name, main CSS. But as with images, we can use an external URL here to load CSS from other sources. This is what we're going to do later to load Bootstrap. A CSS stylesheet is not the only thing we can load with the link element. We can use it to load many other types of resources like fav icons and fonts. Next, we need to tell the browser
+
+that we are loading a css file with the rel attribute. For css the value is going to be stylesheet. Don't forget to include rel stylesheet otherwise the browser won't apply your styles. Link is a self-closing tag so I'm going to put a closing angle bracket
+
+Save the file, refresh the page. Great! The browser has successfully loaded and applied our styles. If your styles didn't load, make sure that you put the CSS file in the same folder as the index.html file. Also make sure that you specify the exactly same file name in the href attribute.
+
+Sometimes I tend to misspell it. And also make sure that you have the rel attribute and that the value is exactly the same as I have it here. Doing all that should solve the issue. Okay, we can also put the link tag in the body element and it will still work. However, it's better to have it in the head element
+
+because in this case the browser loads your CSS file before any HTML code and your styles are immediately applied. Now let's include the Bootstrap CSS library. For that I'll google Bootstrap and open the latest version of the website. At the moment the latest version is 5.3.3 but yours can be different.
+
+Next, scroll down to the Include via CDN section and copy the link tag. CDN stands for Content Delivery Network. CDN is basically a network of servers in various locations worldwide.
+
+The main goal for a CDN is to deliver content like images, videos, CSS, and JavaScript files to you as quickly as possible. For that, CDN uses multiple techniques, like sending you this CSS file from the server that's closest to you.
+
+Okay, we're not interested in the bootstrap's JavaScript in this video. So just copy the CSS link and paste it after our custom styles like this. This link has a couple of extra attributes that we don't need to worry about. Also, notice that this link loads a remote CSS file from the Internet. So save the file and when I refresh the page,
+
+It has changed a little bit. That's because Bootstrap was loaded successfully and applied its own styles. Now let's add a couple of Bootstrap components to our page. For that, I'll go to the Bootstrap's website and click on the Docs link. Bootstrap has many, many different useful tools. I encourage you to experiment with them on your own. For now, we need the Components section.
+
+And let's open the list group item. I'm going to scroll down until I find the component I like. This one under the custom content looks interesting. So to use it, I'm going to copy the content from this example and paste it to our webpage. Save the file, refresh our page, and there you go. Now we've got an item list that's beautifully styled.
+
+Let's use another component. How about some spinners? Okay, so which ones to choose? I like these growing spinners. So let's copy their HTML and paste it before the list group HTML. Save the file. Refresh our page. Great! We've got many spinners to choose from.
+
+Bootstrap is an amazing library and worth learning. Based on the W3 tech statistics, it's the most used CSS library in the world. Okay, now let's recap. Use the link tag to add external stylesheets to your web page. Specify the URL of your stylesheet in the href attribute and tell the browser that it's CSS with the rel attribute.
+
+And this is how you add external stylesheets to your webpage.
+</Lesson_123>
+

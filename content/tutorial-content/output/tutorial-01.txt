@@ -1,0 +1,240 @@
+<Lesson_01>
+I'll be doing this course on a Mac, but everything is the same for Windows. Before we start, we need to install a web browser and a code editor. We'll use the web browser to view the websites we create in this course. I recommend installing Google Chrome. It's the most popular web browser for web development. It's available for Windows, Mac, and Linux. To install Google Chrome, go to google.com
+
+Then search for Google Chrome. Open this link and follow the instructions to download and install it.
+
+Next, we'll install Visual Studio Code or VSCode. It is the most popular code editor for web development. It will help us write our HTML and CSS code. VSCode is also available for Windows, Mac and Linux.
+</Lesson_01>
+
+<Lesson_02>
+Now that you installed Google Chrome and VS Code, we are ready to create our first web page using HTML. To do that, let's go to the desktop and create a new folder. We will call it my-website.
+
+This folder will contain all the code, files and images we will use in this course. It doesn't have to be created on the desktop, just make sure you remember where the folder is. Now that we have the folder for our website, let's open it in VS Code. So I'm gonna start VS Code. Then we'll go to the File menu and then Open Folder.
+
+Next, we'll find and select the folder we just created. And then we'll click Open. If VS Code asks, confirm that you trust the authors of the files in this folder to enable all VS Code features. And let's close the Welcome tab.
+
+Now you should be able to see the folder name in the Explorer here. If you don't see the Explorer, like this, click on this icon to open it.
+
+And we're ready to start creating our first web page in VS Code. To do that, we will click on this icon to create a new file. Then, we'll type the name of the file, which is web-page.html, where .html is a file extension. It tells the computer that this file contains HTML code and not an image, video, or text.
+
+Now we'll press Enter to actually create the file. And inside this area we can modify its content. Let's write our first HTML code here and create a text field. To do that, we'll type left angle bracket, input, right angle bracket.
+
+If you see an angle bracket on your keyboard, but when you press it another symbol appears, then try to hold the Shift key and then press the key with the angle bracket.
+
+Next, we will save our HTML code, because this dot here shows that we've made some changes to the file, and for other programs to see these changes, we need to save them. To save the file, we'll go to the File menu and then click Save. Next, let's learn how to view our web page in the browser. For that, go to the folder that contains our code,
+
+Right-click on our HTML file, open with, Google Chrome. And this opens our web page. I'll zoom in to see it better. And there's that text field that we created in our code. Let's type, well done. Great, this means our web page works properly.
+</Lesson_02>
+
+<Lesson_03>
+Next, we'll place Google Chrome and VS Code side by side so that we can have a better view.
+
+And we'll click this icon to hide the file explorer to have more space in the editor. Now let's add plain text to our HTML file and see what happens when we open it in the browser. We'll write name right after the input. And now we've got this dot again, which means we need to save our changes. If we don't save and reload the page, the text won't appear.
+
+because the browser can't see our latest version of the file until we save it. This is a common mistake. If you write HTML code but don't see it in the browser, make sure to save the file first. So, to save, go to the File menu and then Save. And now, in the browser, click this to load the latest version of our web page. And there is this name text beside the text field.
+
+In our file, this is regular text and this is an HTML instruction. This instruction creates an HTML element. An HTML element is just a part of our web page. It can be a text field, an image, or a link. HTML elements have special meaning and behavior compared to regular text.
+
+And we need to follow specific rules to add HTML elements in our code. These rules are called HTML syntax. HTML syntax is like grammar rules in English. It helps us to explain the computer what to do in a way it can understand.
+
+According to HTML syntax, we start an HTML element with the left angle bracket. Then we write the name of the element, its input in our case. Finally, we end it by using the right angle bracket. There should be no spaces between the left angle bracket and the element name. If I add a space here, like this, I'm breaking the syntax. So let's see what happens in the browser.
+
+Save. Reload. And our text field has turned into regular text. This is one of the things that happen when we break the HTML syntax. Okay, let me remove the space to make sure the code follows the syntax rules.
+
+And this time we will use a better way to save the file. We will use a keyboard shortcut. Keyboard shortcuts help us work faster and more efficiently. Professional programmers are using lots of keyboard shortcuts to save time. To learn the shortcut for saving the file, we will open the File menu and we will see the shortcut here. It's Command S for Mac and Control S for Windows.
+
+So let's use the shortcut to save the file. I'll press command S and the dot is gone.
+
+And to reload our page in the browser, we will also use a keyboard shortcut. It's CMD R for Mac and CTRL R for Windows. Remember this shortcut. You will use it often. So let's reload our page. I'll press CMD R. And the browser shows the text field again because our HTML code is valid and follows syntax rules.
+
+Also, HTML syntax does not allow spaces or other symbols in an element's name. For example, doing something like this breaks the syntax. And if we save and reload the page, the text field is completely gone. I'm gonna remove this extra space to make our HTML code valid again.
+
+And we need to use certain predefined names for our HTML elements. We cannot use non-existing or made-up names. For example, if I add s here, so inputs, this element name doesn't exist in HTML.
+
+which makes our code incorrect or invalid. And if we press CMD S to save the file and CMD R to reload the page, the text field also disappears completely, because now we break the rules of HTML syntax. So let's remove this to use a correct name and make our code valid again. CMD S, CMD R and the text field is back.
+
+Throughout this course, you will learn many different HTML elements and what names to use for them to have valid HTML.
+</Lesson_03>
+
+<Lesson_04>
+Now, let's move this text to the next line for better visual separation. To do that normally, in a text editor like Microsoft Word or Google Docs, we would place the cursor here, press Enter, and expect the text and the input to appear on their own lines in the browser. Let's save the file and see what happens. Reload. Hmm.
+
+The text didn't move to the next line. The only thing that's changed is now we have this extra space here. This is an interesting feature of HTML. It ignores new lines. And it doesn't matter how many new lines we add to our HTML code. The browser shows them just as one space.
+
+Now let's replace all these new lines with one space in our code and see what happens. Save with command S, reload with command R. No changes, just one space. What's also interesting is that if we add multiple spaces like this, the browser will ignore them too and show only one space instead.
+
+So, remember that multiple spaces and new lines in HTML code are displayed as one space. This may seem weird at first, but later in this tutorial I'll show you that this behavior is incredibly useful for formatting our HTML code to make it easy to read and understand.
+
+Let's remove these extra spaces and place them on separate lines. Okay, if we can't use new lines and spaces to move our elements to the next line, what can we use?
+
+We can use another HTML element. To create that element, we'll write left-angle bracket, p, and right-angle bracket. Notice that VS Code helps us here and adds this piece of code for us. Next, we will move this text inside. P stands for paragraph.
+
+And this is now a paragraph HTML element that contains the name text. Save with command S, reload with command R, and now this text is on its own line. So this is the paragraph HTML element. It looks different from this input element we used to create a text field.
+
+The paragraph element has three parts. This first part is called an opening tag. An opening tag has a left angle bracket followed by the element name, like P for paragraph, and then the right angle bracket.
+
+An opening tag starts an HTML element. It says, here, this paragraph begins. Next goes the second part of the paragraph — the content. The content of this paragraph is this text name.
+
+Later, you'll learn that other HTML elements, like text fields or images, can also be a part of the content. And this is the last part of the paragraph and it's called a closing tag. A closing tag ends an HTML element.
+
+We know it's a closing tag because it has this slash between the angle bracket and the element name. And according to HTML syntax rules, the closing tag must always contain this slash.
+
+The opening and closing tags don't appear on the page in the browser. Only the content of the paragraph is displayed, which is the name text. So, every paragraph has three parts — an opening tag, a closing tag, and the content in between.
+
+And according to the rules of HTML syntax, they must go in this specific order. First an opening tag, then the content, and then the closing tag. If we place them in different order, like this for example, it breaks the syntax rules, the browser gets confused, and the HTML code might not work correctly. So let me undo the changes to make the code valid.
+</Lesson_04>
+
+<Lesson_05>
+To practice creating paragraphs, let's add one more. To do that, we will write left angle bracket, P, and right angle bracket. And VS Code adds the closing tag automatically. For the content of our paragraph, we'll write something like this is a paragraph. Save, reload, and now our page shows this additional paragraph on its own line, just like we coded it to do.
+
+Notice that the input only has an opening tag, whereas the paragraph has also the content and the closing tag. This is because the input, by its nature, doesn't need content.
+
+It creates a text field where the website users type in the content. And since the input doesn't have the content, it's called a void element. A void element, like our input, has only one part — an opening tag. This is where it starts and ends. On the other hand, paragraphs are meant to have the content,
+
+And so they need to have the closing tag to show where the content ends. And because a paragraph element has content, it's called a non-void element. HTML has many other elements, not just paragraphs and inputs.
+
+and they all belong to one of these two groups. Void elements, like our input, without content, and non-void elements, like our paragraph, with content. We can have many inputs on our web page. Let's add one more.
+
+For that we will write left angle bracket, then the element name, so input, and then the right angle bracket. We learned that input is a void element, so we don't need a closing tag. Save. Reload. And here is our second text field. Now you know how to create an input HTML element.
+
+which is a very important element and it's often used on websites to collect data from users. For example, Amazon uses a text field to ask for your email on the sign-in page. And Google uses an input for the search bar. Their text fields look a bit different because Amazon and Google use CSS to change their appearance.
+
+Later in this course, we will learn how to style text fields with CSS and how to create a professional-looking search bar for the Reddit clone project.
+</Lesson_05>
+
+<Lesson_06>
+Notice that the browser displays the HTML elements in the exact same order as we place them in our code. This input goes first in our code and first on the page.
+
+then this paragraph goes after the input in the code and on the page. And the same applies to the remaining elements. Let's change the order of our elements in the code and see how it affects our page. For that we will move this paragraph to the top, like this.
+
+save, reload, and now this paragraph appears first on the web page just as in the code. And if we move this paragraph up, save, reload, and now it goes after the first paragraph on the web page. So the browser displays the HTML elements on the page in the same order as they go in our code, from top to bottom, left
+
+to write. Also, notice that when we moved this paragraph up, our text fields started appearing on the same line. This is because input elements behave like text. By default, they go one after another on the same line as if they are words in a sentence.
+
+And there is this space between the inputs because we have a new line here. And HTML replaces it with just one space. So let's remove this new line and see what happens. Save. Reload. The space disappeared.
+
+Now, what if we want our text fields to appear on their own separate lines? For that, we can use paragraphs just like with text. But this time, instead of text, we will put an input HTML element inside the paragraph.
+
+So let's create a paragraph for the first input left angle bracket P right angle bracket to start a paragraph and VS code adds the closing tag automatically next let's place this input inside the paragraph and let's do the same for the second input and
+
+Now, this input becomes the content of the paragraph. Save, reload, and the inputs are on separate lines. So, as you can see, we can place other HTML elements inside our paragraphs as their content. Doing so is called nesting. So, nesting is when we place HTML elements as content inside other HTML elements.
+
+Now let's use that feature of HTML where it ignores new lines and extra spaces to format this piece of code to make it easier to read. For that, we will place the cursor right after the opening tag here and then press Enter.
+
+The input moves to the next line, but it also gains this extra space to the left. This extra space is just four spaces that VS Code automatically adds for us to make our life easier. Next, let's place the cursor right after the input element and press Enter again. This time, VS Code moves the closing tag to the next line without adding extra spaces.
+
+And now the opening and closing tags align vertically to make it easier for us to see where our paragraph starts and where it ends. And if we save and reload the page, nothing has changed visually on the page, because HTML ignores new lines and extra spaces. But formatting our code like this makes the code much easier to read and work with.
+
+Now let's do the same for the second input. Save, reload and again nothing has changed.
+</Lesson_06>
+
+<Lesson_07>
+Okay, this element inside the paragraph is called a child element and this paragraph is called a parent element. So a child element is an element that's inside another element.
+
+And a parent element is an element that contains other elements. In HTML, you will hear these terms, child and parent elements, quite often. And in programming, when an element is placed slightly to the right, like this input, it is called indenting. Indenting our code this way makes it easier to see parent and child elements.
+
+And we're not limited to have only one child element inside a paragraph. We can place as many child elements as we want in it. So let's add one more input element here and move this text inside the paragraph. And let's remove this paragraph since it's an empty paragraph and we don't need it anymore.
+
+And so according to HTML syntax this is perfectly valid HTML code and it should work just fine. So let's save the file and reload the page. And now we have this name and input on the same line and the second input goes on the next line.
+
+This is because there is no more horizontal space available, so the browser moves it to the next line. But if I resize the window, now there is enough horizontal space and the text and two text fields are on the same line as children of that paragraph. Because remember, inputs by default behave like words in a sentence.
+
+So both these input elements are children of this paragraph. And this paragraph is a parent element to these inputs. And this is just plain text. In HTML we can put plain text among other HTML elements.
+
+In HTML we are allowed to nest inputs inside paragraphs, but we're not allowed to nest paragraphs inside paragraphs. So if we add another paragraph inside with some text...
+
+This becomes invalid HTML and may not work or could produce unexpected results on some devices and browsers. So we cannot put or nest paragraphs inside other paragraphs.
+
+because paragraphs in HTML are designed only to contain text or text elements like inputs or links. So let's remove this to make our HTML valid. If all that information feels like a little bit too much, don't worry. HTML is easy to learn but has a lot of details to remember. Don't expect to remember all these details right away. You'll learn them over time with practice.
+</Lesson_07>
+
+<Lesson_08>
+Next, we will learn how to create checkboxes using HTML attributes. For this, let's create a new page. So we will click this icon to open the File Explorer. And then to create a new file, we will click this icon. Let's call it attributes.html.
+
+And let's click this icon again to hide the File Explorer to have more space and focus on the code. Next, we will open the attributes.html file in Google Chrome. To do that, we will go to the folder that contains our website files, then right-click on the attributes.html that we just created,
+
+Open with Google Chrome. This opens our new web page, which is empty for now because we haven't written any code yet. So now let's add a checkbox to this page. To do that, first we will write left angle bracket input and right angle bracket.
+
+You already know that this is an input HTML element that creates a text field on our web page. And if we save and reload, we have a text field that we can fill in. Let me zoom in with CMD plus for Mac or CTRL plus for Windows to see it better. Now to create a checkbox instead of this text field, we will learn a new feature of HTML called Attributes.
+
+For that, we will place the cursor here, between the element's name and the right angle bracket. Then we will write space, type, equals. And VS Code adds this pair of quotes for us automatically. And inside the quotes, we will write checkbox. Make sure that you write it exactly as I have it here, otherwise it won't work.
+
+Now save, reload and just like that with this small change we turned a text field into a checkbox that we can click to check and uncheck. So this piece of code that we added to our input is quite powerful and is called an HTML attribute.
+
+An attribute configures an HTML element and can change how the element works. Attributes in HTML are just like the settings on your phone or computer that you can use to change how it works. And just like there are many different settings on your phone, there are many different HTML attributes we can use to configure HTML elements.
+</Lesson_08>
+
+<Lesson_09>
+This is the type HTML attribute. We use it to change an input from a text field to a checkbox. And there are many more input types available for us in HTML. To learn what input types we can use, let's go to google.com and search for HTML input types.
+
+And then we'll open this first w3schools link. As you can see, we have lots of different input types to choose from. Let's use the password input type to add a password input to our page. For that, we will add another input element and write left angle bracket input space type equals password.
+
+and a right angle bracket right after the ending quote. Save the file, go to our page, reload it, and now we have this text field that hides what I'm typing. The syntax for HTML attributes is straightforward. First goes the attribute name, then the equal sign. The equal sign separates the attribute name from the value we want to set.
+
+Then goes the actual value we want to set for that attribute. We surround that value with quotes. We can use double quotes, like here. Or we can use single quotes, like this. And it's gonna be valid HTML code that works.
+
+It's perfectly fine to use either double quotes or single quotes. But make sure that if you start an attribute's value with a single quote, you end it also with a single quote like here. And if you start with a double quote, you end it with a double quote too.
+
+Doing it like this or like this is valid. But if you use different quotes to start and end the value, then this is an invalid HTML. And if I save and reload, the input is gone. Let me undo the changes to make the code valid again.
+
+And also, if you are using single quotes, don't confuse them with backticks. Let me quickly show you the difference between the single quotes and the backticks. So these are the single quotes and these are the backticks.
+
+Using the single quotes is valid and using the backticks is not. And if I save and reload, the first password field that uses the single quotes works as expected and the second password field that uses the backticks doesn't work and it works like a regular text field.
+
+This is because when we set an invalid attribute type, the browser uses the default value, which is text. Okay, let's remove this invalid input. What also is important is that according to the HTML syntax, we must have at least one space before an attribute's name, like this. Because if I remove this space, it's impossible to tell here where is the element's name and where is the attribute.
+
+This becomes invalid HTML, and if we save and reload the page, the field disappears completely. So let me return the space here to make our HTML valid again. Save, reload, and the field is back.
+</Lesson_09>
+
+<Lesson_10>
+Next, we will learn another useful attribute we can add to our inputs. So to use that attribute, let's put the cursor here.
+
+And remember, we need to have at least one space before every attribute. So let's add space. Then goes the attribute name. We will write placeholder. And then equals. This code adds a pair of double quotes automatically for us. Then as a value here, we will write your password.
+
+Save. Reload. And now, inside this input, we have the text that we used as a value for the placeholder attribute. And this placeholder text is only displayed when there is nothing inside the password field. And the placeholder disappears as soon as we start typing. When we remove all the characters from the password field, the placeholder is visible again.
+
+We can set any text we want as the placeholder's value, and it will be displayed as the text placeholder inside the password field. So to practice that, let's remove this text and type in your password instead. Save, reload, and now this text is displayed here as the placeholder.
+
+and we will use the placeholder attribute for the search field in the Reddit clone project.
+
+The order in which we add attributes to our HTML elements doesn't matter. For example, if we move the placeholder attribute before the type attribute, save and reload, nothing changes. The placeholder is still here and the field still hides whatever we type. Just make sure that you have at least one space before every attribute and you'll be fine.
+
+Remember, when we added an input element like this, without any attributes, the browser displayed a regular text field on the page. So this input doesn't have any attributes, but still works as a text field.
+
+This is because in HTML certain attributes, like the type attribute, they have default values. And when we don't specify the type attribute for this input element explicitly, under the hood the browser adds the type attribute to the input anyway.
+
+And it uses the default value for the type attribute, which is text. So writing it like this is the same as writing it like this. If we save and reload, the text field is still here and we can type in whatever we want. And if we don't add this type text to the input, like this, the browser adds it automatically anyway.
+
+We didn't add type text to the inputs at the beginning of this tutorial because it's easier to start learning without it. But now that you know about attributes, I recommend always specifying type text when you add a text field. Doing so is considered best practice among developers because it's clearer and more consistent.
+
+Some HTML elements have their own unique attributes. For example, input elements can use the placeholder and the type attributes. But if we add these attributes to a paragraph, for example, the browser will just ignore them. So, for example, if we add a paragraph,
+
+and just copy and paste these attributes to this paragraph. Save. Reload. This is just a paragraph of text on the web page and the attributes, they are just ignored. So basically, they are useless to use with paragraphs. Let's remove them.
+
+The last important thing to know about HTML attributes is that we need to place all attributes in the opening tag. So for non-void elements like paragraphs, that would be here, and HTML does not allow attributes in the closing tags. If we add an attribute to a closing tag, the HTML will become invalid and won't work properly.
+
+For void elements like inputs, which only have an opening tag, we add attributes after the element's name.
+</Lesson_10>
+
+<Lesson_11>
+Now, before we get to the practice exercises, let's see what happens if we don't add the .html extension to our files. For that, we will open the file Explorer, right-click on this file, choose Rename,
+
+Remove .html and press Enter. Then we will go to the folder containing this file to open it in the browser. Right-click on the file, Open With, and the first thing that's changed, the Open with Google Chrome option is gone. To open the file in Chrome anyway, we can just drag it into Chrome.
+
+And now we can see the contents of this file as just plain text. No checkboxes, no paragraphs or text fields. Just plain text with all new lines we added. So, without the proper .html extension, the browser
+
+doesn't recognize the HTML code and shows the content of the file as plain text. And to fix this, we need to make sure that our file has the proper .html extension. Let's fix this. For that, we'll go to VS Code, right-click on the file and click Rename. And then we will add .html at the end of the file.
+
+And now, when we go to the folder containing our website's code and right-click on the file, open with, and the Google Chrome option is back. And when we open it with Google Chrome, the browser displays our file as a web page. So, if the browser shows your HTML code as plain text, make sure that this file has the proper .html extension.
+
+Now, before you continue to the practice exercises, let's go over what we've learned in this tutorial. This will help you to understand and remember the material better. You've learned that to create a web page, we create a file with the .html extension. And the web page is just a bunch of HTML elements and plain text. There are void HTML elements, like input, that contain only an opening tag.
+
+and also non-void elements that contain an opening tag, content, and a closing tag. We can add attributes inside an opening tag to configure an HTML element. You also learned that there are specific rules we need to stick to when we write HTML code. Those rules are called HTML syntax. If we follow the syntax, our HTML code works the way we want.
+
+If we break the syntax, our HTML code may not work at all or can produce the results we don't want. You also learned how to create text fields, checkboxes, and password fields by adding the type attribute to the input HTML element.
+
+You learned that the browser does not display new lines, and instead of many spaces and new lines, shows only one space. And if we want our elements to be on separate lines, we can use the paragraph HTML element.
+
+Then, you learned about child and parent elements. You learned that placing child elements inside parent elements is called nesting. And for better code readability, we indent child elements. By learning all this, you have created a good foundation for writing proper HTML code and learning more advanced topics in the next tutorial.
+</Lesson_11>
+
