@@ -1,0 +1,225 @@
+⭐️Question 1:
+What CSS property adds transparent space inside an element, around the content?
+
+1️⃣ Answer 1:
+margin
+😎Why:
+Why? Margin adds space outside the element, not inside.
+--
+
+2️⃣ ✅ Answer 2:
+padding
+😎Why:
+Why? Padding adds space between the content and the border inside the element.
+--
+
+3️⃣ Answer 3:
+width
+😎Why:
+Why? Width controls the size of the content area, not spacing around it.
+
+☁️DISCUSSED:
+Lesson 67
+
+##########
+
+⭐️Question 2:
+Which of the following is the correct order of values when setting padding on all four sides?
+
+1️⃣ ✅ Answer 1:
+Top, Right, Bottom, Left
+😎Why:
+Why? CSS shorthand values for padding follow a clockwise order starting from the top.
+--
+
+2️⃣ Answer 2:
+Left, Right, Top, Bottom
+😎Why:
+Why? That order does not follow the clockwise rule used in CSS.
+--
+
+3️⃣ Answer 3:
+Top, Left, Bottom, Right
+😎Why:
+Why? This order skips the clockwise rule and would confuse the browser.
+
+☁️DISCUSSED:
+Lesson 67
+
+##########
+
+⭐️Question 3:
+Which CSS property is best used to add empty space between two elements on a page?
+
+1️⃣ ✅ Answer 1:
+margin
+😎Why:
+Why? Margin creates space outside an element, separating it from others.
+--
+
+2️⃣ Answer 2:
+padding
+😎Why:
+Why? Padding creates space inside an element, not between elements.
+--
+
+3️⃣ Answer 3:
+border
+😎Why:
+Why? Border surrounds the element but doesn’t add spacing between elements.
+
+☁️DISCUSSED:
+Lesson 66
+
+##########
+
+⭐️Question 4:
+You want to make the content box of a paragraph wider. Which property should you use?
+
+1️⃣ Answer 1:
+padding
+😎Why:
+Why? Padding increases space around content but doesn’t change content width itself.
+--
+
+2️⃣ Answer 2:
+margin
+😎Why:
+Why? Margin affects space outside the element, not the element’s internal box.
+--
+
+3️⃣ ✅ Answer 3:
+width
+😎Why:
+Why? Width changes the size of the content box directly.
+
+☁️DISCUSSED:
+Lesson 66
+
+##########
+
+⭐️Question 5:
+Real-world scenario: You're styling a content box and want to space text away from the edges while adding a visible outline. Which properties do you need?
+
+1️⃣ ✅ Answer 1:
+padding and border
+😎Why:
+Why? Padding spaces the content from edges, border adds an outline.
+--
+
+2️⃣ Answer 2:
+margin and width
+😎Why:
+Why? Margin affects outer spacing; width changes content size, not edge spacing.
+--
+
+3️⃣ Answer 3:
+padding and margin
+😎Why:
+Why? Margin adds space outside; doesn’t add a visible outline like border does.
+
+☁️DISCUSSED:
+Lesson 66
+
+##########
+
+⭐️Question 6:
+Which of the following CSS properties is NOT related to the box model?
+
+1️⃣ Answer 1:
+border
+😎Why:
+Why? Border is one of the four main layers of the box model.
+--
+
+2️⃣ ✅ Answer 2:
+color
+😎Why:
+Why? Color changes text color, not layout or spacing.
+--
+
+3️⃣ Answer 3:
+padding
+😎Why:
+Why? Padding is a core part of the CSS box model.
+
+☁️DISCUSSED:
+Lesson 68
+
+##########
+
+⭐️Question 7:
+What happens when you set padding: 10px 20px;?
+
+1️⃣ Answer 1:
+Top and bottom get 20px, left and right get 10px
+😎Why:
+Why? That's incorrect order. First is top/bottom, second is left/right.
+--
+
+2️⃣ ✅ Answer 2:
+Top and bottom: 10px; Left and right: 20px
+😎Why:
+Why? Two-value padding syntax applies first to vertical, second to horizontal sides.
+--
+
+3️⃣ Answer 3:
+All sides get 15px
+😎Why:
+Why? Only one-value syntax applies equally to all sides, not two-value syntax.
+
+☁️DISCUSSED:
+Lesson 67
+
+##########
+
+⭐️Question 8:
+Which CSS syntax sets a border on only the top edge of an element?
+
+1️⃣ Answer 1:
+border
+😎Why:
+Why? border applies to all four edges unless otherwise specified.
+--
+
+2️⃣ ✅ Answer 2:
+border-top
+😎Why:
+Why? border-top targets only the top edge of the element.
+--
+
+3️⃣ Answer 3:
+border: top;
+😎Why:
+Why? This is not valid CSS syntax.
+
+☁️DISCUSSED:
+Lesson 68
+
+##########
+
+⭐️Question 9:
+Slightly challenging: Which CSS statement best describes how to set padding only on the top and right?
+
+1️⃣ Answer 1:
+padding: 10px 10px;
+😎Why:
+Why? This sets top/bottom and left/right—not only top and right.
+--
+
+2️⃣ ✅ Answer 2:
+padding-top: 10px; padding-right: 10px;
+😎Why:
+Why? This explicitly sets padding on just the top and right sides.
+--
+
+3️⃣ Answer 3:
+padding: top 10px, right 10px;
+😎Why:
+Why? That’s not valid CSS syntax for padding values.
+
+☁️DISCUSSED:
+Lesson 67
+
+##########
+

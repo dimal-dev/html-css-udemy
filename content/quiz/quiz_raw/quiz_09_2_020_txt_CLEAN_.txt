@@ -1,0 +1,175 @@
+⭐️Question 1:
+What’s one way to open Developer Tools on *any* website quickly?
+
+1️⃣ Answer 1:
+Go to browser settings and find "DevTools"
+😎Why:
+Why? That path works but it's slower and less practical than direct methods.
+--
+
+2️⃣ ✅ Answer 2:
+Right-click the page and choose "Inspect"
+😎Why:
+Why? Right-click + Inspect is a fast and effective way to open DevTools on any element.
+--
+
+3️⃣ Answer 3:
+Type “open tools” in the address bar
+😎Why:
+Why? This is not a valid browser command.
+
+☁️DISCUSSED:
+Lesson 63
+
+##########
+
+⭐️Question 2:
+Which Chrome shortcut activates the Inspect tool directly?
+
+1️⃣ Answer 1:
+Ctrl + Alt + I
+😎Why:
+Why? This shortcut opens DevTools, but not in Inspect mode.
+--
+
+2️⃣ ✅ Answer 2:
+Ctrl + Shift + C (or Command + Shift + C)
+😎Why:
+Why? This opens DevTools and enables the Inspect mode in one step.
+--
+
+3️⃣ Answer 3:
+Shift + Tab + C
+😎Why:
+Why? This isn't a valid shortcut for DevTools.
+
+☁️DISCUSSED:
+Lesson 63
+
+##########
+
+⭐️Question 3:
+What’s the purpose of the Inspect button (the small cursor icon in DevTools)?
+
+1️⃣ ✅ Answer 1:
+It allows you to click elements on the page to inspect them directly
+😎Why:
+Why? The Inspect tool links live page elements to their HTML/CSS in DevTools.
+--
+
+2️⃣ Answer 2:
+It copies an element’s color value to the clipboard
+😎Why:
+Why? You must use Computed tab or styles to find and copy color values.
+--
+
+3️⃣ Answer 3:
+It enables JavaScript editing
+😎Why:
+Why? Inspect mode focuses on HTML and CSS, not scripting.
+
+☁️DISCUSSED:
+Lesson 63
+
+##########
+
+⭐️Question 4:
+Where can you find the exact background color of a link using Developer Tools?
+
+1️⃣ Answer 1:
+Elements tab > HTML section
+😎Why:
+Why? The Elements tab shows structure, but not resolved styles like color.
+--
+
+2️⃣ ✅ Answer 2:
+Computed tab > Filter input: “background-color”
+😎Why:
+Why? Computed tab shows resolved styles and lets you filter to find exact values.
+--
+
+3️⃣ Answer 3:
+Console > Log background color
+😎Why:
+Why? Console allows custom scripts, but isn’t meant for direct style inspection.
+
+☁️DISCUSSED:
+Lesson 63
+
+##########
+
+⭐️Question 5:
+Slightly challenging: How would you get the RGB color of a hovered link without hovering manually?
+
+1️⃣ ✅ Answer 1:
+Use the Inspect button, select the link, check "hover", then view background-color in Computed tab
+😎Why:
+Why? This technique simulates hover and reveals the style applied in that state.
+--
+
+2️⃣ Answer 2:
+Click the link quickly and screenshot it
+😎Why:
+Why? This won’t show CSS properties—it’s a guess-and-check approach.
+--
+
+3️⃣ Answer 3:
+Disable JavaScript
+😎Why:
+Why? Hover styles are part of CSS and don’t depend on JavaScript.
+
+☁️DISCUSSED:
+Lesson 64
+
+##########
+
+⭐️Question 6:
+When you modify a web page with Developer Tools, who sees the changes?
+
+1️⃣ ✅ Answer 1:
+Only you, and only temporarily
+😎Why:
+Why? DevTools changes are local to your browser and disappear on reload or page exit.
+--
+
+2️⃣ Answer 2:
+Anyone who visits the same page
+😎Why:
+Why? The changes are not saved to the server or page source.
+--
+
+3️⃣ Answer 3:
+People on the same Wi-Fi network
+😎Why:
+Why? Local DevTools actions don’t broadcast changes to others.
+
+☁️DISCUSSED:
+Lesson 65
+
+##########
+
+⭐️Question 7:
+What happens to changes you made in DevTools after refreshing the page?
+
+1️⃣ Answer 1:
+They are permanently saved
+😎Why:
+Why? DevTools changes are not persistent—they reset with refresh.
+--
+
+2️⃣ ✅ Answer 2:
+They disappear and the page resets
+😎Why:
+Why? A refresh reloads the page’s original HTML/CSS from the server.
+--
+
+3️⃣ Answer 3:
+Only CSS resets, HTML remains
+😎Why:
+Why? Both HTML and CSS revert to original on reload.
+
+☁️DISCUSSED:
+Lesson 65
+
+##########
+

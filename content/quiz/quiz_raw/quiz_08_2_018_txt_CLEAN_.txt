@@ -1,0 +1,175 @@
+⭐️Question 1:
+Why should the :active pseudo-class be written after the :hover pseudo-class in your CSS?
+
+1️⃣ ✅ Answer 1:
+Because otherwise :hover will override :active styles
+😎Why:
+Why? CSS reads from top to bottom, so placing :active after ensures it applies correctly when clicking.
+--
+
+2️⃣ Answer 2:
+Because :hover doesn’t work if placed after :active
+😎Why:
+Why? :hover will still work if placed after; the issue is about overriding styles.
+--
+
+3️⃣ Answer 3:
+Because it’s required by the HTML standard
+😎Why:
+Why? It's a CSS convention for specificity and override control, not a strict standard.
+
+☁️DISCUSSED:
+Lesson 57
+
+##########
+
+⭐️Question 2:
+What’s the effect of changing the font-size of a link on hover?
+
+1️⃣ ✅ Answer 1:
+The text and background shrink proportionally
+😎Why:
+Why? When font-size decreases, the content and its padding shrink, reducing the visual size.
+--
+
+2️⃣ Answer 2:
+Only the text shrinks but the background stays the same
+😎Why:
+Why? Padding and content affect the background, so both shrink.
+--
+
+3️⃣ Answer 3:
+The link disappears on hover
+😎Why:
+Why? Font-size changes don’t make a link disappear unless it’s set to 0.
+
+☁️DISCUSSED:
+Lesson 58
+
+##########
+
+⭐️Question 3:
+What CSS property is used to animate a smooth change in size or color?
+
+1️⃣ Answer 1:
+animate
+😎Why:
+Why? animate is not a valid CSS property; the correct one is transition.
+--
+
+2️⃣ ✅ Answer 2:
+transition
+😎Why:
+Why? transition enables smooth changes between CSS states over time.
+--
+
+3️⃣ Answer 3:
+transform
+😎Why:
+Why? transform changes appearance instantly, but does not animate transitions.
+
+☁️DISCUSSED:
+Lesson 59
+
+##########
+
+⭐️Question 4:
+What happens if you put the transition property only in the :hover selector?
+
+1️⃣ Answer 1:
+The transition works in both directions
+😎Why:
+Why? It only applies when hovering in, not when leaving hover.
+--
+
+2️⃣ ✅ Answer 2:
+The element transitions smoothly on hover, but snaps back instantly
+😎Why:
+Why? Because transition is only present during hover, it doesn't apply when the cursor leaves.
+--
+
+3️⃣ Answer 3:
+The transition is applied permanently
+😎Why:
+Why? CSS pseudo-classes like :hover only apply temporarily during interaction.
+
+☁️DISCUSSED:
+Lesson 59
+
+##########
+
+⭐️Question 5:
+Which of the following transitions would affect both font-size and background-color?
+
+1️⃣ Answer 1:
+transition: color 0.5s;
+😎Why:
+Why? This only affects color, not font-size or background-color.
+--
+
+2️⃣ Answer 2:
+transition: all 0.5s;
+😎Why:
+Why? While this works, the lesson focuses on listing properties explicitly.
+--
+
+3️⃣ ✅ Answer 3:
+transition: font-size 0.5s, background-color 0.5s;
+😎Why:
+Why? This transition specifically targets font-size and background-color with timing for both.
+
+☁️DISCUSSED:
+Lesson 59
+
+##########
+
+⭐️Question 6:
+Diagnostic: Why might your transition not be visible after clicking a link?
+
+1️⃣ ✅ Answer 1:
+Because the page reloads immediately
+😎Why:
+Why? Clicking a link with href causes a page reload, interrupting any visual transition.
+--
+
+2️⃣ Answer 2:
+You used an RGB color instead of HEX
+😎Why:
+Why? Both formats work; it's not related to transitions being cut short.
+--
+
+3️⃣ Answer 3:
+The background color is set to white
+😎Why:
+Why? The background color being white doesn’t prevent a transition from occurring.
+
+☁️DISCUSSED:
+Lesson 59
+
+##########
+
+⭐️Question 7:
+Slightly challenging: You want the link to shrink slightly and change color smoothly on hover. What do you need?
+
+1️⃣ ✅ Answer 1:
+A hover rule changing font-size and background-color, plus a transition on the base selector
+😎Why:
+Why? The hover rule defines the changes, and the transition in the default rule makes them smooth.
+--
+
+2️⃣ Answer 2:
+Only a transition property inside the hover rule
+😎Why:
+Why? That would only animate the "in" state, not when the cursor leaves.
+--
+
+3️⃣ Answer 3:
+A hover rule with padding and color keywords only
+😎Why:
+Why? Padding and keywords don’t affect font-size or smoothness unless combined with transition.
+
+☁️DISCUSSED:
+Lesson 59
+
+##########
+

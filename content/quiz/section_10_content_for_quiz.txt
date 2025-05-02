@@ -1,0 +1,310 @@
+<Lessons for which I want you create quizzes>
+<Lesson 66>
+This is how the reddit clone project looks when we do not use the CSS box model and this is how it looks when we use the box model. In this tutorial we will learn how to use the box model in CSS so that we can apply it in the second part of the course for the reddit clone project.
+
+We start by creating a new folder for this tutorial in VS Code. Inside this folder, we'll create a new file and name it box-model.html. To learn the box model, we'll create a couple of paragraphs. Then we will apply CSS properties from the box model one by one to our paragraphs and see what happens. After that, we will explore every property in detail.
+
+Before we open our new file in the browser let's add background to our paragraphs to easily see their size. To do that we will create a style element and then we'll target our paragraphs using the tag selector and inside the curly brackets we will write background
+
+color let me increase the size of vs code and the value will be light sky blue so now we have two paragraphs on the page with some text and their background goes to the end of the line because paragraphs take up the whole width available
+
+And we already know that we can use the width property to change their width. So let's do that and change their width to, say, 150 pixels. And now we can hide the file explorer and resize VS Code to place it side by side with the browser.
+
+Next, we'll save the file and reload the page. And now our paragraphs width is 150 pixels. Next, we will add the padding property and we'll set it to 15 pixels. Save, reload. This adds some empty space around the content of our paragraphs that is filled with the background too.
+
+The third property we will add is gonna be border and we'll make it 5 pixels solid royal blue. Save, reload. And now we have this border around the paragraph. And the last property we will add for now will be margin. We will set it to 30 pixels. Save, reload. And now we have this extra empty space around paragraphs.
+
+I think we have prepared all we need to start exploring the box model and for that we will use the developer tools that we learned in the previous tutorial. So to open the developer tools let's use the keyboard shortcut command shift c for mac or ctrl shift c for windows and then click on the paragraph to inspect. I will resize the chrome window and zoom in
+
+for us to see better what's happening here. And then let's pin the developer tools to the right side to have more vertical space on the page. I will resize the browser window even more.
+
+Notice that because our paragraph is selected under the styles tab we can see the CSS rule we just wrote. Okay, make sure that the paragraph is selected and let's switch to the computed tab. The first thing we see here is actually the box model of our paragraph. So every element on the page is actually a box that has four layers.
+
+The content layer, it's where text and images appear. The padding layer is the space around the content. It's transparent and this is why we can see the background behind it. The border layer goes around the padding and content. And the margin layer goes after the border and it's the space outside the element. The margin is transparent just like the padding.
+
+So this blue rectangle in the center is for the content. The left value here is content width in pixels and the right value is content height in pixels. Notice that when we hover over here the browser simultaneously highlights the content area on the page. We change the size of the content area using the width and height CSS properties.
+
+We set the width of our paragraphs to 150 pixels in our code, and now it's 150 pixels here in the developer tools. If we add the height property in our code and set it to say 100 pixels,
+
+Now both paragraphs take up 100 pixels of vertical space. And it's also 100 pixels here in the developer tools. Okay, now our paragraphs a little bit too big. So I'm going to resize the developer tools and the browser window to fully see paragraphs.
+
+</Lesson 66>
+<Lesson 67>
+Next in the box model goes padding. Padding is the space around the content inside the element. We configure it using the padding property. When we set the padding property to 15 pixels like this, it adds 15 pixels padding from all sides to our paragraphs. But if we want, we can adjust padding for every side separately.
+
+To do that in our code we will write space 25 pixels space 40 pixels space 60 pixels. Save and reload the page.
+
+And now we have different padding for each side. Notice that when we hover over the padding here, the green padding area on the page that the developer tools highlights also takes up different amount of space for every side. So the first value here configures padding at the top.
+
+The second value is for padding to the right, the third value is for the bottom, and the fourth is for the left. You can memorize the order by imagining a clock. Start at the top, 12 o'clock, and move clockwise. Top, right, bottom, and left. And top, right, bottom, and left here.
+
+Though we can set different padding values for every side here but usually we use symmetrical values. This means that usually we have the same padding for the top and bottom and also for the right and left.
+
+So usually instead of having different padding like this, we have 15 pixels for the top and 15 pixels for the bottom, and also 25 pixels for the right and 25 pixels for the left. Save, reload, and now it's 15 and 15 for the top and bottom, and 25 and 25 for the right and left.
+
+And in this case we can remove these two values and leave only the first two. Writing it like this is the same as writing it like this because browser uses the first value for the top and bottom and
+
+The second value for the right and left. And now if we save and reload the page, nothing changes. We have 15 and 15 for the top and bottom and 25 and 25 for the right and left padding. And I will zoom out a little bit for our paragraphs to be completely visible on the page.
+
+Okay, sometimes we need to add padding to only one side. Let's learn how to do this. For that, we will remove the padding property to have no padding at all. Save, reload, and now the padding is blank here, and when we hover over it in the developer tools, nothing gets highlighted on the page.
+
+This means that now our paragraphs don't have padding. Okay, now let's add padding from the top. To do that, we can simply use another CSS property and it's called padding-top. We will set it to 20 pixels. Save, reload, and now we have the 20 pixels padding from the top. And the number also appears here at the top in the developer tools.
+
+In CSS there is a padding property like this for every side. For example, if we wanted to add 15 pixels padding from the right we can write padding right and 15 pixels, save, reload and now there is a 15 pixel padding from the right.
+
+The remaining properties are padding bottom, let's set it to 20 pixels and padding left, let's set it to 15 pixels. Save, reload, and now we have padding from all the sides. When we add padding like this using the individual properties, this is equal to adding padding like this.
+
+And it's going to be 20 pixels and 15 pixels for top and bottom and right and left. So when you need to configure padding from all sides, it's more common to use this shorthand property because it's much more concise than using individual properties. So let's remove these individual properties and leave the shorthand padding property.
+
+</Lesson 67>
+<Lesson 68>
+Next in the box model goes border. It surrounds the padding and content. The border is like the frame around the box. To set the border from all four sides we can use the border property and configure its thickness, style and color.
+
+So this creates this five pixel solid royal blue border from all four sides for our paragraphs. And according to CSS syntax rules, we need to separate each value here with a space. If we don't separate them with a space, for example, let me remove this space here, this CSS becomes invalid.
+
+And when we reload the page, the border disappears. Okay, let me put back the space here, save, reload, and the border is back. To set the color of our border we can use keywords like this.
+
+And just like with the text color and the background color, we can also use the RGB and hex. So to try this, let's remove this royal blue keyword and write RGB parentheses. And then to get the actual value for our color here, we will use
+
+So we'll Google color picker. And for the color, let's select some shade of purple and then copy its RGB value and paste it here inside the parentheses. Save, reload.
+
+And now the border is purple. Now let's try to use a hex color here instead. So to do this, let's select some blue color here and copy the hex value. Then we will remove
+
+the RGB color and paste the value we just copied. Save, reload, and the border is the shade of blue. If we want our border to be thinner, we can just decrease this number. Let's set it to 2 pixels. Save, reload, and now the border is thinner and it's 2 pixels wide.
+
+And this value in the middle, it configures the style of our border. Most of the time you will use the solid value to have this straight line border. There are a few more values that you can play with. I'm gonna list them on the screen.
+
+Try those values instead of the solid value and playing them on your own. To give you a taste, let me change the solid value to dotted. Save, reload, and now we have this dotted border instead of straight line. Okay, and let me put back the solid value. The border property adjusts border from all the sides.
+
+If we want to configure it for each side separately, just like with padding, we can use CSS properties for every side. To try this, let's remove this border property and set the border only at the top. To do that, we will write border-top
+
+And let's make it a three pixel solid royal blue border. Save, reload, and now there is this border only at the top. We can use different widths, styles, and colors for borders on every side. For example, we can add
+
+border-bottom and make it 2px solid blue. Save. Reload. And now there are two different borders for this paragraph. A quick side note. Usually when you're creating a website you will have a design for it in software like Photoshop, Figma or a reference website. And this is where you get these exact values and
+
+pixels and also styles and colors for your borders and all other elements and their CSS properties. Okay, try to add also borders to the left and the right sides here. Use an RGB color for the left border and a hex color for the right border.
+
+</Lesson 68>
+<Lesson 69>
+The last layer in the box model is the margin. Margin is the space outside of an element and it goes right after the border. Margin pushes other elements away. Like padding, margin doesn't have color, it is transparent. But unlike padding, the background doesn't spread to the margin.
+
+And also the developer tools use the shade of orange to highlight the margin on the page. We set the margin the same way as we set the padding, but we use the margin property for it. We can use one value here and it adds margin from all the sides. We can use two values. Let's set it to 20 pixels and also 40 pixels.
+
+Save, reload and this makes the top margin and the bottom margin 20 pixels and the right margin and the left margin 40 pixels. And just like with padding we can adjust the margin from each side separately. To do that we use four values here.
+
+the order is the same as with padding so the first value will be at the top margin let's set it to 20 pixels so the second value will be the right margin 20 pixels the third value is for the bottom margin and it's going to be
+
+30 pixels and the fourth value is for the left margin so 40 pixels. So top, right, bottom and left. Top, right, bottom and left. Now when we save and refresh the page the margin values are exactly the same as we put them in our code.
+
+And just like with paddings, we can also use individual properties to adjust margin from each side. So there is margin top, margin right, margin bottom, and margin left. One for each side. And we also use here values in pixels. Okay, I'll remove these.
+
+Now paragraph has its own margins by default. Let me show you. For that, I'll remove this property. And so now we don't set any margins explicitly in our CSS code for our paragraphs. And when we save and reload the page, there is still this empty space between the paragraphs.
+
+And in the box model, there is this 16 pixel margin at the top and bottom. So the browser adds these top and bottom margins of 16 pixels by default to all paragraphs. And for example, if we add the margin right property and we'll set it to say 20 pixels here, save, reload.
+
+Notice that it adds this 20 pixels margin from the right and doesn't change margin from the other sides and so the default margin of 16 pixels still applies. So if we want to change these default margins or override them
+
+We need to explicitly add the corresponding CSS properties for margin-top and let's set it to 30 pixels and for margin-bottom let's set it to 30 pixels too. Save, reload and now we have different margins for the top and bottom.
+
+</Lesson 69>
+<Lesson 70>
+Before we discuss one weird feature of margins, let me show you an amazing VS Code feature called autosave. For that, go to settings in VS Code and then search for the save keyword.
+
+And we are interested in this files autosave section. For some reason, by default, autosave is turned off, but we will change it from off to on focus change. This makes VS Code to save our file every time we go somewhere else, including when we go to Chrome to reload the page. Okay, let me show you how it works in action.
+
+For that we will change the margin bottom to 40 pixels. Notice that with this change now the circle appears after the file name and it tells us that there are some unsaved changes to the file. And usually after we did some changes we manually save the file but this time we won't.
+
+Instead, we'll just go to the Chrome browser, then reload the page. There is this bigger margin of 40 pixels. Notice that also the dot is gone in this code, which means that all the changes were saved. After a quick adjustment period, you will see how this autosave is much more convenient than saving files manually.
+
+</Lesson 70>
+<Lesson 71>
+margins have a weird behavior called margin collapsing. Notice that the first paragraph margin bottom is 40 pixels. And when we hover over it in the developer tools, it's 40 pixels and goes right until the second paragraph's border. So this 40 pixels margin takes up all the space, all the empty space between these paragraphs.
+
+but when we select the second paragraph we can see that its margin top is 30 pixels and so it looks like the bottom margin of the paragraph 1 and the top margin of the paragraph 2 overlap instead of pushing each other further away and so the total empty space between them is not the combined space from the bottom
+
+and top margins and so here instead of stacking up these margins overlap and the biggest margin which is the margin bottom of the first paragraph and it's 40 pixels it wins
+
+And this behavior, it's not intuitive. You would expect that the total space between these two paragraphs be 70 pixels. So 40 plus 30 pixels combined. But instead here we have less space. We have only the space from the biggest margin, which is 40 pixels. And this is called margin collapsing.
+
+This happens with margins of two HTML elements that don't have any content between them, like our two paragraphs. They don't have any content between them and their margins are overlapping or collapsing. But if we add even a single character of text between these two paragraphs and reload the page,
+
+Now we can see separate margins for each paragraph and if we remove the character so that there is no content between the paragraphs and then reload the page the margins are collapsing again and the biggest margin wins. So the total space or total margin space between the paragraphs are the space from the biggest margin which is 40 pixels.
+
+and margin-bottom in our case. And so to fix this if you want to have 70 pixels of space between these paragraphs you can either increase margin-top of the second paragraph to 70 pixels or margin-bottom of the first paragraph to 70 pixels.
+
+both margins will be still combined but the biggest one will win so for example if we want to have 70 pixels of free space between the paragraphs we can change the margin bottom of the first paragraph to 70 pixels and let me quickly show you what happens if we do this so we will add this class to the first paragraph and we will target
+
+it and then we'll add the margin bottom of 70 pixels to the first paragraph and when we reload the page there is now more space between the paragraphs and when we inspect the first paragraph its margin is exactly 70 pixels and notice how it takes all the space between the paragraphs
+
+And if we inspect the second paragraph, it's margin still 30 pixels. So both margins are still collapsing. And this is how you fix collapsed margins. You just increase one of them to the total amount of space you want between two elements. Okay, 70 pixels is too much for the padding here. So I'm going to undo the changes. And now it's back to 40 pixels.
+
+</Lesson 71>
+<Lesson 72>
+Now let's go to the next topic, which is incredibly important. First, let's clean up our code a little bit. For that, we will delete the width and height properties, reduce padding to five pixels from all the sides. And you will see a little bit later why we need two values here instead of one. Next, we will remove the bottom border.
+
+And we will change this one to affect all the sides. And let's make it two pixels wide. And then we will add the margin property and it's going to be five pixels from the top and bottom and also five pixels from the right.
+
+Next, let's add a couple of links to our page. The first one will be link 1 and the second one will be link 2. We will leave their href attributes empty so that we have less code to type because adding here actual URLs is not important for what we are about to discuss.
+
+And let's also add some background color to our links. For that, we will use color picker and select a shade of green. Let's use this one and copy the hex color and we will paste it here. And then we will go to the Chrome and reload the page.
+
+Now we have additionally these two links on our page. Okay, notice that each paragraph is on its own line and takes up the whole width available. And if we resize the browser window, the paragraph width grows and shrinks with the browser width. And the links, on the contrary, go one after another on the same line, like words in a sentence.
+
+and also each links only takes up as much width as its text and if we resize the window links don't change their width now paragraphs and links have these different behaviors because paragraphs are block elements and links are inline elements
+
+And a block element like a paragraph starts a new line and takes up the full width available. An inline element doesn't start a new line and only takes up as much width as necessary for its content. Almost all HTML elements are either block or inline.
+
+Now let's try to explicitly set the width and height for our paragraphs and also for our links. To do that we already know the width property and let's set it to 100 pixels and also the height property. Let's set it to 50 pixels.
+
+and let's copy and paste them for links too. So this sets the width and height of all paragraphs to 150 pixels and also this sets the width and height of all links on our page. Now let's go back to the browser and reload the page.
+
+Notice that this changes the size of our paragraphs but doesn't change the size of our links. This is because paragraphs are block elements and we can change the width and height of block elements using the width and height properties. But for inline elements, like links, we cannot explicitly set their width and height in CSS like this.
+
+Inline elements are as wide and as high as their content. This means that when we try to set the width and height of our links explicitly using these CSS properties, the browser simply ignores them and uses the link's content to regulate its size.
+
+and if we add more content to an align element, let's add this to our link and reload the page, now this link takes up more space because its content takes up more space. So remember that the width and height properties work for block
+
+elements and are ignored for inline elements, which means that we can remove these two properties here because they are useless for inline elements. Next, let's copy this padding from the paragraphs and paste them to the links CSS rule.
+
+And when we reload the page, our links have this 5-pixel padding from all sides. And also, when we added padding to our links, they pushed each other further horizontally, but didn't push vertically.
+
+Now to demonstrate you better what I mean, let's use the developer tools. Remember that we can change CSS properties in the developer tools and see the effect on the page right away. We will use this feature to change the padding of our links to see what happens. So first select any link here, then go to the styles tab and here we can see our CSS rule that we added to the page.
+
+Now let's change the padding for our links here and see what happens. We'll start from the second value. We can click on the value itself and then click again on the second value to place the cursor here. And for the numbers like this one, we can press
+
+the up and down keys on the keyboard to increase or decrease the value by one. So let's press up to increase it and this second value simultaneously increases the right and left padding and
+
+Notice, as we increase the right and left padding, it pushes both links away from each other horizontally. And if we decrease the left and right padding, the links move again because they have less padding on their sides.
+
+Now let's do the same but for the first value which sets the top and bottom padding. So let's click on it to place the cursor somewhere within the value and then we'll press the up key on the keyboard to increase it.
+
+This grows the top and bottom padding for our links. Notice that this time the padding area grows but the links don't move and they don't push any elements vertically. And the links background just starts overlapping the paragraphs.
+
+Now this happens because links are inline elements and for inline elements the top and bottom padding doesn't push any elements away. The horizontal padding though for inline elements pushes other elements away. Okay, let's reload the page to reset the padding values. Now for paragraphs, which are block elements, padding
+
+pushes elements from all sides. And so if we select a paragraph and increase its top and bottom padding, so I'm going to press the up key, notice that as the top and bottom padding grows, it pushes other elements away.
+
+</Lesson 72>
+<Lesson 73>
+Notice that as the top and bottom padding grows, it pushes other elements away. And this works the same for borders and margins. Now to check that, let's reload the page to reset the padding values. And then let's copy the margin and border properties from paragraphs and add them to links. Let's also change the border color for our links to red to better distinguish between the paragraphs
+
+and links borders. Let's go back to our page and reload it. Notice that now there is this red border around the links and also there is more horizontal space between the links but nothing has changed vertically. There is no additional space between the links and the paragraph.
+
+Now let's try to increase the border of our links and see what happens. For that we will select any of these links in the developer tools and then we will click on the two pixels here and we'll press the up key to increase the border. Notice that as the border grows it pushes the links away horizontally, but vertically it doesn't push anything. It just overlaps with paragraphs and that's it.
+
+So just like with padding, border works the same way for inline elements. The top and bottom borders are applied but don't push elements away. Now let's reload the page to reset. The same thing
+
+happens to margins. If we increase the right and left margins here, it creates more space between the links and pushes the links away. But when we increase the top and bottom margins, nothing happens. And for block elements, it's again more simple. Both borders and margins, just like paddings, push elements away horizontally and vertically.
+
+So if we increase the border here, notice that it pushes both paragraphs and links away as it grows. And it does this both vertically and horizontally. And also for margins, if we increase the vertical margins of our paragraphs, notice that it also pushes the other elements away.
+
+Okay, it's really not that complex as it might seem at first. Don't worry, with practice you'll master it. And now, to remember it better, let's recap what we've learned. Paragraphs are block elements. And block elements start a new line and take up the whole width available.
+
+We can use the Width and Height properties to change their size. The Padding, Border and Margin properties apply to block elements and push other elements away both horizontally, so from left and right, and vertically, so from top and bottom.
+
+Inline elements are like words in a sentence. They don't start a new line and use as much width and height as their content. The width and height properties do nothing to inline elements and are simply ignored. We can apply the padding, border and margin properties to inline elements.
+
+They work the same way for inline elements horizontally, so from left and right, as for paddings, so they push other elements away. But they don't push other elements away vertically. And let's reload the page to reset.
+
+</Lesson 73>
+<Lesson 74>
+Paragraphs, by default, are block elements, and links, by default, are inline elements. We can change that with CSS. So let's turn our paragraphs into inline elements. To do that, we will use a new property called display. Then to turn our paragraphs into inline elements, we'll just simply write inline.
+
+and so this will turn our paragraphs into inline elements and they will have all the features of inline elements and they will lose all the features of block elements so their top and bottom headings borders and margins won't push other elements away the width and height properties will stop to work and so let's reload the page and now our paragraphs just like proper inline
+
+elements go one after another. They don't start a new line and they don't push away other elements and this is why this link and this paragraph are overlapping. Okay, let's remove this property to make our paragraphs block elements again.
+
+And now let's use the display property to turn our links into block elements. So this will turn all the links on our page from inline to block and when we reload the page.
+
+Now, our links are block elements. And they start a new line, take up the whole width available by default, and their top and bottom padding, border, and margin work just like for paragraphs. It's sometimes useful to make our links into block elements when we're creating responsive websites that support mobile. And it's also useful for some navigation menus.
+
+</Lesson 74>
+<Lesson 75>
+The display property has one more value that combines together the best of block and inline elements. And it's inline-block. And because of this, now our links will be inline-block elements. Let's see what happens on the page.
+
+Okay, now that our links are inline block elements, this makes them just like inline elements to be on the same line. But also, just like block elements, they respect the top and bottom heading, border and margin, which means they push other elements away vertically. And so notice, there is this additional empty space between the links and this paragraph.
+
+Another feature that inline block elements inherit from block elements is that we can now use the width and height properties to change their size. Remember when we tried to change the size of our links when they were inline elements and it didn't work? Let's try to do this again as they are inline block elements now.
+
+So we will set the width to 80 pixels and height to 40 pixels and when we reload the page it works. So use the display inline block if you want your elements to be on the same line but also to respect the vertical padding border and margins and also the width and height properties.
+
+</Lesson 75>
+<Lesson 76>
+Now that we know how to use the box model and inline block elements, let's use this to create this login PayPal link. It has this border with round corners and different vertical and horizontal space inside. And when we hover over it, both the border and text changes its color.
+
+So let's create this link using what we've learned so far and I'll show you how to make round corners which is pretty easy to do. First we need to open paypal.com to use it as a reference for our button. Next let's create a new file in the tutorial folder
+
+and call it paypal-login.html. Then inside this file, we'll add an anchor element. Its text will be login. And to set the href attribute, let's click on the login link to open the actual login page. And then we'll click on the address bar and copy the URL of this page.
+
+Next, we'll paste this URL inside the href attribute. Okay, let's close the File Explorer to have more space in the editor here. And next, we will add a class to our link, and it's gonna be paypal-login.
+
+We will use this class to target our link from our CSS code. And to actually write some CSS code, let's add the style element. And then we will create an empty CSS rule to prepare for styling our link.
+
+So to copy this design, we will go over its properties and copy one by one. The first thing I notice here is that there is no line under the text. So let's remove it from our link too. In the previous tutorials, we learned that we do this with the text decoration property. And so we will add the text decoration property to our rule here.
+
+And to remove the line, we use the non-value. Reload the page. Good. Next, we can see that the color is different here. Let's find out the value for this text color with the developer tools. To do that, we will inspect this link. And for that, we'll use the shortcut Command-Shift-C for Mac and Control-Shift-C for Windows. And then we'll left-click on the link to inspect.
+
+If for any reason the shortcut doesn't work for you, just right click on the link and then select inspect. And I need a little bit more space for developer tools. So I'm going to resize the window to have that space.
+
+Okay, now that we have the login link selected in the developer tools, we will open the computed tab. And to get the color, we'll scroll down to the filter field. And we know that for the text color in CSS, we simply use the color property.
+
+So let's write color here to filter only the properties that contain the color word. Okay, there is a bunch of them here, and we will scroll down until we find the one that we want. And I'll resize this portion here.
+
+And now we can just simply copy the text color value for this link. And then in our code, we will add the color property and then paste the value we just copied. When we reload the page, now our link has the correct text color.
+
+</Lesson 76>
+<Lesson 77>
+Next, notice that when we hover over the link here, it changes its color. Let's get this color and make our link to use it on hover too. So to do this, in the previous tutorial, we learned that we need to make sure that the link is selected here. And then we'll go to the Styles tab and click on this colon hover button. And then we click this hover checkbox to activate the hover state for this link.
+
+Now that the link is in its hover state, we can get the text color we want. So we'll go to the computed tab, and then we'll find the color property and copy its value. Then we'll go back to VS Code and add another CSS rule that targets the hover state of our link. Then we'll add the color property to set text color to this different shade of blue.
+
+And now when we reload the page and hover over the link, it changes its text color just like the PayPal link does. Great, now let's turn off this hover state for the link because we don't need it anymore. What I also notice here is this border around the link that is of the same color as the text. So let's add this border to our link too.
+
+To do that, we know that we need to use the border property. The first value is for how thick the border is. Let's put two pixels here and adjust the value if we need to. And we add a space here to separate the values. And then we need to add the border style. And we'll use the solid value here to have this continuous single line border. Notice that I added the space again.
+
+And the last value will be the color of this border. And from what we can see here, the color of the border is the same as the color of the text. So we can simply copy this text color and paste it here. Don't forget to add the semicolon. And when we reload the page,
+
+Now our link has this border and I think it's thick enough as the border here and the color is correct too. Okay, let's resize our page to see both links.
+
+Next, notice that when we hover over the link here, the border also changes its color, just like the text. But the border of our link doesn't change its color on hover. Let's fix this. For that, we will change the border color on hover. So we will add the border property here, and it's going to be two pixels solid.
+
+And the color we will copy from the text color. And when we reload the page, now the border changes its color on hover too.
+
+</Lesson 77>
+<Lesson 78>
+Next, notice that the link has this extra free space on the sides and also above and below the text. We already know that to create this space between the content and the border, we use the padding property.
+
+And now that we know how to use the developer tools to check the box model of an element, let's just use the developer tools to get the exact padding values for this link. So for that, make sure that the link is selected and then go to the computed tab. Next, we will scroll up to find the box model and
+
+there they are, the exact padding values that we want. So we need to add 5 pixels of padding from the top and bottom and also 16 pixels of padding from the right and left. And also notice that the values are symmetrical, so 5 and 16.
+
+And to add padding to our link, we can use the padding property. The first value will be 5 pixels for the top and bottom padding. And the second value will be 16 pixels for the right and left padding.
+
+And now when we reload the page, there is this extra space around the content. Next, let's make round corners for these borders, just like they are here. To do that, we will learn a new property and it's called border radius.
+
+And let's set it to five pixels and see what happens in the browser. So when we reload the page, the corners are slightly round here. Now let's try to increase this value to say 10 pixels. And this makes the corners a little bit more round.
+
+So the bigger the value here, the more round corners we get. Okay, let's try to increase it to 16 pixels and reload. And it looks good to me. Next, notice that the sling has more empty space above than ours.
+
+And we already know that we use margin to add empty space outside an element. We need more empty space from the top here. So let's use the margin top property and let's set it to say 10 pixels. And when we reload the page,
+
+Nothing happens. This is because, remember, our link is an inline element by default. And so the top margin does nothing for inline elements. And to fix that, we can make our link into an inline block element instead.
+
+So for that we'll use the display property and the value will be inline-block and reload. Great! Now the top margin applies and there is this space above the element which I think it's a little bit too much.
+
+So let's decrease this margin to say five pixels. Okay, maybe a little bit more. So four pixels. Okay, good. The next thing I noticed about this link is that the text is bolder than ours. So let's also add
+
+weight property and set it to bold to make our text bold. And it looks like the text here is a little bit smaller than ours. We already know that to adjust the size of our text, we use the font size property. And let's set it to say 15 pixels. Reload and it is better.
+
+So to me it looks like the text size is correct. Now the last thing you might notice is that the font of the text itself on the PayPal page looks different than the text on our page. And this is because PayPal uses their own custom font for their text. We haven't learned how to change the font of our text yet,
+
+but we will in the future tutorials. We won't explore it in detail right now and we'll just try to make our text to look more similar to this one and for that we will add another CSS property called font
+
+family. This is a powerful property and we can do a lot of fancy stuff with it. But here let's just write Sans Serif. This will make our text to use any Sans Serif font that is available on our computer and
+
+Now, when we reload the page, our text looks quite similar to the one on the PayPal page. And now that we changed the font family, I think our text is bigger than the text on the PayPal page. So let's decrease its font size to 14 pixels and reload the page. Perfect.
+
+And there you go, we have created and styled the same login link as on the PayPal web page. And if we click our link, we open the PayPal login page.
+
+</Lesson 78>
+</Lessons for which I want you create quizzes>

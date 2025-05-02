@@ -1,0 +1,225 @@
+⭐️Question 1:
+What does the CSS property "background-color" do?
+
+1️⃣ ✅ Answer 1:
+It sets the background color behind an element’s content.
+😎Why:
+Why? "background-color" defines the color that fills the space behind an HTML element’s content.
+--
+
+2️⃣ Answer 2:
+It changes the color of the element’s border.
+😎Why:
+Why? The border color is controlled by "border-color", not "background-color".
+--
+
+3️⃣ Answer 3:
+It changes the text color inside an element.
+😎Why:
+Why? Text color is set using the "color" property, not "background-color".
+
+☁️DISCUSSED:
+Lesson 54
+
+##########
+
+⭐️Question 2:
+What happens if a link’s text color and background color are both white?
+
+1️⃣ Answer 1:
+The link becomes bolder and easier to read.
+😎Why:
+Why? Identical text and background colors make the link invisible, not more readable.
+--
+
+2️⃣ ✅ Answer 2:
+The link becomes invisible unless you hover or select it.
+😎Why:
+Why? With the same color for text and background, the content is hidden visually.
+--
+
+3️⃣ Answer 3:
+The browser automatically adds a border for contrast.
+😎Why:
+Why? Browsers don’t add borders by default; styling is controlled by your CSS.
+
+☁️DISCUSSED:
+Lesson 54
+
+##########
+
+⭐️Question 3:
+Which pseudoclass is used to style a link when it’s hovered over?
+
+1️⃣ Answer 1:
+:click
+😎Why:
+Why? ":click" isn’t a valid CSS pseudoclass. The correct one is ":hover".
+--
+
+2️⃣ ✅ Answer 2:
+:hover
+😎Why:
+Why? ":hover" targets the element when a mouse is placed over it.
+--
+
+3️⃣ Answer 3:
+:visited
+😎Why:
+Why? ":visited" applies styles to links the user has already clicked.
+
+☁️DISCUSSED:
+Lesson 55
+
+##########
+
+⭐️Question 4:
+Which of these is a valid RGB color declaration in CSS?
+
+1️⃣ ✅ Answer 1:
+rgb(176, 28, 151)
+😎Why:
+Why? This syntax correctly uses "rgb()" with comma-separated values.
+--
+
+2️⃣ Answer 2:
+RGB:176-28-151
+😎Why:
+Why? The correct format uses lowercase "rgb" and parentheses, not colon and dashes.
+--
+
+3️⃣ Answer 3:
+(176,28,151)
+😎Why:
+Why? The function must include the "rgb" keyword before the parentheses.
+
+☁️DISCUSSED:
+Lesson 56
+
+##########
+
+⭐️Question 5:
+Which of these color formats provides the highest flexibility?
+
+1️⃣ Answer 1:
+Color keywords (e.g., red, blue)
+😎Why:
+Why? Keywords are limited (~150 options). RGB/HEX allows 16+ million colors.
+--
+
+2️⃣ Answer 2:
+Background presets
+😎Why:
+Why? CSS doesn’t have built-in “background presets”—you must define colors manually.
+--
+
+3️⃣ ✅ Answer 3:
+RGB and HEX formats
+😎Why:
+Why? RGB and HEX offer full-spectrum color control with 16+ million options.
+
+☁️DISCUSSED:
+Lesson 57
+
+##########
+
+⭐️Question 6:
+Which color format uses a hash symbol (#) before the color code?
+
+1️⃣ Answer 1:
+RGB
+😎Why:
+Why? RGB uses the syntax rgb(…), not the hash symbol.
+--
+
+2️⃣ ✅ Answer 2:
+HEX
+😎Why:
+Why? Hexadecimal color codes always start with # followed by six alphanumeric characters.
+--
+
+3️⃣ Answer 3:
+CMYK
+😎Why:
+Why? CMYK is not a format used in standard CSS.
+
+☁️DISCUSSED:
+Lesson 55
+
+##########
+
+⭐️Question 7:
+You want to create a button with a background that changes when clicked. Which pseudoclass should you use?
+
+1️⃣ ✅ Answer 1:
+:active
+😎Why:
+Why? ":active" targets elements while they are being clicked.
+--
+
+2️⃣ Answer 2:
+:focus
+😎Why:
+Why? ":focus" applies when an element gains keyboard or mouse focus—not clicks.
+--
+
+3️⃣ Answer 3:
+:pressed
+😎Why:
+Why? ":pressed" is not a valid CSS pseudoclass.
+
+☁️DISCUSSED:
+Lesson 56
+
+##########
+
+⭐️Question 8:
+Why would a color not appear even though you set it using RGB numbers?
+
+1️⃣ Answer 1:
+Because RGB is not supported in browsers
+😎Why:
+Why? All modern browsers support RGB. It’s likely a syntax issue.
+--
+
+2️⃣ ✅ Answer 2:
+Because you forgot to include "rgb()" around the numbers
+😎Why:
+Why? Without "rgb()", the values are treated as invalid by the browser.
+--
+
+3️⃣ Answer 3:
+Because commas are not allowed in RGB
+😎Why:
+Why? Commas are required in RGB format to separate red, green, and blue values.
+
+☁️DISCUSSED:
+Lesson 56
+
+##########
+
+⭐️Question 9:
+Real-life scenario: You want a button to be dark blue by default, turn bright blue on hover, and light blue when clicked. What’s the best way to code this?
+
+1️⃣ ✅ Answer 1:
+Use three CSS rules: one normal, one with :hover, and one with :active, each with a different background-color
+😎Why:
+Why? This method lets you set different colors for each interaction state.
+--
+
+2️⃣ Answer 2:
+Apply one background-color in a single CSS rule
+😎Why:
+Why? That would set only one color, not different ones for hover and click.
+--
+
+3️⃣ Answer 3:
+Set a color animation in HTML
+😎Why:
+Why? Color animations should be done with CSS, not inline HTML.
+
+☁️DISCUSSED:
+Lesson 56
+
+##########
+

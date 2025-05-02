@@ -1,0 +1,182 @@
+<lessons the quizz covers>
+    Lesson 63
+    Lesson 64
+    Lesson 65
+</lessons the quizz covers>
+<Insert after>
+    Lesson 65
+</Insert after>
+<Quizz Title>
+    Inspect Like a Pro
+</Quizz Title>
+<Quizz description>
+    You’ve learned to inspect, modify, and emulate — now prove what you know!
+</Quizz description>
+
+<Question 1>
+    <Description>
+        What’s one way to open Developer Tools on *any* website quickly?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>Go to browser settings and find "DevTools"</Content>
+        <Explanation>Why? That path works but it's slower and less practical than direct methods.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>Right-click the page and choose "Inspect"</Content>
+        <Explanation>Why? Right-click + Inspect is a fast and effective way to open DevTools on any element.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>Type “open tools” in the address bar</Content>
+        <Explanation>Why? This is not a valid browser command.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 63
+    </Where discussed>
+</Question 1>
+
+<Question 2>
+    <Description>
+        Which Chrome shortcut activates the Inspect tool directly?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>Ctrl + Alt + I</Content>
+        <Explanation>Why? This shortcut opens DevTools, but not in Inspect mode.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>Ctrl + Shift + C (or Command + Shift + C)</Content>
+        <Explanation>Why? This opens DevTools and enables the Inspect mode in one step.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>Shift + Tab + C</Content>
+        <Explanation>Why? This isn't a valid shortcut for DevTools.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 63
+    </Where discussed>
+</Question 2>
+
+<Question 3>
+    <Description>
+        What’s the purpose of the Inspect button (the small cursor icon in DevTools)?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>It allows you to click elements on the page to inspect them directly</Content>
+        <Explanation>Why? The Inspect tool links live page elements to their HTML/CSS in DevTools.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>It copies an element’s color value to the clipboard</Content>
+        <Explanation>Why? You must use Computed tab or styles to find and copy color values.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>It enables JavaScript editing</Content>
+        <Explanation>Why? Inspect mode focuses on HTML and CSS, not scripting.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 63
+    </Where discussed>
+</Question 3>
+
+<Question 4>
+    <Description>
+        Where can you find the exact background color of a link using Developer Tools?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>Elements tab > HTML section</Content>
+        <Explanation>Why? The Elements tab shows structure, but not resolved styles like color.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>Computed tab > Filter input: “background-color”</Content>
+        <Explanation>Why? Computed tab shows resolved styles and lets you filter to find exact values.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>Console > Log background color</Content>
+        <Explanation>Why? Console allows custom scripts, but isn’t meant for direct style inspection.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 63
+    </Where discussed>
+</Question 4>
+
+<Question 5>
+    <Description>
+        Slightly challenging: How would you get the RGB color of a hovered link without hovering manually?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>Use the Inspect button, select the link, check "hover", then view background-color in Computed tab</Content>
+        <Explanation>Why? This technique simulates hover and reveals the style applied in that state.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>Click the link quickly and screenshot it</Content>
+        <Explanation>Why? This won’t show CSS properties—it’s a guess-and-check approach.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>Disable JavaScript</Content>
+        <Explanation>Why? Hover styles are part of CSS and don’t depend on JavaScript.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 64
+    </Where discussed>
+</Question 5>
+
+<Question 6>
+    <Description>
+        When you modify a web page with Developer Tools, who sees the changes?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>Only you, and only temporarily</Content>
+        <Explanation>Why? DevTools changes are local to your browser and disappear on reload or page exit.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>Anyone who visits the same page</Content>
+        <Explanation>Why? The changes are not saved to the server or page source.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>People on the same Wi-Fi network</Content>
+        <Explanation>Why? Local DevTools actions don’t broadcast changes to others.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 65
+    </Where discussed>
+</Question 6>
+
+<Question 7>
+    <Description>
+        What happens to changes you made in DevTools after refreshing the page?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>They are permanently saved</Content>
+        <Explanation>Why? DevTools changes are not persistent—they reset with refresh.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>They disappear and the page resets</Content>
+        <Explanation>Why? A refresh reloads the page’s original HTML/CSS from the server.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>Only CSS resets, HTML remains</Content>
+        <Explanation>Why? Both HTML and CSS revert to original on reload.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 65
+    </Where discussed>
+</Question 7>

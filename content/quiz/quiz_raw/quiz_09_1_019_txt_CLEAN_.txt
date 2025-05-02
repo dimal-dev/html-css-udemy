@@ -1,0 +1,150 @@
+⭐️Question 1:
+What is the name of the built-in browser tool used to inspect and modify HTML and CSS?
+
+1️⃣ ✅ Answer 1:
+Developer Tools
+😎Why:
+Why? Developer Tools is the Chrome feature used to inspect and interact with the page's HTML and CSS.
+--
+
+2️⃣ Answer 2:
+Debugger Panel
+😎Why:
+Why? Debugger Panel is just one tab inside Developer Tools, not the full toolset.
+--
+
+3️⃣ Answer 3:
+Inspector Window
+😎Why:
+Why? Inspector Window is a generic term; the actual tool in Chrome is called Developer Tools.
+
+☁️DISCUSSED:
+Lesson 60
+
+##########
+
+⭐️Question 2:
+Which tab in Developer Tools lets you explore the page's HTML structure?
+
+1️⃣ Answer 1:
+Console
+😎Why:
+Why? The Console tab is for running JavaScript and viewing logs, not HTML structure.
+--
+
+2️⃣ ✅ Answer 2:
+Elements
+😎Why:
+Why? The Elements tab displays and lets you interact with the HTML elements of the page.
+--
+
+3️⃣ Answer 3:
+Sources
+😎Why:
+Why? The Sources tab is for viewing loaded files, not HTML element structure.
+
+☁️DISCUSSED:
+Lesson 60
+
+##########
+
+⭐️Question 3:
+What happens when you hover over an HTML element in the Elements tab?
+
+1️⃣ Answer 1:
+The element is removed
+😎Why:
+Why? Hovering highlights the element visually—it doesn’t remove it.
+--
+
+2️⃣ Answer 2:
+It opens the Styles tab
+😎Why:
+Why? Hovering doesn’t switch tabs—it highlights the element on the page.
+--
+
+3️⃣ ✅ Answer 3:
+The element is highlighted on the page
+😎Why:
+Why? Hovering shows a blue overlay on the live page, so you can see where the element is.
+
+☁️DISCUSSED:
+Lesson 60
+
+##########
+
+⭐️Question 4:
+What is the effect of using “Edit as HTML” on a selected element?
+
+1️⃣ ✅ Answer 1:
+It lets you modify the HTML code directly
+😎Why:
+Why? “Edit as HTML” opens an in-place editor to let you change the element’s HTML.
+--
+
+2️⃣ Answer 2:
+It shows the CSS styles applied
+😎Why:
+Why? CSS styles appear in the Styles tab, not during HTML editing.
+--
+
+3️⃣ Answer 3:
+It disables the element temporarily
+😎Why:
+Why? There’s no disabling function in Edit as HTML—it’s strictly for code editing.
+
+☁️DISCUSSED:
+Lesson 60
+
+##########
+
+⭐️Question 5:
+What happens when you uncheck a CSS property in the Styles tab?
+
+1️⃣ Answer 1:
+The page reloads
+😎Why:
+Why? Unchecking a property doesn’t reload the page—it disables that CSS rule temporarily.
+--
+
+2️⃣ ✅ Answer 2:
+The property is disabled temporarily
+😎Why:
+Why? Unchecking turns off the property visually while keeping it available to re-enable.
+--
+
+3️⃣ Answer 3:
+The element is deleted
+😎Why:
+Why? CSS changes don’t remove elements—they only affect appearance.
+
+☁️DISCUSSED:
+Lesson 61
+
+##########
+
+⭐️Question 6:
+Slightly challenging: What CSS property would you add to make a paragraph’s text larger using Developer Tools?
+
+1️⃣ ✅ Answer 1:
+font-size: 25px;
+😎Why:
+Why? This sets the font size explicitly and was demonstrated in the tutorial.
+--
+
+2️⃣ Answer 2:
+text-align: center;
+😎Why:
+Why? That centers text but doesn’t affect size.
+--
+
+3️⃣ Answer 3:
+line-height: 2em;
+😎Why:
+Why? Line-height changes spacing between lines, not the text size itself.
+
+☁️DISCUSSED:
+Lesson 61
+
+##########
+

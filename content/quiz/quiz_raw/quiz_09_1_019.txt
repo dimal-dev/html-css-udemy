@@ -1,0 +1,158 @@
+<lessons the quizz covers>
+    Lesson 60
+    Lesson 61
+    Lesson 62
+</lessons the quizz covers>
+<Insert after>
+    Lesson 62
+</Insert after>
+<Quizz Title>
+    Developer Tools Mastery Checkpoint
+</Quizz Title>
+<Quizz description>
+    Test your new superpowers with Chrome Developer Tools and reinforce what you just learned!
+</Quizz description>
+
+<Question 1>
+    <Description>
+        What is the name of the built-in browser tool used to inspect and modify HTML and CSS?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>Developer Tools</Content>
+        <Explanation>Why? Developer Tools is the Chrome feature used to inspect and interact with the page's HTML and CSS.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>Debugger Panel</Content>
+        <Explanation>Why? Debugger Panel is just one tab inside Developer Tools, not the full toolset.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>Inspector Window</Content>
+        <Explanation>Why? Inspector Window is a generic term; the actual tool in Chrome is called Developer Tools.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 60
+    </Where discussed>
+</Question 1>
+
+<Question 2>
+    <Description>
+        Which tab in Developer Tools lets you explore the page's HTML structure?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>Console</Content>
+        <Explanation>Why? The Console tab is for running JavaScript and viewing logs, not HTML structure.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>Elements</Content>
+        <Explanation>Why? The Elements tab displays and lets you interact with the HTML elements of the page.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>Sources</Content>
+        <Explanation>Why? The Sources tab is for viewing loaded files, not HTML element structure.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 60
+    </Where discussed>
+</Question 2>
+
+<Question 3>
+    <Description>
+        What happens when you hover over an HTML element in the Elements tab?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>The element is removed</Content>
+        <Explanation>Why? Hovering highlights the element visually—it doesn’t remove it.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>It opens the Styles tab</Content>
+        <Explanation>Why? Hovering doesn’t switch tabs—it highlights the element on the page.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>Yes</Is Correct>
+        <Content>The element is highlighted on the page</Content>
+        <Explanation>Why? Hovering shows a blue overlay on the live page, so you can see where the element is.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 60
+    </Where discussed>
+</Question 3>
+
+<Question 4>
+    <Description>
+        What is the effect of using “Edit as HTML” on a selected element?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>It lets you modify the HTML code directly</Content>
+        <Explanation>Why? “Edit as HTML” opens an in-place editor to let you change the element’s HTML.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>It shows the CSS styles applied</Content>
+        <Explanation>Why? CSS styles appear in the Styles tab, not during HTML editing.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>It disables the element temporarily</Content>
+        <Explanation>Why? There’s no disabling function in Edit as HTML—it’s strictly for code editing.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 60
+    </Where discussed>
+</Question 4>
+
+<Question 5>
+    <Description>
+        What happens when you uncheck a CSS property in the Styles tab?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>The page reloads</Content>
+        <Explanation>Why? Unchecking a property doesn’t reload the page—it disables that CSS rule temporarily.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>The property is disabled temporarily</Content>
+        <Explanation>Why? Unchecking turns off the property visually while keeping it available to re-enable.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>The element is deleted</Content>
+        <Explanation>Why? CSS changes don’t remove elements—they only affect appearance.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 61
+    </Where discussed>
+</Question 5>
+
+<Question 6>
+    <Description>
+        Slightly challenging: What CSS property would you add to make a paragraph’s text larger using Developer Tools?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>font-size: 25px;</Content>
+        <Explanation>Why? This sets the font size explicitly and was demonstrated in the tutorial.</Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>text-align: center;</Content>
+        <Explanation>Why? That centers text but doesn’t affect size.</Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>line-height: 2em;</Content>
+        <Explanation>Why? Line-height changes spacing between lines, not the text size itself.</Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 61
+    </Where discussed>
+</Question 6>

@@ -1,0 +1,386 @@
+<lessons the quizz covers>
+  Lesson 75
+  Lesson 76
+  Lesson 77
+</lessons the quizz covers>
+<Insert after>
+  Lesson 77
+</Insert after>
+<Quizz Title>
+  Build the Button: Styling Like PayPal!
+</Quizz Title>
+<Quizz Title>
+  Your First Real-World Styling Mission!
+</Quizz Title>
+<Quizz Title>
+  Apply What You Know: From Inline-Block to Hover Effects!
+</Quizz Title>
+<Quizz description>
+  Put your styling skills to the test with this hands-on quiz about creating and customizing a real-world PayPal login link!
+</Quizz description>
+<Quizz description>
+  Let’s reinforce how to combine CSS properties to create a modern, responsive, clickable element like PayPal’s login button!
+</Quizz description>
+<Quizz description>
+  Time to prove you can style like a pro—test your skills on inline-block display, borders, hover states, and more!
+</Quizz description>
+
+<Question 1>
+  <Description>
+    Which display value allows an element to appear inline while respecting width, height, padding, and margin?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>inline</Content>
+    <Explanation>Why? Inline elements ignore width and height and don’t fully respect vertical padding or margin.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>inline-block</Content>
+    <Explanation>Why? Inline-block elements stay on the same line but behave like blocks in terms of layout control.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>block</Content>
+    <Explanation>Why? Block elements take up full width and start on a new line.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 75
+  </Where discussed>
+</Question 1>
+
+<Question 2>
+  <Description>
+    What’s the first step to style a PayPal-like login link in your HTML?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>Use a <button> tag and add color</Content>
+    <Explanation>Why? The tutorial specifically starts by adding a styled <a> tag, not a button.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Create a <div> with background</Content>
+    <Explanation>Why? The component being built is a link (<a>), not a div container.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>Add an <a> tag with a class for styling</Content>
+    <Explanation>Why? The tutorial creates an <a> element with a class like “paypal-login” for custom styling.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 76
+  </Where discussed>
+</Question 2>
+
+<Question 3>
+  <Description>
+    Which CSS property is used to remove the underline from a link?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>font-style</Content>
+    <Explanation>Why? Font-style changes things like italic, not text decoration.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>text-decoration: none</Content>
+    <Explanation>Why? This removes the underline that appears by default on <a> elements.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>line-height</Content>
+    <Explanation>Why? Line-height changes spacing between lines, not underlines.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 76
+  </Where discussed>
+</Question 3>
+
+<Question 4>
+  <Description>
+    What’s the correct order for the values in the border shorthand?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Width, style, color</Content>
+    <Explanation>Why? That’s the required CSS order for the border shorthand: e.g. 2px solid blue.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Color, style, width</Content>
+    <Explanation>Why? CSS expects width first—this order will not work.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Style, width, color</Content>
+    <Explanation>Why? While logical, this is not valid CSS shorthand syntax for borders.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 76
+  </Where discussed>
+</Question 4>
+
+<Question 5>
+  <Description>
+    Which method was used to get the exact color of PayPal’s text for styling?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>Manually guessed the hex code</Content>
+    <Explanation>Why? The tutorial uses Chrome’s developer tools to inspect the element directly.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>Inspected the element in Chrome Developer Tools</Content>
+    <Explanation>Why? Inspecting the computed styles reveals the exact color being used on the real PayPal link.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Used a color filter extension</Content>
+    <Explanation>Why? No browser extensions were used in the tutorial—just built-in DevTools.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 76
+  </Where discussed>
+</Question 5>
+
+<Question 6>
+  <Description>
+    Which CSS pseudo-class is used to change styles when a user hovers over a link?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>:visited</Content>
+    <Explanation>Why? :visited targets links that have been clicked before, not hover behavior.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>:active</Content>
+    <Explanation>Why? :active applies when the element is clicked, not hovered.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>:hover</Content>
+    <Explanation>Why? :hover activates when the user’s cursor is over the element.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 77
+  </Where discussed>
+</Question 6>
+
+<Question 7>
+  <Description>
+    Diagnostic: Student’s hover color change works for text but not the border. What’s likely missing?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>They used a span instead of an anchor</Content>
+    <Explanation>Why? The element type doesn’t affect whether the border is styled.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>They forgot the !important flag</Content>
+    <Explanation>Why? The tutorial doesn’t use !important and it’s not needed here.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>They didn’t set border color in the hover rule</Content>
+    <Explanation>Why? The border doesn’t change unless you explicitly include the border or border-color in the hover state.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 77
+  </Where discussed>
+</Question 7>
+
+<Question 8>
+  <Description>
+    In the tutorial, how was the padding for the PayPal-style link determined?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>It was guessed based on appearance</Content>
+    <Explanation>Why? The exact values were checked using the box model in developer tools.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>It was retrieved from the box model in the computed tab</Content>
+    <Explanation>Why? The developer tools’ box model shows the exact padding values for any selected element.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>It was copied from a style guide PDF</Content>
+    <Explanation>Why? No external documents were used—only browser inspection tools.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 78
+  </Where discussed>
+</Question 8>
+
+<Question 9>
+  <Description>
+    What’s the purpose of border-radius?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>To make text bold</Content>
+    <Explanation>Why? Text boldness is set using the font-weight property.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>To round the corners of an element’s border</Content>
+    <Explanation>Why? Border-radius curves the corners of an element’s border box.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>To increase padding around the content</Content>
+    <Explanation>Why? Padding is a separate box model property—border-radius only affects corners.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 78
+  </Where discussed>
+</Question 9>
+
+<Question 10>
+  <Description>
+    If your top margin on a link isn’t working, what’s most likely the problem?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>You need to increase the margin value</Content>
+    <Explanation>Why? Increasing the value won’t help if the margin is ignored due to display type.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>The link is still an inline element</Content>
+    <Explanation>Why? Inline elements don’t respect vertical margin—switching to inline-block fixes it.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>You forgot to reload the browser</Content>
+    <Explanation>Why? Reloading is good practice, but the issue here is the display behavior of inline elements.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 78
+  </Where discussed>
+</Question 10>
+
+<Question 11>
+  <Description>
+    Real-world: You want a login button that changes both text and border color on hover. What should you do?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>Style the button with :active instead of :hover</Content>
+    <Explanation>Why? :active only applies when the button is clicked, not hovered.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>Use :hover and specify both color and border in the hover rule</Content>
+    <Explanation>Why? You must include both properties to see both effects when hovering.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Apply display: none on hover</Content>
+    <Explanation>Why? That would hide the button—not create a hover effect.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 77
+  </Where discussed>
+</Question 11>
+
+<Question 12>
+  <Description>
+    What does the font-family property do?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Sets the typeface of the text</Content>
+    <Explanation>Why? Font-family defines which font or fallback fonts are used to render the text.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Changes the font size</Content>
+    <Explanation>Why? Font size is controlled by the font-size property, not font-family.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Makes the text bold</Content>
+    <Explanation>Why? Use font-weight to make text bold—not font-family.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 78
+  </Where discussed>
+</Question 12>
+
+<Question 13>
+  <Description>
+    Slightly challenging: Why is display: inline-block the best choice for the PayPal-style login button?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>It allows horizontal flow while enabling layout control</Content>
+    <Explanation>Why? Inline-block lets the button sit inline but still respond to width, height, margin, padding, and borders.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>It centers the button automatically</Content>
+    <Explanation>Why? Centering requires additional styles—inline-block doesn’t center by default.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>It creates dropdown behavior</Content>
+    <Explanation>Why? Dropdowns are built with other logic—inline-block does not cause dropdown behavior.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 75
+  </Where discussed>
+</Question 13>
+
+<Question 14>
+  <Description>
+    What does font-weight: bold do?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Makes the text thicker</Content>
+    <Explanation>Why? Bold weight visually increases the thickness of characters.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Changes the font color</Content>
+    <Explanation>Why? Font color is controlled by the color property.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Adds extra padding to the text</Content>
+    <Explanation>Why? Padding is a layout property—bold only affects font rendering.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 78
+  </Where discussed>
+</Question 14>
+
+<Question 15>
+  <Description>
+    Which CSS property was added last to make the PayPal login link text look more like PayPal’s real font?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>font-weight: lighter</Content>
+    <Explanation>Why? The tutorial used bold and then changed the font type, not light weight.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>text-transform: uppercase</Content>
+    <Explanation>Why? The link text remained lowercase—text-transform wasn’t applied.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>font-family: sans-serif</Content>
+    <Explanation>Why? Sans-serif font-family was added at the end to match PayPal’s look more closely.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 78
+  </Where discussed>
+</Question 15>

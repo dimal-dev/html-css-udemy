@@ -1,0 +1,386 @@
+<lessons the quizz covers>
+  Lesson 69
+  Lesson 70
+  Lesson 71
+</lessons the quizz covers>
+<Insert after>
+  Lesson 71
+</Insert after>
+<Quizz Title>
+  Margins and Mysteries: Push Your Knowledge!
+</Quizz Title>
+<Quizz Title>
+  Unlock Margin Mastery!
+</Quizz Title>
+<Quizz Title>
+  From Margin Basics to Collapsing Tricks!
+</Quizz Title>
+<Quizz description>
+  Test how well you understand margins, shorthand properties, and the surprising behavior of margin collapsing.
+</Quizz description>
+<Quizz description>
+  Time to prove your margin mastery—especially the weird collapsing behavior that catches many off guard!
+</Quizz description>
+<Quizz description>
+  Ready to challenge your knowledge? Let’s explore how margins behave, including their default quirks and hidden tricks!
+</Quizz description>
+
+<Question 1>
+  <Description>
+    What does the margin property do?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Adds space outside an element</Content>
+    <Explanation>Why? Margin pushes other elements away from the current element by adding space outside its border.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Adds space inside an element</Content>
+    <Explanation>Why? That’s the job of padding, not margin.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Changes text color</Content>
+    <Explanation>Why? The color property is used for changing text color, not spacing.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 69
+  </Where discussed>
+</Question 1>
+
+<Question 2>
+  <Description>
+    If you write margin: 20px 40px;, what does that mean?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>20px left/right, 40px top/bottom</Content>
+    <Explanation>Why? The first value is for top/bottom, the second for left/right.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>20px top and bottom, 40px left and right</Content>
+    <Explanation>Why? Two-value shorthand applies top/bottom first, then left/right.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>40px top and bottom, 20px left and right</Content>
+    <Explanation>Why? That reverses the correct value order for two-value margin shorthand.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 69
+  </Where discussed>
+</Question 2>
+
+<Question 3>
+  <Description>
+    What color is used in Chrome’s developer tools to highlight margin?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>Green</Content>
+    <Explanation>Why? Green is used to highlight padding, not margin.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>Orange</Content>
+    <Explanation>Why? Margin is highlighted in orange in Chrome’s developer tools.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Blue</Content>
+    <Explanation>Why? Blue is used to highlight content area, not margin.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 69
+  </Where discussed>
+</Question 3>
+
+<Question 4>
+  <Description>
+    What is the result of setting margin: 10px 20px 30px 40px;?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Top: 10px, Right: 20px, Bottom: 30px, Left: 40px</Content>
+    <Explanation>Why? Four-value margin shorthand sets margin clockwise from the top.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Top: 40px, Right: 10px, Bottom: 20px, Left: 30px</Content>
+    <Explanation>Why? That’s not the clockwise order used by CSS.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>All sides get 25px</Content>
+    <Explanation>Why? That’s the one-value syntax. This one uses four values.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 69
+  </Where discussed>
+</Question 4>
+
+<Question 5>
+  <Description>
+    What is a key difference between margin and padding?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>Margin is always colored</Content>
+    <Explanation>Why? Margin is transparent by default, not colored.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Padding is only used with images</Content>
+    <Explanation>Why? Padding can be used with any element, not just images.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>Margin does not include background color</Content>
+    <Explanation>Why? Only the padding area extends the background color; margin does not.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 69
+  </Where discussed>
+</Question 5>
+
+<Question 6>
+  <Description>
+    What does autosave in VS Code do when set to “on focus change”?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>Saves only when the file is closed</Content>
+    <Explanation>Why? That’s not how “on focus change” works—it saves on switching focus.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Saves every 5 minutes</Content>
+    <Explanation>Why? “On focus change” means saving when you switch to another app or tab.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>Saves the file when you switch to another window</Content>
+    <Explanation>Why? The “on focus change” setting saves files when the user leaves VS Code.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 70
+  </Where discussed>
+</Question 6>
+
+<Question 7>
+  <Description>
+    You change a margin in VS Code, switch to Chrome, and see the result immediately. What feature helped?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Autosave on focus change</Content>
+    <Explanation>Why? It automatically saved your file when you switched windows, updating the browser view.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Live reload</Content>
+    <Explanation>Why? Live reload requires a separate setup, and wasn’t discussed in this lesson.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Manual save shortcut</Content>
+    <Explanation>Why? You didn’t press save; autosave triggered when you left VS Code.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 70
+  </Where discussed>
+</Question 7>
+
+<Question 8>
+  <Description>
+    What is margin collapsing?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>When vertical margins of two elements combine into one</Content>
+    <Explanation>Why? When two elements’ margins meet with no content between them, only the largest margin is used.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>When margin shrinks if the browser is too small</Content>
+    <Explanation>Why? Margin doesn’t shrink due to browser size—only layouts adjust.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>When margins are removed entirely by the browser</Content>
+    <Explanation>Why? Margins are not removed, they overlap and the largest one is applied.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 71
+  </Where discussed>
+</Question 8>
+
+<Question 9>
+  <Description>
+    Two paragraphs have margin-bottom: 40px and margin-top: 30px. What is the space between them?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>70px</Content>
+    <Explanation>Why? Margin collapsing applies, so only the larger margin (40px) is used.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>30px</Content>
+    <Explanation>Why? 30px is the smaller value. The larger one wins in margin collapsing.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>40px</Content>
+    <Explanation>Why? With collapsing margins, only the larger of the two margins takes effect.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 71
+  </Where discussed>
+</Question 9>
+
+<Question 10>
+  <Description>
+    How can you stop margin collapsing between two elements?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>Remove the margins</Content>
+    <Explanation>Why? That removes spacing completely—not useful if spacing is still desired.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>Add content or increase one of the margins</Content>
+    <Explanation>Why? Margin collapse only happens if there’s no content—adding anything prevents it, or increasing margin gives the desired spacing.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Set the display to none</Content>
+    <Explanation>Why? That hides the element entirely—it doesn’t help with margin behavior.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 71
+  </Where discussed>
+</Question 10>
+
+<Question 11>
+  <Description>
+    Diagnostic: Student expects 70px space between two elements with 40px and 30px margin. What's wrong?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>They don’t realize vertical margins collapse</Content>
+    <Explanation>Why? This is a common misunderstanding—vertical margins overlap instead of adding up.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>They used shorthand margin incorrectly</Content>
+    <Explanation>Why? Shorthand margin syntax was not the issue in this case.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>They applied margin-left instead of margin-top</Content>
+    <Explanation>Why? The issue is about vertical spacing, not horizontal properties.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 71
+  </Where discussed>
+</Question 11>
+
+<Question 12>
+  <Description>
+    What happens if you insert a single character of text between two collapsing margins?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>The margins no longer collapse</Content>
+    <Explanation>Why? Margin collapse requires no content between elements—any content breaks that behavior.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>The margins stay collapsed</Content>
+    <Explanation>Why? The presence of any content, even a single character, prevents collapsing.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>The browser removes both margins</Content>
+    <Explanation>Why? Browsers don’t remove margins—they just change how they behave together.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 71
+  </Where discussed>
+</Question 12>
+
+<Question 13>
+  <Description>
+    Which of the following margins will apply if margin-bottom is 50px and margin-top is 70px between elements?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>120px</Content>
+    <Explanation>Why? That would be an additive behavior, which does not occur with vertical margins.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>50px</Content>
+    <Explanation>Why? The larger margin wins in a collapse, and here it's 70px.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>70px</Content>
+    <Explanation>Why? Only the larger of the two collapsing margins is used.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 71
+  </Where discussed>
+</Question 13>
+
+<Question 14>
+  <Description>
+    Real-world: You want two sections of your page to have 80px between them. What should you do?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Set one margin to 80px and remove the other</Content>
+    <Explanation>Why? Collapsing margins will use the largest one, so this guarantees 80px spacing.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Set both margins to 40px</Content>
+    <Explanation>Why? They will collapse and result in only 40px, not 80px.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Use padding instead</Content>
+    <Explanation>Why? Padding affects internal spacing—not spacing between elements.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 71
+  </Where discussed>
+</Question 14>
+
+<Question 15>
+  <Description>
+    Slightly challenging: You want 100px between two elements with collapsing margins. Which solution works?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>Set margin-top and margin-bottom to 50px each</Content>
+    <Explanation>Why? These will collapse, giving only 50px, not 100px.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>Set margin-bottom of the first element to 100px</Content>
+    <Explanation>Why? With collapsing behavior, a single 100px margin ensures 100px spacing.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Use padding on both elements</Content>
+    <Explanation>Why? Padding does not create spacing between elements—margin does.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 71
+  </Where discussed>
+</Question 15>

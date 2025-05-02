@@ -1,0 +1,386 @@
+<lessons the quizz covers>
+  Lesson 72
+  Lesson 73
+  Lesson 74
+</lessons the quizz covers>
+<Insert after>
+  Lesson 74
+</Insert after>
+<Quizz Title>
+  Block vs Inline: Display Mastery Check!
+</Quizz Title>
+<Quizz Title>
+  From Paragraphs to Pixels: Understand Display!
+</Quizz Title>
+<Quizz Title>
+  Layout Logic: Inline, Block, and Everything Between!
+</Quizz Title>
+<Quizz description>
+  Let’s see how well you understand the difference between block and inline elements—and how to control them!
+</Quizz description>
+<Quizz description>
+  You’ve just explored how HTML elements behave in layouts—let’s reinforce that with a quick and fun challenge!
+</Quizz description>
+<Quizz description>
+  Inline, block, and the magic in between—test your new knowledge and keep building layout skills!
+</Quizz description>
+
+<Question 1>
+  <Description>
+    What is the default display type of a <p> (paragraph) element?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Block</Content>
+    <Explanation>Why? Paragraphs are block elements by default, starting on a new line and taking full width.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Inline</Content>
+    <Explanation>Why? Inline elements don’t start a new line and paragraphs do.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Inline-block</Content>
+    <Explanation>Why? Inline-block is not the default for paragraphs.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 72
+  </Where discussed>
+</Question 1>
+
+<Question 2>
+  <Description>
+    Which element behaves like words in a sentence by default?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content><a></Content>
+    <Explanation>Why? Anchor (<a>) tags are inline elements by default and flow with text.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content><p></Content>
+    <Explanation>Why? Paragraphs are block elements, not inline.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content><div></Content>
+    <Explanation>Why? Divs are block elements and do not behave like inline content.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 72
+  </Where discussed>
+</Question 2>
+
+<Question 3>
+  <Description>
+    What happens when you apply width and height to an inline element like <a>?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>The element stretches to those dimensions</Content>
+    <Explanation>Why? Inline elements ignore width and height properties.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>The browser ignores the width and height values</Content>
+    <Explanation>Why? Inline elements cannot be resized using width and height.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>The element is hidden</Content>
+    <Explanation>Why? Width/height are ignored, but the element still displays.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 72
+  </Where discussed>
+</Question 3>
+
+<Question 4>
+  <Description>
+    Which display value allows an element to behave like a block and still appear inline?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>block-inline</Content>
+    <Explanation>Why? There is no CSS display value called block-inline.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>inline-block</Content>
+    <Explanation>Why? Inline-block elements stay on the same line and allow width, height, padding, and margin.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>relative</Content>
+    <Explanation>Why? Relative is a position value, not a display value.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 75
+  </Where discussed>
+</Question 4>
+
+<Question 5>
+  <Description>
+    What happens when you change a paragraph’s display to inline?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>It no longer starts on a new line</Content>
+    <Explanation>Why? Inline elements do not start new lines, so the paragraph behaves like a word in a sentence.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>It gets hidden</Content>
+    <Explanation>Why? Display: inline just changes layout, it doesn't hide the element.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>It becomes italic</Content>
+    <Explanation>Why? Inline display doesn’t affect text styling like italic.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 74
+  </Where discussed>
+</Question 5>
+
+<Question 6>
+  <Description>
+    Which property must you use to turn a link from inline to block?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>visibility: block</Content>
+    <Explanation>Why? Visibility doesn’t control layout—it hides or shows elements.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>position: block</Content>
+    <Explanation>Why? Position doesn’t define whether an element is inline or block.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>display: block</Content>
+    <Explanation>Why? The display property is used to change how elements are rendered, including to block.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 74
+  </Where discussed>
+</Question 6>
+
+<Question 7>
+  <Description>
+    When set to inline-block, which of the following becomes possible for an element?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>Starts on a new line and fills entire width</Content>
+    <Explanation>Why? That describes block elements, not inline-block.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>Appears on the same line and accepts width and height</Content>
+    <Explanation>Why? Inline-block combines inline flow with block-level box behavior.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Ignores padding and margin</Content>
+    <Explanation>Why? Inline-block respects all box model properties including padding and margin.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 75
+  </Where discussed>
+</Question 7>
+
+<Question 8>
+  <Description>
+    Diagnostic: Student sets padding-top on an inline element and sees no spacing. Why?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Inline elements ignore vertical padding for layout</Content>
+    <Explanation>Why? Inline elements render vertical padding visually but don’t shift layout vertically.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Padding-top isn’t a real CSS property</Content>
+    <Explanation>Why? Padding-top is valid but doesn’t work as expected on inline elements.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>They forgot to add a margin</Content>
+    <Explanation>Why? The issue here isn’t margin—it’s how inline elements handle vertical padding.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 72
+  </Where discussed>
+</Question 8>
+
+<Question 9>
+  <Description>
+    What’s the effect of adding top and bottom borders to an inline element?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>They push other elements vertically</Content>
+    <Explanation>Why? Vertical borders on inline elements don’t push layout—just overlap visually.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>They are drawn but don’t affect layout spacing</Content>
+    <Explanation>Why? Inline elements visually display top/bottom borders but don’t move surrounding content.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>They break the line</Content>
+    <Explanation>Why? Display remains inline, so line breaks are not introduced.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 73
+  </Where discussed>
+</Question 9>
+
+<Question 10>
+  <Description>
+    Which of the following elements behaves like a block only when its display is changed?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content><a></Content>
+    <Explanation>Why? Anchor tags are inline by default but can be made block or inline-block.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content><div></Content>
+    <Explanation>Why? Divs are block by default, not inline.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content><section></Content>
+    <Explanation>Why? Section is a block-level element by default.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 74
+  </Where discussed>
+</Question 10>
+
+<Question 11>
+  <Description>
+    Real-world: You want links to stack vertically and take up full width. What should you do?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>Use margin-top: 100px</Content>
+    <Explanation>Why? Margin adds space but doesn’t make elements block-level or stack.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>Set display: block on the links</Content>
+    <Explanation>Why? Display: block forces each link onto a new line and lets them fill the container width.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Add width: 100%</Content>
+    <Explanation>Why? Width won’t have any effect unless the element is block or inline-block.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 74
+  </Where discussed>
+</Question 11>
+
+<Question 12>
+  <Description>
+    What do block elements do that inline elements do not?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Start on a new line and take full width</Content>
+    <Explanation>Why? That’s a defining trait of block elements like <p> and <div>.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Ignore CSS rules</Content>
+    <Explanation>Why? All elements follow CSS rules unless the rule is invalid.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Float to the right automatically</Content>
+    <Explanation>Why? Float must be explicitly set and is not related to display type.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 72
+  </Where discussed>
+</Question 12>
+
+<Question 13>
+  <Description>
+    When you increase padding-top on a block element, what happens?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>It pushes the element’s content downward</Content>
+    <Explanation>Why? Padding on block elements affects layout both vertically and horizontally.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>It shrinks the element</Content>
+    <Explanation>Why? Padding adds space—it doesn’t shrink elements.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>It hides the element</Content>
+    <Explanation>Why? Padding changes spacing—it doesn’t control visibility.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 73
+  </Where discussed>
+</Question 13>
+
+<Question 14>
+  <Description>
+    Which display type ignores height and width settings?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>block</Content>
+    <Explanation>Why? Block elements respect width and height settings fully.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>inline</Content>
+    <Explanation>Why? Inline elements ignore width and height—you can’t size them directly.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>inline-block</Content>
+    <Explanation>Why? Inline-block elements allow width and height to work.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 72
+  </Where discussed>
+</Question 14>
+
+<Question 15>
+  <Description>
+    Slightly challenging: Which display setting allows top margin to apply to an <a> element?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>inline-block</Content>
+    <Explanation>Why? inline-block allows vertical spacing like top margin to take effect on inline elements.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>inline</Content>
+    <Explanation>Why? Inline elements ignore top and bottom margin in layout.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>none</Content>
+    <Explanation>Why? none hides the element completely, so margin is irrelevant.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 73
+  </Where discussed>
+</Question 15>

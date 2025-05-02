@@ -1,0 +1,182 @@
+<lessons the quizz covers>
+  Lesson 57
+  Lesson 58
+  Lesson 59
+</lessons the quizz covers>
+<Insert after>
+  Lesson 59
+</Insert after>
+<Quizz Title>
+  Smooth Moves: Transitions, Sizing & Color Mastery
+</Quizz Title>
+<Quizz description>
+  Reinforce your skills with interactive styles, hover effects, font sizing, and smooth transitions.
+</Quizz description>
+
+<Question 1>
+  <Description>
+    Why should the :active pseudo-class be written after the :hover pseudo-class in your CSS?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Because otherwise :hover will override :active styles</Content>
+    <Explanation>Why? CSS reads from top to bottom, so placing :active after ensures it applies correctly when clicking.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Because :hover doesn’t work if placed after :active</Content>
+    <Explanation>Why? :hover will still work if placed after; the issue is about overriding styles.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>Because it’s required by the HTML standard</Content>
+    <Explanation>Why? It's a CSS convention for specificity and override control, not a strict standard.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 57
+  </Where discussed>
+</Question 1>
+
+<Question 2>
+  <Description>
+    What’s the effect of changing the font-size of a link on hover?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>The text and background shrink proportionally</Content>
+    <Explanation>Why? When font-size decreases, the content and its padding shrink, reducing the visual size.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Only the text shrinks but the background stays the same</Content>
+    <Explanation>Why? Padding and content affect the background, so both shrink.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>The link disappears on hover</Content>
+    <Explanation>Why? Font-size changes don’t make a link disappear unless it’s set to 0.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 58
+  </Where discussed>
+</Question 2>
+
+<Question 3>
+  <Description>
+    What CSS property is used to animate a smooth change in size or color?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>animate</Content>
+    <Explanation>Why? animate is not a valid CSS property; the correct one is transition.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>transition</Content>
+    <Explanation>Why? transition enables smooth changes between CSS states over time.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>transform</Content>
+    <Explanation>Why? transform changes appearance instantly, but does not animate transitions.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 59
+  </Where discussed>
+</Question 3>
+
+<Question 4>
+  <Description>
+    What happens if you put the transition property only in the :hover selector?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>The transition works in both directions</Content>
+    <Explanation>Why? It only applies when hovering in, not when leaving hover.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>Yes</Is Correct>
+    <Content>The element transitions smoothly on hover, but snaps back instantly</Content>
+    <Explanation>Why? Because transition is only present during hover, it doesn't apply when the cursor leaves.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>The transition is applied permanently</Content>
+    <Explanation>Why? CSS pseudo-classes like :hover only apply temporarily during interaction.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 59
+  </Where discussed>
+</Question 4>
+
+<Question 5>
+  <Description>
+    Which of the following transitions would affect both font-size and background-color?
+  </Description>
+  <Answer 1>
+    <Is Correct>No</Is Correct>
+    <Content>transition: color 0.5s;</Content>
+    <Explanation>Why? This only affects color, not font-size or background-color.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>transition: all 0.5s;</Content>
+    <Explanation>Why? While this works, the lesson focuses on listing properties explicitly.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>Yes</Is Correct>
+    <Content>transition: font-size 0.5s, background-color 0.5s;</Content>
+    <Explanation>Why? This transition specifically targets font-size and background-color with timing for both.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 59
+  </Where discussed>
+</Question 5>
+
+<Question 6>
+  <Description>
+    Diagnostic: Why might your transition not be visible after clicking a link?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>Because the page reloads immediately</Content>
+    <Explanation>Why? Clicking a link with href causes a page reload, interrupting any visual transition.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>You used an RGB color instead of HEX</Content>
+    <Explanation>Why? Both formats work; it's not related to transitions being cut short.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>The background color is set to white</Content>
+    <Explanation>Why? The background color being white doesn’t prevent a transition from occurring.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 59
+  </Where discussed>
+</Question 6>
+
+<Question 7>
+  <Description>
+    Slightly challenging: You want the link to shrink slightly and change color smoothly on hover. What do you need?
+  </Description>
+  <Answer 1>
+    <Is Correct>Yes</Is Correct>
+    <Content>A hover rule changing font-size and background-color, plus a transition on the base selector</Content>
+    <Explanation>Why? The hover rule defines the changes, and the transition in the default rule makes them smooth.</Explanation>
+  </Answer 1>
+  <Answer 2>
+    <Is Correct>No</Is Correct>
+    <Content>Only a transition property inside the hover rule</Content>
+    <Explanation>Why? That would only animate the "in" state, not when the cursor leaves.</Explanation>
+  </Answer 2>
+  <Answer 3>
+    <Is Correct>No</Is Correct>
+    <Content>A hover rule with padding and color keywords only</Content>
+    <Explanation>Why? Padding and keywords don’t affect font-size or smoothness unless combined with transition.</Explanation>
+  </Answer 3>
+  <Where discussed>
+    Lesson 59
+  </Where discussed>
+</Question 7>

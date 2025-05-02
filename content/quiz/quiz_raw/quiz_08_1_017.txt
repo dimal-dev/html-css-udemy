@@ -1,0 +1,336 @@
+<lessons the quizz covers>
+    Lesson 54, Lesson 55, Lesson 56
+</lessons the quizz covers>
+<Insert after>
+    Lesson 56
+</Insert after>
+<Quizz Title>
+    Your First Styled Links: Time to Test Your Skills!
+</Quizz Title>
+<Quizz description>
+    Check how well you’ve grasped backgrounds and color formats.
+</Quizz description>
+
+<Question 1>
+    <Description>
+        What does the CSS property "background-color" do?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            It sets the background color behind an element’s content.
+        </Content>
+        <Explanation>
+            Why? "background-color" defines the color that fills the space behind an HTML element’s content.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            It changes the color of the element’s border.
+        </Content>
+        <Explanation>
+            Why? The border color is controlled by "border-color", not "background-color".
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            It changes the text color inside an element.
+        </Content>
+        <Explanation>
+            Why? Text color is set using the "color" property, not "background-color".
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 54
+    </Where discussed>
+</Question 1>
+
+<Question 2>
+    <Description>
+        What happens if a link’s text color and background color are both white?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            The link becomes bolder and easier to read.
+        </Content>
+        <Explanation>
+            Why? Identical text and background colors make the link invisible, not more readable.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            The link becomes invisible unless you hover or select it.
+        </Content>
+        <Explanation>
+            Why? With the same color for text and background, the content is hidden visually.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            The browser automatically adds a border for contrast.
+        </Content>
+        <Explanation>
+            Why? Browsers don’t add borders by default; styling is controlled by your CSS.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 54
+    </Where discussed>
+</Question 2>
+
+<Question 3>
+    <Description>
+        Which pseudoclass is used to style a link when it’s hovered over?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            :click
+        </Content>
+        <Explanation>
+            Why? ":click" isn’t a valid CSS pseudoclass. The correct one is ":hover".
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            :hover
+        </Content>
+        <Explanation>
+            Why? ":hover" targets the element when a mouse is placed over it.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            :visited
+        </Content>
+        <Explanation>
+            Why? ":visited" applies styles to links the user has already clicked.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 55
+    </Where discussed>
+</Question 3>
+
+<Question 4>
+    <Description>
+        Which of these is a valid RGB color declaration in CSS?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            rgb(176, 28, 151)
+        </Content>
+        <Explanation>
+            Why? This syntax correctly uses "rgb()" with comma-separated values.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            RGB:176-28-151
+        </Content>
+        <Explanation>
+            Why? The correct format uses lowercase "rgb" and parentheses, not colon and dashes.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            (176,28,151)
+        </Content>
+        <Explanation>
+            Why? The function must include the "rgb" keyword before the parentheses.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 56
+    </Where discussed>
+</Question 4>
+
+<Question 5>
+    <Description>
+        Which of these color formats provides the highest flexibility?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Color keywords (e.g., red, blue)
+        </Content>
+        <Explanation>
+            Why? Keywords are limited (~150 options). RGB/HEX allows 16+ million colors.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Background presets
+        </Content>
+        <Explanation>
+            Why? CSS doesn’t have built-in “background presets”—you must define colors manually.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            RGB and HEX formats
+        </Content>
+        <Explanation>
+            Why? RGB and HEX offer full-spectrum color control with 16+ million options.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 57
+    </Where discussed>
+</Question 5>
+
+<Question 6>
+    <Description>
+        Which color format uses a hash symbol (#) before the color code?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            RGB
+        </Content>
+        <Explanation>
+            Why? RGB uses the syntax rgb(…), not the hash symbol.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            HEX
+        </Content>
+        <Explanation>
+            Why? Hexadecimal color codes always start with # followed by six alphanumeric characters.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            CMYK
+        </Content>
+        <Explanation>
+            Why? CMYK is not a format used in standard CSS.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 55
+    </Where discussed>
+</Question 6>
+
+<Question 7>
+    <Description>
+        You want to create a button with a background that changes when clicked. Which pseudoclass should you use?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            :active
+        </Content>
+        <Explanation>
+            Why? ":active" targets elements while they are being clicked.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            :focus
+        </Content>
+        <Explanation>
+            Why? ":focus" applies when an element gains keyboard or mouse focus—not clicks.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            :pressed
+        </Content>
+        <Explanation>
+            Why? ":pressed" is not a valid CSS pseudoclass.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 56
+    </Where discussed>
+</Question 7>
+
+<Question 8>
+    <Description>
+        Why would a color not appear even though you set it using RGB numbers?
+    </Description>
+    <Answer 1>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Because RGB is not supported in browsers
+        </Content>
+        <Explanation>
+            Why? All modern browsers support RGB. It’s likely a syntax issue.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            Because you forgot to include "rgb()" around the numbers
+        </Content>
+        <Explanation>
+            Why? Without "rgb()", the values are treated as invalid by the browser.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Because commas are not allowed in RGB
+        </Content>
+        <Explanation>
+            Why? Commas are required in RGB format to separate red, green, and blue values.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 56
+    </Where discussed>
+</Question 8>
+
+<Question 9>
+    <Description>
+        Real-life scenario: You want a button to be dark blue by default, turn bright blue on hover, and light blue when clicked. What’s the best way to code this?
+    </Description>
+    <Answer 1>
+        <Is Correct>Yes</Is Correct>
+        <Content>
+            Use three CSS rules: one normal, one with :hover, and one with :active, each with a different background-color
+        </Content>
+        <Explanation>
+            Why? This method lets you set different colors for each interaction state.
+        </Explanation>
+    </Answer 1>
+    <Answer 2>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Apply one background-color in a single CSS rule
+        </Content>
+        <Explanation>
+            Why? That would set only one color, not different ones for hover and click.
+        </Explanation>
+    </Answer 2>
+    <Answer 3>
+        <Is Correct>No</Is Correct>
+        <Content>
+            Set a color animation in HTML
+        </Content>
+        <Explanation>
+            Why? Color animations should be done with CSS, not inline HTML.
+        </Explanation>
+    </Answer 3>
+    <Where discussed>
+        Lesson 56
+    </Where discussed>
+</Question 9>
